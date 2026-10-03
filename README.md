@@ -1,2 +1,138 @@
-# hearing-alert-system
-Open-source hearing alert system for people with hearing loss, using sound recognition and wireless wearable alerts.
+# 난청 노인용 청각 알림 시스템
+
+## 1. 프로젝트 소개
+
+난청 노인을 위해 초인종, 화재경보 등 중요한 소리를 감지하고 시각 및 촉각 알림으로 전달하는 대학교 캡스톤 프로젝트입니다. 소리를 듣기 어려워 생활 속 주요 신호를 놓치는 문제를 해결하는 것을 목표로 합니다.
+
+저비용 하드웨어, 로컬 동작, 오픈소스 공개, 사용자 친화성을 지향합니다. 현재는 초기 저장소 골격 (repository scaffold) 단계이며, 소리 감지·분류·통신·알림 기능은 모두 구현 예정입니다. 실제 화재경보 등의 감지 성능과 신뢰성은 아직 검증되지 않았습니다. 오픈소스 라이선스 종류는 TBD입니다.
+
+## 2. 시스템 개요
+
+- 송신부 (Transmitter / Main module): ESP32-S3에서 마이크 입력, 소리 분석 및 이벤트 분류를 수행할 예정입니다.
+- 수신부 (Receiver / Child module): ESP32-C3에서 이벤트 정보를 수신하고 시각·촉각 알림을 제공할 예정입니다.
+- 통신: Wi-Fi SoftAP 기반으로 확정했습니다. 이벤트 전송 기능은 구현 예정이며, UDP 사용 여부와 세부 프로토콜은 TBD입니다.
+- 머신러닝: Ubuntu PC에서 학습·평가·변환을 수행하고, 경량 모델을 ESP32-S3에 배포하는 것을 목표로 합니다.
+
+계획된 전체 데이터 흐름은 다음과 같습니다. 아래 기능은 모두 구현 예정입니다.
+
+```text
+소리 입력 (예정)
+→ ESP32-S3 오디오 입력 (예정)
+→ 소리 분석 (예정)
+→ 이벤트 분류 (예정)
+→ Wi-Fi SoftAP 무선 통신 (방식 확정, 구현 예정)
+→ ESP32-C3 이벤트 수신 (예정)
+→ LED / 진동 / 화면 알림 (예정)
+```
+
+원시 오디오 데이터 (raw data) 전체를 지속적으로 전송하기보다 송신부에서 소리를 분석하고 이벤트 결과만 수신부로 전달하는 구조를 우선 고려합니다. 이벤트 형식은 TBD입니다.
+
+## 3. 하드웨어 계획
+
+### Transmitter
+
+- MCU: ESP32-S3 사용 계획
+- 마이크: TBD
+- 오디오 입력·전처리 및 머신러닝 추론 (ML inference): 구현 예정
+
+### Receiver
+
+- MCU: ESP32-C3 사용 계획
+- LED: 연결 및 알림 구현 예정
+- 진동모터: 부품 선정 및 연결 예정
+- 디스플레이 및 기타 부품: TBD
+
+## 4. 통신 방식
+
+무선 통신 방식은 Wi-Fi SoftAP 기반으로 확정했습니다. ESP32-S3 송신부와 ESP32-C3 수신부 사이에서 이벤트 정보를 전달할 예정입니다. SoftAP를 운영할 보드, 연결 절차, UDP 사용 여부 및 이벤트 메시지 형식은 TBD입니다.
+
+`communication_tests/softap_udp/`는 Wi-Fi SoftAP 연결 및 이벤트 전송을 검증할 테스트 영역입니다. 기존 디렉터리명은 유지하며, 이름에 포함된 UDP의 사용 여부는 아직 확정하지 않았습니다. 지연시간, 안정성, 전력소모 및 구현 복잡도를 평가할 예정이며, 현재 통신 코드는 없습니다.
+
+`communication_tests/espnow/`는 이전 검토 후보의 참고 영역으로 보존합니다. ESP-NOW는 현재 개발 대상에서 제외합니다.
+
+## 5. 머신러닝 계획
+
+향후 음향 데이터 수집 → 전처리 → 학습 → 평가 → 경량화/양자화 → ESP32-S3 배포 순서로 개발할 예정입니다. 학습, 전처리, 평가 및 모델 변환은 초기에는 Ubuntu PC에서 수행할 계획입니다.
+
+YAMNet 기반 접근 또는 YAMNet에서 아이디어를 가져온 경량 음향 이벤트 분류 모델을 검토할 예정입니다. YAMNet 적용 여부, 모델 구조, 데이터셋 및 도구는 TBD이며, 현재 모델 다운로드나 머신러닝 코드 구현은 수행하지 않았습니다. 최종 목표는 경량화된 모델을 ESP32-S3에서 추론 가능하도록 만드는 것입니다.
+
+## 6. 저장소 구조
+
+```text
+.
+├── firmware/
+│   ├── transmitter_s3/
+│   └── receiver_c3/
+├── communication_tests/
+│   ├── espnow/
+│   └── softap_udp/
+├── ml/
+│   ├── datasets/
+│   ├── preprocessing/
+│   ├── training/
+│   ├── evaluation/
+│   ├── export/
+│   └── models/
+├── tools/
+│   └── audio_capture/
+├── docs/
+│   ├── architecture/
+│   ├── communication/
+│   ├── ml/
+│   └── test_results/
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+각 디렉터리에는 역할을 안내하는 한국어 `README.md`가 있습니다.
+
+| 디렉터리 | 역할 |
+| --- | --- |
+| `firmware/` | ESP32-S3 및 ESP32-C3 펌웨어 관리 예정 |
+| `communication_tests/` | 확정된 Wi-Fi SoftAP 통신 테스트 관리 예정; ESP-NOW 영역은 이전 검토 후보로 보존 |
+| `ml/` | 음향 데이터, 전처리, 학습, 평가 및 모델 변환 관리 예정 |
+| `tools/` | 오디오 수집 등 개발 보조 도구 관리 예정 |
+| `docs/` | 시스템 설계, 통신 분석, ML 조사 및 실험 결과 기록 예정 |
+
+## 7. 개발 환경
+
+개발 환경은 Ubuntu, VS Code, Git, GitHub를 사용할 계획입니다. ESP-IDF 및 Python 기반 ML 환경은 향후 구성 예정이며, 이번 작업에서 설치 여부나 버전을 검증하지 않았습니다.
+
+이 저장소는 ROS 2 프로젝트가 아니며, ROS 2 패키지나 colcon workspace를 구성하지 않습니다. 현재 ESP-IDF 프로젝트, 의존성 설치 및 빌드 결과물도 없습니다.
+
+## 8. 개발 워크플로
+
+코드와 개발 환경을 준비한 뒤 다음 흐름으로 작업할 예정입니다.
+
+```text
+코드 수정 → 빌드 → 보드 플래시 → 테스트
+→ git status / git diff → git add → git commit → git push
+```
+
+- 빌드 (build): 소스코드를 컴파일하여 실행 가능한 결과물을 생성하고 컴파일·링크 오류를 확인하는 과정입니다. 실제 보드에서의 실행 가능 여부와 동작은 플래시 후 테스트로 확인합니다.
+- 커밋 (commit): 현재 변경사항을 Git 이력으로 기록하는 과정입니다.
+- 푸시 (push): 커밋을 GitHub 원격 저장소에 업로드하는 과정입니다.
+
+현재 단계에서는 구조와 문서만 준비하며, 빌드·플래시·`git add`·`git commit`·`git push`는 수행하지 않습니다.
+
+## 9. 현재 진행 상태
+
+현재는 초기 저장소 골격 (repository scaffold) 단계입니다.
+
+- [x] 로컬 Git 저장소 및 GitHub 원격 주소 설정 확인
+- [x] 기본 디렉터리 구조 및 한국어 안내 문서 생성
+- [ ] GitHub 원격 저장소 접근 및 공개 상태 확인
+- [ ] 오픈소스 라이선스 선정
+- [ ] ESP-IDF 환경 구성
+- [ ] ESP32-S3 Hello World
+- [ ] ESP32-C3 Hello World
+- [x] 무선 통신 방식 선정: Wi-Fi SoftAP
+- [ ] 이벤트 전송 프로토콜 및 UDP 사용 여부 결정
+- [ ] Wi-Fi SoftAP 연결 및 이벤트 전송 테스트
+- [ ] 오디오 입력
+- [ ] 음향 데이터 수집 및 전처리
+- [ ] ML 모델 선정·학습·평가
+- [ ] 경량화 및 양자화
+- [ ] ESP32-S3 추론 (inference)
+- [ ] 시각 및 촉각 알림 구현

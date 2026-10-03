@@ -1,0 +1,44 @@
+# ESP-IDF 빌드 결과물 (설정 파일은 유지)
+**/build/
+
+# Python 가상환경 및 캐시
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 임시 파일 및 편집기 백업
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS 생성 파일
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# 대용량 원시 데이터: 안내 문서는 유지
+/ml/datasets/raw/*
+!/ml/datasets/raw/README.md
+
+# 임시 학습 출력물 및 실험 캐시
+/ml/training/outputs/
+/ml/training/checkpoints/
+/ml/training/runs/
+/ml/training/wandb/
+/ml/evaluation/outputs/
+/ml/export/tmp/
+
+# 로그 및 캐시
+*.log
+logs/
+.cache/
+
+# 소스, 문서, ESP-IDF 설정, ml/models/ 배포 모델은 제외하지 않음
