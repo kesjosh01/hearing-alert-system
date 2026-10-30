@@ -1,0 +1,135 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Standard input is not a TTY, running in non-interactive mode. Reading commands from stdin: reset, flash, flash-all, app-flash, output, log, timestamps, bootloader, send <text>, sleep <seconds>, expect [--timeout <seconds>] <regex>, exit | Quit: 'exit' command, EOF or Ctrl+C
+2026-10-30 11:11:37 [0;32mI (439736) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:11:37 [0;32mI (439736) softap_test: C3_PM session=2207554028 sleep_count=4530 reject_count=1[0m
+2026-10-30 11:11:39 [0;32mI (441636) softap_test: TX seq=145 attempt=1[0m
+2026-10-30 11:11:39 [0;32mI (441736) softap_test: ACK seq=145 elapsed=105ms attempts=1[0m
+2026-10-30 11:11:42 [0;32mI (444636) softap_test: TX seq=146 attempt=1[0m
+2026-10-30 11:11:42 [0;32mI (444696) softap_test: ACK seq=146 elapsed=64ms attempts=1[0m
+--- Command: 'reset'
+2026-10-30 11:11:43 ESP-ROM:esp32s3-20210327
+2026-10-30 11:11:43 Build:Mar 27 2021
+2026-10-30 11:11:43 rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+2026-10-30 11:11:43 Saved PC:0x403797d2
+2026-10-30 11:11:43 --- 0x403797d2: esp_cpu_wait_for_intr at /home/josh/esp/esp-idf/components/esp_hw_support/cpu.c:64
+2026-10-30 11:11:43 SPIWP:0xee
+2026-10-30 11:11:43 mode:DIO, clock div:1
+2026-10-30 11:11:43 load:0x3fce2820,len:0x1530
+2026-10-30 11:11:43 load:0x403c8700,len:0xcec
+2026-10-30 11:11:43 load:0x403cb700,len:0x2ef8
+2026-10-30 11:11:43 entry 0x403c8920
+2026-10-30 11:11:43 [0;32mI (24) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+2026-10-30 11:11:43 [0;32mI (24) boot: compile time Oct 29 2026 22:06:36[0m
+2026-10-30 11:11:43 [0;32mI (25) boot: Multicore bootloader[0m
+2026-10-30 11:11:43 [0;32mI (25) boot: chip revision: v0.2[0m
+2026-10-30 11:11:43 [0;32mI (25) boot: efuse block revision: v1.4[0m
+2026-10-30 11:11:43 [0;32mI (25) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+2026-10-30 11:11:43 [0;32mI (25) boot.esp32s3: SPI Mode       : DIO[0m
+2026-10-30 11:11:43 [0;32mI (26) boot.esp32s3: SPI Flash Size : 4MB[0m
+2026-10-30 11:11:43 [0;32mI (26) boot: Enabling RNG early entropy source...[0m
+2026-10-30 11:11:43 [0;32mI (26) boot: Partition Table:[0m
+2026-10-30 11:11:43 [0;32mI (26) boot: ## Label            Usage          Type ST Offset   Length[0m
+2026-10-30 11:11:43 [0;32mI (27) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+2026-10-30 11:11:43 [0;32mI (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+2026-10-30 11:11:43 [0;32mI (27) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+2026-10-30 11:11:43 [0;32mI (28) boot: End of partition table[0m
+2026-10-30 11:11:43 [0;32mI (28) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=1787ch ( 96380) map[0m
+2026-10-30 11:11:43 [0;32mI (46) esp_image: segment 1: paddr=000278a4 vaddr=3fc98400 size=04ae8h ( 19176) load[0m
+2026-10-30 11:11:43 [0;32mI (51) esp_image: segment 2: paddr=0002c394 vaddr=40374000 size=03c84h ( 15492) load[0m
+2026-10-30 11:11:43 [0;32mI (54) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=769d0h (485840) map[0m
+2026-10-30 11:11:43 [0;32mI (143) esp_image: segment 4: paddr=000a69f8 vaddr=40377c84 size=106b4h ( 67252) load[0m
+2026-10-30 11:11:43 [0;32mI (159) esp_image: segment 5: paddr=000b70b4 vaddr=50000000 size=00020h (    32) load[0m
+2026-10-30 11:11:43 [0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+2026-10-30 11:11:43 [0;32mI (168) boot: Disabling RNG early entropy source...[0m
+2026-10-30 11:11:43 [0;32mI (169) cpu_start: Multicore app[0m
+2026-10-30 11:11:43 [0;32mI (177) cpu_start: Pro cpu start user code[0m
+2026-10-30 11:11:43 [0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+2026-10-30 11:11:43 [0;32mI (178) app_init: Application information:[0m
+2026-10-30 11:11:43 [0;32mI (178) app_init: Project name:     hearing_softap_test[0m
+2026-10-30 11:11:43 [0;32mI (178) app_init: App version:      74d9efd-dirty[0m
+2026-10-30 11:11:43 [0;32mI (178) app_init: Compile time:     Oct 30 2026 11:02:38[0m
+2026-10-30 11:11:43 [0;32mI (178) app_init: ELF file SHA256:  52b9420b6...[0m
+2026-10-30 11:11:43 [0;32mI (178) app_init: ESP-IDF:          v5.5.5[0m
+2026-10-30 11:11:43 [0;32mI (179) efuse_init: Min chip rev:     v0.0[0m
+2026-10-30 11:11:43 [0;32mI (179) efuse_init: Max chip rev:     v0.99 [0m
+2026-10-30 11:11:43 [0;32mI (179) efuse_init: Chip rev:         v0.2[0m
+2026-10-30 11:11:43 [0;32mI (179) heap_init: Initializing. RAM available for dynamic allocation:[0m
+2026-10-30 11:11:43 [0;32mI (179) heap_init: At 3FCA0BA8 len 00048B68 (290 KiB): RAM[0m
+2026-10-30 11:11:43 [0;32mI (180) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+2026-10-30 11:11:43 [0;32mI (180) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+2026-10-30 11:11:43 [0;32mI (180) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+2026-10-30 11:11:43 [0;32mI (181) spi_flash: detected chip: generic[0m
+2026-10-30 11:11:43 [0;32mI (181) spi_flash: flash io: dio[0m
+2026-10-30 11:11:43 [0;33mW (181) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+2026-10-30 11:11:43 [0;32mI (182) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+2026-10-30 11:11:43 [0;32mI (183) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+2026-10-30 11:11:43 [0;32mI (184) main_task: Started on CPU0[0m
+2026-10-30 11:11:43 [0;32mI (184) main_task: Calling app_main()[0m
+2026-10-30 11:11:43 [0;32mI (194) pp: pp rom version: e7ae62f[0m
+2026-10-30 11:11:43 [0;32mI (194) net80211: net80211 rom version: e7ae62f[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:wifi driver task: 3fca58dc, prio:23, stack:6656, core=0[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:wifi firmware version: b9f67df[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:wifi certification version: v7.0[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:config NVS flash: enabled[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:config nano formatting: disabled[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init data frame dynamic rx buffer num: 32[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init static rx mgmt buffer num: 5[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init management short buffer num: 32[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init dynamic tx buffer num: 32[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init static tx FG buffer num: 2[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init static rx buffer size: 1600[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init static rx buffer num: 10[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi:Init dynamic rx buffer num: 32[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: rx ba win: 6[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: accept mbox: 6[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: tcpip mbox: 32[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: udp mbox: 6[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: tcp mbox: 6[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: tcp tx win: 5760[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: tcp rx win: 5760[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: tcp mss: 1440[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: WiFi IRAM OP enabled[0m
+2026-10-30 11:11:43 [0;32mI (204) wifi_init: WiFi RX IRAM OP enabled[0m
+2026-10-30 11:11:43 [0;32mI (274) phy_init: phy_version 712,87e8c20e,Apr 13 2026,18:51:10[0m
+2026-10-30 11:11:43 [0;32mI (314) wifi:mode : softAP (a4:cb:8f:ce:59:81)[0m
+2026-10-30 11:11:43 [0;32mI (314) wifi:Total power save buffer number: 16[0m
+2026-10-30 11:11:43 [0;32mI (314) wifi:Init max length of beacon: 752/752[0m
+2026-10-30 11:11:43 [0;32mI (314) wifi:Init max length of beacon: 752/752[0m
+2026-10-30 11:11:43 [0;32mI (314) wifi:Set ps type: 0, coexist: 0[0m
+2026-10-30 11:11:43 [0;32mI (314) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+2026-10-30 11:11:43 
+2026-10-30 11:11:43 [0;32mI (314) softap_test: S3 AP ready; SSID=HearingAlert-Test UDP=4210[0m
+2026-10-30 11:11:47 [0;32mI (3964) wifi:station: 90:da:72:87:1b:ac join, AID=1, bgn, 40U[0m
+2026-10-30 11:11:47 [0;32mI (3994) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+2026-10-30 11:11:48 [0;32mI (5484) wifi:<ba-add>idx:2 (ifx:1, 90:da:72:87:1b:ac), tid:0, ssn:0, winSize:64[0m
+2026-10-30 11:11:48 [0;32mI (5484) softap_test: receiver registered session=2207554028[0m
+2026-10-30 11:11:48 [0;32mI (5484) softap_test: TX seq=1 attempt=1[0m
+2026-10-30 11:11:48 [0;32mI (5484) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:11:48 [0;32mI (5484) softap_test: C3_PM session=2207554028 sleep_count=4649 reject_count=1[0m
+2026-10-30 11:11:48 [0;32mI (5504) softap_test: ACK seq=1 elapsed=22ms attempts=1[0m
+2026-10-30 11:11:51 [0;32mI (8504) softap_test: TX seq=2 attempt=1[0m
+2026-10-30 11:11:51 [0;32mI (8524) softap_test: ACK seq=2 elapsed=25ms attempts=1[0m
+2026-10-30 11:11:54 [0;32mI (11524) softap_test: TX seq=3 attempt=1[0m
+2026-10-30 11:11:54 [0;32mI (11594) softap_test: ACK seq=3 elapsed=73ms attempts=1[0m
+2026-10-30 11:11:57 [0;32mI (14544) softap_test: TX seq=4 attempt=1[0m
+2026-10-30 11:11:57 [0;32mI (14564) softap_test: ACK seq=4 elapsed=30ms attempts=1[0m
+2026-10-30 11:11:58 [0;32mI (15644) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:11:58 [0;32mI (15644) softap_test: C3_PM session=2207554028 sleep_count=4758 reject_count=1[0m
+2026-10-30 11:12:00 [0;32mI (17544) softap_test: TX seq=5 attempt=1[0m
+2026-10-30 11:12:00 [0;32mI (17634) softap_test: ACK seq=5 elapsed=93ms attempts=1[0m
+2026-10-30 11:12:03 [0;32mI (20584) softap_test: TX seq=6 attempt=1[0m
+2026-10-30 11:12:03 [0;32mI (20604) softap_test: ACK seq=6 elapsed=22ms attempts=1[0m
+2026-10-30 11:12:06 [0;32mI (23604) softap_test: TX seq=7 attempt=1[0m
+2026-10-30 11:12:06 [0;32mI (23674) softap_test: ACK seq=7 elapsed=73ms attempts=1[0m
+2026-10-30 11:12:08 [0;32mI (25794) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:12:08 [0;32mI (25794) softap_test: C3_PM session=2207554028 sleep_count=4868 reject_count=1[0m
+2026-10-30 11:12:09 [0;32mI (26604) softap_test: TX seq=8 attempt=1[0m
+2026-10-30 11:12:09 [0;32mI (26644) softap_test: ACK seq=8 elapsed=40ms attempts=1[0m
+2026-10-30 11:12:12 [0;32mI (29644) softap_test: TX seq=9 attempt=1[0m
+2026-10-30 11:12:12 [0;32mI (29714) softap_test: ACK seq=9 elapsed=76ms attempts=1[0m
+2026-10-30 11:12:15 [0;32mI (32664) softap_test: TX seq=10 attempt=1[0m
+2026-10-30 11:12:15 [0;32mI (32684) softap_test: ACK seq=10 elapsed=21ms attempts=1[0m
+2026-10-30 11:12:18 [0;32mI (35684) softap_test: TX seq=11 attempt=1[0m
+2026-10-30 11:12:18 [0;32mI (35774) softap_test: ACK seq=11 elapsed=90ms attempts=1[0m
+2026-10-30 11:12:19 [0;32mI (36834) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:12:19 [0;32mI (36834) softap_test: C3_PM session=2207554028 sleep_count=4989 reject_count=1[0m

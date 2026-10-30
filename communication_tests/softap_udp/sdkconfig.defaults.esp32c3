@@ -1,0 +1,7 @@
+# Keep the Wi-Fi association while the receiver CPU and radio sleep when idle.
+CONFIG_PM_ENABLE=y
+CONFIG_FREERTOS_USE_TICKLESS_IDLE=y
+CONFIG_PM_PROFILING=y
+# USB Serial/JTAG cannot stay responsive during real C3 Light-sleep.
+# The S3 receives and logs SDK sleep counters over Wi-Fi for validation.
+CONFIG_USJ_NO_AUTO_LS_ON_CONNECTION=n

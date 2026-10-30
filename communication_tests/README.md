@@ -1,8 +1,6 @@
 # 통신 실험
 
-무선 통신 방식은 Wi-Fi SoftAP 기반으로 확정했습니다. 현재는 초기 구조와 문서만 있으며 통신 코드는 구현 예정입니다.
+- [softap_udp](softap_udp/README.md): T7 S3 v1.1 SoftAP 송신부와 C3 SuperMini STA 수신부의 ESP-IDF 기초 실험. UDP + ACK·재전송 코드를 작성했으며 실제 보드의 이벤트·ACK 및 C3 자동 Light-sleep을 검증했습니다. [결과](../docs/test_results/low_power_2026-10-30.md)를 참고합니다.
+- `espnow/`: 이전 검토 후보의 참고 영역. 현재 개발 대상에서 제외합니다.
 
-- `softap_udp/`: Wi-Fi SoftAP 연결 및 이벤트 전송 테스트 코드와 설정을 관리할 예정입니다. 기존 디렉터리명은 유지하며, UDP 사용 여부는 TBD입니다.
-- `espnow/`: 이전 검토 후보의 참고 영역으로 보존합니다. ESP-NOW는 현재 개발 대상에서 제외합니다.
-
-Wi-Fi SoftAP 방식의 지연시간, 안정성, 전력소모 및 구현 복잡도를 평가할 예정입니다. SoftAP를 운영할 보드, 연결 절차 및 이벤트 메시지 형식은 TBD입니다. 실험 결과는 `docs/test_results/`에 기록할 예정입니다.
+[프로토콜](../docs/communication/README.md)과 [검증 기록](../docs/test_results/softap_udp.md)을 함께 관리합니다.

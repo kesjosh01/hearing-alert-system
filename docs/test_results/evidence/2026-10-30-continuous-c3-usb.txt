@@ -1,0 +1,54 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM1 115200
+--- Standard input is not a TTY, running in non-interactive mode. Reading commands from stdin: reset, flash, flash-all, app-flash, output, log, timestamps, bootloader, send <text>, sleep <seconds>, expect [--timeout <seconds>] <regex>, exit | Quit: 'exit' command, EOF or Ctrl+C
+--- No commands on standard input, watching serial output only...
+2026-10-30 11:04:36 [0;32mI (138) esp_image: segment 4: paddr=000bb130 vaddr=4038417c sizeI (14334) softap_test: TEST event session=1079590628 seq=5[0m
+2026-10-30 11:04:37 [0;32mI (15334) pm: Frequency switching config: CPU_MAX: 160, APB_MAX: 80, APB_MIN: 40, Light sleep: ENABLED[0m
+2026-10-30 11:04:37 [0;32mI (15334) softap_test: C3 auto Light-sleep enabled; USB console may pause; see S3 C3_PM[0m
+2026-10-30 11:04:43 [0;32mI (20104) softap_test: TEST event session=1079590628 seq=7[0m
+2026-10-30 11:04:50 [0;32mI (25904) softap_test: TEST event session=1079590628 seq=9[0m
+2026-10-30 11:04:57 [0;32mI (34384) softap_test: TEST event session=1079590628 seq=12[0m
+2026-10-30 11:05:03 [0;32mI (40014) softap_test: TEST event session=1079590628 seq=14[0m
+2026-10-30 11:05:09 [0;32mI (45714) softap_test: TEST event session=1079590628 seq=16[0m
+2026-10-30 11:05:16 [0;32mI (51394) softap_test: TEST event session=1079590628 seq=18[0m
+2026-10-30 11:05:21 [0;32mI (57104) softap_test: TEST event session=1079590628 seq=20[0m
+2026-10-30 11:05:27 [0;32mI (62904) softap_test: TEST event session=1079590628 seq=22[0m
+2026-10-30 11:05:34 [0;32mI (68614) softap_test: TEST event session=1079590628 seq=24[0m
+2026-10-30 11:05:40 [0;32mI (74324) softap_test: TEST event session=1079590628 seq=26[0m
+2026-10-30 11:05:52 [0;32mI (82884) softap_test: TEST event session=1079590628 seq=29[0m
+2026-10-30 11:06:00 [0;32mI (94324) softap_test: TEST event session=1079590628 seq=33[0m
+2026-10-30 11:06:06 [0;32mI (100144) softap_test: TEST event session=1079590628 seq=35[0m
+2026-10-30 11:06:17 [0;32mI (105854) softap_test: TEST event session=1079590628 seq=37[0m
+2026-10-30 11:06:22 [0;32mI (114384) softap_test: TEST event session=1079590628 seq=40[0m
+2026-10-30 11:06:28 [0;32mI (120084) softap_test: TEST event session=1079590628 seq=42[0m
+2026-10-30 11:06:34 [0;32mI (125894) softap_test: TEST event session=1079590628 seq=44[0m
+2026-10-30 11:06:41 [0;32mI (131524) softap_test: TEST event session=1079590628 seq=46[0m
+2026-10-30 11:06:49 [0;32mI (137274) softap_test: TEST event session=1079590628 seq=48[0m
+2026-10-30 11:06:59 [0;32mI (145914) softap_test: TEST event session=1079590628 seq=51[0m
+2026-10-30 11:07:07 [0;32mI (157354) softap_test: TEST event session=1079590628 seq=55[0m
+2026-10-30 11:07:13 [0;32mI (163084) softap_test: TEST event session=1079590628 seq=57[0m
+2026-10-30 11:07:19 [0;32mI (168784) softap_test: TEST event session=1079590628 seq=59[0m
+2026-10-30 11:07:25 [0;32mI (174464) softap_test: TEST event session=1079590628 seq=61[0m
+2026-10-30 11:07:31 [0;32mI (180184) softap_test: TEST event session=1079590628 seq=63[0m
+2026-10-30 11:07:39 [0;32mI (185884) softap_test: TEST event session=1079590628 seq=65[0m
+2026-10-30 11:07:43 [0;32mI (191604) softap_test: TEST event session=1079590628 seq=67[0m
+2026-10-30 11:07:55 [0;32mI (197304) softap_test: TEST event session=1079590628 seq=69[0m
+2026-10-30 11:08:02 [0;32mI (208714) softap_test: TEST event session=1079590628 seq=73[0m
+2026-10-30 11:08:12 [0;32mI (217304) softap_test: TEST event session=1079590628 seq=76[0m
+2026-10-30 11:08:16 [0;32mI (223014) softap_test: TEST event session=1079590628 seq=78[0m
+2026-10-30 11:08:23 [0;32mI (228754) softap_test: TEST event session=1079590628 seq=80[0m
+2026-10-30 11:08:29 [0;32mI (234434) softap_test: TEST event session=1079590628 seq=82[0m
+2026-10-30 11:08:35 [0;32mI (240144) softap_test: TEST event session=1079590628 seq=84[0m
+2026-10-30 11:08:41 [0;32mI (245874) softap_test: TEST event session=1079590628 seq=86[0m
+2026-10-30 11:08:47 [0;32mI (251564) softap_test: TEST event session=1079590628 seq=88[0m
+2026-10-30 11:08:53 [0;32mI (257284) softap_test: TEST event session=1079590628 seq=90[0m
+2026-10-30 11:08:59 [0;32mI (262994) softap_test: TEST event session=1079590628 seq=92[0m
+2026-10-30 11:09:05 [0;32mI (268604) softap_test: TEST event session=1079590628 seq=94[0m
+2026-10-30 11:09:12 [0;32mI (274284) softap_test: TEST event session=1079590628 seq=96[0m
+2026-10-30 11:09:17 [0;32mI (279994) softap_test: TEST event session=1079590628 seq=98[0m
+2026-10-30 11:09:23 [0;32mI (285704) softap_test: TEST event session=1079590628 seq=100[0m
+2026-10-30 11:09:30 [0;32mI (291294) softap_test: TEST event session=1079590628 seq=102[0m
+2026-10-30 11:09:35 [0;32mI (297024) softap_test: TEST event session=1079590628 seq=104[0m
+2026-10-30 11:09:41 [0;32mI (302744) softap_test: TEST event session=1079590628 seq=106[0m
+2026-10-30 11:09:47 [0;32mI (308424) softap_test: TEST event session=1079590628 seq=108[0m
+2026-10-30 11:09:56 [0;32mI (317084) softap_test: TEST event session=1079590628 seq=111[0m
+2026-10-30 11:10:09 [0;32mI (325584) softap_test: TEST event session=1079590628 seq=114[0m

@@ -1,0 +1,29 @@
+{
+  "log": "/tmp/hearing-lowpower/continuous-s3.txt",
+  "requested_events": 100,
+  "transmitted_unique": 100,
+  "acknowledged_unique": 100,
+  "sequence_first": 9,
+  "sequence_last": 108,
+  "missing_ack_sequences": [],
+  "retransmissions": 0,
+  "failed_events": [],
+  "ack_round_trip_ms": {
+    "min": 9,
+    "mean": 55.79,
+    "max": 130
+  },
+  "first_confirmed_sleep": {
+    "session": 2207554028,
+    "successful": 111,
+    "rejected": 0
+  },
+  "last_sleep": {
+    "session": 2207554028,
+    "successful": 3519,
+    "rejected": 1
+  },
+  "single_c3_session": true,
+  "sleep_counter_increased": true,
+  "passed": true
+}

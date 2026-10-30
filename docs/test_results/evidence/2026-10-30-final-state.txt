@@ -1,0 +1,90 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyACM0 115200
+--- Standard input is not a TTY, running in non-interactive mode. Reading commands from stdin: reset, flash, flash-all, app-flash, output, log, timestamps, bootloader, send <text>, sleep <seconds>, expect [--timeout <seconds>] <regex>, exit | Quit: 'exit' command, EOF or Ctrl+C
+2026-10-30 11:16:11 [0;32mI (268234) softap_test: TX seq=88 attempt=1[0m
+2026-10-30 11:16:11 [0;32mI (268304) softap_test: ACK seq=88 elapsed=76ms attempts=1[0m
+2026-10-30 11:16:12 [0;32mI (269354) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:16:12 [0;32mI (269364) softap_test: C3_PM session=2207554028 sleep_count=7506 reject_count=1[0m
+2026-10-30 11:16:14 [0;32mI (271264) softap_test: TX seq=89 attempt=1[0m
+2026-10-30 11:16:14 [0;32mI (271274) softap_test: ACK seq=89 elapsed=15ms attempts=1[0m
+2026-10-30 11:16:17 [0;32mI (274274) softap_test: TX seq=90 attempt=1[0m
+2026-10-30 11:16:17 [0;32mI (274344) softap_test: ACK seq=90 elapsed=79ms attempts=1[0m
+2026-10-30 11:16:20 [0;32mI (277294) softap_test: TX seq=91 attempt=1[0m
+2026-10-30 11:16:20 [0;32mI (277314) softap_test: ACK seq=91 elapsed=27ms attempts=1[0m
+2026-10-30 11:16:22 [0;32mI (279654) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:16:22 [0;32mI (279664) softap_test: C3_PM session=2207554028 sleep_count=7615 reject_count=1[0m
+2026-10-30 11:16:23 [0;32mI (280314) softap_test: TX seq=92 attempt=1[0m
+2026-10-30 11:16:23 [0;32mI (280384) softap_test: ACK seq=92 elapsed=76ms attempts=1[0m
+2026-10-30 11:16:26 [0;32mI (283334) softap_test: TX seq=93 attempt=1[0m
+2026-10-30 11:16:26 [0;32mI (283354) softap_test: ACK seq=93 elapsed=26ms attempts=1[0m
+2026-10-30 11:16:29 [0;32mI (286354) softap_test: TX seq=94 attempt=1[0m
+2026-10-30 11:16:29 [0;32mI (286434) softap_test: ACK seq=94 elapsed=85ms attempts=1[0m
+2026-10-30 11:16:32 [0;32mI (289384) softap_test: TX seq=95 attempt=1[0m
+2026-10-30 11:16:32 [0;32mI (289414) softap_test: ACK seq=95 elapsed=30ms attempts=1[0m
+2026-10-30 11:16:33 [0;32mI (290474) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:16:33 [0;32mI (290474) softap_test: C3_PM session=2207554028 sleep_count=7734 reject_count=1[0m
+2026-10-30 11:16:35 [0;32mI (292424) softap_test: TX seq=96 attempt=1[0m
+2026-10-30 11:16:35 [0;32mI (292474) softap_test: ACK seq=96 elapsed=50ms attempts=1[0m
+2026-10-30 11:16:38 [0;32mI (295424) softap_test: TX seq=97 attempt=1[0m
+2026-10-30 11:16:38 [0;32mI (295444) softap_test: ACK seq=97 elapsed=23ms attempts=1[0m
+2026-10-30 11:16:41 [0;32mI (298444) softap_test: TX seq=98 attempt=1[0m
+2026-10-30 11:16:41 [0;32mI (298514) softap_test: ACK seq=98 elapsed=71ms attempts=1[0m
+2026-10-30 11:16:43 [0;32mI (300654) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:16:43 [0;32mI (300664) softap_test: C3_PM session=2207554028 sleep_count=7846 reject_count=1[0m
+2026-10-30 11:16:44 [0;32mI (301464) softap_test: TX seq=99 attempt=1[0m
+2026-10-30 11:16:44 [0;32mI (301484) softap_test: ACK seq=99 elapsed=26ms attempts=1[0m
+2026-10-30 11:16:47 [0;32mI (304484) softap_test: TX seq=100 attempt=1[0m
+2026-10-30 11:16:47 [0;32mI (304554) softap_test: ACK seq=100 elapsed=75ms attempts=1[0m
+2026-10-30 11:16:50 [0;32mI (307504) softap_test: TX seq=101 attempt=1[0m
+2026-10-30 11:16:50 [0;32mI (307524) softap_test: ACK seq=101 elapsed=24ms attempts=1[0m
+2026-10-30 11:16:53 [0;32mI (310524) softap_test: TX seq=102 attempt=1[0m
+2026-10-30 11:16:53 [0;32mI (310604) softap_test: ACK seq=102 elapsed=82ms attempts=1[0m
+2026-10-30 11:16:54 [0;32mI (311674) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:16:54 [0;32mI (311674) softap_test: C3_PM session=2207554028 sleep_count=7963 reject_count=1[0m
+2026-10-30 11:16:56 [0;32mI (313524) softap_test: TX seq=103 attempt=1[0m
+2026-10-30 11:16:56 [0;32mI (313574) softap_test: ACK seq=103 elapsed=50ms attempts=1[0m
+2026-10-30 11:16:59 [0;32mI (316524) softap_test: TX seq=104 attempt=1[0m
+2026-10-30 11:16:59 [0;32mI (316534) softap_test: ACK seq=104 elapsed=13ms attempts=1[0m
+2026-10-30 11:17:02 [0;32mI (319534) softap_test: TX seq=105 attempt=1[0m
+2026-10-30 11:17:02 [0;32mI (319614) softap_test: ACK seq=105 elapsed=82ms attempts=1[0m
+2026-10-30 11:17:04 [0;32mI (321734) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:17:04 [0;32mI (321734) softap_test: C3_PM session=2207554028 sleep_count=8073 reject_count=1[0m
+2026-10-30 11:17:05 [0;32mI (322534) softap_test: TX seq=106 attempt=1[0m
+2026-10-30 11:17:05 [0;32mI (322584) softap_test: ACK seq=106 elapsed=52ms attempts=1[0m
+2026-10-30 11:17:08 [0;32mI (325534) softap_test: TX seq=107 attempt=1[0m
+2026-10-30 11:17:08 [0;32mI (325544) softap_test: ACK seq=107 elapsed=14ms attempts=1[0m
+2026-10-30 11:17:11 [0;32mI (328544) softap_test: TX seq=108 attempt=1[0m
+2026-10-30 11:17:11 [0;32mI (328614) softap_test: ACK seq=108 elapsed=79ms attempts=1[0m
+2026-10-30 11:17:14 [0;32mI (331564) softap_test: TX seq=109 attempt=1[0m
+2026-10-30 11:17:14 [0;32mI (331604) softap_test: ACK seq=109 elapsed=42ms attempts=1[0m
+2026-10-30 11:17:15 [0;32mI (332644) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:17:15 [0;32mI (332644) softap_test: C3_PM session=2207554028 sleep_count=8190 reject_count=1[0m
+2026-10-30 11:17:17 [0;32mI (334594) softap_test: TX seq=110 attempt=1[0m
+2026-10-30 11:17:17 [0;32mI (334654) softap_test: ACK seq=110 elapsed=68ms attempts=1[0m
+2026-10-30 11:17:20 [0;32mI (337604) softap_test: TX seq=111 attempt=1[0m
+2026-10-30 11:17:20 [0;32mI (337634) softap_test: ACK seq=111 elapsed=30ms attempts=1[0m
+2026-10-30 11:17:23 [0;32mI (340634) softap_test: TX seq=112 attempt=1[0m
+2026-10-30 11:17:23 [0;32mI (340704) softap_test: ACK seq=112 elapsed=72ms attempts=1[0m
+2026-10-30 11:17:25 [0;32mI (342794) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:17:25 [0;32mI (342794) softap_test: C3_PM session=2207554028 sleep_count=8296 reject_count=1[0m
+2026-10-30 11:17:26 [0;32mI (343644) softap_test: TX seq=113 attempt=1[0m
+2026-10-30 11:17:26 [0;32mI (343674) softap_test: ACK seq=113 elapsed=32ms attempts=1[0m
+2026-10-30 11:17:29 [0;32mI (346674) softap_test: TX seq=114 attempt=1[0m
+2026-10-30 11:17:29 [0;32mI (346764) softap_test: ACK seq=114 elapsed=97ms attempts=1[0m
+2026-10-30 11:17:32 [0;32mI (349714) softap_test: TX seq=115 attempt=1[0m
+2026-10-30 11:17:32 [0;32mI (349814) softap_test: ACK seq=115 elapsed=103ms attempts=1[0m
+2026-10-30 11:17:35 [0;32mI (352714) softap_test: TX seq=116 attempt=1[0m
+2026-10-30 11:17:35 [0;32mI (352784) softap_test: ACK seq=116 elapsed=77ms attempts=1[0m
+2026-10-30 11:17:36 [0;32mI (353844) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:17:36 [0;32mI (353854) softap_test: C3_PM session=2207554028 sleep_count=8418 reject_count=1[0m
+2026-10-30 11:17:38 [0;32mI (355754) softap_test: TX seq=117 attempt=1[0m
+2026-10-30 11:17:38 [0;32mI (355854) softap_test: ACK seq=117 elapsed=105ms attempts=1[0m
+2026-10-30 11:17:41 [0;32mI (358754) softap_test: TX seq=118 attempt=1[0m
+2026-10-30 11:17:41 [0;32mI (358824) softap_test: ACK seq=118 elapsed=79ms attempts=1[0m
+2026-10-30 11:17:44 [0;32mI (361774) softap_test: TX seq=119 attempt=1[0m
+2026-10-30 11:17:44 [0;32mI (361794) softap_test: ACK seq=119 elapsed=27ms attempts=1[0m
+2026-10-30 11:17:46 [0;32mI (363904) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1[0m
+2026-10-30 11:17:46 [0;32mI (363914) softap_test: C3_PM session=2207554028 sleep_count=8528 reject_count=1[0m
+2026-10-30 11:17:47 [0;32mI (364814) softap_test: TX seq=120 attempt=1[0m
+2026-10-30 11:17:47 [0;32mI (364864) softap_test: ACK seq=120 elapsed=59ms attempts=1[0m
+2026-10-30 11:17:50 [0;32mI (367814) softap_test: TX seq=121 attempt=1[0m
+2026-10-30 11:17:50 [0;32mI (367834) softap_test: ACK seq=121 elapsed=27ms attempts=1[0m
