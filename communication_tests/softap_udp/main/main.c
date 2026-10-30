@@ -43,6 +43,7 @@
 #define EVENT_INTERVAL_MS 3000
 #define ACK_TIMEOUT_MS 300
 #define MAX_SEND_ATTEMPTS 4
+#define RETRY_BATCH_INTERVAL_MS 2000
 #define HELLO_INTERVAL_MS 10000
 #define PEER_TIMEOUT_MS 35000
 #define POWER_REPORT_MS 10000
@@ -50,6 +51,7 @@
 static const char *TAG = "softap_test";
 static EventGroupHandle_t wifi_bits;
 #define GOT_IP_BIT BIT0
+#define HELLO_DUE_BIT BIT1
 static int64_t now_ms(void) { return esp_timer_get_time() / 1000; }
 
 #if CONFIG_IDF_TARGET_ESP32C3
@@ -112,10 +114,28 @@ static void wifi_event(void *arg, esp_event_base_t base, int32_t id, void *data)
         if (err != ESP_OK) ESP_LOGW(TAG, "connect: %s", esp_err_to_name(err));
     }
     if (base == IP_EVENT && id == IP_EVENT_STA_GOT_IP) {
-        xEventGroupSetBits(wifi_bits, GOT_IP_BIT);
+        xEventGroupSetBits(wifi_bits, GOT_IP_BIT | HELLO_DUE_BIT);
         ESP_LOGI(TAG, "STA got IP; UDP discovery enabled");
     }
 }
+
+#if CONFIG_IDF_TARGET_ESP32C3
+static int discovery_fd;
+static uint32_t discovery_session;
+// Wake on every IP acquisition, even if disconnect/reconnect happened while
+// the receive task was blocked. No receive-timeout or heartbeat delay.
+static void discovery_task(void *arg) {
+    (void)arg;
+    struct sockaddr_in ap = {.sin_family = AF_INET, .sin_port = htons(PORT)};
+    inet_pton(AF_INET, "192.168.4.1", &ap.sin_addr);
+    for (;;) {
+        xEventGroupWaitBits(wifi_bits, HELLO_DUE_BIT, pdTRUE, pdFALSE,
+                            pdMS_TO_TICKS(HELLO_INTERVAL_MS));
+        if (xEventGroupGetBits(wifi_bits) & GOT_IP_BIT)
+            send_packet(discovery_fd, &ap, HELLO, discovery_session, 0, 0);
+    }
+}
+#endif
 
 static void init_wifi(void) {
     wifi_bits = xEventGroupCreate();
@@ -184,12 +204,18 @@ void app_main(void) {
     inet_pton(AF_INET, "192.168.4.1", &peer.sin_addr);
     uint32_t session = esp_random(), seq = 0, peer_session = 0;
     uint32_t last_session = 0, last_seq = 0;
-    bool have_last = false, have_peer = false, pending = false;
+    bool have_last = false, have_peer = false, pending = false, peer_stale = false;
 #if CONFIG_IDF_TARGET_ESP32C3
     bool light_sleep_started = false;
     bool was_online = false;
     int64_t power_at = 0;
-    int64_t hello_at = 0;
+    discovery_fd = fd;
+    discovery_session = session;
+    if (xTaskCreate(discovery_task, "discovery", 3072, NULL, 5, NULL) != pdPASS) {
+        ESP_LOGE(TAG, "discovery task allocation failed");
+        close(fd);
+        return;
+    }
 #endif
     int attempts = 0;
     int64_t event_at = 0, sent_at = 0, first_sent = 0, seen_at = 0;
@@ -205,11 +231,13 @@ void app_main(void) {
             uint32_t s = get32(p + 4), q = get32(p + 8), value = get32(p + 12);
             if (AP_ROLE && p[3] == HELLO && q == 0 && value == 0) {
                 if (!have_peer || peer.sin_addr.s_addr != from.sin_addr.s_addr || peer_session != s) {
-                    pending = false;
                     peer = from; peer_session = s; have_peer = true;
                     event_at = now;
+                    if (pending) sent_at = now - RETRY_BATCH_INTERVAL_MS;
                     ESP_LOGI(TAG, "receiver registered session=%" PRIu32, s);
                 }
+                if (peer_stale && pending) sent_at = now - RETRY_BATCH_INTERVAL_MS;
+                peer_stale = false;
                 seen_at = now;
             } else if (AP_ROLE && have_peer && s == peer_session &&
                        from.sin_addr.s_addr == peer.sin_addr.s_addr && p[3] == PM_STATS) {
@@ -244,12 +272,8 @@ void app_main(void) {
             ESP_LOGI(TAG, "C3 auto Light-sleep enabled; USB console may pause; see S3 C3_PM");
         }
         bool online = (xEventGroupGetBits(wifi_bits) & GOT_IP_BIT) != 0;
-        if (online && !was_online) { hello_at = 0; power_at = 0; }
+        if (online && !was_online) power_at = 0;
         was_online = online;
-        if (online && now >= hello_at) {
-            send_packet(fd, &peer, HELLO, session, 0, 0);
-            hello_at = now + HELLO_INTERVAL_MS;
-        }
         if (online && now >= power_at) {
             esp_pm_config_t pm;
             wifi_ps_type_t ps;
@@ -264,19 +288,23 @@ void app_main(void) {
         }
 #endif
         if (AP_ROLE) {
-            if (have_peer && now - seen_at > PEER_TIMEOUT_MS) {
-                have_peer = false; pending = false;
-                ESP_LOGW(TAG, "receiver heartbeat expired");
+            if (have_peer && !peer_stale && now - seen_at > PEER_TIMEOUT_MS) {
+                peer_stale = true;
+                ESP_LOGW(TAG, "receiver heartbeat expired; retaining peer and pending event");
             }
             if (have_peer && !pending && now >= event_at) {
                 if (++seq == 0) { session = esp_random(); seq = 1; }
                 pending = true; attempts = 0; first_sent = now; sent_at = now - ACK_TIMEOUT_MS;
                 event_at = now + EVENT_INTERVAL_MS;
             }
-            if (pending && now - sent_at >= ACK_TIMEOUT_MS) {
+            if (pending && now - sent_at >=
+                (attempts >= MAX_SEND_ATTEMPTS ? RETRY_BATCH_INTERVAL_MS : ACK_TIMEOUT_MS)) {
                 if (attempts == MAX_SEND_ATTEMPTS) {
-                    ESP_LOGW(TAG, "FAILED seq=%" PRIu32 " after %d attempts", seq, MAX_SEND_ATTEMPTS);
-                    pending = false;
+                    ESP_LOGW(TAG, "RETRY_PENDING seq=%" PRIu32 "; retrying retained event", seq);
+                    attempts = 0;
+                    send_packet(fd, &peer, EVENT, session, seq, 1);
+                    sent_at = now; ++attempts;
+                    ESP_LOGI(TAG, "TX seq=%" PRIu32 " attempt=%d", seq, attempts);
                 } else {
                     send_packet(fd, &peer, EVENT, session, seq, 1);
                     sent_at = now; ++attempts;
