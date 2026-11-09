@@ -12,7 +12,7 @@ git clone https://github.com/HwanheeJu415-rgb/hearing-alert-dataset.git
 
 ## 데이터와 기존 체크포인트 복원
 
-두 저장소를 같은 상위 디렉터리에 복제한 상태에서 실행합니다. 체크섬은 원본 음원, 고정 split, 체크포인트와 실행 기록의 바이트를 검증합니다.
+두 저장소를 같은 상위 디렉터리에 복제한 상태에서 실행합니다. 이미 복제했다면 각 저장소에서 `git pull`로 갱신하세요. 체크섬은 원본 음원, 고정 split, 임베딩, 체크포인트와 실행 기록의 바이트를 검증합니다.
 
 ```bash
 (cd hearing-alert-dataset && sha256sum -c SHA256SUMS)
@@ -38,7 +38,7 @@ mkdir -p data/cache/ESC-50
 )
 ```
 
-최종 오디오 경로는 `data/cache/ESC-50/ESC-50-master/audio/`입니다. FSD50K는 후보 메타데이터만 있고 baseline 학습에는 쓰지 않았습니다. 기존 결과를 재평가하려면 복원한 split의 바이트를 유지하세요. 코드가 각 run에 저장된 split SHA-256과 현재 파일을 대조합니다.
+최종 오디오 경로는 `data/cache/ESC-50/ESC-50-master/audio/`입니다. 학습 코드가 캐시된 임베딩의 출처를 원본 음원 해시로 확인하므로 캐시를 복원해도 ESC-50 원본이 필요합니다. FSD50K는 후보 메타데이터만 있고 baseline 학습에는 쓰지 않았습니다. 기존 결과를 재평가하려면 복원한 split의 바이트를 유지하세요. 코드가 각 run에 저장된 split SHA-256과 현재 파일을 대조합니다.
 
 ## 환경 설치와 동작 확인
 
@@ -47,15 +47,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-yamnet.txt
 python -m unittest discover -s tests
-python -m sound_baseline doctor --load-yamnet
+python -m sound_baseline doctor
 ```
 
-`doctor`에서 네 fold, fold당 2,046개, 개발 1,635개, 고정 test 411개를 확인합니다. `smoke`는 실제 음원 12개를 사용하는 선택적 실행 점검입니다. `prepare`는 개발 데이터의 오디오와 특징 캐시를 재생성하고, 같은 명령으로 재시도할 수 있습니다.
-
-```bash
-python -m sound_baseline smoke
-python -m sound_baseline prepare
-```
+`doctor`에서 네 fold, fold당 2,046개, 개발 1,635개, 고정 test 411개를 확인합니다. 복원한 `data/processed/yamnet_v1/embeddings/`에는 개발 데이터의 `.npy`와 대응하는 JSON이 있습니다. 바로 아래 학습 명령을 실행하면 저장된 특징을 사용합니다. `prepare`는 캐시를 새로 만들거나 원본이 바뀌었을 때 사용하세요.
 
 ## 체크포인트 사용과 다음 실험
 
