@@ -1,0 +1,15 @@
+/data/raw/**
+!/data/raw/
+!/data/raw/private/
+!/data/raw/private/README.md
+/data/cache/
+/data/processed/
+/data/metadata/manifest.csv
+/data/metadata/source_registry.csv
+/data/splits/*/
+.cache/
+runs/
+wandb/
+*.keras
+*.npy
+*.npz

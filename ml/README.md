@@ -2,9 +2,9 @@
 
 - `datasets/`: 음향 데이터 및 출처·수집 조건 안내를 관리할 예정입니다.
 - `preprocessing/`: 오디오 전처리 코드를 관리할 예정입니다.
-- `training/`: 모델 학습 코드와 설정을 관리할 예정입니다.
+- [training/](training/README.md): YAMNet baseline 학습 코드, 설정과 실험 결과를 관리합니다.
 - `evaluation/`: 분류 성능 및 경량화 전후 평가를 관리할 예정입니다.
 - `export/`: 모델 변환·양자화 및 배포 형식 변환 코드를 관리할 예정입니다.
 - `models/`: 최종 배포용 경량 모델과 관련 설명을 관리할 예정입니다.
 
-초기 작업은 Ubuntu PC에서 수행하고 ESP32-S3 추론을 목표로 합니다. YAMNet 관련 접근은 검토 예정이며, 현재 코드 구현이나 모델 다운로드는 하지 않았습니다. 대용량 원시 데이터는 향후 `datasets/raw/`에 두며 Git에서 제외합니다. 최종 배포 모델은 일괄 제외하지 않습니다.
+YAMNet baseline은 PC에서 개발하며, 향후 ESP32-S3에서 경량 모델 추론을 목표로 합니다. baseline 재현에 필요한 음원과 기존 체크포인트는 [Ubuntu 안내](training/yamnet/UBUNTU.md)의 데이터 복원 절차를 따릅니다.

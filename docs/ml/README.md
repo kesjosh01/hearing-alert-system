@@ -1,3 +1,5 @@
 # 머신러닝 조사 문서
 
-머신러닝 조사 문서 관련 파일을 관리할 예정입니다. 현재는 초기 구조와 안내 문서만 존재하며, 코드·모델·실험 결과는 아직 없습니다. 구체적인 구성은 TBD입니다.
+- [YAMNet baseline 구현](../../ml/training/yamnet/README.md)
+- [데이터 수집·분할 설계](../../ml/training/yamnet/DATASET_PLAN.md)
+- [개발 실험 결과](../../ml/training/yamnet/RESULTS.md)
