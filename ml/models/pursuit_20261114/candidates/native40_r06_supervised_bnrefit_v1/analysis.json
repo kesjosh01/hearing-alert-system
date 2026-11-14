@@ -1,0 +1,182 @@
+{
+  "source": "pursuit_20261114_r06_native40_supervised_bnrefit",
+  "bundle": "native40_r06_supervised_bnrefit_v1",
+  "kind": "probability",
+  "temperature": 4.0,
+  "policy": [
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/pursuit_20261114/stage2_native40_delivered_v1/pursuit_20261114_r06_native40_supervised_bnrefit/probability_t4",
+  "model_sha256": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd",
+  "source_model_sha256": "5b9b3aaa6ee5aaebb2dcb015a1ea38bda0314cda2a3b752b9edbbab7cb0a4e27",
+  "selection_cuts": [
+    179,
+    162
+  ],
+  "selection": {
+    "fire_recall": 0.34108527131782945,
+    "doorbell_recall": 0.32926829268292684,
+    "classes": {
+      "fire_alarm": {
+        "files": 91,
+        "detected_files": 30,
+        "source_groups": 86,
+        "source_mean_file_recall": 0.34108527131782945,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 47,
+        "detected_files": 16,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.32926829268292684,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 91,
+          "detected_files": 30
+        },
+        "doorbell": {
+          "files": 47,
+          "detected_files": 16
+        }
+      }
+    },
+    "other_files": 1053,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      179,
+      162
+    ],
+    "policy": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "measure": "Source-mean file detection; acoustic variants retain original source groups",
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "cuts_integer_units": [
+    190,
+    162
+  ],
+  "selection_after_calibration": {
+    "fire_recall": 0.1744186046511628,
+    "doorbell_recall": 0.32926829268292684,
+    "classes": {
+      "fire_alarm": {
+        "files": 91,
+        "detected_files": 15,
+        "source_groups": 86,
+        "source_mean_file_recall": 0.1744186046511628,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 47,
+        "detected_files": 16,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.32926829268292684,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 91,
+          "detected_files": 15
+        },
+        "doorbell": {
+          "files": 47,
+          "detected_files": 16
+        }
+      }
+    },
+    "other_files": 1053,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      190,
+      162
+    ],
+    "policy": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "measure": "Source-mean file detection; acoustic variants retain original source groups",
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "calibration_after_fit": {
+    "fire_recall": 0.13793103448275862,
+    "doorbell_recall": 0.2903225806451613,
+    "classes": {
+      "fire_alarm": {
+        "files": 62,
+        "detected_files": 8,
+        "source_groups": 58,
+        "source_mean_file_recall": 0.13793103448275862,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 34,
+        "detected_files": 9,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.2903225806451613,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 62,
+          "detected_files": 8
+        },
+        "doorbell": {
+          "files": 34,
+          "detected_files": 9
+        }
+      }
+    },
+    "other_files": 788,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      190,
+      162
+    ],
+    "policy": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "measure": "Source-mean file detection; acoustic variants retain original source groups",
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "calibration_is_fitting_not_independent_test": true,
+  "actual_product_targets_verified": false
+}

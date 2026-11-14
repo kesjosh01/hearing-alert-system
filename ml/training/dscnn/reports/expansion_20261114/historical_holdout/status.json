@@ -1,0 +1,16 @@
+{
+  "kind": "expanded_model_historical_comparison",
+  "exit_code": 0,
+  "test_evaluation_invocations": 1,
+  "is_fresh_independent_test": false,
+  "model_sha256_before": "8edd834615c06336659bbd68c25d34497f49ac9b54c7ebe252aa9620335a21cf",
+  "int8_sha256_before": "0dc5bedf92e16e14e94e33f34ea2dd7abe3f5fb436083b17fd90337841468c9c",
+  "model_selection_and_thresholds_fixed_before_comparison": true,
+  "deployment_ready": false,
+  "evaluated_clips": 403,
+  "foreign_sirens_excluded": 8,
+  "model_sha256_after": "8edd834615c06336659bbd68c25d34497f49ac9b54c7ebe252aa9620335a21cf",
+  "int8_sha256_after": "0dc5bedf92e16e14e94e33f34ea2dd7abe3f5fb436083b17fd90337841468c9c",
+  "model_unchanged": true,
+  "elapsed_seconds": 68.74755269100024
+}

@@ -1,0 +1,13 @@
+{
+  "refit_epochs": 13,
+  "decision_policy": {
+    "kind": "per_target_argmax_confidence_rejection",
+    "thresholds": {
+      "fire_alarm": 0.0,
+      "doorbell": 0.75
+    },
+    "clip_aggregation": "all_window_mean_softmax",
+    "group_aggregation": "equal_clip_mean_softmax_then_decide",
+    "selection_source": "domestic_OOF_and_corrected_foreign_validation_only"
+  }
+}

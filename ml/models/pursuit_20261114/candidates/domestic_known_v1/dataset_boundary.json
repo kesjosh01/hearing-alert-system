@@ -1,0 +1,39 @@
+{
+  "name": "domestic_seen_v1",
+  "files": {
+    "inventory.csv": "426a22c1cb4a3cd0a9505ad652f56f09b7cb45468f28b82590101c84adc365c7",
+    "development.csv": "426a22c1cb4a3cd0a9505ad652f56f09b7cb45468f28b82590101c84adc365c7",
+    "known_positive_probes.csv": "5cbb89c9225476fe0133b15842f7986fb72e21c706b0498b03683536d3666c64"
+  },
+  "counts": {
+    "train": {
+      "doorbell": 26,
+      "fire_alarm": 17,
+      "other": 3336
+    },
+    "selection": {
+      "other": 422
+    },
+    "calibration": {
+      "other": 312
+    }
+  },
+  "explicit_user_authorized_domestic_overfitting": true,
+  "known_positive_probe_files": 43,
+  "historical_KR_files_now_seen": [
+    "kr-db-03",
+    "kr-db-05",
+    "kr-db-14",
+    "kr-fa-04",
+    "kr-fa-10",
+    "kr-fa-15",
+    "kr-fa-17",
+    "kr-user-db-04",
+    "kr-user-dl-01"
+  ],
+  "historical_original_manifests_changed": false,
+  "independent_positive_test_files": 0,
+  "target_metric": "Memorization of collected domestic-classified recordings only",
+  "product_targets_verified": false,
+  "new_physical_devices_or_other_homes_reliability_claim": false
+}

@@ -1,0 +1,11 @@
+{
+  "plan_sha256": "007b6f3894d544b25b2f9faaab72df9269f8fc37085ffc778fa75c16e5c1c4c9",
+  "code_sha256": "c092b812ebd2eb5ebbf3d9a0ee96b687b12843b22e6c4f7975578c2a06f8cab1",
+  "data_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "source_models_sha256": {
+    "domestic_known_aug_v2": "209ef89235cd38c9d3d80aec3b6ffc6b05a4ddcac2bf37d3c446ff86d458f5ce",
+    "native40_r06_v1": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd"
+  },
+  "new_public_outputs_read": false,
+  "new_public_outputs_used_to_choose": false
+}

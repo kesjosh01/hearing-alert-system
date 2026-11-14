@@ -1,0 +1,2 @@
+﻿epoch,train_loss,val_group_loss,val_domestic_target_recall,val_macro_f1,val_overseas_other_fpr,val_doorlock_fp,validation_guards_passed
+1,1.5446381568908691,0.9886443202443717,0.7083333333333333,0.27910139505884185,0.4949748743718593,1,False

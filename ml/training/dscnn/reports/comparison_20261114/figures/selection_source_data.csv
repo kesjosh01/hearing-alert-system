@@ -1,0 +1,17 @@
+run,stage,seed,parent,factor,target_macro_recall,fpr,selected_epoch,executed_epochs,selected_checkpoint_negatives
+s1_baseline,1,42,historical_models_not_control,source_disjoint_selection_and_calibration,0.7916666666666667,0.015625,5,13,650
+s2_coverage,2,42,s1_baseline,negative_sampler,0.7916666666666667,0.005208333333333333,12,20,1179
+s2_hardneg,2,42,s2_coverage,hard_negative_multiplier,0.7916666666666667,0.005208333333333333,10,18,1179
+s3_top50,3,42,s2_coverage,pooling_fraction,0.7916666666666667,0.0,10,18,1179
+s3_top25,3,42,s3_top50,pooling_fraction,0.7916666666666667,0.005208333333333333,3,11,850
+s4_added,4,42,s3_top50,added_training_data,0.7916666666666667,0.010416666666666666,3,11,871
+s5_domestic2,5,42,s3_top50,domestic_weight,0.7916666666666667,0.005208333333333333,2,10,591
+s5_other50,5,42,s3_top50,other_mass,0.7916666666666667,0.005208333333333333,3,11,1179
+s6_kd25,6,42,s3_top50,kd_weight,0.7916666666666667,0.005208333333333333,13,21,1179
+s6_kd0,6,42,s3_top50,kd_weight,0.9166666666666667,0.020833333333333332,12,20,1179
+s7_temporal24_seed43,7,43,s6_kd0,architecture_paired_seed,0.9166666666666667,0.005208333333333333,18,26,1179
+s7_temporal24_seed44,7,44,s6_kd0,architecture_paired_seed,0.7916666666666667,0.0,3,11,945
+s7_freq24_seed42,7,42,s6_kd0,architecture_paired_seed,0.9166666666666667,0.0,19,27,1179
+s7_freq24_seed43,7,43,s6_kd0,architecture_paired_seed,0.7916666666666667,0.0,11,19,1179
+s7_freq24_seed44,7,44,s6_kd0,architecture_paired_seed,0.9166666666666667,0.015625,4,12,1179
+s7_plateau,7,42,s7_freq24_seed42,lr_schedule,0.9166666666666667,0.0,19,27,1179

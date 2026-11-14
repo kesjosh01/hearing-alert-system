@@ -1,0 +1,71 @@
+{
+  "kind": "metadata_only_no_audio_decoding",
+  "labels": {
+    "fire_alarm": 0,
+    "doorbell": 1,
+    "other": 2
+  },
+  "protocol_version": "ko-source-cv4-20261108-v1",
+  "folds": [
+    {
+      "fold": 0,
+      "rows_by_role": {
+        "train": 1227,
+        "test": 411,
+        "validation": 408
+      },
+      "source_groups_by_role": {
+        "train": 946,
+        "validation": 305,
+        "test": 319
+      },
+      "split_sha256": "d807ea8d8248c7002f5d87f325ea193ce862c465d3bee3226e206a353751b485"
+    },
+    {
+      "fold": 1,
+      "rows_by_role": {
+        "train": 1229,
+        "validation": 406,
+        "test": 411
+      },
+      "source_groups_by_role": {
+        "train": 948,
+        "validation": 303,
+        "test": 319
+      },
+      "split_sha256": "23afe674a2dbbffaad44cb8eb45528846378b7386bf6de781780217ec5323e92"
+    },
+    {
+      "fold": 2,
+      "rows_by_role": {
+        "train": 1229,
+        "test": 411,
+        "validation": 406
+      },
+      "source_groups_by_role": {
+        "train": 948,
+        "validation": 303,
+        "test": 319
+      },
+      "split_sha256": "cc1a1335c4c3b5a4600d54d938939ad1d9aa70fe761adb245c32145f0930581a"
+    },
+    {
+      "fold": 3,
+      "rows_by_role": {
+        "train": 1229,
+        "validation": 406,
+        "test": 411
+      },
+      "source_groups_by_role": {
+        "train": 948,
+        "validation": 303,
+        "test": 319
+      },
+      "split_sha256": "79cc4f98b0d0c470a2f2829415b1495c8fce4bdfeb54f69fb9151be617f58d68"
+    }
+  ],
+  "test_audio_decoded": 0,
+  "test_features_created": 0,
+  "test_evaluated": false,
+  "positive_development_clips_needing_annotations": 32
+}

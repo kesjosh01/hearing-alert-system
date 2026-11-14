@@ -1,0 +1,44 @@
+{
+  "spec": {
+    "name": "pursuit_20261114_r06_full_yamnet_refined_unfused_bn",
+    "phase": "refine_unfused",
+    "learning_rate": 3e-05,
+    "epochs": 60,
+    "patience": 12
+  },
+  "options": {
+    "architecture": "temporal24",
+    "pooling_fraction": 1.0,
+    "negative_sampler": "coverage_cycle",
+    "hard_negative_multiplier": 1.0,
+    "domestic_weight": 4.0,
+    "other_mass": 0.3333333333333333,
+    "kd_weight": 0.0,
+    "learning_rate": 3e-05,
+    "lr_schedule": "constant",
+    "added_training_data": false,
+    "epochs": 60,
+    "patience": 12,
+    "steps_per_epoch": 40,
+    "batch_size": 36,
+    "microbatch_files": 6,
+    "temperature": 2.0,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "study_plan_sha256": "faacf198a55850bc417ecfd221dc6210d2685b317d3cfe4120621e6a7454526a",
+  "dataset_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "teacher": true,
+  "distillation": false,
+  "source_weights_modified": false,
+  "parameters": 3348931,
+  "trainable_parameters": 3316099,
+  "all_batch_normalization_frozen": true,
+  "features_on_disk": false,
+  "source_code_identity": {
+    "pursuit/stage2_teacher_fit.py": "0567467faa95b54c6ac93e688316e0fcedc71b8771172c4eb0dd1983ebbd11e4",
+    "pursuit/stage2_stream.py": "fd472ed168793ffe2ec61786ddbad70fc91d82c6fe83823314e55321f35afd68",
+    "pursuit/presence_mil.py": "e8f6c9509095739233196572ac1cf74be19326a15b590c4519b0caeb25a48dea",
+    "pursuit/stage2_unfused_bn.py": "f196ab41234ad84fda3847a5ddc0c350b15ef99bfbd00791ad112c000b2bb547"
+  }
+}

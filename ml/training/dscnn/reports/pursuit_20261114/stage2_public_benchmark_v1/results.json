@@ -1,0 +1,550 @@
+{
+  "complete": true,
+  "freeze_sha256": "c23005d3c589abe2e7b4fc5d5e77eebeff1f3a89054cf3262db562fbb23c17a2",
+  "recordings": 559,
+  "models": {
+    "domestic_known_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 1,
+          "file_recall": 0.024390243902439025,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.024390243902439025,
+          "wrong_other_target_alert_files": 2
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 1,
+          "file_recall": 0.16666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.16666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 3,
+      "other_false_alert_recording_fraction": 0.005859375,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 1
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 3,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "domestic_known_aug_v2": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 0,
+          "file_recall": 0.0,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.0,
+          "wrong_other_target_alert_files": 2
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 1,
+          "file_recall": 0.16666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.16666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 1,
+      "other_false_alert_recording_fraction": 0.001953125,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 1
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 1,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "domestic_known_enriched_v3": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 0,
+          "file_recall": 0.0,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.0,
+          "wrong_other_target_alert_files": 1
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 1,
+          "file_recall": 0.16666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.16666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 0,
+      "other_false_alert_recording_fraction": 0.0,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 1
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "general_prefix64_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 17,
+          "file_recall": 0.4146341463414634,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.4146341463414634,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 0,
+          "file_recall": 0.0,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.0,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 2,
+      "other_false_alert_recording_fraction": 0.00390625,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 0
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 2,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "native40_r06_supervised_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 4,
+          "file_recall": 0.0975609756097561,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.0975609756097561,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 1,
+          "file_recall": 0.16666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.16666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 0,
+      "other_false_alert_recording_fraction": 0.0,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 4
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 1
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "native40_r06_distilled_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 5,
+          "file_recall": 0.12195121951219512,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.12195121951219512,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 4,
+          "file_recall": 0.6666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.6666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 0,
+      "other_false_alert_recording_fraction": 0.0,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 5
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 4
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "native40_r06_supervised_bnrefit_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 8,
+          "file_recall": 0.1951219512195122,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.1951219512195122,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 1,
+          "file_recall": 0.16666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.16666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 0,
+      "other_false_alert_recording_fraction": 0.0,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 1
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "native40_r06_distilled_bnrefit_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 6,
+          "file_recall": 0.14634146341463414,
+          "known_source_groups": 41,
+          "source_mean_file_recall": 0.14634146341463414,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 4,
+          "file_recall": 0.6666666666666666,
+          "known_source_groups": 6,
+          "source_mean_file_recall": 0.6666666666666666,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 512,
+      "other_false_alert_files": 1,
+      "other_false_alert_recording_fraction": 0.001953125,
+      "by_source": {
+        "AudioSet-Strong-CLAPv2": {
+          "files": 47,
+          "other_files": 0,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 41,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 6,
+              "detected_files": 4
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 512,
+          "other_files": 512,
+          "other_false_alert_files": 1,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 0,
+        "published_acoustic_bouts": 0,
+        "bouts_with_any_positive_endpoint": 0,
+        "positive_rising_edges": 0,
+        "matched_rising_edges": 0,
+        "unmatched_rising_edges": 0
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    }
+  },
+  "global_winner_alias": "native40_r06_supervised_bnrefit_v1",
+  "no_test_based_model_or_threshold_tuning": true,
+  "feature_arrays_saved": false,
+  "actual_activation_event_recall_verified": false,
+  "actual_device_days": 0,
+  "actual_product_targets_verified": false,
+  "elapsed_seconds": 92.3348813929988
+}

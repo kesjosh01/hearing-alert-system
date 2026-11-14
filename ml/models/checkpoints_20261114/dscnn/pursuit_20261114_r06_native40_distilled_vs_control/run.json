@@ -1,0 +1,41 @@
+{
+  "spec": {
+    "name": "pursuit_20261114_r06_native40_distilled_vs_control",
+    "kd_weight": 0.25
+  },
+  "options": {
+    "architecture": "temporal24",
+    "pooling_fraction": 1.0,
+    "negative_sampler": "coverage_cycle",
+    "hard_negative_multiplier": 1.0,
+    "domestic_weight": 4.0,
+    "other_mass": 0.3333333333333333,
+    "kd_weight": 0.25,
+    "learning_rate": 0.0007,
+    "lr_schedule": "constant",
+    "added_training_data": false,
+    "epochs": 100,
+    "patience": 20,
+    "steps_per_epoch": 40,
+    "batch_size": 36,
+    "microbatch_files": 6,
+    "temperature": 2.0,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "study_plan_sha256": "92261dc96fdd951b66ca5ce50353386ffdd8a1c5200d957ef9bde37c7d17c34e",
+  "dataset_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "teacher_name": "pursuit_20261114_r06_full_yamnet_refined_unfused_bn",
+  "teacher_model_sha256": "5e1bbf3f123c8623da3d2f38012634ec5bb4889fdb3fe93dcfaa771d1ac67c3f",
+  "architecture": "native40_long_receptive_dscnn",
+  "complexity": {
+    "parameters_including_bn_statistics": 54291,
+    "convolution_and_dense_macs_per_window": 9982080,
+    "largest_single_int8_activation_bytes": 32000,
+    "input_int8_bytes": 3920,
+    "board_tensor_arena_bytes": null,
+    "board_processing_ms": null,
+    "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+  },
+  "feature_arrays_saved": false
+}

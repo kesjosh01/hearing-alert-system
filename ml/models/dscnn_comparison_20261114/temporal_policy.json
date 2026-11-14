@@ -1,0 +1,19 @@
+{
+  "policy": {
+    "vote_rule": "single",
+    "release_ratio": 1.0,
+    "cooldown_s": 0.0
+  },
+  "float_thresholds": [
+    0.75,
+    0.65
+  ],
+  "int8_thresholds": [
+    0.8,
+    0.7
+  ],
+  "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+  "int8_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+  "source": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/temporal_replay/calibration.json",
+  "fresh_test_used": false
+}

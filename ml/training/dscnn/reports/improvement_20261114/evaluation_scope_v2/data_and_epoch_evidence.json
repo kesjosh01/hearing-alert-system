@@ -1,0 +1,129 @@
+{
+  "selected_candidate": "kd24_freq_aug",
+  "refit_epochs": 9,
+  "domestic_OOF_groups": {
+    "fire_alarm": {
+      "source_groups": 13,
+      "correct": 9
+    },
+    "doorbell": {
+      "source_groups": 21,
+      "correct": 16
+    },
+    "other": {
+      "source_groups": 5,
+      "correct": 5
+    }
+  },
+  "selected_fold_epochs": [
+    {
+      "fold": 0,
+      "selected_epoch": 4,
+      "epochs_completed": 12,
+      "epoch_cap": 30,
+      "patience": 8,
+      "best_epoch_hard_label_loss": 0.2977496385574341,
+      "last_epoch_hard_label_loss": 0.20742273330688477,
+      "best_epoch_local_threshold_recall": 0.625,
+      "last_epoch_local_threshold_recall": 0.3333333333333333,
+      "caveat": "Each epoch has its own development-calibrated thresholds; this is observational, not a fixed-threshold causal test."
+    },
+    {
+      "fold": 1,
+      "selected_epoch": 7,
+      "epochs_completed": 15,
+      "epoch_cap": 30,
+      "patience": 8,
+      "best_epoch_hard_label_loss": 0.2390313297510147,
+      "last_epoch_hard_label_loss": 0.18193870782852173,
+      "best_epoch_local_threshold_recall": 0.8,
+      "last_epoch_local_threshold_recall": 0.6333333333333333,
+      "caveat": "Each epoch has its own development-calibrated thresholds; this is observational, not a fixed-threshold causal test."
+    },
+    {
+      "fold": 2,
+      "selected_epoch": 11,
+      "epochs_completed": 19,
+      "epoch_cap": 30,
+      "patience": 8,
+      "best_epoch_hard_label_loss": 0.22658671438694,
+      "last_epoch_hard_label_loss": 0.19730429351329803,
+      "best_epoch_local_threshold_recall": 0.8333333333333333,
+      "last_epoch_local_threshold_recall": 0.6666666666666666,
+      "caveat": "Each epoch has its own development-calibrated thresholds; this is observational, not a fixed-threshold causal test."
+    },
+    {
+      "fold": 3,
+      "selected_epoch": 17,
+      "epochs_completed": 25,
+      "epoch_cap": 30,
+      "patience": 8,
+      "best_epoch_hard_label_loss": 0.17707930505275726,
+      "last_epoch_hard_label_loss": 0.16223199665546417,
+      "best_epoch_local_threshold_recall": 0.6666666666666666,
+      "last_epoch_local_threshold_recall": 0.5,
+      "caveat": "Each epoch has its own development-calibrated thresholds; this is observational, not a fixed-threshold causal test."
+    }
+  ],
+  "refit_siren_roles_still_labeled_other": {
+    "train": 24,
+    "validation": 8
+  },
+  "raw_label_policy_review_required_before_future_training": true,
+  "oof_errors": [
+    {
+      "sample_id": "kr-db-06",
+      "label": "doorbell",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    },
+    {
+      "sample_id": "kr-db-13",
+      "label": "doorbell",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    },
+    {
+      "sample_id": "kr-fa-01",
+      "label": "fire_alarm",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    },
+    {
+      "sample_id": "kr-user-db-06",
+      "label": "doorbell",
+      "predicted_label": "other",
+      "source_dataset": "User-supplied-KR"
+    },
+    {
+      "sample_id": "kr-db-04",
+      "label": "doorbell",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    },
+    {
+      "sample_id": "kr-user-db-08",
+      "label": "doorbell",
+      "predicted_label": "other",
+      "source_dataset": "User-supplied-KR"
+    },
+    {
+      "sample_id": "kr-fa-16",
+      "label": "fire_alarm",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    },
+    {
+      "sample_id": "kr-fa-08",
+      "label": "fire_alarm",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    },
+    {
+      "sample_id": "kr-fa-13",
+      "label": "fire_alarm",
+      "predicted_label": "other",
+      "source_dataset": "YouTube-KR"
+    }
+  ]
+}

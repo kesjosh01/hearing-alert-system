@@ -1,0 +1,40 @@
+{
+  "version": "public-target-siren-expansion-20261114-v1",
+  "accepted_new_public_files": 39,
+  "excluded_duplicate_files": 0,
+  "new_public_counts": {
+    "KR_public_catalog:doorbell": 24,
+    "overseas_public_catalog:fire_alarm": 9,
+    "overseas_public_catalog:doorbell": 6
+  },
+  "training_clips_by_class": {
+    "fire_alarm": 47,
+    "doorbell": 53,
+    "other": 1181
+  },
+  "training_groups_by_class": {
+    "fire_alarm": 31,
+    "doorbell": 32,
+    "other": 909
+  },
+  "fire_to_doorbell_training_clip_ratio": 0.8867924528301887,
+  "training_sirens_reclassified": 24,
+  "validation_sirens_reclassified": 8,
+  "new_public_role": "train_only",
+  "new_public_country_basis": "Publication catalog, not verified physical device country",
+  "new_public_human_listening_verified": false,
+  "event_interval_annotations_used": false,
+  "frozen_test_files_in_development": 0,
+  "test_audio_decoded": 0,
+  "test_membership_unchanged": true,
+  "dataset_identity": {
+    "accepted_public.json": "808229ec570d81b39e50b59997389b2dae3da954962edaa774478b8ebcad9707",
+    "label_overrides.csv": "3aee64f86c55da6fd21dd158fd206d091e0cd8c24f9bc374023eda63aaaef6b9",
+    "dataset.json": "f0c6b749314c1e09f130394022d1ba2571a2d889e39fa55b267be163e680251d",
+    "refit.csv": "566b4c0961dc18561af587eb4a5f785b44e451598821c98422a802a90d17e4a4",
+    "fold_0.csv": "23ef6ab8e48c7a0ae1ea1e7b09dadf57f4ce53625fe1c80b7d34dcfa324f3ce7",
+    "fold_1.csv": "ffd5538637e2fec22a999e623169946bfe44c3c9bb0f6dbea6b75419365a3b29",
+    "fold_2.csv": "b2f8645654adfe9ff74eb0ef54750fbbf2261805c4af5d401f67e93003c9ab29",
+    "fold_3.csv": "226228ecf2fda6ba5dea256c90958df5161a666b227088a619844e22e595ed3a"
+  }
+}

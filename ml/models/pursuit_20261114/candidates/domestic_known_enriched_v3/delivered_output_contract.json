@@ -1,0 +1,43 @@
+{
+  "output_semantics": "Quantized softmax probabilities",
+  "class_order": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "output_scale": 0.00390625,
+  "output_zero_point": -128,
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "per_class_int8_minimum_q": [
+    71,
+    79
+  ],
+  "unsigned_probability_cuts": [
+    199,
+    207
+  ],
+  "argmax_required_per_contributing_window": true,
+  "target_argmax_required": true,
+  "threshold_semantics": "Strictly above every observed nonmatching selection/calibration envelope; uint score 0 is inactive",
+  "tie_break": "First maximum, matching numpy.argmax",
+  "input_shape": [
+    1,
+    98,
+    40,
+    1
+  ],
+  "export_logit_temperature": 4.0,
+  "multiple_notifications_per_recording_controlled": false,
+  "actual_notification_controller_tested": false,
+  "old_firmware_thresholds_automatically_updated": false,
+  "board_validated": false
+}

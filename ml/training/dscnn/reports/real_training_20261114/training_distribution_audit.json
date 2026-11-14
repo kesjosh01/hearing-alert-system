@@ -1,0 +1,54 @@
+{
+  "dscnn_filelabels_20261114_w1_f0": {
+    "file_draw_class_probabilities": {
+      "fire_alarm": 0.3333333333333333,
+      "doorbell": 0.3333333333333332,
+      "other": 0.3333333333333327
+    },
+    "expected_window_population_share": {
+      "fire_alarm": 0.7021624144368379,
+      "doorbell": 0.14312383322962025,
+      "other": 0.1547137523335419
+    },
+    "interpretation": "File loss is class balanced. This expected window population is duration weighted and may affect batch-normalization statistics; it does not prove the cause of validation errors."
+  },
+  "dscnn_filelabels_20261114_w1_f1": {
+    "file_draw_class_probabilities": {
+      "fire_alarm": 0.33333333333333326,
+      "doorbell": 0.33333333333333326,
+      "other": 0.33333333333333276
+    },
+    "expected_window_population_share": {
+      "fire_alarm": 0.7248567690138331,
+      "doorbell": 0.14183361069119252,
+      "other": 0.13330962029497437
+    },
+    "interpretation": "File loss is class balanced. This expected window population is duration weighted and may affect batch-normalization statistics; it does not prove the cause of validation errors."
+  },
+  "dscnn_filelabels_20261114_w1_f2": {
+    "file_draw_class_probabilities": {
+      "fire_alarm": 0.33333333333333326,
+      "doorbell": 0.33333333333333326,
+      "other": 0.33333333333333276
+    },
+    "expected_window_population_share": {
+      "fire_alarm": 0.6883365200764809,
+      "doorbell": 0.1581114869833797,
+      "other": 0.15355199294013938
+    },
+    "interpretation": "File loss is class balanced. This expected window population is duration weighted and may affect batch-normalization statistics; it does not prove the cause of validation errors."
+  },
+  "dscnn_filelabels_20261114_w1_f3": {
+    "file_draw_class_probabilities": {
+      "fire_alarm": 0.33333333333333326,
+      "doorbell": 0.33333333333333326,
+      "other": 0.33333333333333276
+    },
+    "expected_window_population_share": {
+      "fire_alarm": 0.6468725934799339,
+      "doorbell": 0.18909899888765264,
+      "other": 0.16402840763241336
+    },
+    "interpretation": "File loss is class balanced. This expected window population is duration weighted and may affect batch-normalization statistics; it does not prove the cause of validation errors."
+  }
+}

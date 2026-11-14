@@ -1,0 +1,20 @@
+{
+  "original_frozen_test_count": 411,
+  "evaluated_count": 403,
+  "foreign_negative_count": 394,
+  "excluded_original_category": "siren",
+  "excluded_ids": [
+    "ESC50-5-117118-A-42",
+    "ESC50-5-117120-A-42",
+    "ESC50-5-117122-A-42",
+    "ESC50-5-133989-A-42",
+    "ESC50-5-133989-B-42",
+    "ESC50-5-150409-A-42",
+    "ESC50-5-160551-A-42",
+    "ESC50-5-184323-A-42"
+  ],
+  "excluded_audio_decoded": false,
+  "eligibility_depends_on_model_predictions": false,
+  "raw_test_labels_and_membership_unchanged": true,
+  "foreign_siren_subtype_not_inferred": true
+}

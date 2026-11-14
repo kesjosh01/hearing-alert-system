@@ -1,0 +1,16 @@
+{
+  "initial_attempt_log": "reports/expansion_20261114/preflight.log",
+  "first_fault": "Exactly one selected GPU is required, found 0",
+  "installed_cuda_libraries_present": 12,
+  "default_loader_could_not_find": [
+    "libcudart.so.12",
+    "libcudnn.so.9"
+  ],
+  "resolution": "Use the existing DS-CNN virtual environment CUDA library paths for the child process only, matching prior validated execution.",
+  "successful_synthetic_preflight": "reports/expansion_20261114/preflight.json",
+  "successful_process": "reports/expansion_20261114/preflight_process.json",
+  "package_installation": false,
+  "driver_change": false,
+  "persistent_environment_change": false,
+  "real_audio_training_before_successful_preflight": 0
+}

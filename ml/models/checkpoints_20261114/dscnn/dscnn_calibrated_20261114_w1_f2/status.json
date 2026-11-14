@@ -1,0 +1,11 @@
+{
+  "kind": "dscnn_development",
+  "fold": 2,
+  "device": "gpu",
+  "test_evaluated": false,
+  "deployment_ready": false,
+  "exit_code": null,
+  "wandb": {
+    "mode": "disabled"
+  }
+}

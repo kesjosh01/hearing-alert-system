@@ -1,0 +1,61 @@
+{
+  "version": "ko-source-cv4-20261108-v1",
+  "confirmation_date": "2026-11-08",
+  "seed": 42,
+  "labels": {"fire_alarm": 0, "doorbell": 1, "other": 2},
+  "review": {
+    "domestic_file_labels": "verified_by_user",
+    "domestic_sources": "user_confirmed_distinct_except_exact_duplicates",
+    "scope": "file_class_and_source_independence",
+    "does_not_change": ["license_id", "privacy_review", "participant_consent_id", "redistribution_allowed", "overlap"]
+  },
+  "split": {
+    "unit": "source_recording_group",
+    "domestic_test_groups": {"fire_alarm": 4, "doorbell": 4, "other": 1},
+    "development_folds": 4,
+    "default_fold": 0,
+    "holdout_strata": {
+      "doorbell": "source_dataset",
+      "fire_alarm": "metadata_duration_le_12s_or_gt_12s",
+      "other": "single_stratum"
+    },
+    "auxiliary_target_recordings": "train_only",
+    "esc50_upstream_fold_roles": {"1": "train", "2": "train", "3": "train", "4": "validation", "5": "test"},
+    "esc50_shared_source_policy": "keep_group_in_most_restrictive_role_test_then_validation_then_train",
+    "do_not_tune_on_test": true
+  },
+  "sampling": {
+    "scope": "train_only",
+    "class_probabilities": {"fire_alarm": 0.3333333333333333, "doorbell": 0.3333333333333333, "other": 0.3333333333333333},
+    "target_class_domestic_group_weight": 4,
+    "target_class_auxiliary_group_weight": 1,
+    "domestic_weight_candidates": [1, 2, 4],
+    "other_pool_probabilities": {"overseas_general": 0.6, "overseas_confuser": 0.3, "domestic_doorlock": 0.1},
+    "esc50_confuser_categories": ["clock_alarm", "siren", "door_wood_knock", "door_wood_creaks", "glass_breaking"],
+    "within_other_pool": "uniform_source_group",
+    "within_source_group": "uniform_valid_window",
+    "flattened_window_probability": "group_probability / number_of_valid_windows_in_group",
+    "replacement": true,
+    "simultaneous_class_or_domain_loss_weights": false,
+    "suggested_batch_size": 30,
+    "suggested_steps_per_epoch": 30,
+    "epoch_definition": "fixed_900_window_draws_not_one_pass_over_all_stored_crops",
+    "empty_pool_policy": "fail_and_review_configuration"
+  },
+  "selection": {
+    "primary": "mean_of_domestic_fire_alarm_and_doorbell_group_macro_recalls",
+    "guard_metrics": ["per_target_precision", "macro_f1", "overseas_other_clip_false_positive_rate", "domestic_doorlock_false_positive_count"],
+    "report": ["all_four_fold_scores", "fold_mean_and_standard_deviation", "pooled_out_of_fold_group_predictions", "numerators_and_denominators"],
+    "weight_comparison_rule": "compare_1x_2x_4x_on_identical_folds_and_seeds_choose_smallest_if_no_consistent_gain",
+    "note": "False-positive rate on curated clips is not deployment false alarms per hour; set operational limits before training."
+  },
+  "refit": {
+    "domestic": "all_non_test_development_groups",
+    "esc50": "original_training_partition_only",
+    "auxiliary_target_recordings": "train_only",
+    "epochs": "predeclare_from_median_best_epoch_across_four_development_folds",
+    "thresholds": "choose_from_development_out_of_fold_predictions_and_esc50_validation_only",
+    "threshold_transfer_note": "OOF thresholds can shift after refit; do not correct them using test. Later use separate deployment-validation audio if available.",
+    "test": "same_frozen_test_groups_after_model_and_policy_are_fixed"
+  }
+}

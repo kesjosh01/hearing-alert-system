@@ -1,0 +1,14 @@
+{
+  "target_recall_difference": 0.125,
+  "descriptive_95_percentile_interval": [
+    0.0,
+    0.375
+  ],
+  "source_group_support": {
+    "fire_alarm": 4,
+    "doorbell": 3
+  },
+  "resamples": 10000,
+  "small_source_count": true,
+  "physical_source_independence_not_proven": true
+}

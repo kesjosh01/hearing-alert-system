@@ -1,0 +1,128 @@
+{
+  "complete": true,
+  "source_model": "pursuit_20261114_r04_prefix64_pretrained",
+  "source_model_sha256": "99470e770ef338fb98879c8c40c885c1706e10c69f5b0a9a5135f343f3d54884",
+  "selected_tflite_sha256": "5b8e811b87f4381c466ab94932b8a1659e6c2cc440931d6ac5350a410905f247",
+  "output_kind": "probability",
+  "temperature": 4.0,
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "cuts_integer_units": [
+    238,
+    252
+  ],
+  "selection_after_calibration": {
+    "fire_recall": 0.4848484848484848,
+    "doorbell_recall": 0.06451612903225806,
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 7,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.4848484848484848,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 2,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.06451612903225806,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 16,
+          "detected_files": 7
+        },
+        "doorbell": {
+          "files": 37,
+          "detected_files": 2
+        }
+      }
+    },
+    "other_files": 925,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      238,
+      252
+    ],
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "measure": "Source-mean file detection; acoustic variants retain original source groups",
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "calibration_after_fit": {
+    "fire_recall": 0.15,
+    "doorbell_recall": 0.16,
+    "classes": {
+      "fire_alarm": {
+        "files": 14,
+        "detected_files": 2,
+        "source_groups": 10,
+        "source_mean_file_recall": 0.15,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 28,
+        "detected_files": 4,
+        "source_groups": 25,
+        "source_mean_file_recall": 0.16,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 14,
+          "detected_files": 2
+        },
+        "doorbell": {
+          "files": 28,
+          "detected_files": 4
+        }
+      }
+    },
+    "other_files": 660,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      238,
+      252
+    ],
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "measure": "Source-mean file detection; acoustic variants retain original source groups",
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "calibration_is_threshold_fitting_not_independent_test": true,
+  "fresh_test_used": false,
+  "board_validated": false,
+  "actual_product_targets_verified": false
+}

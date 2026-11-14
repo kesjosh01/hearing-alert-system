@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-11-09T17:06:19.016289+00:00",
+  "stage": "complete",
+  "experiment_completed": true,
+  "refit_completed": true,
+  "test_evaluated": true,
+  "initial_execution_exit_code": 1,
+  "initial_error": "[Errno 2] No such file or directory: '/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/data/processed/yamnet_v1/audio/kr-fa-01.wav'",
+  "initial_error_log": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/reports/gpu_refit_final_w1_s42_official221_20261109T164741Z/first_error.log",
+  "final_error": null,
+  "refit_executions": 1,
+  "test_evaluation_invocations": 1,
+  "installation_executed": false,
+  "cpu_training_fallback": false,
+  "reason": "User-approved absolute probability criterion evaluated from saved development outputs; retain the frozen refit model and settings.",
+  "approval_record": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/reports/gpu_refit_final_w1_s42_official221_20261109T164741Z/final_acceptance.json",
+  "previous_numeric_error": "\nNot equal to tolerance rtol=0.0001, atol=1e-05\nDevelopment embedding mismatch: bsb-1153\nMismatched elements: 1698 / 82944 (2.05%)\nMax absolute difference: 0.00050354\nMax relative difference: 0.7163356\n x: array([[0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],\n       [0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],\n       [0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],...\n y: array([[0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],\n       [0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],\n       [0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],...",
+  "integrity_passed": true,
+  "finished_at": "2026-11-09T17:06:50.323623+00:00",
+  "elapsed_seconds": 31.30730749200029,
+  "exit_code": 0
+}

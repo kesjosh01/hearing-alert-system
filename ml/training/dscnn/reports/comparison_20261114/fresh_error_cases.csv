@@ -1,0 +1,15 @@
+sample_id,source_group,label,predicted,category,title,source_url,error_type
+bsb-comparison-0302,bsb-new-recording-family-creak,other,fire_alarm,door_wood_creaks,Creaking Door #1,https://bigsoundbank.com/creaking-door-s0302.html,false_positive
+bsb-comparison-0994,bsb-new-recording-family-church-group,other,fire_alarm,church_bells,Church Bells 10 Hours,https://bigsoundbank.com/church-bells-10-hours-s0994.html,false_positive
+bsb-comparison-1269,bsb-new-recording-family-industrial-bell,doorbell,other,doorbell,Industrial Doorbell #1,https://bigsoundbank.com/industrial-doorbell-s1269.html,miss_or_wrong_target_class
+bsb-comparison-1922,bsb-new-recording-family-industrial-bell,doorbell,fire_alarm,doorbell,Industrial doorbell #2,https://bigsoundbank.com/industrial-doorbell-2-s1922.html,miss_or_wrong_target_class
+bsb-comparison-1923,bsb-new-recording-family-industrial-bell,doorbell,other,doorbell,Industrial doorbell #3,https://bigsoundbank.com/industrial-doorbell-3-s1923.html,miss_or_wrong_target_class
+bsb-comparison-1924,bsb-new-recording-family-industrial-bell,doorbell,other,doorbell,Industrial doorbell #4,https://bigsoundbank.com/industrial-doorbell-4-s1924.html,miss_or_wrong_target_class
+bsb-comparison-1925,bsb-new-recording-family-industrial-bell,doorbell,other,doorbell,Industrial doorbell #5,https://bigsoundbank.com/industrial-doorbell-5-s1925.html,miss_or_wrong_target_class
+bsb-comparison-2811,bsb-new-recording-family-clock-mechanical,other,fire_alarm,clock_alarm,"Mechanical alarm clock, ringtone #8",https://bigsoundbank.com/mechanical-alarm-clock-ringtone-8-s2811.html,false_positive
+bsb-comparison-2812,bsb-new-recording-family-clock-mechanical,other,fire_alarm,clock_alarm,"Mechanical alarm clock, ringtone #9",https://bigsoundbank.com/mechanical-alarm-clock-ringtone-9-s2812.html,false_positive
+bsb-comparison-2813,bsb-new-recording-family-clock-mechanical,other,fire_alarm,clock_alarm,"Mechanical alarm clock, ringtone #10",https://bigsoundbank.com/mechanical-alarm-clock-ringtone-10-s2813.html,false_positive
+bsb-comparison-2814,bsb-new-recording-family-clock-mechanical,other,fire_alarm,clock_alarm,"Mechanical Alarm Clock, Ringtone #11",https://bigsoundbank.com/mechanical-alarm-clock-ringtone-11-s2814.html,false_positive
+bsb-comparison-3445,bsb-new-recording-family-church-group,other,doorbell,church_bells,Bell 5 O'clock,https://bigsoundbank.com/bell-5-o-clock-s3445.html,false_positive
+soundbible-2022,soundbible-cullen-card-fire_alarm,fire_alarm,other,fire_alarm,2022-School-Fire-Alarm,https://soundbible.com/2022-School-Fire-Alarm.html,miss_or_wrong_target_class
+soundbible-2160,soundbible-daniel-simion-doorbell,doorbell,other,doorbell,2160-Old-Fashion-Door-Bell,https://soundbible.com/2160-Old-Fashion-Door-Bell.html,miss_or_wrong_target_class

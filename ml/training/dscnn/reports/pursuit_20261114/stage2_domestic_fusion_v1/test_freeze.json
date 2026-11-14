@@ -1,0 +1,7 @@
+{
+  "fusion_status_sha256": "d35608e2a83c91e0f8e04aa0b66ee463d788af1e87446486a337b64c25ec59ef",
+  "base_test_freeze_sha256": "c23005d3c589abe2e7b4fc5d5e77eebeff1f3a89054cf3262db562fbb23c17a2",
+  "base_manifest_sha256": "b7195da1c1128dc8de2721d56cf9b6f46cf5b7c46fccd415b6efd5c9fb346f83",
+  "readout_frozen_before_opening_public_q_traces": true,
+  "no_test_based_tuning": true
+}

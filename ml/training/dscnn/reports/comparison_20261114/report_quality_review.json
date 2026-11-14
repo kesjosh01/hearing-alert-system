@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "html_tables": 5,
+  "html_images": 5,
+  "figures": [
+    {
+      "name": "architecture_seeds.png",
+      "pixels": [
+        1800,
+        810
+      ],
+      "mode": "RGBA",
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ]
+    },
+    {
+      "name": "frozen_evaluation.png",
+      "pixels": [
+        2160,
+        1350
+      ],
+      "mode": "RGBA",
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ]
+    },
+    {
+      "name": "learning_curves.png",
+      "pixels": [
+        2340,
+        792
+      ],
+      "mode": "RGBA",
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ]
+    },
+    {
+      "name": "selection_runs.png",
+      "pixels": [
+        2160,
+        1440
+      ],
+      "mode": "RGBA",
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ]
+    },
+    {
+      "name": "temporal_selection.png",
+      "pixels": [
+        1980,
+        846
+      ],
+      "mode": "RGBA",
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ]
+    }
+  ],
+  "manual_visual_inspection": "All five PNG figures inspected for labels, scale, missing rows and legends. Evaluation cohorts separated; raw seeds shown; no smoothing.",
+  "journal_compliance_claimed": false,
+  "field_model_performance_certified": false
+}

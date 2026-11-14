@@ -1,0 +1,194 @@
+{
+  "float": {
+    "single_at_same_thresholds": {
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": 0.0,
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correctly_alerted_files": 2,
+          "source_groups": 4,
+          "source_macro_file_recall": 0.5,
+          "median_seconds_from_file_start": 2.25,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        },
+        "doorbell": {
+          "clips": 8,
+          "correctly_alerted_files": 2,
+          "source_groups": 3,
+          "source_macro_file_recall": 0.3333333333333333,
+          "median_seconds_from_file_start": 1.0,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        }
+      },
+      "foreign_negative_clips": 67,
+      "foreign_false_positive_files": 10,
+      "foreign_fpr": 0.14925373134328357,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "negative_audio_seconds": 2347.673625,
+      "negative_notifications": 26,
+      "negative_notifications_per_hour": 39.86925567645716,
+      "positive_files_with_wrong_class_alert": 6,
+      "policy": {
+        "vote_rule": "single",
+        "release_ratio": 1.0,
+        "cooldown_s": 0.0
+      },
+      "thresholds": {
+        "fire_alarm": 0.75,
+        "doorbell": 0.65
+      },
+      "event_onset_ground_truth_available": false,
+      "per_event_recall_not_measured": true,
+      "recording_boundary_resets": true
+    },
+    "chosen": {
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": 0.0,
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correctly_alerted_files": 2,
+          "source_groups": 4,
+          "source_macro_file_recall": 0.5,
+          "median_seconds_from_file_start": 2.25,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        },
+        "doorbell": {
+          "clips": 8,
+          "correctly_alerted_files": 2,
+          "source_groups": 3,
+          "source_macro_file_recall": 0.3333333333333333,
+          "median_seconds_from_file_start": 1.0,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        }
+      },
+      "foreign_negative_clips": 67,
+      "foreign_false_positive_files": 10,
+      "foreign_fpr": 0.14925373134328357,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "negative_audio_seconds": 2347.673625,
+      "negative_notifications": 26,
+      "negative_notifications_per_hour": 39.86925567645716,
+      "positive_files_with_wrong_class_alert": 6,
+      "policy": {
+        "vote_rule": "single",
+        "release_ratio": 1.0,
+        "cooldown_s": 0.0
+      },
+      "thresholds": {
+        "fire_alarm": 0.75,
+        "doorbell": 0.65
+      },
+      "event_onset_ground_truth_available": false,
+      "per_event_recall_not_measured": true,
+      "recording_boundary_resets": true
+    },
+    "additional_delay": {
+      "matched_positive_files": 4,
+      "median_additional_seconds": 0.0,
+      "max_additional_seconds": 0.0,
+      "lost_positive_files": 0,
+      "gained_positive_files": 0,
+      "baseline": "Single-window notifications at exactly the same thresholds; no true onset assumptions"
+    }
+  },
+  "int8": {
+    "single_at_same_thresholds": {
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": 0.0,
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correctly_alerted_files": 2,
+          "source_groups": 4,
+          "source_macro_file_recall": 0.5,
+          "median_seconds_from_file_start": 2.75,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        },
+        "doorbell": {
+          "clips": 8,
+          "correctly_alerted_files": 2,
+          "source_groups": 3,
+          "source_macro_file_recall": 0.3333333333333333,
+          "median_seconds_from_file_start": 1.0,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        }
+      },
+      "foreign_negative_clips": 67,
+      "foreign_false_positive_files": 9,
+      "foreign_fpr": 0.13432835820895522,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "negative_audio_seconds": 2347.673625,
+      "negative_notifications": 28,
+      "negative_notifications_per_hour": 42.93612149772309,
+      "positive_files_with_wrong_class_alert": 5,
+      "policy": {
+        "vote_rule": "single",
+        "release_ratio": 1.0,
+        "cooldown_s": 0.0
+      },
+      "thresholds": {
+        "fire_alarm": 0.8,
+        "doorbell": 0.7
+      },
+      "event_onset_ground_truth_available": false,
+      "per_event_recall_not_measured": true,
+      "recording_boundary_resets": true
+    },
+    "chosen": {
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": 0.0,
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correctly_alerted_files": 2,
+          "source_groups": 4,
+          "source_macro_file_recall": 0.5,
+          "median_seconds_from_file_start": 2.75,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        },
+        "doorbell": {
+          "clips": 8,
+          "correctly_alerted_files": 2,
+          "source_groups": 3,
+          "source_macro_file_recall": 0.3333333333333333,
+          "median_seconds_from_file_start": 1.0,
+          "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+        }
+      },
+      "foreign_negative_clips": 67,
+      "foreign_false_positive_files": 9,
+      "foreign_fpr": 0.13432835820895522,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "negative_audio_seconds": 2347.673625,
+      "negative_notifications": 28,
+      "negative_notifications_per_hour": 42.93612149772309,
+      "positive_files_with_wrong_class_alert": 5,
+      "policy": {
+        "vote_rule": "single",
+        "release_ratio": 1.0,
+        "cooldown_s": 0.0
+      },
+      "thresholds": {
+        "fire_alarm": 0.8,
+        "doorbell": 0.7
+      },
+      "event_onset_ground_truth_available": false,
+      "per_event_recall_not_measured": true,
+      "recording_boundary_resets": true
+    },
+    "additional_delay": {
+      "matched_positive_files": 4,
+      "median_additional_seconds": 0.0,
+      "max_additional_seconds": 0.0,
+      "lost_positive_files": 0,
+      "gained_positive_files": 0,
+      "baseline": "Single-window notifications at exactly the same thresholds; no true onset assumptions"
+    }
+  }
+}

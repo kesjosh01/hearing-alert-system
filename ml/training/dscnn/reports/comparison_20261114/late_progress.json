@@ -1,0 +1,79 @@
+{
+  "stage": 7,
+  "champion": {
+    "name": "dscnn_comparison_20261114_s7_freq24_seed42",
+    "stage": 7,
+    "factor": "architecture_paired_seed",
+    "parent": "dscnn_comparison_20261114_s6_kd0",
+    "options": {
+      "architecture": "freq24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42",
+    "seed": 42,
+    "selected_epoch": 19,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.18496558891973847,
+      "thresholds": {
+        "fire_alarm": 0.7,
+        "doorbell": 0.55
+      },
+      "count": 207
+    },
+    "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 810
+  },
+  "selection_only": true
+}

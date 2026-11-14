@@ -1,0 +1,9 @@
+.cache/
+runs/
+reports/real_training_*/
+reports/improvement_*/
+data/domestic_extension_*.json
+data/file_label_approval_*.json
+annotations/reviewed_events_*.csv
+annotations/reviewed_events_*.review.json
+

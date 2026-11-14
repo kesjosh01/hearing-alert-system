@@ -1,0 +1,12 @@
+{
+  "recorded_at_unix": 1794609558.2484324,
+  "receipt_count": 24,
+  "all_recorded_exits_zero": true,
+  "same_process_identities_still_alive": [],
+  "comparison_module_processes_in_project": [],
+  "gpu_state": "GPU-10f7f4b0-eee7-9d43-26de-7bbefdbfc7ce, 14 MiB, 12227 MiB",
+  "compute_processes": "",
+  "passed": true,
+  "read_only": true,
+  "no_process_signals_sent": true
+}

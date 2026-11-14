@@ -1,0 +1,240 @@
+{
+  "role": "teacher",
+  "candidate": "freq24",
+  "folds": [
+    {
+      "fold": 0,
+      "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f0",
+      "selected_epoch": 4,
+      "model_sha256": "48dd00cb98625003d0812102d4e4306707a9bfbade1c4ba85af3299e1ee0998e",
+      "domestic_target_recall": 0.8333333333333333,
+      "overseas_other_fpr": 0.046153846153846156,
+      "overseas_other_count": 390,
+      "overseas_other_fp": 18,
+      "domestic_doorlock_fp": 0,
+      "validation_guards_passed": true,
+      "foreign_positive_correct": 8,
+      "foreign_positive_support": 8
+    },
+    {
+      "fold": 1,
+      "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f1",
+      "selected_epoch": 6,
+      "model_sha256": "d6e3eb42ff10d79e3ea28932eda10467b489ef7eaa11a95a0ec067fb22e06156",
+      "domestic_target_recall": 0.8,
+      "overseas_other_fpr": 0.01282051282051282,
+      "overseas_other_count": 390,
+      "overseas_other_fp": 5,
+      "domestic_doorlock_fp": 0,
+      "validation_guards_passed": true,
+      "foreign_positive_correct": 8,
+      "foreign_positive_support": 8
+    },
+    {
+      "fold": 2,
+      "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f2",
+      "selected_epoch": 29,
+      "model_sha256": "1737199e97041c1f44878ac07a09ccc3e5d1c7066d7a1579170cc9c47988d9e7",
+      "domestic_target_recall": 0.7333333333333334,
+      "overseas_other_fpr": 0.010256410256410256,
+      "overseas_other_count": 390,
+      "overseas_other_fp": 4,
+      "domestic_doorlock_fp": 0,
+      "validation_guards_passed": true,
+      "foreign_positive_correct": 8,
+      "foreign_positive_support": 8
+    },
+    {
+      "fold": 3,
+      "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f3",
+      "selected_epoch": 20,
+      "model_sha256": "6b0411b17e2a0af7af724e7f63294f44d37fbbacdfb1c528d4facd2327968034",
+      "domestic_target_recall": 0.7333333333333334,
+      "overseas_other_fpr": 0.01282051282051282,
+      "overseas_other_count": 390,
+      "overseas_other_fp": 5,
+      "domestic_doorlock_fp": 0,
+      "validation_guards_passed": true,
+      "foreign_positive_correct": 8,
+      "foreign_positive_support": 8
+    }
+  ],
+  "domestic_target_recall_mean": 0.775,
+  "domestic_target_recall_std": 0.04999999999999995,
+  "oof_metrics": {
+    "clips": {
+      "count": 39,
+      "accuracy": 0.7948717948717948,
+      "macro_f1": 0.7685185185185185,
+      "loss": 0.4391657503952048,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.8461538461538461,
+          "f1": 0.9166666666666666,
+          "support": 13,
+          "correct": 11,
+          "predicted": 11
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333,
+          "support": 21,
+          "correct": 15,
+          "predicted": 15
+        },
+        "other": {
+          "precision": 0.38461538461538464,
+          "recall": 1.0,
+          "f1": 0.5555555555555556,
+          "support": 5,
+          "correct": 5,
+          "predicted": 13
+        }
+      },
+      "confusion_matrix": [
+        [
+          11,
+          0,
+          2
+        ],
+        [
+          0,
+          15,
+          6
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    "groups": {
+      "count": 39,
+      "accuracy": 0.7948717948717948,
+      "macro_f1": 0.7685185185185185,
+      "loss": 0.4391657503952048,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.8461538461538461,
+          "f1": 0.9166666666666666,
+          "support": 13,
+          "correct": 11,
+          "predicted": 11
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333,
+          "support": 21,
+          "correct": 15,
+          "predicted": 15
+        },
+        "other": {
+          "precision": 0.38461538461538464,
+          "recall": 1.0,
+          "f1": 0.5555555555555556,
+          "support": 5,
+          "correct": 5,
+          "predicted": 13
+        }
+      },
+      "confusion_matrix": [
+        [
+          11,
+          0,
+          2
+        ],
+        [
+          0,
+          15,
+          6
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    "domestic_groups": {
+      "count": 39,
+      "accuracy": 0.7948717948717948,
+      "macro_f1": 0.7685185185185185,
+      "loss": 0.4391657503952048,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.8461538461538461,
+          "f1": 0.9166666666666666,
+          "support": 13,
+          "correct": 11,
+          "predicted": 11
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333,
+          "support": 21,
+          "correct": 15,
+          "predicted": 15
+        },
+        "other": {
+          "precision": 0.38461538461538464,
+          "recall": 1.0,
+          "f1": 0.5555555555555556,
+          "support": 5,
+          "correct": 5,
+          "predicted": 13
+        }
+      },
+      "confusion_matrix": [
+        [
+          11,
+          0,
+          2
+        ],
+        [
+          0,
+          15,
+          6
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    "domestic_target_macro_recall": 0.7802197802197802,
+    "overseas_other_clip_count": 0,
+    "overseas_other_clip_false_positives": 0,
+    "overseas_other_clip_fpr": null,
+    "domestic_doorlock_group_count": 5,
+    "domestic_doorlock_false_positive_groups": 0,
+    "decision_policy": {
+      "kind": "per_target_argmax_confidence_rejection",
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.75
+      }
+    }
+  },
+  "parameters": 131587,
+  "refit_epochs": 13,
+  "decision_policy": {
+    "kind": "per_target_argmax_confidence_rejection",
+    "thresholds": {
+      "fire_alarm": 0.0,
+      "doorbell": 0.75
+    },
+    "clip_aggregation": "all_window_mean_softmax",
+    "group_aggregation": "equal_clip_mean_softmax_then_decide",
+    "selection_source": "domestic_OOF_and_corrected_foreign_validation_only"
+  },
+  "new_public_files_role": "train_only",
+  "fixed_test_used": false
+}

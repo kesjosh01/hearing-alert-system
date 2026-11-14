@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "source_model_sha256": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd",
+  "sampled_training_windows": 64,
+  "maximum_output_error_lsb": 0,
+  "argmax_disagreements": 0,
+  "selected_backend": "existing_optimized_builtin_cpu",
+  "all_possible_inputs_or_actual_board_parity_claimed": false,
+  "hardware_or_environment_changed": false
+}

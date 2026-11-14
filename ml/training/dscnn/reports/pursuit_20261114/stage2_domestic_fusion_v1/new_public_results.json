@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "metric": {
+    "fire_recall": 0.0,
+    "doorbell_recall": 0.0,
+    "classes": {
+      "fire_alarm": {
+        "files": 41,
+        "detected_files": 0,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.0
+      },
+      "doorbell": {
+        "files": 6,
+        "detected_files": 0,
+        "source_groups": 6,
+        "source_mean_file_recall": 0.0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 0
+        }
+      }
+    },
+    "other_files": 512,
+    "other_false_alert_files": 1,
+    "wrong_target_alert_files": 1,
+    "cuts_integer_units": [
+      529,
+      559
+    ],
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "readout_status_sha256": "d35608e2a83c91e0f8e04aa0b66ee463d788af1e87446486a337b64c25ec59ef",
+  "original_eight_model_results_unchanged": true,
+  "test_based_model_or_threshold_tuning": false,
+  "true_activation_recall_or_device_monthly_false_rate_verified": false,
+  "actual_product_targets_verified": false
+}

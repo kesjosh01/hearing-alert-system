@@ -1,0 +1,236 @@
+{
+  "complete": true,
+  "files": 38,
+  "windows": 3321,
+  "receipts": [
+    {
+      "sample_id": "bsb-comparison-0124",
+      "source_sha256": "102f5ef7cf5a8b15d2f4bcd806291b5aeafbe1409109f1a35410f319d1238fdf",
+      "window_count": 85,
+      "feature_sha256": "becf4775853a81721799bfbdc2b14e8b82db144df242909a976f31e97bd000c9"
+    },
+    {
+      "sample_id": "bsb-comparison-0303",
+      "source_sha256": "529b3573bbe66ebfc9c53e4c43a57d3cba18e747ad5ee5dedc9d972b8b2e24fa",
+      "window_count": 2,
+      "feature_sha256": "909a3e20b3107396d45e1436a2cf0bb16f69824c2d6da634acec696100be7734"
+    },
+    {
+      "sample_id": "bsb-comparison-0304",
+      "source_sha256": "1126b280fb081ecd692eec98d5ce42d4bc92fd2f2e224f148e36ea830b251f38",
+      "window_count": 2,
+      "feature_sha256": "1249df1b1bcb07130bdef9a63636a255ce18cdadb3ab8c9526a040262e61a9d8"
+    },
+    {
+      "sample_id": "bsb-comparison-0423",
+      "source_sha256": "b7865f8d3c3763e40a354c92219e1ff695eec824f13d13577bff1450c74b5795",
+      "window_count": 200,
+      "feature_sha256": "e72b71ea5f4a30271ed372afd8060045deeadcd55c3064b0375148d65fcb2731"
+    },
+    {
+      "sample_id": "bsb-comparison-0555",
+      "source_sha256": "7e14cd7bf2005c4b03109c7fd0df5d9a756c55238022723703514af36bffc176",
+      "window_count": 58,
+      "feature_sha256": "ad188944a712d0b8acd9a2fa1be844a0b58dadc346f043b27255cef1076a5df4"
+    },
+    {
+      "sample_id": "bsb-comparison-0616",
+      "source_sha256": "e608288047971a2be01f68f49810022b180e32ab9508a959e244afdfb84a3a3d",
+      "window_count": 164,
+      "feature_sha256": "c2db105e9751902edd0b221196521cdb832d9b87d14f1f6b945549b3fa91ab67"
+    },
+    {
+      "sample_id": "bsb-comparison-0621",
+      "source_sha256": "0842fc05bb6b164e795334d9619dc00263f1695e3d5399dbc36c8ef75303ffc6",
+      "window_count": 134,
+      "feature_sha256": "4a77a209f44f7b91cda41b8edcc7ea630853439980293426adeff1b26a58ca04"
+    },
+    {
+      "sample_id": "bsb-comparison-0691",
+      "source_sha256": "6b3cf67b9eadcc9d579d78f1c02e0f4ce973efb14b2d73673bdad353b4d54d8c",
+      "window_count": 323,
+      "feature_sha256": "59ac0fe227c2ead637a56261c4b6ce5b960cb62ff285c401445e5129db159b52"
+    },
+    {
+      "sample_id": "bsb-comparison-0740",
+      "source_sha256": "056c5296303887b650e62a6dc3282f327f8a8560c061acbf577c5e0734acdb6e",
+      "window_count": 315,
+      "feature_sha256": "7fd870793be4d6dd2be344618943c8afdc32a9dec4bb4c39616c2828e1d16415"
+    },
+    {
+      "sample_id": "bsb-comparison-0809",
+      "source_sha256": "341d2c4be86adbf54707e2ebfbfeb4a86ad716364c4f56a081d6ff870e3b5804",
+      "window_count": 21,
+      "feature_sha256": "090916c6cd1a6e5e60b7ec7809c709d0415dc58b466cc7e2d1bf57a3ee826157"
+    },
+    {
+      "sample_id": "bsb-comparison-0819",
+      "source_sha256": "95f80a9088c9900ec7362bfd25fc28de25b3cd5240db33dff62fcbf8093d9202",
+      "window_count": 29,
+      "feature_sha256": "759a6e15ad7f98a1a4c0b356d20fa01153b1318a2ce2c7a5bd72227f7e7439fd"
+    },
+    {
+      "sample_id": "bsb-comparison-0868",
+      "source_sha256": "72bea083a991787f75f61f73f9a621ed1bd79060ae443145f1a0f89c6016ce81",
+      "window_count": 61,
+      "feature_sha256": "247cf13c97457ef0f75b3e57c2d938dacd6d81004384a6e2ee8604fd2f585652"
+    },
+    {
+      "sample_id": "bsb-comparison-0997",
+      "source_sha256": "693caeb67230e06302946615ae3ec513030a1eac3992750115854e325bfdcb36",
+      "window_count": 180,
+      "feature_sha256": "f494fe007d531ea632a07d3f2e71135b6d18f285f4fedcd4b5deb1ce149348d9"
+    },
+    {
+      "sample_id": "bsb-comparison-0998",
+      "source_sha256": "dfa26563df4b227c77e89403a8237b71676cb987c29073912eec59903cd57a5a",
+      "window_count": 298,
+      "feature_sha256": "489a255a8cf8e3a8b56f45952c7746b8c7242a797b1c36cc6e87dbf83a63057d"
+    },
+    {
+      "sample_id": "bsb-comparison-1019",
+      "source_sha256": "b3050713d6303cde08379b0e45db568a216ca9d8068d2b93eb37c38a3edbe979",
+      "window_count": 313,
+      "feature_sha256": "050cf069e925ed5f617f433d23db6f8dfe57f4883b36e1e94f1bb4c1b86829f0"
+    },
+    {
+      "sample_id": "bsb-comparison-1060",
+      "source_sha256": "73d9d15ebb8d77c65e99783bce1db5641bde7796bd91fb600aa1af9792b5a70b",
+      "window_count": 59,
+      "feature_sha256": "a79a917979760f9c03a2a6ba367192ac3cee668ce1e12947bbff97ea110ea1e6"
+    },
+    {
+      "sample_id": "bsb-comparison-1061",
+      "source_sha256": "816ea09b4234ff60b9008d788028258aeb2e8e26220e8934fc2fe7106d46a3cb",
+      "window_count": 168,
+      "feature_sha256": "63f20f5151b4c677344e1d091f2bf9d4ae8aaa99056edb6daa6aeebe26062448"
+    },
+    {
+      "sample_id": "bsb-comparison-1544",
+      "source_sha256": "7da30563b8fe70d39f57814b89482a98ab4cad6aa03bd05340022c2aef3cb052",
+      "window_count": 27,
+      "feature_sha256": "d10b27a835a5cc157230a902503d3d76deefba5aedcf04168e2d13045017992a"
+    },
+    {
+      "sample_id": "bsb-comparison-1545",
+      "source_sha256": "030d1f0b2986b6e23ec797ec84f244f11769dcdafbc66a09b72f36b95bb4483d",
+      "window_count": 34,
+      "feature_sha256": "81ae60bc4775aa18ef5f5fcfa5b8413b55be742959db7e267b886e44b3faa249"
+    },
+    {
+      "sample_id": "bsb-comparison-1546",
+      "source_sha256": "beb1f27011cdbd0e11b517b4ec2daeedc16b2fcf422a541b79bc4934aadf3392",
+      "window_count": 61,
+      "feature_sha256": "a5bfc63d736c5d7a48bb27b183e72a8d6efb7e119669658b1eff584ce7180123"
+    },
+    {
+      "sample_id": "bsb-comparison-1702",
+      "source_sha256": "96269a66da85b7204bd6435561ef21a682604c1d78f07ae6e07771faba36dd2d",
+      "window_count": 9,
+      "feature_sha256": "10f4c06983b82a3b9679908b406a3c5ebd285698a32ec875560f6fe2c08b1154"
+    },
+    {
+      "sample_id": "bsb-comparison-1703",
+      "source_sha256": "8353b7f494714412bc88e7903175a3eec3a37799d00b3b11326fd2c5c5f34294",
+      "window_count": 8,
+      "feature_sha256": "ecc326ef71688241337e3a03114d2b1710b4b67f20971e61c003d152be322795"
+    },
+    {
+      "sample_id": "bsb-comparison-1704",
+      "source_sha256": "524b8f460f3f81ef89a09089c4999298f9bfb8b91e301c1437e99f598beeae0c",
+      "window_count": 7,
+      "feature_sha256": "f6d964a55007005a3947bfe102715e54a96bf33c7efeec0e84e82abea798f63d"
+    },
+    {
+      "sample_id": "bsb-comparison-1705",
+      "source_sha256": "17ffe18f6eb2984607c240377393204365c0dd46e8478c169b0f9cef260ff392",
+      "window_count": 10,
+      "feature_sha256": "2cf6cb65fec84356270af8ff28433f5f0919c5c558d1fef1f34c497d5aabc24d"
+    },
+    {
+      "sample_id": "bsb-comparison-1706",
+      "source_sha256": "adf93690ec1680538880f4f4b8ac11fc1553b24117b86626a041e6e4c593d5c8",
+      "window_count": 10,
+      "feature_sha256": "ab64ab03aa901e79949f7cc492e24560b212d3df72e2e76f0be3841c57987d4f"
+    },
+    {
+      "sample_id": "bsb-comparison-2373",
+      "source_sha256": "5e309a15a65e579dd5e0c7337c17dbcb3ce36b0658763fa067355800c33c5ddb",
+      "window_count": 1,
+      "feature_sha256": "6d651babd3734583ca381810c17c3aa14a9b2d7f004a124be204a25e01b68e5b"
+    },
+    {
+      "sample_id": "bsb-comparison-2374",
+      "source_sha256": "56efd810ad0293e2722d75df79f4a46db6ebff7fb004d101a163252980865611",
+      "window_count": 1,
+      "feature_sha256": "3f77caa42234c0dc0f27d5d7a769d55a5289261d8c8e532e6d672be38c0cec1f"
+    },
+    {
+      "sample_id": "bsb-comparison-2375",
+      "source_sha256": "a05ef856563fc2f2fad8a7b60b9ecdfefa433e5115d75a180917bdb7a000c844",
+      "window_count": 1,
+      "feature_sha256": "9f849c0da539241179064d38e8aeb92c18421410df0f1a8b941215d540d8f58e"
+    },
+    {
+      "sample_id": "bsb-comparison-2679",
+      "source_sha256": "128d1f724175161635f524b110c580c545875654db402d9aaae4f13a775698bd",
+      "window_count": 68,
+      "feature_sha256": "3da6bb1cea83a4e9dc5e96ecdc476ca29f25e4b153bc891af9c20ce08b24f889"
+    },
+    {
+      "sample_id": "bsb-comparison-2717",
+      "source_sha256": "ad568bd8c1e740c60a9a5c558360916c4f6eda22a960972aa7b56f52079716a0",
+      "window_count": 80,
+      "feature_sha256": "f74592b48ad3112c459d8538b47c7bf57da6f1f0ca3c5bcaf9b989cc86997406"
+    },
+    {
+      "sample_id": "bsb-comparison-2954",
+      "source_sha256": "7887fd0a80aad658b19a836c12e2c1516f709997bfd51653f36a201971705ddc",
+      "window_count": 37,
+      "feature_sha256": "6f361fc9b06e0c90f6df1e9ba96374e702f69bb4528916fcbccbf178f433febe"
+    },
+    {
+      "sample_id": "bsb-comparison-2955",
+      "source_sha256": "d4e478c3812d3f28a5d756851721c968241ffc416b9cee4464400bffe389012f",
+      "window_count": 8,
+      "feature_sha256": "6958ab0a4a50405c2f2a31e7f198c654224e09cb83e945950a85fe207d4f97ab"
+    },
+    {
+      "sample_id": "bsb-comparison-3537",
+      "source_sha256": "c4b4429cb4c050c92dbce207c3313cfa6c28d2095bd1757218ea6cb4ceccea02",
+      "window_count": 62,
+      "feature_sha256": "62b4c6829b2bfe71cc66f9031b6ce82d5452b58706c5de84447d6b3849eba561"
+    },
+    {
+      "sample_id": "commons-1427051",
+      "source_sha256": "f5edb9bb84cb916fad026137703eba4aede998a4754350088da7ff59e4465117",
+      "window_count": 99,
+      "feature_sha256": "a0ddcd3adc700fa6990a8e6e41544bdb30f4e39927e0b6272c3eadaae17b67d6"
+    },
+    {
+      "sample_id": "commons-24001137",
+      "source_sha256": "159a970c1f006cb3463626f541e0f7c356f0a4b3b1b7afd3252965071cc42be7",
+      "window_count": 73,
+      "feature_sha256": "01ddb3fc1879f9709c5410db60a850f68b8352daa23dfe47c1755d757f460a2c"
+    },
+    {
+      "sample_id": "commons-5144512",
+      "source_sha256": "b5b68e742939dc5b493fc4eb3961a1da78076eeac4996d16ae1cb77f5b0455f1",
+      "window_count": 152,
+      "feature_sha256": "d2f4998e0c3d9d22389e80cb31577973bf9162724fc7e71de556bf5dec9b5e2a"
+    },
+    {
+      "sample_id": "commons-5144549",
+      "source_sha256": "cbd455eddcea034bb0b7474842757c38691bb08eb0259f4b7aedfffd94085eaa",
+      "window_count": 151,
+      "feature_sha256": "adbe3b8b40e28faee37b52de81d3f3f36da8e6c9cc78fd8678d4a3318ed9269d"
+    },
+    {
+      "sample_id": "commons-91866268",
+      "source_sha256": "d73b94e272d2bdfb9197269e934fa8a9c685f20249bfa330a11ed0b0d81e4eb2",
+      "window_count": 10,
+      "feature_sha256": "03bf20884946e7ab4ed53cdf890eba42a7f90f9292d028769be26ff7498deda4"
+    }
+  ],
+  "fresh_test_files": 0
+}

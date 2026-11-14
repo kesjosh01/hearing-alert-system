@@ -1,0 +1,891 @@
+{
+  "frozen": {
+    "champion": {
+      "name": "dscnn_comparison_20261114_s7_freq24_seed42",
+      "stage": 7,
+      "factor": "architecture_paired_seed",
+      "parent": "dscnn_comparison_20261114_s6_kd0",
+      "options": {
+        "architecture": "freq24",
+        "pooling_fraction": 0.5,
+        "negative_sampler": "coverage_cycle",
+        "hard_negative_multiplier": 1.0,
+        "domestic_weight": 4.0,
+        "other_mass": 0.3333333333333333,
+        "kd_weight": 0.0,
+        "learning_rate": 0.001,
+        "lr_schedule": "constant",
+        "added_training_data": false,
+        "epochs": 30,
+        "patience": 8,
+        "steps_per_epoch": 30,
+        "batch_size": 30,
+        "microbatch_files": 6,
+        "temperature": 2.0,
+        "max_frequency_mask": 4,
+        "max_time_mask": 10
+      },
+      "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42",
+      "seed": 42,
+      "selected_epoch": 19,
+      "selection": {
+        "classes": {
+          "fire_alarm": {
+            "clips": 9,
+            "correct": 6,
+            "recall": 0.6666666666666666,
+            "groups": 6,
+            "group_correct": 5,
+            "group_recall": 0.8333333333333334
+          },
+          "doorbell": {
+            "clips": 5,
+            "correct": 5,
+            "recall": 1.0,
+            "groups": 4,
+            "group_correct": 4,
+            "group_recall": 1.0
+          },
+          "other": {
+            "clips": 193,
+            "correct": 193,
+            "recall": 1.0,
+            "groups": 146,
+            "group_correct": 146,
+            "group_recall": 1.0
+          }
+        },
+        "target_macro_group_recall": 0.9166666666666667,
+        "domestic_target_macro_group_recall": 1.0,
+        "foreign_negative_clips": 192,
+        "foreign_false_positives": 0,
+        "foreign_fpr": 0.0,
+        "domestic_doorlock_groups": 1,
+        "domestic_doorlock_fp": 0,
+        "guards_passed": true,
+        "loss": 0.18496558891973847,
+        "thresholds": {
+          "fire_alarm": 0.7,
+          "doorbell": 0.55
+        },
+        "count": 207
+      },
+      "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+      "negative_files": 1179,
+      "negative_unique_sampled": 1179,
+      "actual_optimizer_steps": 810
+    },
+    "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "dataset_freeze_sha256": "f9ce5ca05c02683069dc1c6ad2578595162fb5fe19931cedf01502d6add70571",
+    "selected_without_calibration_or_fresh_test": true,
+    "source_disjoint": true,
+    "actual_training_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "actual_hyperparameter_comparisons": 16,
+    "not_full_goal_complete": true
+  },
+  "run": {
+    "spec": {
+      "name": "dscnn_comparison_20261114_s7_freq24_seed42",
+      "options": {
+        "architecture": "freq24",
+        "pooling_fraction": 0.5,
+        "negative_sampler": "coverage_cycle",
+        "hard_negative_multiplier": 1.0,
+        "domestic_weight": 4.0,
+        "other_mass": 0.3333333333333333,
+        "kd_weight": 0.0,
+        "learning_rate": 0.001,
+        "lr_schedule": "constant",
+        "added_training_data": false,
+        "epochs": 30,
+        "patience": 8,
+        "steps_per_epoch": 30,
+        "batch_size": 30,
+        "microbatch_files": 6,
+        "temperature": 2.0,
+        "max_frequency_mask": 4,
+        "max_time_mask": 10
+      },
+      "teacher_run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_teacher_base",
+      "seed": 42,
+      "role": "student"
+    },
+    "options": {
+      "architecture": "freq24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "source_identity": "d77534df65e6eebff297901f40d5ddad45bf74e3de23cec9c8cb2aa6cddb2699",
+    "code_identity": {
+      "comparison/runner.py": "9a0ef3541b7e31dee1b14493d478c868759aeead7cf03766294fc0a3220116c6",
+      "comparison/fallback_sources.py": "1de4f7c66c5a318069941a32d4285dd40585b7a264bece0dcec4d47169a24576",
+      "comparison/exposure.py": "fac749e1ea711850c42e447adc5ee0f96ba39ace996dfd1e0761e2daadc3157b",
+      "comparison/temporal.py": "6740d24ac648a2bb826eca96d76799443c0bdfc0ac5ef1318a0c91d8b8e85c52",
+      "comparison/metrics.py": "e904dc79a325c123449d9189f160dab296355bb84778e5d2e2750b3e4df10601",
+      "comparison/preflight.py": "cfc668424cad0513eae00f04a10764b2f1c10e7eb636d3f4fd40cbfab03ba552",
+      "comparison/review_sources.py": "5cc328db2d7137aaa271ff483954c3b678fd4164a66380454d8d71d536007647",
+      "comparison/features.py": "3d3f6fa1f0651bc1f7986bacf15f763c601981db0e44751211aafe2cda6a2072",
+      "comparison/evaluate.py": "886cfb48efd7a616e2aff250c46f5269f466f9acafdb6c857ee39e3c867c77e9",
+      "comparison/sampling.py": "880542c97323ab7caf0f246ac7ae037f9e761206f60e9a536f6dfcbaef23f370",
+      "comparison/dataset.py": "43faa36ff48177be471ced0f557602b4712a6bdead67bee0b42128121a039179",
+      "comparison/study.py": "9c312222bf580febef753c25e06c05541be53694c1231b7eaa84d58281de8fbf",
+      "comparison/finalize_sources.py": "1fe2f78e0c01ca685d75a2248b3d7f7271031f14368da93601af08cd6d1f98b1",
+      "comparison/replay.py": "f896638498feeee9f77c245d04d041542301e824f02d9190117860de62e43043",
+      "comparison/__init__.py": "d01acb181dedd4c4799ee92410b69f7fabf79a00531fae591bf7be358633a521",
+      "comparison/train.py": "727beb86cc30318a4dc5eff5321a6201091b402d792022c73bd0eea7d0edff17",
+      "comparison/prepare.py": "aeca5c2d930eb8b1f3484d1f6e2fe818d9255be4020c7d07bdcf59f902358434",
+      "comparison/calibration.py": "63bdae0ec1825c9c966b7790569db83710808f6e7343db5bf641f17aad43e95f",
+      "comparison/model.py": "58be41cfdaef23e8d0c5e960a05efd678db97665cbc6e849fbd7254df4754055",
+      "comparison/protocol.py": "78f0da1b15a13989590ca6f69e0d22e2f17c5374f57cb78324c7ff41593732bd",
+      "comparison/collect.py": "7ec1d6ab8483fb991797f00cb336cd83209442f22f6f626142e1a43a8a172b0d",
+      "expansion/runtime.py": "bd24de40ec7552f7d44d2e7cd9304af99d5b06929950d90c6049eb0506b59dac",
+      "expansion/study.py": "08e0088a0cf9153503da6288aafc9abd10822210c2f560dcb88475c1130ed46c",
+      "expansion/__init__.py": "c7d4f3caf87ad82f7aae324ea24de3db2d4f8d16a5be4f68327417db5c2c4477",
+      "expansion/train.py": "5e55e8aed54b6d09dde95335a538c6759246a57bc8fccc66281c48b3efb505b0",
+      "expansion/data.py": "4d008b9f7a8de5ada3288eae4bc886a5d58106eec8a59c23fb162a4c4318386e",
+      "expansion/model.py": "23060d06a5304706b729b3ee00acecd89a0a59a098bfa2740665361ef3b17069",
+      "expansion/protocol.py": "7c0d43f9d8be15a3351da7c120247693573a2159f92a009672586f81008e8311",
+      "improvement/preflight.py": "31fc9b2ce759f9dbadf9d66d34979cdbd844a88cd82b03d3de2cd9295e9826ac",
+      "improvement/policy.py": "29570dffcb24f829755d89d79bd7522512fd7c29b2c0c3d96770c975ef446d2c",
+      "improvement/study.py": "85c43247444bff79d2867db8208070746d8b76885e3c0e4cb50f1cc6c036fbcd",
+      "improvement/__init__.py": "ec71816c6ffbca45d06198d59ce1d93a4d35a06abd3e1b8c6ecb506042218ab0",
+      "improvement/train.py": "d9992cd6a8ddf85d9604eba80e29daf0c8d5f5b2b67cc0f8228c5fa57f131a96",
+      "improvement/teacher.py": "a46a4877f56fd8a7da3b84e9d5b25f32d55e715bf09c30116a1cf888942e9d09",
+      "improvement/model.py": "390e01bba382eb9c9c1e578f8afd0022d3371e6f412832fc015f07f49e25ae10",
+      "improvement/protocol.py": "f6e2387fcb93b006a86525c34ba831d08fe6ccf38f1d0043239fba1a997ddb12",
+      "dscnn_baseline/evaluation.py": "7a9139953e9ef12a96aab36c99e4ef592f26b09b919233c32bfb73a664ccc2c6",
+      "dscnn_baseline/tracking.py": "7e5263f40f8ac5f61f97c3eb7a404d697647d9ca5c380d9c3b2e19c48751af56",
+      "dscnn_baseline/study.py": "7cbbda89ae46b59e5c2ff64dd727c2b21044ee11e35d109916a73f3960a96615",
+      "dscnn_baseline/__main__.py": "62a59f5c884dfcd4fdf5ef12db51c53cf7ff164ed98191ad2847e785f663fd40",
+      "dscnn_baseline/__init__.py": "f7b0c919d80f0c3729dcb329307dc43ea5e5fe7f731c2fa7ca86b25ed88de02f",
+      "dscnn_baseline/training.py": "c04acd228342c8fd1314f5d5da29351602d00aea7672e53a14efed98adabe021",
+      "dscnn_baseline/selfcheck.py": "cfbce26d1a32fdcb2c4e0249ea8dd47c9b87e8d6054878db9876845fcb374f3d",
+      "dscnn_baseline/review.py": "cc15bef032414e687a9355d7cdef97cc35799621e807e29efe70be1231036d8d",
+      "dscnn_baseline/frontend.py": "f386ea2d78fd25a5ece78be5bf47bea64449e4efc1cfad8ee7c61345d267ea6b",
+      "dscnn_baseline/common.py": "182d25f180fdc47e4f625ac1687bef3216e00807296c5a7402a808fe3af40411",
+      "dscnn_baseline/export.py": "4131e2c921e70986f0938300f31ff7f7f65b969578f7daf5f5f263bb54a1ab39",
+      "dscnn_baseline/data.py": "8ea5f568f8d821565e7c95543c76571ed8a7d5d324e6a085fa34959cd46a9767",
+      "dscnn_baseline/model.py": "2a6048f1bf2664dc442482efd5af29affad500adf056243d910c605b2c47e2a5",
+      "dscnn_baseline/weak_labels.py": "24f3a0e48d659971ba3887498cab675c9ca3a31d3d111149d0d7b8d77a042c82",
+      "dscnn_baseline/decisions.py": "3471e806a31e340301c0e2f07631bdd29f024174f20d0eba227f41d0e34ba160"
+    },
+    "supervision": "file-label bags; no reviewed event timestamps",
+    "test_used": false,
+    "calibration_used": false
+  },
+  "status": {
+    "complete": true,
+    "exit_code": 0,
+    "actual_optimizer_steps": 810,
+    "fresh_test_used": false,
+    "calibration_used_for_selection": false,
+    "epoch": 27,
+    "selected_epoch": 19,
+    "elapsed_seconds": 87.6713516280015,
+    "latest_selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.23168952709114293,
+      "thresholds": {
+        "fire_alarm": 0.55,
+        "doorbell": 0.65
+      },
+      "count": 207
+    },
+    "epochs_completed": 27,
+    "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "selected_metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.18496558891973847,
+      "thresholds": {
+        "fire_alarm": 0.7,
+        "doorbell": 0.55
+      },
+      "count": 207
+    },
+    "complexity": {
+      "parameters_including_bn_statistics": 4707,
+      "convolution_and_dense_macs_per_window": 2541600,
+      "largest_single_int8_activation_bytes": 23520,
+      "input_int8_bytes": 3920,
+      "board_tensor_arena_bytes": null,
+      "board_processing_ms": null,
+      "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+    },
+    "all_training_positives_sampled": true,
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179
+  },
+  "selected_checkpoint_exposure": {
+    "selected_epoch": 19,
+    "epochs_executed": 27,
+    "selected_checkpoint": {
+      "fire_alarm": {
+        "total": 36,
+        "sampled": 36,
+        "draws": 5765
+      },
+      "doorbell": {
+        "total": 44,
+        "sampled": 44,
+        "draws": 5706
+      },
+      "other": {
+        "total": 1179,
+        "sampled": 1179,
+        "draws": 5629
+      }
+    },
+    "deterministic_sampling_replay_matches_logged_full_run_exactly": true,
+    "reconstruction_only": true,
+    "model_weights_changed": false,
+    "note": "Full-run exposure includes optimizer steps after the saved checkpoint. This audit explicitly stops at the saved epoch."
+  },
+  "calibration": {
+    "before_float_selection_threshold_transfer": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 10,
+          "correct": 4,
+          "recall": 0.4,
+          "groups": 6,
+          "group_correct": 2,
+          "group_recall": 0.3333333333333333
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 199,
+          "correct": 197,
+          "recall": 0.9899497487437185,
+          "groups": 145,
+          "group_correct": 144,
+          "group_recall": 0.993103448275862
+        }
+      },
+      "target_macro_group_recall": 0.5416666666666666,
+      "domestic_target_macro_group_recall": 0.3333333333333333,
+      "foreign_negative_clips": 198,
+      "foreign_false_positives": 2,
+      "foreign_fpr": 0.010101010101010102,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.1700433618028859,
+      "thresholds": {
+        "fire_alarm": 0.7,
+        "doorbell": 0.55
+      },
+      "count": 213
+    },
+    "after_float_calibration": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 10,
+          "correct": 5,
+          "recall": 0.5,
+          "groups": 6,
+          "group_correct": 4,
+          "group_recall": 0.6666666666666666
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 199,
+          "correct": 195,
+          "recall": 0.9798994974874372,
+          "groups": 145,
+          "group_correct": 142,
+          "group_recall": 0.9793103448275862
+        }
+      },
+      "target_macro_group_recall": 0.7083333333333333,
+      "domestic_target_macro_group_recall": 0.5833333333333333,
+      "foreign_negative_clips": 198,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.020202020202020204,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.1700433618028859,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 213
+    },
+    "after_int8_calibration": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 10,
+          "correct": 5,
+          "recall": 0.5,
+          "groups": 6,
+          "group_correct": 4,
+          "group_recall": 0.6666666666666666
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 199,
+          "correct": 195,
+          "recall": 0.9798994974874372,
+          "groups": 145,
+          "group_correct": 142,
+          "group_recall": 0.9793103448275862
+        }
+      },
+      "target_macro_group_recall": 0.7083333333333333,
+      "domestic_target_macro_group_recall": 0.5833333333333333,
+      "foreign_negative_clips": 198,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.020202020202020204,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.174266284644677,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.6
+      },
+      "count": 213
+    },
+    "float_thresholds": {
+      "fire_alarm": 0.0,
+      "doorbell": 0.55
+    },
+    "int8_thresholds": {
+      "fire_alarm": 0.0,
+      "doorbell": 0.6
+    },
+    "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "int8_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+    "model_settings_frozen_before_calibration": true,
+    "calibration_used_to_rank_models": false,
+    "fresh_test_used": false,
+    "quantization_representative_role": "train",
+    "decision_calibration_role": "calibration",
+    "calibration_groups": 155,
+    "export": {
+      "input": {
+        "shape": [
+          1,
+          98,
+          40,
+          1
+        ],
+        "dtype": "int8",
+        "scale": 0.0922469049692154,
+        "zero_point": 22
+      },
+      "output": {
+        "shape": [
+          1,
+          3
+        ],
+        "dtype": "int8",
+        "scale": 0.00390625,
+        "zero_point": -128
+      },
+      "operators": [
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "CONV_2D",
+        "AVERAGE_POOL_2D",
+        "RESHAPE",
+        "FULLY_CONNECTED",
+        "SOFTMAX"
+      ],
+      "operator_set": [
+        "AVERAGE_POOL_2D",
+        "CONV_2D",
+        "DEPTHWISE_CONV_2D",
+        "FULLY_CONNECTED",
+        "RESHAPE",
+        "SOFTMAX"
+      ],
+      "all_tensor_types": [
+        "int32",
+        "int8"
+      ],
+      "board_tflm_allocate_tensors_verified": false,
+      "model_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+      "model_bytes": 15600,
+      "labels": {
+        "fire_alarm": 0,
+        "doorbell": 1,
+        "other": 2
+      },
+      "frontend": {
+        "sample_rate": 16000,
+        "window_samples": 16000,
+        "window_hop_samples": 8000,
+        "frame_samples": 400,
+        "frame_hop_samples": 160,
+        "fft_size": 512,
+        "mel_bins": 40,
+        "lower_hz": 80.0,
+        "upper_hz": 7600.0,
+        "log_floor": 1e-06,
+        "frame_window": "periodic_hann",
+        "mel_scale": "htk_unnormalized_triangles",
+        "spectrum": "unnormalized_rfft_power",
+        "fft_arithmetic": "float32_radix2",
+        "amplitude": "pcm16_divide_32768_no_peak_normalization",
+        "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+      },
+      "frontend_sha256": "b0cfbccaf11745e46aa07d6b6451ec94d1dc3230faa4de12979ea0416ecc640d",
+      "pipeline_only": false,
+      "deployment_ready": false,
+      "calibration_windows": 300,
+      "calibration_role": "train",
+      "calibration_sha256": "0a1aabd42d94b8355402567920e727d12206f7168f1187c54bea3d5194438596"
+    }
+  },
+  "temporal_selection": {
+    "ledger": [
+      {
+        "factor": "baseline",
+        "policy": {
+          "vote_rule": "single",
+          "release_ratio": 1.0,
+          "cooldown_s": 0.0
+        },
+        "thresholds": [
+          0.975,
+          0.95
+        ],
+        "selection": {
+          "target_macro_group_recall": 0.7916666666666667,
+          "domestic_target_macro_group_recall": 0.8333333333333333,
+          "classes": {
+            "fire_alarm": {
+              "clips": 9,
+              "correctly_alerted_files": 6,
+              "source_groups": 6,
+              "source_macro_file_recall": 0.8333333333333334,
+              "median_seconds_from_file_start": 1.0,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            },
+            "doorbell": {
+              "clips": 5,
+              "correctly_alerted_files": 4,
+              "source_groups": 4,
+              "source_macro_file_recall": 0.75,
+              "median_seconds_from_file_start": 2.4498125,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            }
+          },
+          "foreign_negative_clips": 192,
+          "foreign_false_positive_files": 1,
+          "foreign_fpr": 0.005208333333333333,
+          "domestic_doorlock_fp": 0,
+          "guards_passed": true,
+          "negative_audio_seconds": 960.0,
+          "negative_notifications": 1,
+          "negative_notifications_per_hour": 3.75,
+          "positive_files_with_wrong_class_alert": 2,
+          "policy": {
+            "vote_rule": "single",
+            "release_ratio": 1.0,
+            "cooldown_s": 0.0
+          },
+          "thresholds": {
+            "fire_alarm": 0.975,
+            "doorbell": 0.95
+          },
+          "event_onset_ground_truth_available": false,
+          "per_event_recall_not_measured": true,
+          "recording_boundary_resets": true
+        },
+        "adopted": true
+      },
+      {
+        "factor": "vote_rule",
+        "policy": {
+          "vote_rule": "two_of_three",
+          "release_ratio": 1.0,
+          "cooldown_s": 0.0
+        },
+        "thresholds": [
+          0.85,
+          0.95
+        ],
+        "selection": {
+          "target_macro_group_recall": 0.6041666666666667,
+          "domestic_target_macro_group_recall": 0.6666666666666666,
+          "classes": {
+            "fire_alarm": {
+              "clips": 9,
+              "correctly_alerted_files": 6,
+              "source_groups": 6,
+              "source_macro_file_recall": 0.8333333333333334,
+              "median_seconds_from_file_start": 1.5,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            },
+            "doorbell": {
+              "clips": 5,
+              "correctly_alerted_files": 2,
+              "source_groups": 4,
+              "source_macro_file_recall": 0.375,
+              "median_seconds_from_file_start": 2.0,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            }
+          },
+          "foreign_negative_clips": 192,
+          "foreign_false_positive_files": 1,
+          "foreign_fpr": 0.005208333333333333,
+          "domestic_doorlock_fp": 0,
+          "guards_passed": true,
+          "negative_audio_seconds": 960.0,
+          "negative_notifications": 1,
+          "negative_notifications_per_hour": 3.75,
+          "positive_files_with_wrong_class_alert": 2,
+          "policy": {
+            "vote_rule": "two_of_three",
+            "release_ratio": 1.0,
+            "cooldown_s": 0.0
+          },
+          "thresholds": {
+            "fire_alarm": 0.85,
+            "doorbell": 0.95
+          },
+          "event_onset_ground_truth_available": false,
+          "per_event_recall_not_measured": true,
+          "recording_boundary_resets": true
+        },
+        "adopted": false,
+        "added_delay_at_same_thresholds": {
+          "matched_positive_files": 8,
+          "median_additional_seconds": 0.5,
+          "max_additional_seconds": 0.5,
+          "lost_positive_files": 2,
+          "gained_positive_files": 0,
+          "baseline": "Single-window notifications at exactly the same thresholds; no true onset assumptions"
+        }
+      },
+      {
+        "factor": "release_ratio",
+        "policy": {
+          "vote_rule": "single",
+          "release_ratio": 0.8,
+          "cooldown_s": 0.0
+        },
+        "thresholds": [
+          0.975,
+          0.95
+        ],
+        "selection": {
+          "target_macro_group_recall": 0.7916666666666667,
+          "domestic_target_macro_group_recall": 0.8333333333333333,
+          "classes": {
+            "fire_alarm": {
+              "clips": 9,
+              "correctly_alerted_files": 6,
+              "source_groups": 6,
+              "source_macro_file_recall": 0.8333333333333334,
+              "median_seconds_from_file_start": 1.0,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            },
+            "doorbell": {
+              "clips": 5,
+              "correctly_alerted_files": 4,
+              "source_groups": 4,
+              "source_macro_file_recall": 0.75,
+              "median_seconds_from_file_start": 2.4498125,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            }
+          },
+          "foreign_negative_clips": 192,
+          "foreign_false_positive_files": 1,
+          "foreign_fpr": 0.005208333333333333,
+          "domestic_doorlock_fp": 0,
+          "guards_passed": true,
+          "negative_audio_seconds": 960.0,
+          "negative_notifications": 1,
+          "negative_notifications_per_hour": 3.75,
+          "positive_files_with_wrong_class_alert": 2,
+          "policy": {
+            "vote_rule": "single",
+            "release_ratio": 0.8,
+            "cooldown_s": 0.0
+          },
+          "thresholds": {
+            "fire_alarm": 0.975,
+            "doorbell": 0.95
+          },
+          "event_onset_ground_truth_available": false,
+          "per_event_recall_not_measured": true,
+          "recording_boundary_resets": true
+        },
+        "adopted": false,
+        "added_delay_at_same_thresholds": {
+          "matched_positive_files": 10,
+          "median_additional_seconds": 0.0,
+          "max_additional_seconds": 0.0,
+          "lost_positive_files": 0,
+          "gained_positive_files": 0,
+          "baseline": "Single-window notifications at exactly the same thresholds; no true onset assumptions"
+        }
+      },
+      {
+        "factor": "cooldown_s",
+        "policy": {
+          "vote_rule": "single",
+          "release_ratio": 1.0,
+          "cooldown_s": 2.0
+        },
+        "thresholds": [
+          0.975,
+          0.95
+        ],
+        "selection": {
+          "target_macro_group_recall": 0.7916666666666667,
+          "domestic_target_macro_group_recall": 0.8333333333333333,
+          "classes": {
+            "fire_alarm": {
+              "clips": 9,
+              "correctly_alerted_files": 6,
+              "source_groups": 6,
+              "source_macro_file_recall": 0.8333333333333334,
+              "median_seconds_from_file_start": 1.0,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            },
+            "doorbell": {
+              "clips": 5,
+              "correctly_alerted_files": 4,
+              "source_groups": 4,
+              "source_macro_file_recall": 0.75,
+              "median_seconds_from_file_start": 2.4498125,
+              "latency_basis": "Actual frontend window end (including end-aligned final window) from file start; short files right-zero-pad to1sec; acoustic onset not annotated"
+            }
+          },
+          "foreign_negative_clips": 192,
+          "foreign_false_positive_files": 1,
+          "foreign_fpr": 0.005208333333333333,
+          "domestic_doorlock_fp": 0,
+          "guards_passed": true,
+          "negative_audio_seconds": 960.0,
+          "negative_notifications": 1,
+          "negative_notifications_per_hour": 3.75,
+          "positive_files_with_wrong_class_alert": 2,
+          "policy": {
+            "vote_rule": "single",
+            "release_ratio": 1.0,
+            "cooldown_s": 2.0
+          },
+          "thresholds": {
+            "fire_alarm": 0.975,
+            "doorbell": 0.95
+          },
+          "event_onset_ground_truth_available": false,
+          "per_event_recall_not_measured": true,
+          "recording_boundary_resets": true
+        },
+        "adopted": false,
+        "added_delay_at_same_thresholds": {
+          "matched_positive_files": 10,
+          "median_additional_seconds": 0.0,
+          "max_additional_seconds": 0.0,
+          "lost_positive_files": 0,
+          "gained_positive_files": 0,
+          "baseline": "Single-window notifications at exactly the same thresholds; no true onset assumptions"
+        }
+      }
+    ],
+    "chosen_policy": {
+      "vote_rule": "single",
+      "release_ratio": 1.0,
+      "cooldown_s": 0.0
+    },
+    "selection_only": true,
+    "calibration_or_test_used_to_select": false
+  },
+  "evaluation": {
+    "complete": true,
+    "models": 5,
+    "fresh_test_clips": 79,
+    "historical_clips": 403,
+    "excluded_historical_sirens": [
+      "ESC50-5-117118-A-42",
+      "ESC50-5-117120-A-42",
+      "ESC50-5-117122-A-42",
+      "ESC50-5-133989-A-42",
+      "ESC50-5-133989-B-42",
+      "ESC50-5-150409-A-42",
+      "ESC50-5-160551-A-42",
+      "ESC50-5-184323-A-42"
+    ],
+    "no_test_driven_reselection": true,
+    "observed_new_test_fpr_le_5_percent": false,
+    "fresh_target_recall_not_lower": true,
+    "fresh_fpr_not_higher": true,
+    "actual_event_onset_latency_unverified": true,
+    "real_microphone_or_board_runs": 0,
+    "field_deployment_ready": false,
+    "fresh_test_independence_basis": "Publisher recording identities + related-source families + exact source and PCM checks; physical device/country/full excerpt reuse not certified"
+  },
+  "source_freeze": {
+    "counts": {
+      "train": {
+        "fire_alarm": {
+          "clips": 4,
+          "groups": 3
+        },
+        "doorbell": {
+          "clips": 3,
+          "groups": 1
+        },
+        "other": {
+          "clips": 31,
+          "groups": 8
+        }
+      },
+      "fresh_test": {
+        "fire_alarm": {
+          "clips": 4,
+          "groups": 4
+        },
+        "doorbell": {
+          "clips": 8,
+          "groups": 3
+        },
+        "other": {
+          "clips": 67,
+          "groups": 10
+        }
+      }
+    },
+    "files": {
+      "development.csv": "d77534df65e6eebff297901f40d5ddad45bf74e3de23cec9c8cb2aa6cddb2699",
+      "new_training.csv": "1c7bf1d7cbbaf71fc717bb4f38dd45dd77e52205d76383426b0a9f288e4c09bd",
+      "fresh_test.csv": "7c841423e19d83b5bfcbb9e018498d5ecb8567bc023308d2156b018713ceff90"
+    },
+    "sources_sha256": "dd6bf0d3c037ae439e0e3677e2d1b2a1333a978bf43af216ba1a73ad6eae6c0a",
+    "source_overlap_checks": {
+      "recording_id": true,
+      "exact_bytes": true,
+      "exact_decoded_pcm": true,
+      "creator_or_device_series_roles": true
+    },
+    "excluded": [],
+    "new_test_model_inferences": 0,
+    "no_model_scores_used_for_inclusion": true,
+    "foundation_pretraining_exposure_unknown": true,
+    "physical_device_country_verified": false,
+    "human_listening_verified": false,
+    "independence_limit": "New publisher recording identities and conservative related-source groups; all physical device/session reuse or edited excerpts cannot be certified from public metadata."
+  },
+  "code_git_head": "1c6e164d4efcbb0145a9ed058bf626c4505ea187",
+  "local_changes_not_committed_or_pushed": true
+}

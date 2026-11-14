@@ -1,0 +1,18 @@
+{
+  "sample_rate": 16000,
+  "window_samples": 16000,
+  "window_hop_samples": 8000,
+  "frame_samples": 400,
+  "frame_hop_samples": 160,
+  "fft_size": 512,
+  "mel_bins": 40,
+  "lower_hz": 80.0,
+  "upper_hz": 7600.0,
+  "log_floor": 1e-06,
+  "frame_window": "periodic_hann",
+  "mel_scale": "htk_unnormalized_triangles",
+  "spectrum": "unnormalized_rfft_power",
+  "fft_arithmetic": "float32_radix2",
+  "amplitude": "pcm16_divide_32768_no_peak_normalization",
+  "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+}

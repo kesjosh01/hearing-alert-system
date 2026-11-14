@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "completed_folds": 12,
+  "folds": [
+    {
+      "weight": 1,
+      "fold": 0,
+      "passed": true,
+      "epochs_completed": 24,
+      "selected_epoch": 16,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 1,
+      "fold": 1,
+      "passed": true,
+      "epochs_completed": 28,
+      "selected_epoch": 20,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 1,
+      "fold": 2,
+      "passed": true,
+      "epochs_completed": 19,
+      "selected_epoch": 11,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 1,
+      "fold": 3,
+      "passed": true,
+      "epochs_completed": 30,
+      "selected_epoch": 30,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 2,
+      "fold": 0,
+      "passed": true,
+      "epochs_completed": 24,
+      "selected_epoch": 16,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 2,
+      "fold": 1,
+      "passed": true,
+      "epochs_completed": 20,
+      "selected_epoch": 12,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 2,
+      "fold": 2,
+      "passed": true,
+      "epochs_completed": 21,
+      "selected_epoch": 13,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 2,
+      "fold": 3,
+      "passed": true,
+      "epochs_completed": 30,
+      "selected_epoch": 29,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 4,
+      "fold": 0,
+      "passed": true,
+      "epochs_completed": 16,
+      "selected_epoch": 8,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 4,
+      "fold": 1,
+      "passed": true,
+      "epochs_completed": 30,
+      "selected_epoch": 27,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 4,
+      "fold": 2,
+      "passed": true,
+      "epochs_completed": 25,
+      "selected_epoch": 17,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    },
+    {
+      "weight": 4,
+      "fold": 3,
+      "passed": true,
+      "epochs_completed": 22,
+      "selected_epoch": 14,
+      "validation_guards_passed": true,
+      "overseas_validation_clips": 398,
+      "no_fixed_test_samples": true,
+      "gpu_execution_verified": true
+    }
+  ],
+  "domestic_oof_unique_clips_per_weight": 34,
+  "domestic_oof_unique_groups_per_weight": 34,
+  "shared_overseas_validation_unique_clips": 398,
+  "shared_overseas_validation_not_pooled": true,
+  "sequential_weight_order": [
+    1,
+    2,
+    4
+  ],
+  "all_worker_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "prior_gpu_validation_evidence_unchanged": true,
+  "numeric_metrics_recomputed_from_saved_probabilities": true,
+  "fixed_test_embeddings": 0,
+  "test_evaluated": false,
+  "refit_executed": false,
+  "tensorflow_imported": false,
+  "checkpoint_sha256": {
+    "runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_0/classifier.keras": "be975c7162c4f61a8b1a72ab875a0445758d292d1db30781056478dd0581d764",
+    "runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_1/classifier.keras": "0dc76516674427867d5b5adb0643bd47c0f00fd30c56fb83197b54938300fa56",
+    "runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_2/classifier.keras": "bad2f553298f941316e8c2f87c31d4010aa741364092145a82d2c9b3dd5b2ceb",
+    "runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_3/classifier.keras": "11de7d393903f8ecd233550b950b5b0e0fb4895f0e4502401050299534cd4186",
+    "runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_0/classifier.keras": "eab114cd7942d075a2d8d65daa2fde38e3925b03803e64732da9c1e9ca40ff2e",
+    "runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_1/classifier.keras": "fe9d41c7ed46317b8e8bd8eadbd0ea11d5e194364669d1b9779b3909843d7134",
+    "runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_2/classifier.keras": "93c4076af74b4bf7b59454e6dee4e85ca6b87b1d36b1837bdb3c71bf7b0468b1",
+    "runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_3/classifier.keras": "1f9cb17b131f89976f124f0e310d19c9edf6939e8f42370c269f8c0ece17a865",
+    "runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_0/classifier.keras": "7913c70d04135e098de40f50e875f9b63f8836388b1cdb97915bd93e3c4a76be",
+    "runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_1/classifier.keras": "28adae757c5e0317f000887375072185ac4195a41dab8f773cf7f6b0c1501231",
+    "runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_2/classifier.keras": "523fdcaf8ed398614a0180b33ce2308ad56954569e91619020a0a43fd2d6e53d",
+    "runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_3/classifier.keras": "58a7b5d43a8eeab35356b9e8e89bb2bf04be8a1da96682c65bc1a7cf95f85b8d"
+  }
+}

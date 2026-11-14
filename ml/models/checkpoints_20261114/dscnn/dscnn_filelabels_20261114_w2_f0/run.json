@@ -1,0 +1,149 @@
+{
+  "config": {
+    "version": "dscnn-logmel-v1",
+    "labels": {
+      "fire_alarm": 0,
+      "doorbell": 1,
+      "other": 2
+    },
+    "protocol_version": "ko-source-cv4-20261108-v1",
+    "development_extension_path": "data/domestic_extension_20261114.json",
+    "frontend": {
+      "sample_rate": 16000,
+      "window_samples": 16000,
+      "window_hop_samples": 8000,
+      "frame_samples": 400,
+      "frame_hop_samples": 160,
+      "fft_size": 512,
+      "mel_bins": 40,
+      "lower_hz": 80.0,
+      "upper_hz": 7600.0,
+      "log_floor": 1e-06,
+      "frame_window": "periodic_hann",
+      "mel_scale": "htk_unnormalized_triangles",
+      "spectrum": "unnormalized_rfft_power",
+      "fft_arithmetic": "float32_radix2",
+      "amplitude": "pcm16_divide_32768_no_peak_normalization",
+      "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+    },
+    "model": {
+      "channels": 24,
+      "depthwise_blocks": 3
+    },
+    "training": {
+      "seed": 42,
+      "domestic_weight": 1,
+      "epochs": 30,
+      "patience": 8,
+      "batch_size": 30,
+      "steps_per_epoch": 30,
+      "learning_rate": 0.001,
+      "minimum_event_coverage": 0.8,
+      "file_label_microbatch_files": 6,
+      "file_label_loss": "cross_entropy_of_all_window_mean_softmax_per_file",
+      "file_label_within_group_sampling": "uniform_file_then_all_valid_windows",
+      "file_label_window_labels_assigned": false,
+      "augmentation": "none",
+      "validation_aggregation": "all_windows_mean_probability_then_equal_clip_mean_per_source"
+    },
+    "readiness": {
+      "event_annotations_available": false,
+      "microphone_validation_available": false,
+      "board_ram_and_latency_budget_available": false,
+      "deployment_ready": false
+    }
+  },
+  "options": {
+    "seed": 42,
+    "domestic_weight": 2,
+    "epochs": 30,
+    "patience": 8,
+    "batch_size": 30,
+    "steps_per_epoch": 30,
+    "learning_rate": 0.001,
+    "minimum_event_coverage": 0.8,
+    "file_label_microbatch_files": 6,
+    "file_label_loss": "cross_entropy_of_all_window_mean_softmax_per_file",
+    "file_label_within_group_sampling": "uniform_file_then_all_valid_windows",
+    "file_label_window_labels_assigned": false,
+    "augmentation": "none",
+    "validation_aggregation": "all_windows_mean_probability_then_equal_clip_mean_per_source"
+  },
+  "protocol_version": "ko-source-cv4-20261108-v1",
+  "split_sha256": "d807ea8d8248c7002f5d87f325ea193ce862c465d3bee3226e206a353751b485",
+  "development_identity": {
+    "parent_protocol": "ko-source-cv4-20261108-v1",
+    "effective_fold_fingerprints": [
+      "7d843ebce67123b512641ce03c0a0e6a85bf0e1309cd095db2a62dcdf3465409",
+      "8bc347cc7ba51b42e995e213b9c485214b37822c64da6c9c990ea18d4823ea90",
+      "bb283505ed7fac721c19aa0c87027138d808006f2e21dcc5721090225a551a96",
+      "22929dec9de9532bb8cbda057ecf698752432404450721255881caa3c22270c0"
+    ],
+    "extension_version": "ko-source-cv4-20261114-dscnn-v2",
+    "extension_sha256": "31f63fd509bbb01b5adadfe7a45ca1c1474851d5222821a217b6d9adaaf72e9b"
+  },
+  "annotations_sha256": null,
+  "annotations": null,
+  "supervision": {
+    "mode": "file_labels",
+    "approval_sha256": "463627e685b038b38fab3c54fba3c7a7a29841997c6fe8e848d151e439345e04",
+    "window_labels_assigned": false,
+    "event_intervals_used": false,
+    "training_loss": "cross_entropy_of_all_window_mean_softmax_per_file",
+    "within_group_sampling": "uniform_file_then_all_valid_windows",
+    "microbatch_files": 6
+  },
+  "kind": "dscnn_development",
+  "refit_source": null,
+  "code_sha256": {
+    "evaluation.py": "f21646dfa241537c6c6400540ab46928d463e934d9582a63198e0d92e4aa2fca",
+    "tracking.py": "7e5263f40f8ac5f61f97c3eb7a404d697647d9ca5c380d9c3b2e19c48751af56",
+    "study.py": "ebb73c912d8240810b153e3bd6cc61abee1c1bea609fa4dbbfc197fadd164b0d",
+    "__main__.py": "62a59f5c884dfcd4fdf5ef12db51c53cf7ff164ed98191ad2847e785f663fd40",
+    "__init__.py": "f7b0c919d80f0c3729dcb329307dc43ea5e5fe7f731c2fa7ca86b25ed88de02f",
+    "training.py": "90e60c1c1ece5388380df5ef59d3ef1082903107d47e12de854cb5f113c166c4",
+    "selfcheck.py": "cfbce26d1a32fdcb2c4e0249ea8dd47c9b87e8d6054878db9876845fcb374f3d",
+    "review.py": "cc15bef032414e687a9355d7cdef97cc35799621e807e29efe70be1231036d8d",
+    "frontend.py": "f386ea2d78fd25a5ece78be5bf47bea64449e4efc1cfad8ee7c61345d267ea6b",
+    "common.py": "182d25f180fdc47e4f625ac1687bef3216e00807296c5a7402a808fe3af40411",
+    "export.py": "4131e2c921e70986f0938300f31ff7f7f65b969578f7daf5f5f263bb54a1ab39",
+    "data.py": "8ea5f568f8d821565e7c95543c76571ed8a7d5d324e6a085fa34959cd46a9767",
+    "model.py": "2a6048f1bf2664dc442482efd5af29affad500adf056243d910c605b2c47e2a5",
+    "weak_labels.py": "24f3a0e48d659971ba3887498cab675c9ca3a31d3d111149d0d7b8d77a042c82"
+  },
+  "command": [
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/bin/python",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/dscnn_baseline/__main__.py",
+    "train",
+    "--supervision",
+    "file_labels",
+    "--file-label-approval",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/data/file_label_approval_20261114.json",
+    "--fold",
+    "0",
+    "--run-name",
+    "dscnn_filelabels_20261114_w2_f0",
+    "--device",
+    "gpu",
+    "--domestic-weight",
+    "2",
+    "--wandb-mode",
+    "disabled",
+    "--skip-export"
+  ],
+  "complexity": {
+    "parameters_including_bn_statistics": 3339,
+    "convolution_and_dense_macs_per_window": 2540232,
+    "largest_single_int8_activation_bytes": 23520,
+    "input_int8_bytes": 3920,
+    "board_tensor_arena_bytes": null,
+    "board_processing_ms": null,
+    "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+  },
+  "validation_guards": {
+    "max_overseas_other_clip_fpr": 0.05,
+    "max_domestic_doorlock_false_positive_groups": 0,
+    "note": "Provisional checkpoint-selection limits, not validated product requirements."
+  },
+  "note": "No fixed test or board access. Refit epoch is fixed before training; validation cannot change it."
+}

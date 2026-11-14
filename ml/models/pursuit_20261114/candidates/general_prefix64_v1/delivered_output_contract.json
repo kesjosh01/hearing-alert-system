@@ -1,0 +1,58 @@
+{
+  "class_order": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "output_kind": "probability",
+  "output_scale": 0.00390625,
+  "output_zero_point": -128,
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "cuts_integer_units": [
+    238,
+    252
+  ],
+  "output_semantics": "Quantized softmax probabilities",
+  "score_semantics": "Argmax gated unsigned probability",
+  "target_argmax_required": true,
+  "threshold_comparison": "score>=cut and score>0",
+  "tie_break": "First maximum, matching numpy.argmax",
+  "input_shape": [
+    1,
+    96,
+    64,
+    1
+  ],
+  "frontend": {
+    "sample_rate": 16000,
+    "sample_count": 15600,
+    "frame_length": 400,
+    "frame_step": 160,
+    "fft_length": 512,
+    "hann_periodic": true,
+    "spectrum": "magnitude",
+    "mel_bins": 64,
+    "mel_lower_hz": 125.0,
+    "mel_upper_hz": 7500.0,
+    "log_offset": 0.001,
+    "shape": [
+      96,
+      64,
+      1
+    ],
+    "waveform_scale": 32768.0,
+    "window_start_grid": "existing 1-second/0.5-second-hop, final end-aligned"
+  },
+  "existing_98x40_firmware_compatible": false,
+  "actual_notification_controller_tested": false,
+  "board_validated": false
+}

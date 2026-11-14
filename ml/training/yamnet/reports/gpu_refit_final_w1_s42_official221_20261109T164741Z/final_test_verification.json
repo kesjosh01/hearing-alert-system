@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "test_clips": 411,
+  "test_groups": 319,
+  "domestic_test_groups": 9,
+  "metrics_recomputed_from_saved_probabilities": true,
+  "no_test_samples_in_refit_or_model_selection": true,
+  "settings_frozen_before_test_features": true,
+  "classifier_hash_unchanged_during_test": true,
+  "test_evaluation_invocations": 1,
+  "test_based_retuning": false,
+  "refit_executions": 1,
+  "final_optimizer_count": 0,
+  "classifier_sha256": "70b9da2319abecf27fb55ef748ca3e65ceb2dcb21207eb9e32f3bb9f446982b2"
+}

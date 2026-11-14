@@ -1,0 +1,26 @@
+{
+  "version": "foreign-negative-evaluation-user-v2-20261114",
+  "created_at": "2026-11-13T20:14:36.969909+00:00",
+  "authorization": "User requests excluding overseas doorbell/fire alarm/siren audio from foreign-other FPR.",
+  "metric": "FP on eligible foreign negative clips / all eligible foreign negative clips",
+  "excluded_source_categories": [
+    "doorbell",
+    "fire_alarm",
+    "siren"
+  ],
+  "observed_excluded_categories": [
+    "siren"
+  ],
+  "eligibility_uses_predictions": false,
+  "all_category_members_excluded": true,
+  "source_inventory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/data/metadata/esc50_manifest.csv",
+  "source_category_field": "notes: Original category=...",
+  "scope": "Saved historical predictions and frozen development validation policies; no reselection",
+  "domestic_targets_and_doorlock_metrics_unchanged": true,
+  "raw_labels_and_original_metrics_unchanged": true,
+  "siren_subtype_not_inferred": true,
+  "alarm_clock_church_bell_door_knock_remain_negatives": true,
+  "new_training_executions": 0,
+  "new_model_inference_executions": 0,
+  "threshold_recalibrations": 0
+}

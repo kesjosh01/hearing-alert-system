@@ -1,0 +1,65 @@
+{
+  "input": {
+    "shape": [
+      1,
+      98,
+      40,
+      1
+    ],
+    "dtype": "int8",
+    "scale": 0.09342911839485168,
+    "zero_point": 20
+  },
+  "output": {
+    "shape": [
+      1,
+      3
+    ],
+    "dtype": "int8",
+    "scale": 0.00390625,
+    "zero_point": -128
+  },
+  "operator_set": [
+    "AVERAGE_POOL_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "RESHAPE",
+    "SOFTMAX"
+  ],
+  "labels": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "model_sha256": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd",
+  "model_bytes": 88280,
+  "frontend": {
+    "sample_rate": 16000,
+    "window_samples": 16000,
+    "window_hop_samples": 8000,
+    "frame_samples": 400,
+    "frame_hop_samples": 160,
+    "fft_size": 512,
+    "mel_bins": 40,
+    "lower_hz": 80.0,
+    "upper_hz": 7600.0,
+    "log_floor": 1e-06,
+    "frame_window": "periodic_hann",
+    "mel_scale": "htk_unnormalized_triangles",
+    "spectrum": "unnormalized_rfft_power",
+    "fft_arithmetic": "float32_radix2",
+    "amplitude": "pcm16_divide_32768_no_peak_normalization",
+    "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+  },
+  "output_semantics": "probability",
+  "export_logit_temperature": 4.0,
+  "export_transformation": "Divide only final Dense weights/bias by positive temperature; source checkpoint unchanged",
+  "representative_role": "train",
+  "representative_windows": 3795,
+  "pipeline_only": false,
+  "deployment_ready": false,
+  "board_validated": false,
+  "actual_product_targets_verified": false,
+  "frontend_sha256": "b0cfbccaf11745e46aa07d6b6451ec94d1dc3230faa4de12979ea0416ecc640d"
+}

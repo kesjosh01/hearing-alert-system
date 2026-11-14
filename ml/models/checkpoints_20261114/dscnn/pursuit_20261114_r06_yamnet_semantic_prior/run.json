@@ -1,0 +1,58 @@
+{
+  "specification_sha256": "c5b0c0ce3be6902477615fe6ca5e4437b3bb29066946166c47f59bfe20ff8b11",
+  "dataset_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "class_groups": [
+    [
+      {
+        "index": "317",
+        "mid": "/m/04qvtq",
+        "display_name": "Police car (siren)"
+      },
+      {
+        "index": "318",
+        "mid": "/m/012n7d",
+        "display_name": "Ambulance (siren)"
+      },
+      {
+        "index": "319",
+        "mid": "/m/012ndj",
+        "display_name": "Fire engine, fire truck (siren)"
+      },
+      {
+        "index": "390",
+        "mid": "/m/03kmc9",
+        "display_name": "Siren"
+      },
+      {
+        "index": "391",
+        "mid": "/m/0dgbq",
+        "display_name": "Civil defense siren"
+      },
+      {
+        "index": "393",
+        "mid": "/m/01y3hg",
+        "display_name": "Smoke detector, smoke alarm"
+      },
+      {
+        "index": "394",
+        "mid": "/m/0c3f7m",
+        "display_name": "Fire alarm"
+      }
+    ],
+    [
+      {
+        "index": "349",
+        "mid": "/m/03wwcy",
+        "display_name": "Doorbell"
+      },
+      {
+        "index": "350",
+        "mid": "/m/07r67yg",
+        "display_name": "Ding-dong"
+      }
+    ]
+  ],
+  "parameters": 3227594,
+  "source_weights_modified": false,
+  "actual_optimizer_steps": 0
+}

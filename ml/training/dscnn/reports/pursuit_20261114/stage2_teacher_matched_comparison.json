@@ -1,0 +1,285 @@
+{
+  "complete": true,
+  "selection_only": true,
+  "common_selection_files": 978,
+  "study_plan_sha256": "faacf198a55850bc417ecfd221dc6210d2685b317d3cfe4120621e6a7454526a",
+  "baseline_model": "pursuit_20261114_r04_prefix64_pretrained",
+  "baseline_model_sha256": "99470e770ef338fb98879c8c40c885c1706e10c69f5b0a9a5135f343f3d54884",
+  "baseline_previous_best_readout": {
+    "mode": "probability",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      0.9999751499166051,
+      0.9999837804894876
+    ],
+    "fire_recall": 0.4848484848484848,
+    "doorbell_recall": 0.3870967741935484,
+    "macro_recall": 0.43597262952101656,
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 7,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.4848484848484848,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 15,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.3870967741935484,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 925,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "baseline_same_margin_readout": {
+    "mode": "margin",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      10.72437119483948,
+      11.325016736984255
+    ],
+    "fire_recall": 0.4848484848484848,
+    "doorbell_recall": 0.3870967741935484,
+    "macro_recall": 0.43597262952101656,
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 7,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.4848484848484848,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 15,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.3870967741935484,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 925,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "candidates": [
+    {
+      "name": "pursuit_20261114_r06_full_yamnet_head",
+      "model_sha256": "2024b0d55b4f491652fa99b04b656189f060dbf91b08b7106a336b584babef6b",
+      "selection_logits_sha256": "754c97e4acfd220dbe188d85fd81c26d5c638047152042405c73f604840446e4",
+      "full_frozen_selection": {
+        "mode": "margin",
+        "temperature": 1.0,
+        "policy": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "thresholds": [
+          4.733789326623083,
+          6.052673786878587
+        ],
+        "fire_recall": 0.7519379844961239,
+        "doorbell_recall": 0.14634146341463414,
+        "macro_recall": 0.44913972395537904,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 67,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.7519379844961239,
+            "wrong_target_or_negative_alert_files": 0
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 6,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.14634146341463414,
+            "wrong_target_or_negative_alert_files": 0
+          }
+        },
+        "other_false_alert_files": 0,
+        "other_files": 1053,
+        "cross_or_negative_alert_files": 0,
+        "selection_zero_errors_by_construction": true,
+        "true_event_or_monthly_rate_verified": false
+      },
+      "matched_parent_selection": {
+        "mode": "margin",
+        "temperature": 1.0,
+        "policy": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "thresholds": [
+          4.733789326623083,
+          6.052673786878587
+        ],
+        "fire_recall": 0.5151515151515151,
+        "doorbell_recall": 0.12903225806451613,
+        "macro_recall": 0.32209188660801563,
+        "classes": {
+          "fire_alarm": {
+            "files": 16,
+            "detected_files": 8,
+            "source_groups": 11,
+            "source_mean_file_recall": 0.5151515151515151,
+            "wrong_target_or_negative_alert_files": 0
+          },
+          "doorbell": {
+            "files": 37,
+            "detected_files": 4,
+            "source_groups": 31,
+            "source_mean_file_recall": 0.12903225806451613,
+            "wrong_target_or_negative_alert_files": 0
+          }
+        },
+        "other_false_alert_files": 0,
+        "other_files": 925,
+        "cross_or_negative_alert_files": 0,
+        "selection_zero_errors_by_construction": true,
+        "true_event_or_monthly_rate_verified": false
+      },
+      "selected_epoch": 18,
+      "actual_optimizer_steps": 960
+    },
+    {
+      "name": "pursuit_20261114_r06_full_yamnet_refined_unfused_bn",
+      "model_sha256": "5e1bbf3f123c8623da3d2f38012634ec5bb4889fdb3fe93dcfaa771d1ac67c3f",
+      "selection_logits_sha256": "8626ffcc40522b9e04a98a0381cb1b5ea899695185f3854b59b4e9a1d03d877f",
+      "full_frozen_selection": {
+        "mode": "margin",
+        "temperature": 1.0,
+        "policy": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "thresholds": [
+          7.1096816062927255,
+          4.548479322344066
+        ],
+        "fire_recall": 0.562015503875969,
+        "doorbell_recall": 0.32926829268292684,
+        "macro_recall": 0.4456418982794479,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 50,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.562015503875969,
+            "wrong_target_or_negative_alert_files": 0
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 15,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.32926829268292684,
+            "wrong_target_or_negative_alert_files": 0
+          }
+        },
+        "other_false_alert_files": 0,
+        "other_files": 1053,
+        "cross_or_negative_alert_files": 0,
+        "selection_zero_errors_by_construction": true,
+        "true_event_or_monthly_rate_verified": false
+      },
+      "matched_parent_selection": {
+        "mode": "margin",
+        "temperature": 1.0,
+        "policy": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "thresholds": [
+          7.109681129455567,
+          4.548480067402125
+        ],
+        "fire_recall": 0.303030303030303,
+        "doorbell_recall": 0.27419354838709675,
+        "macro_recall": 0.28861192570869987,
+        "classes": {
+          "fire_alarm": {
+            "files": 16,
+            "detected_files": 5,
+            "source_groups": 11,
+            "source_mean_file_recall": 0.303030303030303,
+            "wrong_target_or_negative_alert_files": 0
+          },
+          "doorbell": {
+            "files": 37,
+            "detected_files": 10,
+            "source_groups": 31,
+            "source_mean_file_recall": 0.27419354838709675,
+            "wrong_target_or_negative_alert_files": 0
+          }
+        },
+        "other_false_alert_files": 0,
+        "other_files": 925,
+        "cross_or_negative_alert_files": 0,
+        "selection_zero_errors_by_construction": true,
+        "true_event_or_monthly_rate_verified": false
+      },
+      "selected_epoch": 9,
+      "actual_optimizer_steps": 840
+    }
+  ],
+  "chosen_teacher": "pursuit_20261114_r06_full_yamnet_refined_unfused_bn",
+  "chosen_model_sha256": "5e1bbf3f123c8623da3d2f38012634ec5bb4889fdb3fe93dcfaa771d1ac67c3f",
+  "selected_on_entire_new_selection_cohort": true,
+  "distillation_gate_passed": false,
+  "distillation_gate": "No worse on either target and strictly better target-normalized minimum than the old checkpoint with its previous best readout, on identical parent selection IDs.",
+  "calibration_or_fresh_used": false,
+  "foundation_pretraining_independence_certified": false,
+  "repeated_selection_is_not_independent_test": true,
+  "actual_product_targets_verified": false
+}

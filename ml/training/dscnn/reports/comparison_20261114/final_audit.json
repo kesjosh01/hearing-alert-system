@@ -1,0 +1,327 @@
+{
+  "passed": true,
+  "checks": {
+    "frozen_source_manifests_unchanged": {
+      "passed": true,
+      "detail": null
+    },
+    "no_cross_role_source_recording_hash_or_known_creator_family": {
+      "passed": true,
+      "detail": null
+    },
+    "all_accepted_public_source_bytes_unchanged": {
+      "passed": true,
+      "detail": 117
+    },
+    "entire_pretraining_code_freeze_unchanged": {
+      "passed": true,
+      "detail": 12
+    },
+    "comparison_modules_parse": {
+      "passed": true,
+      "detail": null
+    },
+    "all_student_training_and_single_setting_comparisons_verified": {
+      "passed": true,
+      "detail": [
+        {
+          "name": "dscnn_comparison_20261114_s1_baseline",
+          "optimizer_steps": 390,
+          "selected_epoch": 5,
+          "changed_options": [],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 650,
+            "draws": 1480
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s2_coverage",
+          "optimizer_steps": 600,
+          "selected_epoch": 12,
+          "changed_options": [
+            "negative_sampler"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 3542
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s2_hardneg",
+          "optimizer_steps": 540,
+          "selected_epoch": 10,
+          "changed_options": [
+            "hard_negative_multiplier"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 2927
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s3_top50",
+          "optimizer_steps": 540,
+          "selected_epoch": 10,
+          "changed_options": [
+            "pooling_fraction"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 2927
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s3_top25",
+          "optimizer_steps": 330,
+          "selected_epoch": 3,
+          "changed_options": [
+            "pooling_fraction"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 850,
+            "draws": 850
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s4_added",
+          "optimizer_steps": 330,
+          "selected_epoch": 3,
+          "changed_options": [
+            "added_training_data"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1210,
+            "sampled": 871,
+            "draws": 871
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s5_domestic2",
+          "optimizer_steps": 300,
+          "selected_epoch": 2,
+          "changed_options": [
+            "domestic_weight"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 591,
+            "draws": 591
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s5_other50",
+          "optimizer_steps": 330,
+          "selected_epoch": 3,
+          "changed_options": [
+            "other_mass"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 1305
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s6_kd25",
+          "optimizer_steps": 630,
+          "selected_epoch": 13,
+          "changed_options": [
+            "kd_weight"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 3831
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s6_kd0",
+          "optimizer_steps": 600,
+          "selected_epoch": 12,
+          "changed_options": [
+            "kd_weight"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 3542
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s7_temporal24_seed43",
+          "optimizer_steps": 780,
+          "selected_epoch": 18,
+          "changed_options": [],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 5364
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s7_temporal24_seed44",
+          "optimizer_steps": 330,
+          "selected_epoch": 3,
+          "changed_options": [],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 945,
+            "draws": 945
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s7_freq24_seed42",
+          "optimizer_steps": 810,
+          "selected_epoch": 19,
+          "changed_options": [
+            "architecture"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 5629
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s7_freq24_seed43",
+          "optimizer_steps": 570,
+          "selected_epoch": 11,
+          "changed_options": [
+            "architecture"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 3300
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s7_freq24_seed44",
+          "optimizer_steps": 360,
+          "selected_epoch": 4,
+          "changed_options": [
+            "architecture"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 1230
+          },
+          "real_training": true
+        },
+        {
+          "name": "dscnn_comparison_20261114_s7_plateau",
+          "optimizer_steps": 810,
+          "selected_epoch": 19,
+          "changed_options": [
+            "lr_schedule"
+          ],
+          "negative_exposure_at_saved_checkpoint": {
+            "total": 1179,
+            "sampled": 1179,
+            "draws": 5629
+          },
+          "real_training": true
+        }
+      ]
+    },
+    "all_requested_model_stages_represented": {
+      "passed": true,
+      "detail": null
+    },
+    "paired_three_seed_architecture_same_settings": {
+      "passed": true,
+      "detail": null
+    },
+    "all_eligible_negative_files_reached_saved_final_checkpoint": {
+      "passed": true,
+      "detail": null
+    },
+    "actual_float_int8_models_separately_calibrated_on_held_out_sources": {
+      "passed": true,
+      "detail": null
+    },
+    "all_temporal_factors_compared_on_selection_only": {
+      "passed": true,
+      "detail": null
+    },
+    "final_policy_and_model_hashes_frozen_before_test": {
+      "passed": true,
+      "detail": null
+    },
+    "evaluation_completed_without_test_driven_reselection": {
+      "passed": true,
+      "detail": null
+    },
+    "all_five_models_both_backends_both_cohorts_scored": {
+      "passed": true,
+      "detail": null
+    },
+    "sirens_excluded_before_foreign_fpr_scoring": {
+      "passed": true,
+      "detail": null
+    },
+    "trained_bundle_file_hashes_match": {
+      "passed": true,
+      "detail": null
+    },
+    "packaged_checkpoint_matches_frozen_model": {
+      "passed": true,
+      "detail": null
+    },
+    "no_synthetic_or_board_claims": {
+      "passed": true,
+      "detail": null
+    },
+    "offline_cli_matches_frozen_predictions_and_replay": {
+      "passed": true,
+      "detail": null
+    },
+    "previous_dscnn_code_data_reports_weights_and_environment_preserved": {
+      "passed": true,
+      "detail": {
+        "protected_files": 1581,
+        "packages": 77
+      }
+    },
+    "yamnet_sources_data_weights_reports_and_all_three_environments_preserved": {
+      "passed": true,
+      "detail": {
+        "protected_files": 9344,
+        "environments": 3
+      }
+    },
+    "all_tracked_training_calibration_and_evaluation_processes_exited_successfully": {
+      "passed": true,
+      "detail": 24
+    },
+    "every_tracked_stage_used_existing_packages_without_environment_mutation": {
+      "passed": true,
+      "detail": null
+    }
+  },
+  "git_head": "1c6e164d4efcbb0145a9ed058bf626c4505ea187",
+  "actual_training_and_host_audio_evaluation": true,
+  "gpu_or_model_execution_started_by_this_audit": false,
+  "hardware_microphone_or_board_validated": false,
+  "field_deployment_ready": false
+}

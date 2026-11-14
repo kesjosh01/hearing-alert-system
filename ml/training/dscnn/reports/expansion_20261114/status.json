@@ -1,0 +1,42 @@
+{
+  "stage": "training_complete",
+  "coordinator_pid": 98300,
+  "exit_code": 0,
+  "completed_teacher_folds": 4,
+  "completed_student_folds": 8,
+  "historical_test_evaluations": 0,
+  "new_public_files": 39,
+  "apps_or_packages_installed": false,
+  "fold": 3,
+  "candidate": "temporal24",
+  "decision": {
+    "candidate": "temporal24",
+    "refit_epochs": 5,
+    "decision_policy": {
+      "kind": "per_target_argmax_confidence_rejection",
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      },
+      "clip_aggregation": "all_window_mean_softmax",
+      "group_aggregation": "equal_clip_mean_softmax_then_decide",
+      "selection_source": "domestic_OOF_and_corrected_foreign_validation_only"
+    },
+    "domestic_weight": 4.0,
+    "selection_rank": [
+      1,
+      0.76875,
+      0.7666352582222821,
+      0.9411764705882353,
+      -6003,
+      -0.030128205128205125
+    ],
+    "summary_sha256": "2c6c482c791ec630866ad8f973fed6f107f1102d772b98ae1ac152117fd07403",
+    "fixed_test_used": false
+  },
+  "teacher_retrained_for_new_labels": true,
+  "distillation_applied": true,
+  "model_development_and_training_complete": true,
+  "deployment_ready": false,
+  "elapsed_seconds": 551.5068174720009
+}

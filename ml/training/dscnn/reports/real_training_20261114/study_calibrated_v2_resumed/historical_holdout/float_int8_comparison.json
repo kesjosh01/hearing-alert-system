@@ -1,0 +1,17 @@
+{
+  "clips": {
+    "count": 411,
+    "probability_max_abs": 0.025363832712173462,
+    "argmax_agreement": 0.9975669099756691,
+    "declared_decision_agreement": 1.0,
+    "argmax_disagreements": 1
+  },
+  "source_groups": {
+    "count": 319,
+    "probability_max_abs": 0.025363832712173462,
+    "argmax_agreement": 0.9968652037617555,
+    "declared_decision_agreement": 1.0,
+    "argmax_disagreements": 1
+  },
+  "note": "Observed quantization differences, not a post-hoc tuning or acceptance threshold."
+}

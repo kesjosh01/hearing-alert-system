@@ -1,0 +1,78 @@
+{
+  "scope": "gpu_validation_only",
+  "overall_passed": true,
+  "update": {
+    "passed": true,
+    "loss": 1.0993397235870361,
+    "all_trainable_tensors_changed": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "optimizer_iterations": 1,
+    "architecture": "1024 -> Dense(128,relu) -> Dropout(0.2) -> Dense(3)"
+  },
+  "real_fold0_and_reload": {
+    "passed": true,
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_validation_1e2s_s42_20261109T135728Z",
+    "epochs": 1,
+    "steps": 2,
+    "validation_clips": 408,
+    "excluded_from_cv": true,
+    "reload_max_abs_difference": 0.0,
+    "checkpoint_sha256": "41ae1ef23a3446fb36aff9fa7ada1a49d0555d9f8d8d99f0726d8360f16c569e"
+  },
+  "cpu_gpu_parity": {
+    "passed": true,
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "max_abs_difference": 1.9073486328125e-06,
+    "sample_ids": [
+      "kr-fa-05",
+      "kr-db-01",
+      "kr-fa-08",
+      "kr-fa-02",
+      "ESC50-2-139749-A-15",
+      "kr-fa-16",
+      "kr-fa-05",
+      "kr-fa-06",
+      "ESC50-2-155801-A-11",
+      "kr-db-01",
+      "kr-user-db-05",
+      "kr-fa-11",
+      "kr-db-11",
+      "kr-fa-07",
+      "kr-db-01",
+      "ESC50-1-54065-A-45",
+      "kr-db-08",
+      "ESC50-2-119161-A-8",
+      "kr-fa-07",
+      "kr-db-11",
+      "kr-fa-05",
+      "kr-user-dl-02",
+      "kr-fa-16",
+      "kr-fa-11",
+      "kr-fa-05",
+      "ESC50-1-31482-B-42",
+      "kr-db-02",
+      "ESC50-3-110913-B-7",
+      "ESC50-3-180977-A-0",
+      "kr-fa-02"
+    ],
+    "tf32_disabled_for_parity_only": true,
+    "cpu_use": "existing checkpoint numerical parity only; no CPU training"
+  },
+  "integrity": {
+    "protected_file_count": 7137,
+    "protected_hashes_unchanged": true,
+    "differences": {},
+    "package_lists_unchanged": true,
+    "fixed_test_embeddings": 0,
+    "test_evaluated": false,
+    "before_fingerprint": "e6ef233337716269e7e1819e486f7d1db45b8ef8fd74d86adaef0d681d32e98e",
+    "after_fingerprint": "e6ef233337716269e7e1819e486f7d1db45b8ef8fd74d86adaef0d681d32e98e"
+  },
+  "regular_cv_executed": false,
+  "test_evaluated": false
+}

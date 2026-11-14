@@ -1,0 +1,112 @@
+{
+  "kind": "metadata_only_no_audio_decoding",
+  "labels": {
+    "fire_alarm": 0,
+    "doorbell": 1,
+    "other": 2
+  },
+  "protocol_version": "ko-source-cv4-20261108-v1",
+  "folds": [
+    {
+      "fold": 0,
+      "rows_by_role": {
+        "train": 1227,
+        "test": 411,
+        "validation": 408
+      },
+      "source_groups_by_role": {
+        "train": 946,
+        "validation": 305,
+        "test": 319
+      },
+      "split_sha256": "d807ea8d8248c7002f5d87f325ea193ce862c465d3bee3226e206a353751b485"
+    },
+    {
+      "fold": 1,
+      "rows_by_role": {
+        "train": 1229,
+        "validation": 406,
+        "test": 411
+      },
+      "source_groups_by_role": {
+        "train": 948,
+        "validation": 303,
+        "test": 319
+      },
+      "split_sha256": "23afe674a2dbbffaad44cb8eb45528846378b7386bf6de781780217ec5323e92"
+    },
+    {
+      "fold": 2,
+      "rows_by_role": {
+        "train": 1229,
+        "test": 411,
+        "validation": 406
+      },
+      "source_groups_by_role": {
+        "train": 948,
+        "validation": 303,
+        "test": 319
+      },
+      "split_sha256": "cc1a1335c4c3b5a4600d54d938939ad1d9aa70fe761adb245c32145f0930581a"
+    },
+    {
+      "fold": 3,
+      "rows_by_role": {
+        "train": 1229,
+        "validation": 406,
+        "test": 411
+      },
+      "source_groups_by_role": {
+        "train": 948,
+        "validation": 303,
+        "test": 319
+      },
+      "split_sha256": "79cc4f98b0d0c470a2f2829415b1495c8fce4bdfeb54f69fb9151be617f58d68"
+    }
+  ],
+  "test_audio_decoded": 0,
+  "test_features_created": 0,
+  "test_evaluated": false,
+  "positive_development_clips_needing_annotations": 37,
+  "effective_development_folds": [
+    {
+      "fold": 0,
+      "rows_by_role": {
+        "train": 1230,
+        "validation": 410
+      }
+    },
+    {
+      "fold": 1,
+      "rows_by_role": {
+        "train": 1233,
+        "validation": 407
+      }
+    },
+    {
+      "fold": 2,
+      "rows_by_role": {
+        "train": 1233,
+        "validation": 407
+      }
+    },
+    {
+      "fold": 3,
+      "rows_by_role": {
+        "train": 1233,
+        "validation": 407
+      }
+    }
+  ],
+  "development_identity": {
+    "parent_protocol": "ko-source-cv4-20261108-v1",
+    "effective_fold_fingerprints": [
+      "7d843ebce67123b512641ce03c0a0e6a85bf0e1309cd095db2a62dcdf3465409",
+      "8bc347cc7ba51b42e995e213b9c485214b37822c64da6c9c990ea18d4823ea90",
+      "bb283505ed7fac721c19aa0c87027138d808006f2e21dcc5721090225a551a96",
+      "22929dec9de9532bb8cbda057ecf698752432404450721255881caa3c22270c0"
+    ],
+    "extension_version": "ko-source-cv4-20261114-dscnn-v2",
+    "extension_sha256": "31f63fd509bbb01b5adadfe7a45ca1c1474851d5222821a217b6d9adaaf72e9b"
+  }
+}

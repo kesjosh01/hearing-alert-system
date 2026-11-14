@@ -1,0 +1,160 @@
+{
+  "clips": {
+    "count": 411,
+    "accuracy": 0.975669099756691,
+    "macro_f1": 0.6625207296849088,
+    "loss": 0.19620084158003118,
+    "classes": {
+      "fire_alarm": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1": 0.3333333333333333,
+        "support": 4,
+        "correct": 2,
+        "predicted": 8
+      },
+      "doorbell": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 4,
+        "correct": 2,
+        "predicted": 2
+      },
+      "other": {
+        "precision": 0.9900249376558603,
+        "recall": 0.9851116625310173,
+        "f1": 0.9875621890547264,
+        "support": 403,
+        "correct": 397,
+        "predicted": 401
+      }
+    },
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        6,
+        0,
+        397
+      ]
+    ]
+  },
+  "groups": {
+    "count": 319,
+    "accuracy": 0.9749216300940439,
+    "macro_f1": 0.6846016434440871,
+    "loss": 0.19011445068147317,
+    "classes": {
+      "fire_alarm": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4,
+        "support": 4,
+        "correct": 2,
+        "predicted": 6
+      },
+      "doorbell": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 4,
+        "correct": 2,
+        "predicted": 2
+      },
+      "other": {
+        "precision": 0.9871382636655949,
+        "recall": 0.9871382636655949,
+        "f1": 0.9871382636655949,
+        "support": 311,
+        "correct": 307,
+        "predicted": 311
+      }
+    },
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        4,
+        0,
+        307
+      ]
+    ]
+  },
+  "domestic_groups": {
+    "count": 9,
+    "accuracy": 0.5555555555555556,
+    "macro_f1": 0.5555555555555555,
+    "loss": 0.7308559605278941,
+    "classes": {
+      "fire_alarm": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 4,
+        "correct": 2,
+        "predicted": 2
+      },
+      "doorbell": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 4,
+        "correct": 2,
+        "predicted": 2
+      },
+      "other": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337,
+        "support": 1,
+        "correct": 1,
+        "predicted": 5
+      }
+    },
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "domestic_target_macro_recall": 0.5,
+  "overseas_other_clip_count": 402,
+  "overseas_other_clip_false_positives": 6,
+  "overseas_other_clip_fpr": 0.014925373134328358,
+  "domestic_doorlock_group_count": 1,
+  "domestic_doorlock_false_positive_groups": 0,
+  "decision_policy": {
+    "kind": "argmax_with_target_confidence_rejection",
+    "threshold": 0.6
+  },
+  "loss_note": "Cross entropy uses raw probabilities; confusion matrices and FPR use the declared rejection policy."
+}

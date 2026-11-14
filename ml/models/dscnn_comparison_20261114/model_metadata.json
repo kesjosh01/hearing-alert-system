@@ -1,0 +1,98 @@
+{
+  "input": {
+    "shape": [
+      1,
+      98,
+      40,
+      1
+    ],
+    "dtype": "int8",
+    "scale": 0.0922469049692154,
+    "zero_point": 22
+  },
+  "output": {
+    "shape": [
+      1,
+      3
+    ],
+    "dtype": "int8",
+    "scale": 0.00390625,
+    "zero_point": -128
+  },
+  "operators": [
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "CONV_2D",
+    "AVERAGE_POOL_2D",
+    "RESHAPE",
+    "FULLY_CONNECTED",
+    "SOFTMAX"
+  ],
+  "operator_set": [
+    "AVERAGE_POOL_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "RESHAPE",
+    "SOFTMAX"
+  ],
+  "all_tensor_types": [
+    "int32",
+    "int8"
+  ],
+  "board_tflm_allocate_tensors_verified": false,
+  "model_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+  "model_bytes": 15600,
+  "labels": {
+    "fire_alarm": 0,
+    "doorbell": 1,
+    "other": 2
+  },
+  "frontend": {
+    "sample_rate": 16000,
+    "window_samples": 16000,
+    "window_hop_samples": 8000,
+    "frame_samples": 400,
+    "frame_hop_samples": 160,
+    "fft_size": 512,
+    "mel_bins": 40,
+    "lower_hz": 80.0,
+    "upper_hz": 7600.0,
+    "log_floor": 1e-06,
+    "frame_window": "periodic_hann",
+    "mel_scale": "htk_unnormalized_triangles",
+    "spectrum": "unnormalized_rfft_power",
+    "fft_arithmetic": "float32_radix2",
+    "amplitude": "pcm16_divide_32768_no_peak_normalization",
+    "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+  },
+  "frontend_sha256": "b0cfbccaf11745e46aa07d6b6451ec94d1dc3230faa4de12979ea0416ecc640d",
+  "pipeline_only": false,
+  "deployment_ready": false,
+  "calibration_windows": 300,
+  "calibration_role": "train",
+  "calibration_sha256": "0a1aabd42d94b8355402567920e727d12206f7168f1187c54bea3d5194438596",
+  "trained": true,
+  "version": "dscnn-comparison-20261114-v1",
+  "architecture": "freq24",
+  "pooling_fraction": 0.5,
+  "clip_aggregation": "Mean of top fraction of windows ranked by1-p_other; all windows when fraction1",
+  "knowledge_distillation_applied": false,
+  "kd_weight": 0.0,
+  "selected_epoch": 19,
+  "complexity": {
+    "parameters_including_bn_statistics": 4707,
+    "convolution_and_dense_macs_per_window": 2541600,
+    "largest_single_int8_activation_bytes": 23520,
+    "input_int8_bytes": 3920,
+    "board_tensor_arena_bytes": null,
+    "board_processing_ms": null,
+    "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+  },
+  "physical_board_or_microphone_validated": false,
+  "observed_fresh_test_fpr_le_5_percent": false
+}

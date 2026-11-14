@@ -1,0 +1,22 @@
+{
+  "role": "student",
+  "candidate": "freq24",
+  "fold": 1,
+  "exit_code": 0,
+  "device": "gpu",
+  "test_evaluated": false,
+  "deployment_ready": false,
+  "distillation_applied": true,
+  "event_annotations_used": false,
+  "epochs_completed": 14,
+  "selected_epoch": 6,
+  "optimizer_steps": 420,
+  "distillation_optimizer_steps": 420,
+  "model_sha256": "f83742b57526947fd576e0a9a2fe51299061127bf250c3ebafb85cb80e57970c",
+  "model_variable_devices": [
+    "/job:localhost/replica:0/task:0/device:GPU:0"
+  ],
+  "save_reload_verified": true,
+  "training_siren_clips": 24,
+  "elapsed_seconds": 38.114037966999604
+}

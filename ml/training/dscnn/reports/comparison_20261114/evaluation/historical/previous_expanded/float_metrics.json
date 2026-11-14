@@ -1,0 +1,43 @@
+{
+  "classes": {
+    "fire_alarm": {
+      "clips": 4,
+      "correct": 3,
+      "recall": 0.75,
+      "groups": 4,
+      "group_correct": 3,
+      "group_recall": 0.75
+    },
+    "doorbell": {
+      "clips": 4,
+      "correct": 2,
+      "recall": 0.5,
+      "groups": 4,
+      "group_correct": 2,
+      "group_recall": 0.5
+    },
+    "other": {
+      "clips": 395,
+      "correct": 348,
+      "recall": 0.8810126582278481,
+      "groups": 304,
+      "group_correct": 266,
+      "group_recall": 0.875
+    }
+  },
+  "target_macro_group_recall": 0.625,
+  "domestic_target_macro_group_recall": 0.625,
+  "foreign_negative_clips": 394,
+  "foreign_false_positives": 47,
+  "foreign_fpr": 0.11928934010152284,
+  "domestic_doorlock_groups": 1,
+  "domestic_doorlock_fp": 0,
+  "guards_passed": false,
+  "loss": 0.47038169823078535,
+  "thresholds": {
+    "fire_alarm": 0.5,
+    "doorbell": 0.55
+  },
+  "count": 403,
+  "any_target_alert_macro_recall": 0.75
+}

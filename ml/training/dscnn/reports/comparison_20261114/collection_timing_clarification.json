@@ -1,0 +1,6 @@
+{
+  "reason": "Public-host rate limits must not block independent training. Register source/role eligibility before fitting; allow transport-only collection and deduplication while training; freeze actual final test before first test inference.",
+  "real_training_started": false,
+  "model_or_test_scores_used": false,
+  "source_review_sha256": "e67ec4688a5ac44be756fc2340aade80a7a869905bac5e5d3841144729e8f1f4"
+}

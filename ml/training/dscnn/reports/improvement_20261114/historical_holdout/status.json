@@ -1,0 +1,17 @@
+{
+  "kind": "improved_model_retrospective_holdout_comparison",
+  "exit_code": 0,
+  "is_fresh_independent_test": false,
+  "test_evaluation_invocations": 1,
+  "previous_student_test_comparisons": 1,
+  "not_used_for_improvement_selection": true,
+  "model_sha256_before": "2e859b8ae3d85c13c72591cff0821f2646cd1a0085feacceb75b73c533772e59",
+  "int8_sha256_before": "365d1015a3fe90ffdcc2edab0966e140dd190352dc127ba9d8fc30492d5b48a2",
+  "deployment_ready": false,
+  "completed_clips": 411,
+  "evaluated_clips": 411,
+  "model_sha256_after": "2e859b8ae3d85c13c72591cff0821f2646cd1a0085feacceb75b73c533772e59",
+  "int8_sha256_after": "365d1015a3fe90ffdcc2edab0966e140dd190352dc127ba9d8fc30492d5b48a2",
+  "model_unchanged": true,
+  "elapsed_seconds": 40.95484048900016
+}

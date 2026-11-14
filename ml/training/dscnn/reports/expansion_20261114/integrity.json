@@ -1,0 +1,18 @@
+{
+  "kind": "post_training_preservation_audit",
+  "checked_at_utc": "2026-11-13T21:05:30.918520+00:00",
+  "protected_yamnet_files": 9344,
+  "raw_and_metadata_files": 140,
+  "protected_environments": [
+    ".venv",
+    ".venv-gpu",
+    ".venv-gpu-official221"
+  ],
+  "yamnet_files_and_environments_unchanged": true,
+  "raw_and_metadata_unchanged": true,
+  "dscnn_packages_unchanged": true,
+  "changed_or_missing_yamnet": [],
+  "added_yamnet": [],
+  "changed_or_missing_raw_and_metadata": [],
+  "unchanged": true
+}

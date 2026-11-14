@@ -1,0 +1,2386 @@
+{
+  "snapshot_date": "2026-11-14",
+  "checkpoint_count": 127,
+  "total_checkpoint_bytes": 80156391,
+  "interpretation": "Saved artifacts include smoke/integration checks and historical experiments. Check each recorded state; presence does not mean deployment readiness. No model fit or conversion was rerun for publication.",
+  "checkpoints": [
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114_w1_f0/classifier.keras",
+      "bytes": 95449,
+      "sha256": "46da5455c17edd0ae1274d56ecc48479f1a5a333e67e4d8af28fa393717a29fd",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 19,
+        "selected_epoch": 11
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114_w1_f0/history.csv",
+        "dscnn/dscnn_calibrated_20261114_w1_f0/run.json",
+        "dscnn/dscnn_calibrated_20261114_w1_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114_w1_f1/classifier.keras",
+      "bytes": 95449,
+      "sha256": "bccec2e2c0475b6751c1556be18f739e45329c9b6e7c13d7e5fb63cff818c0cf",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 30,
+        "selected_epoch": 24
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114_w1_f1/history.csv",
+        "dscnn/dscnn_calibrated_20261114_w1_f1/run.json",
+        "dscnn/dscnn_calibrated_20261114_w1_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114_w1_f2/classifier.keras",
+      "bytes": 95449,
+      "sha256": "41fb5f6ef82b0a96a130de975889b04e45560aa47ad6ad1972751f55e182ee37",
+      "recorded_state": {
+        "exit_code": null
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114_w1_f2/history.csv",
+        "dscnn/dscnn_calibrated_20261114_w1_f2/run.json",
+        "dscnn/dscnn_calibrated_20261114_w1_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_refit_w1/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_refit_w1/classifier.keras",
+      "bytes": 95449,
+      "sha256": "8bcfe1785ad25d0f33a47cb489de1412ff4a665cf8d5e3fc67feef4c8783df3b",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 19,
+        "selected_epoch": 19
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_refit_w1/decision_policy.json",
+        "dscnn/dscnn_calibrated_20261114r_refit_w1/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_refit_w1/run.json",
+        "dscnn/dscnn_calibrated_20261114r_refit_w1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w1_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w1_f2/classifier.keras",
+      "bytes": 95449,
+      "sha256": "5f095408ad72bbf0c0da2036f5142182c7fda19d7fa898b20e7700b9d75e6ae6",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 25,
+        "selected_epoch": 17
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w1_f2/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w1_f2/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w1_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w1_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w1_f3/classifier.keras",
+      "bytes": 95449,
+      "sha256": "7a2b808032d88ab03c62e24dcb43079a98c0e470b0d1d42758c34f0c4f8decd4",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 29,
+        "selected_epoch": 21
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w1_f3/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w1_f3/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w1_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w2_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w2_f0/classifier.keras",
+      "bytes": 95449,
+      "sha256": "b794ad4cda761af00ad1230fcd74c5ba01e722afbf64b21b36999cf43eac3b3b",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w2_f0/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w2_f0/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w2_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w2_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w2_f1/classifier.keras",
+      "bytes": 95449,
+      "sha256": "78d307891d03daa9dd5761245e507d39af42438c922960836c48f43391892981",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 23,
+        "selected_epoch": 15
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w2_f1/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w2_f1/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w2_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w2_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w2_f2/classifier.keras",
+      "bytes": 95449,
+      "sha256": "172bbe0e7e120fa5708edd8203c8372bb36679eeef9a146f06910235583be631",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 30,
+        "selected_epoch": 27
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w2_f2/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w2_f2/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w2_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w2_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w2_f3/classifier.keras",
+      "bytes": 95449,
+      "sha256": "e5362375eb2c00c9cffb239f8e6ece3fe5618c5788e4bbb1e0fc341186e389f7",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 28,
+        "selected_epoch": 20
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w2_f3/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w2_f3/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w2_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w4_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w4_f0/classifier.keras",
+      "bytes": 95449,
+      "sha256": "6186dd3f4a45e3b22fe390077de74211cae7932981a83f39e2565cb28912c9f6",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 14,
+        "selected_epoch": 6
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w4_f0/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w4_f0/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w4_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w4_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w4_f1/classifier.keras",
+      "bytes": 95449,
+      "sha256": "c9c7ebf64eba694a7ef728ab9e57643409e195ae6022d7d5c730cb59214a2bdb",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 21,
+        "selected_epoch": 13
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w4_f1/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w4_f1/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w4_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w4_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w4_f2/classifier.keras",
+      "bytes": 95449,
+      "sha256": "62499ffa94adb70a6eb6be53fe84a26a89219b4e86333dfe2b411b94d01fd802",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 30,
+        "selected_epoch": 26
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w4_f2/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w4_f2/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w4_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_calibrated_20261114r_w4_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_calibrated_20261114r_w4_f3/classifier.keras",
+      "bytes": 95449,
+      "sha256": "2523fa0b8c34350568478865f120c6f0a90483ba62f10b81c42c1840c7ef79d0",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 26,
+        "selected_epoch": 18
+      },
+      "sidecars": [
+        "dscnn/dscnn_calibrated_20261114r_w4_f3/history.csv",
+        "dscnn/dscnn_calibrated_20261114r_w4_f3/run.json",
+        "dscnn/dscnn_calibrated_20261114r_w4_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s1_baseline/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s1_baseline/classifier.keras",
+      "bytes": 106110,
+      "sha256": "32a3edc7a9c25a8eed5ca869df581aa9d19427dbfebf5ac4b62a5343cbb2a18d",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 390,
+        "epochs_completed": 13,
+        "selected_epoch": 5
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s1_baseline/history.csv",
+        "dscnn/dscnn_comparison_20261114_s1_baseline/run.json",
+        "dscnn/dscnn_comparison_20261114_s1_baseline/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s1_baseline/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s1_baseline/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s2_coverage/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s2_coverage/classifier.keras",
+      "bytes": 106110,
+      "sha256": "9373be41a6c9b73b85b3d65e2141e470f79f1a97a74f9419ec81c4529a62208b",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 600,
+        "epochs_completed": 20,
+        "selected_epoch": 12
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s2_coverage/history.csv",
+        "dscnn/dscnn_comparison_20261114_s2_coverage/run.json",
+        "dscnn/dscnn_comparison_20261114_s2_coverage/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s2_coverage/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s2_coverage/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s2_hardneg/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s2_hardneg/classifier.keras",
+      "bytes": 106110,
+      "sha256": "47ad749b1edd3b82a335b9ab4b048424d2b6ffdcf331a50516ebdb9fe1d739f6",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 540,
+        "epochs_completed": 18,
+        "selected_epoch": 10
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s2_hardneg/history.csv",
+        "dscnn/dscnn_comparison_20261114_s2_hardneg/run.json",
+        "dscnn/dscnn_comparison_20261114_s2_hardneg/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s2_hardneg/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s2_hardneg/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s3_top25/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s3_top25/classifier.keras",
+      "bytes": 106110,
+      "sha256": "a09f502523e6617b09c28ac81ed292e6faee96fb8110f2dbc5c7413a0bd58b7f",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 330,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s3_top25/history.csv",
+        "dscnn/dscnn_comparison_20261114_s3_top25/run.json",
+        "dscnn/dscnn_comparison_20261114_s3_top25/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s3_top25/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s3_top25/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s3_top50/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s3_top50/classifier.keras",
+      "bytes": 106110,
+      "sha256": "17ea6a8b706e5c72d5f277290ce38c018e49c47cbff3efb4305d5770054cad2b",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 540,
+        "epochs_completed": 18,
+        "selected_epoch": 10
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s3_top50/history.csv",
+        "dscnn/dscnn_comparison_20261114_s3_top50/run.json",
+        "dscnn/dscnn_comparison_20261114_s3_top50/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s3_top50/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s3_top50/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s4_added/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s4_added/classifier.keras",
+      "bytes": 106110,
+      "sha256": "b1662cd417925388d597f4e6f4e7da164ad24da555edd6cbbb3663e9ba8fcf54",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 330,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s4_added/history.csv",
+        "dscnn/dscnn_comparison_20261114_s4_added/run.json",
+        "dscnn/dscnn_comparison_20261114_s4_added/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s4_added/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s4_added/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s5_domestic2/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s5_domestic2/classifier.keras",
+      "bytes": 106110,
+      "sha256": "ae998a807a026ab2581d9da5087f3caa722be705bd901e87a608083a598de045",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 300,
+        "epochs_completed": 10,
+        "selected_epoch": 2
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s5_domestic2/history.csv",
+        "dscnn/dscnn_comparison_20261114_s5_domestic2/run.json",
+        "dscnn/dscnn_comparison_20261114_s5_domestic2/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s5_domestic2/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s5_domestic2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s5_other50/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s5_other50/classifier.keras",
+      "bytes": 106110,
+      "sha256": "6bce33913b423fbf48d5597a4ec85eb4d3bb60d16d1d4923c256fe0322acac78",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 330,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s5_other50/history.csv",
+        "dscnn/dscnn_comparison_20261114_s5_other50/run.json",
+        "dscnn/dscnn_comparison_20261114_s5_other50/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s5_other50/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s5_other50/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s6_kd0/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s6_kd0/classifier.keras",
+      "bytes": 106110,
+      "sha256": "a877e426ecb8c39bf277c4dfdb62a1552e4747997e524005082572854587aee6",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 600,
+        "epochs_completed": 20,
+        "selected_epoch": 12
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s6_kd0/history.csv",
+        "dscnn/dscnn_comparison_20261114_s6_kd0/run.json",
+        "dscnn/dscnn_comparison_20261114_s6_kd0/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s6_kd0/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s6_kd0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s6_kd25/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s6_kd25/classifier.keras",
+      "bytes": 106110,
+      "sha256": "0c6e6f220be48a9c39c73a841cf80f5e7c09973a8d091e83b7b083dee1ff0a6a",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 630,
+        "epochs_completed": 21,
+        "selected_epoch": 13
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s6_kd25/history.csv",
+        "dscnn/dscnn_comparison_20261114_s6_kd25/run.json",
+        "dscnn/dscnn_comparison_20261114_s6_kd25/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s6_kd25/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s6_kd25/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s7_freq24_seed42/classifier.keras",
+      "bytes": 100926,
+      "sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 810,
+        "epochs_completed": 27,
+        "selected_epoch": 19
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed42/history.csv",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed42/run.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed42/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed42/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed42/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed43/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s7_freq24_seed43/classifier.keras",
+      "bytes": 100926,
+      "sha256": "9d60956a8318914a0aad4f44db7a990e9c3968374f7ceaafb4a5588890d49169",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 570,
+        "epochs_completed": 19,
+        "selected_epoch": 11
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed43/history.csv",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed43/run.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed43/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed43/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed43/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed44/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s7_freq24_seed44/classifier.keras",
+      "bytes": 100926,
+      "sha256": "5ef13498b8f271ab7d66d9c676bf71c6eee8f794d4ec7f2cb40f4e932b1b2e9f",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 360,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed44/history.csv",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed44/run.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed44/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed44/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s7_freq24_seed44/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s7_plateau/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s7_plateau/classifier.keras",
+      "bytes": 100926,
+      "sha256": "fb7424bd762533c26ec7873cdceb729091268e6fb6accf1acd2a2b24c34745b9",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 810,
+        "epochs_completed": 27,
+        "selected_epoch": 19
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s7_plateau/history.csv",
+        "dscnn/dscnn_comparison_20261114_s7_plateau/run.json",
+        "dscnn/dscnn_comparison_20261114_s7_plateau/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s7_plateau/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s7_plateau/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s7_temporal24_seed43/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s7_temporal24_seed43/classifier.keras",
+      "bytes": 106110,
+      "sha256": "49001dbd5e8e33a630b572a87c289817cb6b2340dd3c7b550d7b8969d9421b3f",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 780,
+        "epochs_completed": 26,
+        "selected_epoch": 18
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed43/history.csv",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed43/run.json",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed43/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed43/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed43/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_s7_temporal24_seed44/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_s7_temporal24_seed44/classifier.keras",
+      "bytes": 106110,
+      "sha256": "64928632c3c87e3bc5ab77821bee1894d11d9994969e7333aeb2a0e5d0a7dde3",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 330,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed44/history.csv",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed44/run.json",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed44/selected_checkpoint_exposure_audit.json",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed44/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_s7_temporal24_seed44/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_teacher_added/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_teacher_added/classifier.keras",
+      "bytes": 540665,
+      "sha256": "3507ef5c80b0478fc9a63baee590efa7c3f996948967b67be5f75487f5f04813",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 750,
+        "epochs_completed": 25,
+        "selected_epoch": 17
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_teacher_added/history.csv",
+        "dscnn/dscnn_comparison_20261114_teacher_added/run.json",
+        "dscnn/dscnn_comparison_20261114_teacher_added/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_teacher_added/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_comparison_20261114_teacher_base/classifier.keras",
+      "archive_path": "dscnn/dscnn_comparison_20261114_teacher_base/classifier.keras",
+      "bytes": 540665,
+      "sha256": "f2e631565567648f0b71acaf748b8e43146c6108f6b703674dfef4b808f1dd59",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 480,
+        "epochs_completed": 16,
+        "selected_epoch": 8
+      },
+      "sidecars": [
+        "dscnn/dscnn_comparison_20261114_teacher_base/history.csv",
+        "dscnn/dscnn_comparison_20261114_teacher_base/run.json",
+        "dscnn/dscnn_comparison_20261114_teacher_base/selection_metrics.json",
+        "dscnn/dscnn_comparison_20261114_teacher_base/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_freq24_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_freq24_f0/classifier.keras",
+      "bytes": 100926,
+      "sha256": "39179ad4554827222ce0860bed445bb841d01e5337fde29b95256e785c64b221",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 24,
+        "selected_epoch": 16
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_freq24_f0/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f0/history.csv",
+        "dscnn/dscnn_expanded_20261114_freq24_f0/run.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_freq24_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_freq24_f1/classifier.keras",
+      "bytes": 100926,
+      "sha256": "f83742b57526947fd576e0a9a2fe51299061127bf250c3ebafb85cb80e57970c",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 14,
+        "selected_epoch": 6
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_freq24_f1/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f1/history.csv",
+        "dscnn/dscnn_expanded_20261114_freq24_f1/run.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_freq24_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_freq24_f2/classifier.keras",
+      "bytes": 100926,
+      "sha256": "9c3d679fed81410677e86550945e6294631dcb91cc311767d96faf28b09c93ce",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 16,
+        "selected_epoch": 8
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_freq24_f2/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f2/history.csv",
+        "dscnn/dscnn_expanded_20261114_freq24_f2/run.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_freq24_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_freq24_f3/classifier.keras",
+      "bytes": 100926,
+      "sha256": "e894dac41bd79937cf1a70fc93a66d6276e2cf62da52b5dca1888ed7cfd508e9",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 19,
+        "selected_epoch": 11
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_freq24_f3/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f3/history.csv",
+        "dscnn/dscnn_expanded_20261114_freq24_f3/run.json",
+        "dscnn/dscnn_expanded_20261114_freq24_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_teacher_f0/classifier.keras",
+      "bytes": 540665,
+      "sha256": "48dd00cb98625003d0812102d4e4306707a9bfbade1c4ba85af3299e1ee0998e",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_teacher_f0/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f0/history.csv",
+        "dscnn/dscnn_expanded_20261114_teacher_f0/run.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_teacher_f1/classifier.keras",
+      "bytes": 540665,
+      "sha256": "d6e3eb42ff10d79e3ea28932eda10467b489ef7eaa11a95a0ec067fb22e06156",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 14,
+        "selected_epoch": 6
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_teacher_f1/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f1/history.csv",
+        "dscnn/dscnn_expanded_20261114_teacher_f1/run.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_teacher_f2/classifier.keras",
+      "bytes": 540665,
+      "sha256": "1737199e97041c1f44878ac07a09ccc3e5d1c7066d7a1579170cc9c47988d9e7",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 30,
+        "selected_epoch": 29
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_teacher_f2/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f2/history.csv",
+        "dscnn/dscnn_expanded_20261114_teacher_f2/run.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_teacher_f3/classifier.keras",
+      "bytes": 540665,
+      "sha256": "6b0411b17e2a0af7af724e7f63294f44d37fbbacdfb1c528d4facd2327968034",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 28,
+        "selected_epoch": 20
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_teacher_f3/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f3/history.csv",
+        "dscnn/dscnn_expanded_20261114_teacher_f3/run.json",
+        "dscnn/dscnn_expanded_20261114_teacher_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_final/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_teacher_final/classifier.keras",
+      "bytes": 540665,
+      "sha256": "06975b3851f7392731199ecf545f47755a5fdbc134b420ba4a3b045822eb1d54",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 13,
+        "selected_epoch": 13
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_teacher_final/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_teacher_final/history.csv",
+        "dscnn/dscnn_expanded_20261114_teacher_final/run.json",
+        "dscnn/dscnn_expanded_20261114_teacher_final/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_coverage_final/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_temporal24_coverage_final/classifier.keras",
+      "bytes": 106110,
+      "sha256": "8edd834615c06336659bbd68c25d34497f49ac9b54c7ebe252aa9620335a21cf",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 5,
+        "selected_epoch": 5
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_temporal24_coverage_final/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_coverage_final/history.csv",
+        "dscnn/dscnn_expanded_20261114_temporal24_coverage_final/run.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_coverage_final/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_temporal24_f0/classifier.keras",
+      "bytes": 106110,
+      "sha256": "4eadf9523d59930a01359edd37fef26e31e6c1f7aa87b07b8bb852a31cb3d797",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 22,
+        "selected_epoch": 14
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_temporal24_f0/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f0/history.csv",
+        "dscnn/dscnn_expanded_20261114_temporal24_f0/run.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_temporal24_f1/classifier.keras",
+      "bytes": 106110,
+      "sha256": "db1776617ec15fbfaf27bfba3263f57227655fca07af7d2762baf9ec70619309",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_temporal24_f1/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f1/history.csv",
+        "dscnn/dscnn_expanded_20261114_temporal24_f1/run.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_temporal24_f2/classifier.keras",
+      "bytes": 106110,
+      "sha256": "8d1d7ac91e22e613d4df96fe217d8c7a4931f728a87eadb2077211e4d817ac78",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_temporal24_f2/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f2/history.csv",
+        "dscnn/dscnn_expanded_20261114_temporal24_f2/run.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_temporal24_f3/classifier.keras",
+      "bytes": 106110,
+      "sha256": "64a6880b78641819b52c47afca5786e6c1fa2e6ed108e12c25d2c0e0fa6c5898",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 14,
+        "selected_epoch": 6
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_temporal24_f3/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f3/history.csv",
+        "dscnn/dscnn_expanded_20261114_temporal24_f3/run.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_final/classifier.keras",
+      "archive_path": "dscnn/dscnn_expanded_20261114_temporal24_final/classifier.keras",
+      "bytes": 106110,
+      "sha256": "3dcd1851356452fea8b89a22a4c1db216b729a2db8b1024dd143c7402f2c622e",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 5,
+        "selected_epoch": 5
+      },
+      "sidecars": [
+        "dscnn/dscnn_expanded_20261114_temporal24_final/decision_policy.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_final/history.csv",
+        "dscnn/dscnn_expanded_20261114_temporal24_final/run.json",
+        "dscnn/dscnn_expanded_20261114_temporal24_final/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_filelabels_20261114_w1_f0/classifier.keras",
+      "bytes": 95449,
+      "sha256": "a1e6dd00518c9d5d4f45ab6ca2d4e15807f5bf6e576f6a57b3b2e128bef1885c",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 10,
+        "selected_epoch": 2
+      },
+      "sidecars": [
+        "dscnn/dscnn_filelabels_20261114_w1_f0/history.csv",
+        "dscnn/dscnn_filelabels_20261114_w1_f0/run.json",
+        "dscnn/dscnn_filelabels_20261114_w1_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_filelabels_20261114_w1_f1/classifier.keras",
+      "bytes": 95449,
+      "sha256": "75aba36ada81a2e296ba3fc27ef0192b31bfe104a24bf7139bc2a16edb18c6df",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_filelabels_20261114_w1_f1/history.csv",
+        "dscnn/dscnn_filelabels_20261114_w1_f1/run.json",
+        "dscnn/dscnn_filelabels_20261114_w1_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_filelabels_20261114_w1_f2/classifier.keras",
+      "bytes": 95449,
+      "sha256": "2c56b316f0b774f1cc4c3f9e135538237ba4b1857e55829dba0689c3b5b23ea1",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_filelabels_20261114_w1_f2/history.csv",
+        "dscnn/dscnn_filelabels_20261114_w1_f2/run.json",
+        "dscnn/dscnn_filelabels_20261114_w1_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_filelabels_20261114_w1_f3/classifier.keras",
+      "bytes": 95449,
+      "sha256": "3d8c68c6d1ddc0f0f5ace6fc6bc23d967ec95e5e21f321814cb01b526144eb60",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 29,
+        "selected_epoch": 21
+      },
+      "sidecars": [
+        "dscnn/dscnn_filelabels_20261114_w1_f3/history.csv",
+        "dscnn/dscnn_filelabels_20261114_w1_f3/run.json",
+        "dscnn/dscnn_filelabels_20261114_w1_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_filelabels_20261114_w2_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_filelabels_20261114_w2_f0/classifier.keras",
+      "bytes": 95449,
+      "sha256": "b960a574e9cdea9420a6a99850949813aba7900590c6b378ddc48b823aa738b4",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_filelabels_20261114_w2_f0/history.csv",
+        "dscnn/dscnn_filelabels_20261114_w2_f0/run.json",
+        "dscnn/dscnn_filelabels_20261114_w2_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_final/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_final/classifier.keras",
+      "bytes": 100921,
+      "sha256": "2e859b8ae3d85c13c72591cff0821f2646cd1a0085feacceb75b73c533772e59",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 9,
+        "selected_epoch": 9
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_final/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_final/history.csv",
+        "dscnn/dscnn_improvement_20261114_final/run.json",
+        "dscnn/dscnn_improvement_20261114_final/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_f0/classifier.keras",
+      "bytes": 95449,
+      "sha256": "8dd8689aa9f3b91185b39b17682808189d26e1fba085c33390359756ff337666",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 28,
+        "selected_epoch": 20
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_f0/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f0/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_f0/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_f1/classifier.keras",
+      "bytes": 95449,
+      "sha256": "7f14cf11199917ea2210d50262ed7b4a47eea7e5cef9437c0eb7997e767e3d23",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 25,
+        "selected_epoch": 17
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_f1/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f1/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_f1/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_f2/classifier.keras",
+      "bytes": 95449,
+      "sha256": "80eab93da530f4b3479dc13d344242f503648472f4e0c4bfa35a4f85e1f21fe4",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 24,
+        "selected_epoch": 16
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_f2/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f2/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_f2/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_f3/classifier.keras",
+      "bytes": 95449,
+      "sha256": "821bad1c726a3f61855f31b8ff394acf073038e7ed8715f936aa1c56016a009a",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 13,
+        "selected_epoch": 5
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_f3/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f3/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_f3/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_aug_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f0/classifier.keras",
+      "bytes": 100921,
+      "sha256": "96858d1eee859f1aa2980d18582f4669221d25a94f8d966e94dcc30366ac4f20",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f0/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f0/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f0/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_aug_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f1/classifier.keras",
+      "bytes": 100921,
+      "sha256": "d28a6558dcb8d2fed56a2299c0f68e88b857c74c4734f0e8a47868bd3eb1de78",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 15,
+        "selected_epoch": 7
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f1/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f1/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f1/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_aug_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f2/classifier.keras",
+      "bytes": 100921,
+      "sha256": "5b118368c9aa243c4319d3a00bc28d51f622c2273392c8afa370b95c9a99af26",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 19,
+        "selected_epoch": 11
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f2/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f2/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f2/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_aug_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f3/classifier.keras",
+      "bytes": 100921,
+      "sha256": "83c3fbef881414761131d4071249fd6617b673f5a2026395e754fbf0341ec1c7",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 25,
+        "selected_epoch": 17
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f3/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f3/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f3/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_aug_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_f0/classifier.keras",
+      "bytes": 100921,
+      "sha256": "3e99b557cc95d15e68a2137434dd277302ea40b79c5404e99adbfe7383b47235",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f0/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f0/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f0/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_f1/classifier.keras",
+      "bytes": 100921,
+      "sha256": "b5eaa929670db6aa115abfc9a97a8c8b8193744fc8b93bf3d134e5c39ecfcf9f",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f1/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f1/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f1/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_f2/classifier.keras",
+      "bytes": 100921,
+      "sha256": "3fa8c791c52f447c4b8bde235fc7fb8437ca2ceaa789654ad7ed677c7c8d6ebc",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 20,
+        "selected_epoch": 12
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f2/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f2/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f2/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd24_freq_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd24_freq_f3/classifier.keras",
+      "bytes": 100921,
+      "sha256": "0b84ac5a876a000d983a51d119e6fb097f5aadddcada42c93ded31b05da82c38",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 30,
+        "selected_epoch": 25
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f3/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f3/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f3/run.json",
+        "dscnn/dscnn_improvement_20261114_kd24_freq_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd48_freq_aug_f0/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f0/classifier.keras",
+      "bytes": 133561,
+      "sha256": "57144a9949ce5492c631e8eb132d01e0a27958f6e25f82e5131f688d394352ed",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f0/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f0/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f0/run.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f0/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd48_freq_aug_f1/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f1/classifier.keras",
+      "bytes": 133561,
+      "sha256": "43371d43a2c37e4ee0f79b49b635eca6c3d9c3b8a19057d3dfeb5e84a6fc786d",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 12,
+        "selected_epoch": 4
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f1/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f1/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f1/run.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f1/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd48_freq_aug_f2/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f2/classifier.keras",
+      "bytes": 133561,
+      "sha256": "db5a0d6ddf4e4f5e8e511f80aa13eb11df27bae2303b126b646f8e65ea929dac",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 16,
+        "selected_epoch": 8
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f2/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f2/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f2/run.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f2/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/dscnn_improvement_20261114_kd48_freq_aug_f3/classifier.keras",
+      "archive_path": "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f3/classifier.keras",
+      "bytes": 133561,
+      "sha256": "575ea3e7ee7ed8e26ff4cb5c011b80bd340d865b9e0d145c945131e84fec1f51",
+      "recorded_state": {
+        "exit_code": 0,
+        "epochs_completed": 11,
+        "selected_epoch": 3
+      },
+      "sidecars": [
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f3/decision_policy.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f3/history.csv",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f3/run.json",
+        "dscnn/dscnn_improvement_20261114_kd48_freq_aug_f3/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_domestic_seen_aug_presence/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_domestic_seen_aug_presence/classifier.keras",
+      "bytes": 100926,
+      "sha256": "8624c96c80dba7246f54570ee8b567a7aed28fd81bcb01a3f36f3865c2c88f39",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2130,
+        "epochs_completed": 71,
+        "selected_epoch": 56
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_domestic_seen_aug_presence/history.csv",
+        "dscnn/pursuit_20261114_domestic_seen_aug_presence/run.json",
+        "dscnn/pursuit_20261114_domestic_seen_aug_presence/selection_metrics.json",
+        "dscnn/pursuit_20261114_domestic_seen_aug_presence/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_domestic_seen_enriched_presence/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_domestic_seen_enriched_presence/classifier.keras",
+      "bytes": 100926,
+      "sha256": "8c9bb86c0b38ca5b1d31caed19b9a8ad8aead63403aef9d7c2223eef742869d6",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1830,
+        "epochs_completed": 61,
+        "selected_epoch": 46
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_domestic_seen_enriched_presence/history.csv",
+        "dscnn/pursuit_20261114_domestic_seen_enriched_presence/run.json",
+        "dscnn/pursuit_20261114_domestic_seen_enriched_presence/selection_metrics.json",
+        "dscnn/pursuit_20261114_domestic_seen_enriched_presence/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_domestic_seen_freq24/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_domestic_seen_freq24/classifier.keras",
+      "bytes": 100926,
+      "sha256": "83eaf7d5eedb9f7abbb6bc206f67c1e96b7d34485f4aa5ac4a026ad8e2a821a3",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2610,
+        "epochs_completed": 87,
+        "selected_epoch": 67
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_domestic_seen_freq24/history.csv",
+        "dscnn/pursuit_20261114_domestic_seen_freq24/run.json",
+        "dscnn/pursuit_20261114_domestic_seen_freq24/selection_metrics.json",
+        "dscnn/pursuit_20261114_domestic_seen_freq24/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_domestic_seen_presence/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_domestic_seen_presence/classifier.keras",
+      "bytes": 100926,
+      "sha256": "ebbddfb3a54216baed943753295db440e68ff86f4b4bd019d6e51e274ffbbed3",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2670,
+        "epochs_completed": 89,
+        "selected_epoch": 69
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_domestic_seen_presence/history.csv",
+        "dscnn/pursuit_20261114_domestic_seen_presence/run.json",
+        "dscnn/pursuit_20261114_domestic_seen_presence/selection_metrics.json",
+        "dscnn/pursuit_20261114_domestic_seen_presence/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_domestic_seen_sparse/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_domestic_seen_sparse/classifier.keras",
+      "bytes": 100926,
+      "sha256": "b2e1f4c7b753f0db857e4e99256d6ca74576196fa1dba381fda3d57a37e37d93",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2100,
+        "epochs_completed": 70,
+        "selected_epoch": 50
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_domestic_seen_sparse/history.csv",
+        "dscnn/pursuit_20261114_domestic_seen_sparse/run.json",
+        "dscnn/pursuit_20261114_domestic_seen_sparse/selection_metrics.json",
+        "dscnn/pursuit_20261114_domestic_seen_sparse/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_context5/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_context5/classifier.keras",
+      "bytes": 104439,
+      "sha256": "1bd6b1a9cc77666d7aa6a4a6515b9bacde6931aa0eb2571f98112ef01215fd4b",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 630,
+        "epochs_completed": 21,
+        "selected_epoch": 9
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_context5/history.csv",
+        "dscnn/pursuit_20261114_r01_context5/run.json",
+        "dscnn/pursuit_20261114_r01_context5/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_context5/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_deep/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_deep/classifier.keras",
+      "bytes": 372867,
+      "sha256": "c59281de6193e1f8f5b31d5afeb7c7b13c8c410d1515dc9727375272b46dd016",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 570,
+        "epochs_completed": 19,
+        "selected_epoch": 7
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_deep/history.csv",
+        "dscnn/pursuit_20261114_r01_deep/run.json",
+        "dscnn/pursuit_20261114_r01_deep/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_deep/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_freq24/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_freq24/classifier.keras",
+      "bytes": 100926,
+      "sha256": "0550fcc61c901174ee79624af6fd0b2ec2c8175b9309da25664abd2b36753bcd",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1410,
+        "epochs_completed": 47,
+        "selected_epoch": 35
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_freq24/history.csv",
+        "dscnn/pursuit_20261114_r01_freq24/run.json",
+        "dscnn/pursuit_20261114_r01_freq24/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_freq24/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_freq24_firevote/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_freq24_firevote/classifier.keras",
+      "bytes": 100926,
+      "sha256": "c33b35ffc08ffe3f84338524fcdb7ecd62adaf727157fb336ee875c06b5dd26b",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 660,
+        "epochs_completed": 22,
+        "selected_epoch": 10
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_freq24_firevote/history.csv",
+        "dscnn/pursuit_20261114_r01_freq24_firevote/run.json",
+        "dscnn/pursuit_20261114_r01_freq24_firevote/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_freq24_firevote/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_freq24_kd25/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_freq24_kd25/classifier.keras",
+      "bytes": 100926,
+      "sha256": "7268560d417013bc65fbb1eac8891dae4e9c1e209c092fc4a3c1654238ec795a",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 780,
+        "epochs_completed": 26,
+        "selected_epoch": 14
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_freq24_kd25/history.csv",
+        "dscnn/pursuit_20261114_r01_freq24_kd25/run.json",
+        "dscnn/pursuit_20261114_r01_freq24_kd25/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_freq24_kd25/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_freq24_kd50/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_freq24_kd50/classifier.keras",
+      "bytes": 100926,
+      "sha256": "ba5b1fa4603cce9f02da54040eb6095a8657b77a478eab58d17aa2fc8a03ac42",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 570,
+        "epochs_completed": 19,
+        "selected_epoch": 7
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_freq24_kd50/history.csv",
+        "dscnn/pursuit_20261114_r01_freq24_kd50/run.json",
+        "dscnn/pursuit_20261114_r01_freq24_kd50/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_freq24_kd50/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_freq24_sparse/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_freq24_sparse/classifier.keras",
+      "bytes": 100926,
+      "sha256": "8578474e1d955d6bfc4222339434977dec1eb0f8a5c4f9962b56e87580d1e6ac",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 600,
+        "epochs_completed": 20,
+        "selected_epoch": 8
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_freq24_sparse/history.csv",
+        "dscnn/pursuit_20261114_r01_freq24_sparse/run.json",
+        "dscnn/pursuit_20261114_r01_freq24_sparse/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_freq24_sparse/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_freq48/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_freq48/classifier.keras",
+      "bytes": 133566,
+      "sha256": "ea934345aff6436a3eb5c1160610ee3e3c38e0d25b7d21d84df690e490929533",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 690,
+        "epochs_completed": 23,
+        "selected_epoch": 11
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_freq48/history.csv",
+        "dscnn/pursuit_20261114_r01_freq48/run.json",
+        "dscnn/pursuit_20261114_r01_freq48/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_freq48/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_yamnet_mean/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_yamnet_mean/classifier.keras",
+      "bytes": 542557,
+      "sha256": "e917d4da306401e98c1c2e16e6e8c9e5b1d14a4e6cba8de7955df8a73e3756a9",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "epochs_completed": 21,
+        "selected_epoch": 9
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_yamnet_mean/history.csv",
+        "dscnn/pursuit_20261114_r01_yamnet_mean/run.json",
+        "dscnn/pursuit_20261114_r01_yamnet_mean/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_yamnet_mean/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r01_yamnet_sparse/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r01_yamnet_sparse/classifier.keras",
+      "bytes": 542557,
+      "sha256": "28f68b467501caba2f4dfabac13ad1ddd227b28f2ab31267f7bb06e64e92076c",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "epochs_completed": 22,
+        "selected_epoch": 10
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r01_yamnet_sparse/history.csv",
+        "dscnn/pursuit_20261114_r01_yamnet_sparse/run.json",
+        "dscnn/pursuit_20261114_r01_yamnet_sparse/selection_metrics.json",
+        "dscnn/pursuit_20261114_r01_yamnet_sparse/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r02_freq24/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r02_freq24/classifier.keras",
+      "bytes": 100926,
+      "sha256": "d043912753abe2ff2a3e2d73e1330b6d0e1604322e1619ec78567ca9af43d674",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1080,
+        "epochs_completed": 36,
+        "selected_epoch": 24
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r02_freq24/history.csv",
+        "dscnn/pursuit_20261114_r02_freq24/run.json",
+        "dscnn/pursuit_20261114_r02_freq24/selection_metrics.json",
+        "dscnn/pursuit_20261114_r02_freq24/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r02_freq24_aug/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r02_freq24_aug/classifier.keras",
+      "bytes": 100926,
+      "sha256": "0c7ff9ace4efcc628dcee7a8603dd65f38b7c0afcc6007fa6fa63a7d196ecdee",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 930,
+        "epochs_completed": 31,
+        "selected_epoch": 19
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r02_freq24_aug/history.csv",
+        "dscnn/pursuit_20261114_r02_freq24_aug/run.json",
+        "dscnn/pursuit_20261114_r02_freq24_aug/selection_metrics.json",
+        "dscnn/pursuit_20261114_r02_freq24_aug/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r02_max_ce_control/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r02_max_ce_control/classifier.keras",
+      "bytes": 100926,
+      "sha256": "24c3408c085cfded12766ce2251869f3b12d8365d35d7503cac3626f446d2bdd",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 810,
+        "epochs_completed": 27,
+        "selected_epoch": 12
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r02_max_ce_control/history.csv",
+        "dscnn/pursuit_20261114_r02_max_ce_control/run.json",
+        "dscnn/pursuit_20261114_r02_max_ce_control/selection_metrics.json",
+        "dscnn/pursuit_20261114_r02_max_ce_control/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r02_presence_mil/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r02_presence_mil/classifier.keras",
+      "bytes": 100926,
+      "sha256": "0220db9da841b051fd2880b270934a74659266e36b08833b488c20b52a0adf6f",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2130,
+        "epochs_completed": 71,
+        "selected_epoch": 56
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r02_presence_mil/history.csv",
+        "dscnn/pursuit_20261114_r02_presence_mil/run.json",
+        "dscnn/pursuit_20261114_r02_presence_mil/selection_metrics.json",
+        "dscnn/pursuit_20261114_r02_presence_mil/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r02_yamnet_sparse/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r02_yamnet_sparse/classifier.keras",
+      "bytes": 542557,
+      "sha256": "af896825a0a082a1f1bed1403e2f62131202f76b2c0ac360dacc5ed85d856d61",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "epochs_completed": 34,
+        "selected_epoch": 22
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r02_yamnet_sparse/history.csv",
+        "dscnn/pursuit_20261114_r02_yamnet_sparse/run.json",
+        "dscnn/pursuit_20261114_r02_yamnet_sparse/selection_metrics.json",
+        "dscnn/pursuit_20261114_r02_yamnet_sparse/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r02_yamnet_warm/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r02_yamnet_warm/classifier.keras",
+      "bytes": 542557,
+      "sha256": "04bfd3c242af95c9b381b8c6a385608c8cb0ac918f7e5401637a0bb2a2be006a",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "epochs_completed": 26,
+        "selected_epoch": 14
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r02_yamnet_warm/history.csv",
+        "dscnn/pursuit_20261114_r02_yamnet_warm/run.json",
+        "dscnn/pursuit_20261114_r02_yamnet_warm/selection_metrics.json",
+        "dscnn/pursuit_20261114_r02_yamnet_warm/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r03_prefix8_pretrained/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r03_prefix8_pretrained/classifier.keras",
+      "bytes": 2337810,
+      "sha256": "05e1518a151032dcf2a82c858d3ff5524fce8849ce9b9209e79e61aa3a6d6a47",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 810,
+        "epochs_completed": 27,
+        "selected_epoch": 12
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r03_prefix8_pretrained/history.csv",
+        "dscnn/pursuit_20261114_r03_prefix8_pretrained/run.json",
+        "dscnn/pursuit_20261114_r03_prefix8_pretrained/selection_metrics.json",
+        "dscnn/pursuit_20261114_r03_prefix8_pretrained/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r03_prefix8_random/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r03_prefix8_random/classifier.keras",
+      "bytes": 2337810,
+      "sha256": "a141c1b91eef3ec955ec218d5fa986f72257892e5372c650473d71839d1649fc",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 960,
+        "epochs_completed": 32,
+        "selected_epoch": 17
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r03_prefix8_random/history.csv",
+        "dscnn/pursuit_20261114_r03_prefix8_random/run.json",
+        "dscnn/pursuit_20261114_r03_prefix8_random/selection_metrics.json",
+        "dscnn/pursuit_20261114_r03_prefix8_random/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r03_strong/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r03_strong/classifier.keras",
+      "bytes": 100926,
+      "sha256": "8948ec1e5a8106d0e38c4b2c0acfae73042350d9882b02c56af10910d5bb2ef1",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 720,
+        "epochs_completed": 24,
+        "selected_epoch": 12
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r03_strong/history.csv",
+        "dscnn/pursuit_20261114_r03_strong/run.json",
+        "dscnn/pursuit_20261114_r03_strong/selection_metrics.json",
+        "dscnn/pursuit_20261114_r03_strong/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r03_weak/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r03_weak/classifier.keras",
+      "bytes": 100926,
+      "sha256": "4cd12d6031234eaa8e4dbd56923f464d788484cd2832f251a2e662c9e1f861a2",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1170,
+        "epochs_completed": 39,
+        "selected_epoch": 27
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r03_weak/history.csv",
+        "dscnn/pursuit_20261114_r03_weak/run.json",
+        "dscnn/pursuit_20261114_r03_weak/selection_metrics.json",
+        "dscnn/pursuit_20261114_r03_weak/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r04_freq24/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r04_freq24/classifier.keras",
+      "bytes": 100926,
+      "sha256": "e4a7cde6d3cb9b865691a4fcf758af05f7b27c6219e426ebdf9b419819b6cee7",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1650,
+        "epochs_completed": 55,
+        "selected_epoch": 43
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r04_freq24/history.csv",
+        "dscnn/pursuit_20261114_r04_freq24/run.json",
+        "dscnn/pursuit_20261114_r04_freq24/selection_metrics.json",
+        "dscnn/pursuit_20261114_r04_freq24/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r04_prefix40_pretrained/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r04_prefix40_pretrained/classifier.keras",
+      "bytes": 2337810,
+      "sha256": "81229df035abd2f22bfec3956fff9e961445fe269d3dba23f96ca2c81e9c1cec",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1980,
+        "epochs_completed": 66,
+        "selected_epoch": 51
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r04_prefix40_pretrained/history.csv",
+        "dscnn/pursuit_20261114_r04_prefix40_pretrained/run.json",
+        "dscnn/pursuit_20261114_r04_prefix40_pretrained/selection_metrics.json",
+        "dscnn/pursuit_20261114_r04_prefix40_pretrained/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r04_prefix64_pretrained/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r04_prefix64_pretrained/classifier.keras",
+      "bytes": 2343956,
+      "sha256": "99470e770ef338fb98879c8c40c885c1706e10c69f5b0a9a5135f343f3d54884",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1710,
+        "epochs_completed": 57,
+        "selected_epoch": 42
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r04_prefix64_pretrained/history.csv",
+        "dscnn/pursuit_20261114_r04_prefix64_pretrained/run.json",
+        "dscnn/pursuit_20261114_r04_prefix64_pretrained/selection_metrics.json",
+        "dscnn/pursuit_20261114_r04_prefix64_pretrained/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r05_prefix64_targets/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r05_prefix64_targets/classifier.keras",
+      "bytes": 2343956,
+      "sha256": "0414b21d8f5ecab605ab79c8d1d8f277937b91200bbe15d89baf0b406cd735c2",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 1380,
+        "epochs_completed": 46,
+        "selected_epoch": 31
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r05_prefix64_targets/history.csv",
+        "dscnn/pursuit_20261114_r05_prefix64_targets/run.json",
+        "dscnn/pursuit_20261114_r05_prefix64_targets/selection_metrics.json",
+        "dscnn/pursuit_20261114_r05_prefix64_targets/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_full_yamnet_head/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_full_yamnet_head/classifier.keras",
+      "bytes": 13670833,
+      "sha256": "2024b0d55b4f491652fa99b04b656189f060dbf91b08b7106a336b584babef6b",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 960,
+        "epochs_completed": 24,
+        "selected_epoch": 18
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_full_yamnet_head/history.csv",
+        "dscnn/pursuit_20261114_r06_full_yamnet_head/run.json",
+        "dscnn/pursuit_20261114_r06_full_yamnet_head/selected_checkpoint_exposure_audit.json",
+        "dscnn/pursuit_20261114_r06_full_yamnet_head/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_full_yamnet_head/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/classifier.keras",
+      "bytes": 13670779,
+      "sha256": "5e1bbf3f123c8623da3d2f38012634ec5bb4889fdb3fe93dcfaa771d1ac67c3f",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 840,
+        "epochs_completed": 21,
+        "selected_epoch": 9
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/history.csv",
+        "dscnn/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/run.json",
+        "dscnn/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/selected_checkpoint_exposure_audit.json",
+        "dscnn/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_full_yamnet_refined_unfused_bn/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_native40_distilled_vs_control/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_native40_distilled_vs_control/classifier.keras",
+      "bytes": 359116,
+      "sha256": "d46d577596475062f59006abce1c7e0cf417d47a8d95a14d4c75aff4ade90592",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2760,
+        "epochs_completed": 69,
+        "selected_epoch": 49
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control/history.csv",
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control/run.json",
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control/selected_checkpoint_exposure_audit.json",
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_native40_distilled_vs_control_bnrefit/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_native40_distilled_vs_control_bnrefit/classifier.keras",
+      "bytes": 359116,
+      "sha256": "76046896645f42dd171925f68d3f7529f07e19d704b82ebaa921c7061dbda591",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 0,
+        "inherited_real_trained_checkpoint": true
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control_bnrefit/run.json",
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control_bnrefit/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_native40_distilled_vs_control_bnrefit/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_native40_supervised/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_native40_supervised/classifier.keras",
+      "bytes": 359116,
+      "sha256": "20a088788d66f45c61aa69e2af77c7583c04c4b4a229befbe4359072b0fcb227",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 2840,
+        "epochs_completed": 71,
+        "selected_epoch": 51
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_native40_supervised/history.csv",
+        "dscnn/pursuit_20261114_r06_native40_supervised/run.json",
+        "dscnn/pursuit_20261114_r06_native40_supervised/selected_checkpoint_exposure_audit.json",
+        "dscnn/pursuit_20261114_r06_native40_supervised/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_native40_supervised/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_native40_supervised_bnrefit/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_native40_supervised_bnrefit/classifier.keras",
+      "bytes": 359116,
+      "sha256": "5b9b3aaa6ee5aaebb2dcb015a1ea38bda0314cda2a3b752b9edbbab7cb0a4e27",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 0,
+        "inherited_real_trained_checkpoint": true
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_native40_supervised_bnrefit/run.json",
+        "dscnn/pursuit_20261114_r06_native40_supervised_bnrefit/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_native40_supervised_bnrefit/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "dscnn",
+      "source_path": "ml/training/dscnn/runs/pursuit_20261114_r06_yamnet_semantic_prior/classifier.keras",
+      "archive_path": "dscnn/pursuit_20261114_r06_yamnet_semantic_prior/classifier.keras",
+      "bytes": 13202362,
+      "sha256": "3300afe4df325f87001e1dc3aeb027da5f61d5c512b6a5b0fef22c6512b1653e",
+      "recorded_state": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 0
+      },
+      "sidecars": [
+        "dscnn/pursuit_20261114_r06_yamnet_semantic_prior/run.json",
+        "dscnn/pursuit_20261114_r06_yamnet_semantic_prior/selection_metrics.json",
+        "dscnn/pursuit_20261114_r06_yamnet_semantic_prior/status.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/SMOKE_20261108_210937_345986/classifier.keras",
+      "archive_path": "yamnet/SMOKE_20261108_210937_345986/classifier.keras",
+      "bytes": 537416,
+      "sha256": "d094f8471319eb8caf417f77b4506210f897536690aaa1b5f74b0e0d8814f636",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/SMOKE_20261108_210937_345986/history.csv",
+        "yamnet/SMOKE_20261108_210937_345986/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/first_fold0_w4/classifier.keras",
+      "archive_path": "yamnet/first_fold0_w4/classifier.keras",
+      "bytes": 537416,
+      "sha256": "8a2f37c6a58cdd93013759cd5c8b10fbc800f4f082dca96e85aa34f9ad1f465a",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/first_fold0_w4/history.csv",
+        "yamnet/first_fold0_w4/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/integration_cv_1epoch/fold_0/classifier.keras",
+      "archive_path": "yamnet/integration_cv_1epoch/fold_0/classifier.keras",
+      "bytes": 537416,
+      "sha256": "7a1f2f7badbd75cf2caae446a66d2f19609cc7ba9fcb8581b3ab872b890ca822",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/integration_cv_1epoch/fold_0/history.csv",
+        "yamnet/integration_cv_1epoch/fold_0/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/integration_cv_1epoch/fold_1/classifier.keras",
+      "archive_path": "yamnet/integration_cv_1epoch/fold_1/classifier.keras",
+      "bytes": 537416,
+      "sha256": "7e6be8748b64d674eb6f0e4fd391b02b23123a8708da25b64dea7a1c992d164d",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/integration_cv_1epoch/fold_1/history.csv",
+        "yamnet/integration_cv_1epoch/fold_1/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/integration_cv_1epoch/fold_2/classifier.keras",
+      "archive_path": "yamnet/integration_cv_1epoch/fold_2/classifier.keras",
+      "bytes": 537416,
+      "sha256": "a7f05747728e3036a4ac3b11c7e6a7546b54541849f36b2cf941292f0abe525d",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/integration_cv_1epoch/fold_2/history.csv",
+        "yamnet/integration_cv_1epoch/fold_2/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/integration_cv_1epoch/fold_3/classifier.keras",
+      "archive_path": "yamnet/integration_cv_1epoch/fold_3/classifier.keras",
+      "bytes": 537416,
+      "sha256": "9094b8668e7d49a6105009ce48befc2ca9f877a16df8d1436757f2615b0cea68",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/integration_cv_1epoch/fold_3/history.csv",
+        "yamnet/integration_cv_1epoch/fold_3/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/integration_refit_1epoch/classifier.keras",
+      "archive_path": "yamnet/integration_refit_1epoch/classifier.keras",
+      "bytes": 537416,
+      "sha256": "4ab54738ca7c05b1d563bc4530829a26b26e765303bbbcc40e5462f8686a2170",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/integration_refit_1epoch/history.csv",
+        "yamnet/integration_refit_1epoch/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/smoke_verified_v3/classifier.keras",
+      "archive_path": "yamnet/smoke_verified_v3/classifier.keras",
+      "bytes": 537416,
+      "sha256": "bf6b1dd26a6271d3481d9e899a0eab9651e57977751a9f5250c1986dc19542e0",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/smoke_verified_v3/history.csv",
+        "yamnet/smoke_verified_v3/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_0/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w1_s42/fold_0/classifier.keras",
+      "bytes": 538467,
+      "sha256": "be975c7162c4f61a8b1a72ab875a0445758d292d1db30781056478dd0581d764",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_0/history.csv",
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_0/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_1/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w1_s42/fold_1/classifier.keras",
+      "bytes": 538467,
+      "sha256": "0dc76516674427867d5b5adb0643bd47c0f00fd30c56fb83197b54938300fa56",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_1/history.csv",
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_1/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_2/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w1_s42/fold_2/classifier.keras",
+      "bytes": 538467,
+      "sha256": "bad2f553298f941316e8c2f87c31d4010aa741364092145a82d2c9b3dd5b2ceb",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_2/history.csv",
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_2/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_3/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w1_s42/fold_3/classifier.keras",
+      "bytes": 538467,
+      "sha256": "11de7d393903f8ecd233550b950b5b0e0fb4895f0e4502401050299534cd4186",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_3/history.csv",
+        "yamnet/ubuntu_gpu_cv_w1_s42/fold_3/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_0/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w2_s42/fold_0/classifier.keras",
+      "bytes": 538467,
+      "sha256": "eab114cd7942d075a2d8d65daa2fde38e3925b03803e64732da9c1e9ca40ff2e",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_0/history.csv",
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_0/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_1/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w2_s42/fold_1/classifier.keras",
+      "bytes": 538467,
+      "sha256": "fe9d41c7ed46317b8e8bd8eadbd0ea11d5e194364669d1b9779b3909843d7134",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_1/history.csv",
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_1/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_2/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w2_s42/fold_2/classifier.keras",
+      "bytes": 538467,
+      "sha256": "93c4076af74b4bf7b59454e6dee4e85ca6b87b1d36b1837bdb3c71bf7b0468b1",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_2/history.csv",
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_2/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w2_s42/fold_3/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w2_s42/fold_3/classifier.keras",
+      "bytes": 538467,
+      "sha256": "1f9cb17b131f89976f124f0e310d19c9edf6939e8f42370c269f8c0ece17a865",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_3/history.csv",
+        "yamnet/ubuntu_gpu_cv_w2_s42/fold_3/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_0/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w4_s42/fold_0/classifier.keras",
+      "bytes": 538467,
+      "sha256": "7913c70d04135e098de40f50e875f9b63f8836388b1cdb97915bd93e3c4a76be",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_0/history.csv",
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_0/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_1/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w4_s42/fold_1/classifier.keras",
+      "bytes": 538467,
+      "sha256": "28adae757c5e0317f000887375072185ac4195a41dab8f773cf7f6b0c1501231",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_1/history.csv",
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_1/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_2/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w4_s42/fold_2/classifier.keras",
+      "bytes": 538467,
+      "sha256": "523fdcaf8ed398614a0180b33ce2308ad56954569e91619020a0a43fd2d6e53d",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_2/history.csv",
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_2/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w4_s42/fold_3/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_cv_w4_s42/fold_3/classifier.keras",
+      "bytes": 538467,
+      "sha256": "58a7b5d43a8eeab35356b9e8e89bb2bf04be8a1da96682c65bc1a7cf95f85b8d",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_3/history.csv",
+        "yamnet/ubuntu_gpu_cv_w4_s42/fold_3/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_refit_w1_s42/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_refit_w1_s42/classifier.keras",
+      "bytes": 538467,
+      "sha256": "70b9da2319abecf27fb55ef748ca3e65ceb2dcb21207eb9e32f3bb9f446982b2",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_refit_w1_s42/history.csv",
+        "yamnet/ubuntu_gpu_refit_w1_s42/run.json"
+      ],
+      "role": "saved_experiment_checkpoint"
+    },
+    {
+      "family": "yamnet",
+      "source_path": "ml/training/yamnet/runs/yamnet/ubuntu_gpu_validation_1e2s_s42_20261109T135728Z/classifier.keras",
+      "archive_path": "yamnet/ubuntu_gpu_validation_1e2s_s42_20261109T135728Z/classifier.keras",
+      "bytes": 538467,
+      "sha256": "41ae1ef23a3446fb36aff9fa7ada1a49d0555d9f8d8d99f0726d8360f16c569e",
+      "recorded_state": {},
+      "sidecars": [
+        "yamnet/ubuntu_gpu_validation_1e2s_s42_20261109T135728Z/history.csv",
+        "yamnet/ubuntu_gpu_validation_1e2s_s42_20261109T135728Z/run.json"
+      ],
+      "role": "smoke_or_integration_check"
+    }
+  ]
+}

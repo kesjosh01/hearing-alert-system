@@ -1,0 +1,719 @@
+{
+  "plan_sha256": "624402455ab9e26f967909eb1ec1cb7b7ed15dac59cf8bb6f7073f590cb7428c",
+  "candidates": {
+    "native40_r06_supervised_v1": {
+      "model_sha256": "a88539b89acc7a2f1860b892b8f9eb337aa4e64cab963e787880081923d7789d",
+      "readout_sha256": "8c49ea75c3d946e73993a5a6f8f3ae21894c3de0498014eb6701ff0a6cde7906",
+      "gate_sha256": "39f3f264b739de4164f2eaf2d90b0fbbae586387e9fa50f0be36347f4ab3f485"
+    },
+    "native40_r06_distilled_v1": {
+      "model_sha256": "bd43e15f2573553df76abd38e2686f87285c2009ee2332fc75d9268e29299cc7",
+      "readout_sha256": "e96c746cbdce565ca240f1e13554294b8f244e675d424f462b4351efe4949acc",
+      "gate_sha256": "2df842c9fc1dbe4bf8c2024ea1ab468622e03fb4669b72aa30ac829cb3a761ad"
+    },
+    "native40_r06_supervised_bnrefit_v1": {
+      "model_sha256": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd",
+      "readout_sha256": "bfe00fe27a373cccf4953ce01bf8a89818b5b09d1185bb50c6f0ceb859cfe4b0",
+      "gate_sha256": "abad38f8741f227417a086e57e9c201895c05fd8becdb5886df192e440948007"
+    },
+    "native40_r06_distilled_bnrefit_v1": {
+      "model_sha256": "b2f19b84574da27bb8bf89c6f87ffbad47fcbc1eeec36f0f82ceecb6e2811dc7",
+      "readout_sha256": "020f5d5eb156632f8a17e9ac2d235c7941ae5d9703a268695c2f5dbbbe8f570b",
+      "gate_sha256": "9437fcf8cae660916c76376b8e382c9ea9937e276d48c69fd2ab63c7b7259b4e"
+    }
+  },
+  "probes_sha256": "cd06338c7281e32e1380dc454f398d422373b21c148313952ecdba63935eff9b",
+  "read_only_feature_identities": {
+    "gongu-13252139": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/a325dc1f6f0b12f86fa57a40190851bf34fbe05f9bbfaa2b20cfb344aeff602b/features.npy",
+      "sha256": "0ddcd9f37be7b4b1c34d5fec425724d43272290fac70c860ac8c0cdb241d4a42"
+    },
+    "gongu-13252139-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/a325dc1f6f0b12f86fa57a40190851bf34fbe05f9bbfaa2b20cfb344aeff602b/quiet/features.npy",
+      "sha256": "a9451afadc0dd5684e707520c6e98dd68e8abcd7613df256b8b26e612b355368"
+    },
+    "gongu-13252139-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/a325dc1f6f0b12f86fa57a40190851bf34fbe05f9bbfaa2b20cfb344aeff602b/room_snr20/features.npy",
+      "sha256": "930bb470838b0458d7c4705ec3f894703e4b855e72e8e18b3e5ac537aa479308"
+    },
+    "gongu-13252139-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/a325dc1f6f0b12f86fa57a40190851bf34fbe05f9bbfaa2b20cfb344aeff602b/room_snr10/features.npy",
+      "sha256": "bb0cce25682abdcdb3b4dafcaeb208045619e36fe64c67e6a4765954644015bd"
+    },
+    "kr-db-01": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/86be1512e7dbb91484ca43664354104570b6c4eb7bd6707c0b83aa452b42a673/features.npy",
+      "sha256": "3144948b3daf0f6084047a30fa2c083b3248c87203da3500de84ea7fffbe85b7"
+    },
+    "kr-db-01-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/86be1512e7dbb91484ca43664354104570b6c4eb7bd6707c0b83aa452b42a673/quiet/features.npy",
+      "sha256": "f72cc18052c660ec81bb31f5d6baa5d98adc1b53f4a006d8798cedc277ca2ffc"
+    },
+    "kr-db-01-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/86be1512e7dbb91484ca43664354104570b6c4eb7bd6707c0b83aa452b42a673/room_snr20/features.npy",
+      "sha256": "ab934125dc8ed73105e34bdda0528e5b2f8f6fbfb5cbb196d7b5599517a7c096"
+    },
+    "kr-db-01-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/86be1512e7dbb91484ca43664354104570b6c4eb7bd6707c0b83aa452b42a673/room_snr10/features.npy",
+      "sha256": "9f5ef781ee58010cff0bf2e45be193657ddb037275e5b57bbb220a45bfb5904d"
+    },
+    "kr-db-02": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/001312f9c0f8ff6a7604ccf87f205f3bf675340d55fc5d2e231164c91a24103e/features.npy",
+      "sha256": "3354796ee03f9c88f64ecd82547d8b836944d7763099c282c74610eda72b6eb7"
+    },
+    "kr-db-02-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/001312f9c0f8ff6a7604ccf87f205f3bf675340d55fc5d2e231164c91a24103e/quiet/features.npy",
+      "sha256": "e63f4fa82c91bb8570d510f4a61492c4f558c3c69c88dd9617bf0ec3fed35673"
+    },
+    "kr-db-02-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/001312f9c0f8ff6a7604ccf87f205f3bf675340d55fc5d2e231164c91a24103e/room_snr20/features.npy",
+      "sha256": "c359760427e94a412387be8cc23f30be9e3087d942ca55d285ab4b5c26a18758"
+    },
+    "kr-db-02-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/001312f9c0f8ff6a7604ccf87f205f3bf675340d55fc5d2e231164c91a24103e/room_snr10/features.npy",
+      "sha256": "7d2fd94125965f81672fc5be870d8dced756152dd28fa735edd713136a6dbeb8"
+    },
+    "kr-db-04": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/5c364d15f96cc04a9c9e3caac3e7132926b483c5c784db268e93b0ac53ccd150/features.npy",
+      "sha256": "34b6ef6ed2a15be82e0351c8d3676df69bedfd3765b0d74d12e755f92cd5e774"
+    },
+    "kr-db-04-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5c364d15f96cc04a9c9e3caac3e7132926b483c5c784db268e93b0ac53ccd150/quiet/features.npy",
+      "sha256": "4377be5e912082dae3f75112715df67b743cc5bd72756beda052a7c8451f5a39"
+    },
+    "kr-db-04-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5c364d15f96cc04a9c9e3caac3e7132926b483c5c784db268e93b0ac53ccd150/room_snr20/features.npy",
+      "sha256": "e8ea0ba4dbbb5f64470da4dfb8e6302c65cfd23ba83894667617bf06f40bda2d"
+    },
+    "kr-db-04-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5c364d15f96cc04a9c9e3caac3e7132926b483c5c784db268e93b0ac53ccd150/room_snr10/features.npy",
+      "sha256": "64708a1a359d1748d374777e81c428b3ee93f88ce54e58482995d80a6298584d"
+    },
+    "kr-db-06": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/58530e7943f568d4bedbc6d959a425dab0f6a78ced72a25c79a363d9f277a3e7/features.npy",
+      "sha256": "e6f47b386edc0aab05b5df009b0e52d49321f521a5ad25bff208bd1ea4ceaa32"
+    },
+    "kr-db-06-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/58530e7943f568d4bedbc6d959a425dab0f6a78ced72a25c79a363d9f277a3e7/quiet/features.npy",
+      "sha256": "d209c27cf4c2c546b0f90d2a162bfc11c424bc7e9c5754b6568aff34d897bb9f"
+    },
+    "kr-db-06-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/58530e7943f568d4bedbc6d959a425dab0f6a78ced72a25c79a363d9f277a3e7/room_snr20/features.npy",
+      "sha256": "feb7921bdc71eeeaf21e380b8194534a5cd5ae4fdf65665959ee6aa6b28336e1"
+    },
+    "kr-db-06-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/58530e7943f568d4bedbc6d959a425dab0f6a78ced72a25c79a363d9f277a3e7/room_snr10/features.npy",
+      "sha256": "d3fac4bf3166447fa48664428234bb41f15d5f84989366eac3307b541034a73c"
+    },
+    "kr-db-07": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/2d274f9d0d12d344aa60b120e3e9cbfb731dd6162428707090e4424c35ea7b90/features.npy",
+      "sha256": "9c3fcd36643b55f909e01f3fc69fa7f8468837508eb5c3b948acf5870af8b348"
+    },
+    "kr-db-07-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2d274f9d0d12d344aa60b120e3e9cbfb731dd6162428707090e4424c35ea7b90/quiet/features.npy",
+      "sha256": "0f2215bd5084b27978b0e99eaec6f544c194cb7ae2eedb8626a3c023527ac829"
+    },
+    "kr-db-07-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2d274f9d0d12d344aa60b120e3e9cbfb731dd6162428707090e4424c35ea7b90/room_snr20/features.npy",
+      "sha256": "25e7ac9c3f797173959be3c245d5c72e38f780e447db2ec788a1fd952c58f9d0"
+    },
+    "kr-db-07-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2d274f9d0d12d344aa60b120e3e9cbfb731dd6162428707090e4424c35ea7b90/room_snr10/features.npy",
+      "sha256": "550e623db013e0ae65ecf5b9ed95dbd9c275c63d2d59b2a0fe11c3481c2ecef9"
+    },
+    "kr-db-08": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/76ee9da4e18cb7c0f5006b564bc7ba1c5b433e4f5f43998884af9406cab21310/features.npy",
+      "sha256": "d174c637b748139b59614428dc9de5ce7a9c96bbdeeb35910d9a33cf58ab1623"
+    },
+    "kr-db-08-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/76ee9da4e18cb7c0f5006b564bc7ba1c5b433e4f5f43998884af9406cab21310/quiet/features.npy",
+      "sha256": "4c6fb659b8175a849202f0462da37fdae2fed2a242c155163f7ef5bdea4d65ce"
+    },
+    "kr-db-08-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/76ee9da4e18cb7c0f5006b564bc7ba1c5b433e4f5f43998884af9406cab21310/room_snr20/features.npy",
+      "sha256": "5555907142fed6d352f47313f4d33ad9676f47fa90d6048fde0b77f8acf2c075"
+    },
+    "kr-db-08-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/76ee9da4e18cb7c0f5006b564bc7ba1c5b433e4f5f43998884af9406cab21310/room_snr10/features.npy",
+      "sha256": "7bd1419f49ce6137aa9cd66830bb0140f1071824ab7351dc1d61300446dd49d4"
+    },
+    "kr-db-09": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/b198c1c7eb349fbd0edad423d99bf0ef7ce20992178a481f15b4a7f7372b7679/features.npy",
+      "sha256": "7b751e146c51a16d92964e01bdafa9c3c8abae3fea799966b7eab97fac23b76c"
+    },
+    "kr-db-09-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/b198c1c7eb349fbd0edad423d99bf0ef7ce20992178a481f15b4a7f7372b7679/quiet/features.npy",
+      "sha256": "80ff1d2ed5174f9d6e10c3244adf4b2e1f557fe14dbc230456668bc47fd5e70c"
+    },
+    "kr-db-09-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/b198c1c7eb349fbd0edad423d99bf0ef7ce20992178a481f15b4a7f7372b7679/room_snr20/features.npy",
+      "sha256": "a1ae8d86b1b207428e3699f62f726895d6ea892ad85717a755bf463b9aabf5f8"
+    },
+    "kr-db-09-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/b198c1c7eb349fbd0edad423d99bf0ef7ce20992178a481f15b4a7f7372b7679/room_snr10/features.npy",
+      "sha256": "880fc75f04e5b0aec4669e483ecfa37fe19a7d0954e26496e6e119ad49431c11"
+    },
+    "kr-db-10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/9d9f56ecba5b4d1e54c49dc54c5a00f6b5afe0f901eedd05e716a39b5698853f/features.npy",
+      "sha256": "d3b9c053e940d63a4e48e637eb8afe0f45465883c1988689239df7aa70112980"
+    },
+    "kr-db-10-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/9d9f56ecba5b4d1e54c49dc54c5a00f6b5afe0f901eedd05e716a39b5698853f/quiet/features.npy",
+      "sha256": "5d17f4d0896ffb64e7f2f389a6205ecd7d6ec24daa8837f1e4f5135fa0833fc7"
+    },
+    "kr-db-10-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/9d9f56ecba5b4d1e54c49dc54c5a00f6b5afe0f901eedd05e716a39b5698853f/room_snr20/features.npy",
+      "sha256": "13a054865f9de458986967f8e3c7379c1a2533897be0f09a1a1f4876ea008e4a"
+    },
+    "kr-db-10-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/9d9f56ecba5b4d1e54c49dc54c5a00f6b5afe0f901eedd05e716a39b5698853f/room_snr10/features.npy",
+      "sha256": "ccfeefe70c5b09d29be5299f0a244e062a5d3fa03c88cb15cfd52c75b667605f"
+    },
+    "kr-db-11": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/a47ea2e7250168d9a47e19a68ca624fb8db0c31658ae286ac47596419e11d44d/features.npy",
+      "sha256": "87476dc4c70c5bd016579afb4f59c317e198bcab60c6f44f650ae50017d99a81"
+    },
+    "kr-db-11-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/a47ea2e7250168d9a47e19a68ca624fb8db0c31658ae286ac47596419e11d44d/quiet/features.npy",
+      "sha256": "ce3c1b4cccca26e1bbca3b85a4d8b73bd31101951c4173acaf2987be12c47eed"
+    },
+    "kr-db-11-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/a47ea2e7250168d9a47e19a68ca624fb8db0c31658ae286ac47596419e11d44d/room_snr20/features.npy",
+      "sha256": "8e39e048d4355b00ab2d546a13d096a00a34cf5fd1e42e75442d6ca88c139abb"
+    },
+    "kr-db-11-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/a47ea2e7250168d9a47e19a68ca624fb8db0c31658ae286ac47596419e11d44d/room_snr10/features.npy",
+      "sha256": "13d3e5b83e8f25c91fd25f3d7395bf537b4624cfcb93f6e90dcd07d024603ba6"
+    },
+    "kr-db-12": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/2e127ad2e9a3bd8613ef68a5e3dc1d6fcee1db5c8b39555d221772c1d0a0b9ea/features.npy",
+      "sha256": "f0c994227510760fb6ee5bda400a00ecfe9e61de5535647b3012e6983c914237"
+    },
+    "kr-db-12-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2e127ad2e9a3bd8613ef68a5e3dc1d6fcee1db5c8b39555d221772c1d0a0b9ea/quiet/features.npy",
+      "sha256": "621632137601e43f6bb995fb439094a0051091e844cd150fefca6543a56aa834"
+    },
+    "kr-db-12-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2e127ad2e9a3bd8613ef68a5e3dc1d6fcee1db5c8b39555d221772c1d0a0b9ea/room_snr20/features.npy",
+      "sha256": "a10fba958f8cdc689142f45936e86b80a9e6f1df16ca9e2cb832e3609877c272"
+    },
+    "kr-db-12-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2e127ad2e9a3bd8613ef68a5e3dc1d6fcee1db5c8b39555d221772c1d0a0b9ea/room_snr10/features.npy",
+      "sha256": "40514312584334cc9e601abe70d106910c486028727223a6017dab7e685e78d3"
+    },
+    "kr-db-13": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/c07ee4e9d882cb5a00966ffcf44e2676fbecc9f6e3cc5c7dce30aa22ef38739d/features.npy",
+      "sha256": "2162a70c8c5c0a3b2121d1bcb0c7959032ac3e1a6e26e55ad3f708f4484500e9"
+    },
+    "kr-db-13-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/c07ee4e9d882cb5a00966ffcf44e2676fbecc9f6e3cc5c7dce30aa22ef38739d/quiet/features.npy",
+      "sha256": "27e22e29d72bb154bbc4bb5047663934b424e90fdfae517b0626a34fe42c74f7"
+    },
+    "kr-db-13-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/c07ee4e9d882cb5a00966ffcf44e2676fbecc9f6e3cc5c7dce30aa22ef38739d/room_snr20/features.npy",
+      "sha256": "b34b4522ddb1f5ae543fcf42c6afa6113a3382f901c448f66ca7b7c569d31383"
+    },
+    "kr-db-13-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/c07ee4e9d882cb5a00966ffcf44e2676fbecc9f6e3cc5c7dce30aa22ef38739d/room_snr10/features.npy",
+      "sha256": "26897c420fb37d51df4ffb449e0b3baf1c19722b0547aa0dbbfab7cc9b007e02"
+    },
+    "kr-db-15": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/53990eaeb117d74cba5631a7aa5d32520d13e2a7d7a4ad48d0b66a2f280ef39f/features.npy",
+      "sha256": "52167dd47f558e59a870568db61c0418033f17437ef7243d3db34adbc1ee2c06"
+    },
+    "kr-db-15-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/53990eaeb117d74cba5631a7aa5d32520d13e2a7d7a4ad48d0b66a2f280ef39f/quiet/features.npy",
+      "sha256": "f587e9be279ec6b90e02486217f96560ca055c8e50a4038838cb8ac25aa2b6ab"
+    },
+    "kr-db-15-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/53990eaeb117d74cba5631a7aa5d32520d13e2a7d7a4ad48d0b66a2f280ef39f/room_snr20/features.npy",
+      "sha256": "a165f854ccd4ae092880948acd81fc620b36d5a75f1dfbc57b120d206ec25f70"
+    },
+    "kr-db-15-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/53990eaeb117d74cba5631a7aa5d32520d13e2a7d7a4ad48d0b66a2f280ef39f/room_snr10/features.npy",
+      "sha256": "edfb51269017736276ab72409bcb55331a879132fc5441789e66fbc0fb6e367e"
+    },
+    "kr-fa-01": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/c18d58fa98f1159aa8a87255f496173033d532cb9c179e4cb1da586be20bad1a/features.npy",
+      "sha256": "3deb6cb887baa4318be2c60517c2b7287349c4ccad33e3d42db39e6ee1e15e78"
+    },
+    "kr-fa-01-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/c18d58fa98f1159aa8a87255f496173033d532cb9c179e4cb1da586be20bad1a/quiet/features.npy",
+      "sha256": "840fd63a5cc05e3ea786e4faf03dcc81e046b85704f86a854c84df68922daebb"
+    },
+    "kr-fa-01-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/c18d58fa98f1159aa8a87255f496173033d532cb9c179e4cb1da586be20bad1a/room_snr20/features.npy",
+      "sha256": "36fb593cea01368668bf55c0da42bb4f949e5a48ea11836c210f6f7c11435df5"
+    },
+    "kr-fa-01-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/c18d58fa98f1159aa8a87255f496173033d532cb9c179e4cb1da586be20bad1a/room_snr10/features.npy",
+      "sha256": "e353c8d245d517bc6a776f777455bb1b6b3aee3d285c892f3c2853efe98d3572"
+    },
+    "kr-fa-02": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/2960e54e5543584d1c14181642e2c540ce8164fb969f8868b6306edafefa1fff/features.npy",
+      "sha256": "7b9ec5a0301231602472645308aa967daa3a25869525b595264914eb84e3a4ca"
+    },
+    "kr-fa-02-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2960e54e5543584d1c14181642e2c540ce8164fb969f8868b6306edafefa1fff/quiet/features.npy",
+      "sha256": "1ca4d8e6074abda4b60c6aa76dd4a39882f9c4f9ae39ef82f45bf1a1811c3557"
+    },
+    "kr-fa-02-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2960e54e5543584d1c14181642e2c540ce8164fb969f8868b6306edafefa1fff/room_snr20/features.npy",
+      "sha256": "a2e0df312baf49d81a379ba464e2105fd11a8a675e7d8c7a62b81dcdd8ed4bf1"
+    },
+    "kr-fa-02-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2960e54e5543584d1c14181642e2c540ce8164fb969f8868b6306edafefa1fff/room_snr10/features.npy",
+      "sha256": "66990479bb0a15c0e120b39369adae3b312a9620fd54fe1504cc23d1ca24936a"
+    },
+    "kr-fa-03": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/9fbcff17657e5512fd91a31da9f4a4a67209d2e9200ee86dac437c6d980a5382/features.npy",
+      "sha256": "35607eaca95d25ed4e6d7d17946f2dd4b1edc08f381bcbbf500c05353413a5c4"
+    },
+    "kr-fa-03-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/9fbcff17657e5512fd91a31da9f4a4a67209d2e9200ee86dac437c6d980a5382/quiet/features.npy",
+      "sha256": "f27f6628b46d1b3bf1c6c703b3d8a289a71921cc492da71dcf6e22e466115610"
+    },
+    "kr-fa-03-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/9fbcff17657e5512fd91a31da9f4a4a67209d2e9200ee86dac437c6d980a5382/room_snr20/features.npy",
+      "sha256": "af3c71986963af8d9e77c88e79c5859e2a84d058ecaf119fddad1e8655476ea2"
+    },
+    "kr-fa-03-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/9fbcff17657e5512fd91a31da9f4a4a67209d2e9200ee86dac437c6d980a5382/room_snr10/features.npy",
+      "sha256": "c7479d692443e6c1d352c79c974f064c26e12db7d35a7a93bb38a58946f223b0"
+    },
+    "kr-fa-05": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/1df8d6e8871b83c5f6a3e7989caf67909cc4418b6d5ddc32b0ee6afb43743e77/features.npy",
+      "sha256": "356a0ec4d12c2bea9174d540a4f1c7825a3aa79756068a0e560d53ac1d1a8558"
+    },
+    "kr-fa-05-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/1df8d6e8871b83c5f6a3e7989caf67909cc4418b6d5ddc32b0ee6afb43743e77/quiet/features.npy",
+      "sha256": "91320aac2d5610c74aa2db0ebedee8fa69e139d5579464f13414415d64af40be"
+    },
+    "kr-fa-05-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/1df8d6e8871b83c5f6a3e7989caf67909cc4418b6d5ddc32b0ee6afb43743e77/room_snr20/features.npy",
+      "sha256": "a7b04290fd8cde82e202cb291bc5639b803e526bc4eaf7464cb2e52380399d6f"
+    },
+    "kr-fa-05-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/1df8d6e8871b83c5f6a3e7989caf67909cc4418b6d5ddc32b0ee6afb43743e77/room_snr10/features.npy",
+      "sha256": "0175d7dcd25e835f5f82af06bb4fec6af08d8b99120daa5227d9d12bec79cfea"
+    },
+    "kr-fa-06": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/3efbfca8ca9f3df950d75c3c445c01ab4ac04f53fa21a6f30e5ce55a2443f9d0/features.npy",
+      "sha256": "ca1b75703e336305ee907861788d9ea725c5ffc60b98368a66650464cda72249"
+    },
+    "kr-fa-06-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3efbfca8ca9f3df950d75c3c445c01ab4ac04f53fa21a6f30e5ce55a2443f9d0/quiet/features.npy",
+      "sha256": "74c2762a28965c35fefdea4a134faca28cfbdad59b22cc497d60e47912a70d06"
+    },
+    "kr-fa-06-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3efbfca8ca9f3df950d75c3c445c01ab4ac04f53fa21a6f30e5ce55a2443f9d0/room_snr20/features.npy",
+      "sha256": "9aa03309bd2be895905ca9f47e0eb40153fa50ccf6568d48713c0af77f03a621"
+    },
+    "kr-fa-06-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3efbfca8ca9f3df950d75c3c445c01ab4ac04f53fa21a6f30e5ce55a2443f9d0/room_snr10/features.npy",
+      "sha256": "766d2057cbe0a352c274b0727673078e4a57aebe88a294132a17653432062a63"
+    },
+    "kr-fa-07": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/bf51281555620f7cbcabe93ff810e0466a2310635affd55b6d9404efa715b04a/features.npy",
+      "sha256": "e36fb988ce4b0025ab01fb6ce9f0b2b835ee6b6d876a8f8a41effb7ec5dc543d"
+    },
+    "kr-fa-07-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/bf51281555620f7cbcabe93ff810e0466a2310635affd55b6d9404efa715b04a/quiet/features.npy",
+      "sha256": "c0e03c45ac742466834dbea09d6ac961e79ea7aa1cf805751b51ad7fdcd341b7"
+    },
+    "kr-fa-07-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/bf51281555620f7cbcabe93ff810e0466a2310635affd55b6d9404efa715b04a/room_snr20/features.npy",
+      "sha256": "ef486f52cd40386734debda1e5f96eb032768ef8a305f6b32f0aff4ac7daa69b"
+    },
+    "kr-fa-07-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/bf51281555620f7cbcabe93ff810e0466a2310635affd55b6d9404efa715b04a/room_snr10/features.npy",
+      "sha256": "20bca3d103e354a60a4c33ba2db32a3fa6ff4a5781511dd4fce30829510b39b3"
+    },
+    "kr-fa-08": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/cc671eef1d130fdb028f8e2b4f70a8504c1f2599a39a563b2041f8b284eaeca2/features.npy",
+      "sha256": "78b01ba2c8eab5e208fd5fa609b9d3d667fb871e2a2b97a761ff00603978dd33"
+    },
+    "kr-fa-08-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/cc671eef1d130fdb028f8e2b4f70a8504c1f2599a39a563b2041f8b284eaeca2/quiet/features.npy",
+      "sha256": "56770bd5d0cec57d4e4eb7c8a1f131b1ffac21c710ae708b6ee35ea64ceea271"
+    },
+    "kr-fa-08-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/cc671eef1d130fdb028f8e2b4f70a8504c1f2599a39a563b2041f8b284eaeca2/room_snr20/features.npy",
+      "sha256": "7ede4b9580e47ba650282be79f8d3f6dbb74cbbc5533b86df0d89535ec441ba3"
+    },
+    "kr-fa-08-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/cc671eef1d130fdb028f8e2b4f70a8504c1f2599a39a563b2041f8b284eaeca2/room_snr10/features.npy",
+      "sha256": "d877adf0a7139179f716be50866651a2d9b71eb3ecb1674efe33990b20d272d1"
+    },
+    "kr-fa-09": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/696063f32abd9927c8c645b981f3c4d129c3479b429529423e192e9fdd8d24ec/features.npy",
+      "sha256": "0487dffa616801d6fe62f3fe66e954a9b53901d803137fb6862b29fd2a2959c9"
+    },
+    "kr-fa-09-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/696063f32abd9927c8c645b981f3c4d129c3479b429529423e192e9fdd8d24ec/quiet/features.npy",
+      "sha256": "364f9da84aaef393cc1e8506dbc6dc96be70154234a7a80a7b9539fcec3341be"
+    },
+    "kr-fa-09-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/696063f32abd9927c8c645b981f3c4d129c3479b429529423e192e9fdd8d24ec/room_snr20/features.npy",
+      "sha256": "46150e63963fe034a62bd0bac92cabdeca67b856000cccb3dd6eb38bebd0f6da"
+    },
+    "kr-fa-09-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/696063f32abd9927c8c645b981f3c4d129c3479b429529423e192e9fdd8d24ec/room_snr10/features.npy",
+      "sha256": "a7b57f3bfb539ecbe6a0b2a699611249b5f78498cba6b368ead99e1eca323796"
+    },
+    "kr-fa-11": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/7991bca8a27345ae52a1c318e0b50cbc2188c0f51fbbab82f6b4d3149dba412e/features.npy",
+      "sha256": "98c8915a1d02d4d4eb48c5f3185e462ce1ecb18ec547660a80429b32982c5298"
+    },
+    "kr-fa-11-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/7991bca8a27345ae52a1c318e0b50cbc2188c0f51fbbab82f6b4d3149dba412e/quiet/features.npy",
+      "sha256": "1958ea4362d501442f8564130a870d6888e92cb8da861bffa6194254ceb63b14"
+    },
+    "kr-fa-11-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/7991bca8a27345ae52a1c318e0b50cbc2188c0f51fbbab82f6b4d3149dba412e/room_snr20/features.npy",
+      "sha256": "2c3a601a97251e444c0c56f6dac190cd4353541c80f31d84dd23c31b531f203c"
+    },
+    "kr-fa-11-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/7991bca8a27345ae52a1c318e0b50cbc2188c0f51fbbab82f6b4d3149dba412e/room_snr10/features.npy",
+      "sha256": "e5ca22d6ed667d321e6347e0ec8fe089eeb7ac06e0ad2fd50c1af068803def79"
+    },
+    "kr-fa-12": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/60bcb886fb49461e8b5f9500cccac4fe8f012999bb976c4f290a21e048a70295/features.npy",
+      "sha256": "6713b752f00e712dfdd3d5139b30deab1999812129c29acd6d3108f3d51d72d7"
+    },
+    "kr-fa-12-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/60bcb886fb49461e8b5f9500cccac4fe8f012999bb976c4f290a21e048a70295/quiet/features.npy",
+      "sha256": "ebb450db16bfa7207f140158c88f5aa221488abef47162f50c5a338300b89b57"
+    },
+    "kr-fa-12-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/60bcb886fb49461e8b5f9500cccac4fe8f012999bb976c4f290a21e048a70295/room_snr20/features.npy",
+      "sha256": "8611d8349396499f47471862f07a042960a734fcca6e8424a6a42edf1dbbdd6d"
+    },
+    "kr-fa-12-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/60bcb886fb49461e8b5f9500cccac4fe8f012999bb976c4f290a21e048a70295/room_snr10/features.npy",
+      "sha256": "771a1c489ca196321488bcb1d94ec2628c865854d674b3f3aec30c54e901e6e0"
+    },
+    "kr-fa-13": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/197df627099f0da61b1bdbc57a50db144ae5969580d0c322983f1236ae4bbdc7/features.npy",
+      "sha256": "a5147d2976de482cbdf2327f418a7b89802c7eadd990a96d9c4f03e50f73c091"
+    },
+    "kr-fa-13-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/197df627099f0da61b1bdbc57a50db144ae5969580d0c322983f1236ae4bbdc7/quiet/features.npy",
+      "sha256": "9be80d753d6639a477a2ef49c996d5f78b26e95e656c857ee84986970cfad26c"
+    },
+    "kr-fa-13-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/197df627099f0da61b1bdbc57a50db144ae5969580d0c322983f1236ae4bbdc7/room_snr20/features.npy",
+      "sha256": "884d91508a940ad2b7e0e36ae0c586131723a14d6b06187019faf2da19b008ab"
+    },
+    "kr-fa-13-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/197df627099f0da61b1bdbc57a50db144ae5969580d0c322983f1236ae4bbdc7/room_snr10/features.npy",
+      "sha256": "0c5284396fd6e55437d3e4663556d8c1bc9e1796f297cd1f9d0fbe1bd6f38648"
+    },
+    "kr-fa-14": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/b77f7246cfceafca1675f367176143893849a1d6979827b0b94e1509f1b8155d/features.npy",
+      "sha256": "2c6f53c59e3cdff2e6a0cb2b52dec8a1cd86b934ede8a09b7b1dbf7972a5cada"
+    },
+    "kr-fa-14-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/b77f7246cfceafca1675f367176143893849a1d6979827b0b94e1509f1b8155d/quiet/features.npy",
+      "sha256": "b8db864de75de374724b825838e7ebcd97a715cfe96ba3e3a37ac0c122342819"
+    },
+    "kr-fa-14-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/b77f7246cfceafca1675f367176143893849a1d6979827b0b94e1509f1b8155d/room_snr20/features.npy",
+      "sha256": "0b71f7165919bfe4946806f41d76b92b693091ab0ded2df87a2a91cff7a2731d"
+    },
+    "kr-fa-14-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/b77f7246cfceafca1675f367176143893849a1d6979827b0b94e1509f1b8155d/room_snr10/features.npy",
+      "sha256": "32f90827f05439cd84d77f2b9a7a37c4ad14e7b5db67b3889cc439b9486e2116"
+    },
+    "kr-fa-16": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/5c515adcf606a99a6b7401e16dcef60f85913187b25b89b48341f280e8afa085/features.npy",
+      "sha256": "1fc98831d6217d316e0413169c4019068be171caad91501f034b137aa828d13f"
+    },
+    "kr-fa-16-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5c515adcf606a99a6b7401e16dcef60f85913187b25b89b48341f280e8afa085/quiet/features.npy",
+      "sha256": "d98f2cae8582d52ad0803c798c7da208ba886afc190868925fcb570586b5a3e7"
+    },
+    "kr-fa-16-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5c515adcf606a99a6b7401e16dcef60f85913187b25b89b48341f280e8afa085/room_snr20/features.npy",
+      "sha256": "42bbdecb0adc84120024c4eb4930f4a5b24537fc3b46127e042eecaa99188c20"
+    },
+    "kr-fa-16-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5c515adcf606a99a6b7401e16dcef60f85913187b25b89b48341f280e8afa085/room_snr10/features.npy",
+      "sha256": "a22022f46818100fd1f40668166df7577c6d58604f3dc80dec88355a21d9e257"
+    },
+    "kr-user-db-01": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/3a24129a60f8d5f5157baf27397ec49671d74bc3ec3018fb1bebf8cef0fa94ec/features.npy",
+      "sha256": "1d98d18eccb4ec62e06644070d5cdf812bafa806bcb33a8922e5a0c8344c61dd"
+    },
+    "kr-user-db-01-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3a24129a60f8d5f5157baf27397ec49671d74bc3ec3018fb1bebf8cef0fa94ec/quiet/features.npy",
+      "sha256": "819e73c9683617627110d3d75d901c933ae489a5d8e818559245e188ad4c1211"
+    },
+    "kr-user-db-01-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3a24129a60f8d5f5157baf27397ec49671d74bc3ec3018fb1bebf8cef0fa94ec/room_snr20/features.npy",
+      "sha256": "84398a10a222ca2be6b0cb7a71e5623d83cce3135898f2c41a348158e29dd673"
+    },
+    "kr-user-db-01-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3a24129a60f8d5f5157baf27397ec49671d74bc3ec3018fb1bebf8cef0fa94ec/room_snr10/features.npy",
+      "sha256": "965afa020aa55b2a52b7c1390e0648dec29c9db7221a09f445c7cf30c6a1b7d5"
+    },
+    "kr-user-db-02": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/e601deb6d103415e234b6b624363b9a1f1eb7c6b9a36564dfecf983ff1b738f0/features.npy",
+      "sha256": "8418568374b8c1f87d86017e4a405d844f5a2e5125e6766c69d93cbd707de522"
+    },
+    "kr-user-db-02-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/e601deb6d103415e234b6b624363b9a1f1eb7c6b9a36564dfecf983ff1b738f0/quiet/features.npy",
+      "sha256": "d8101183275cc448fe50caee47dca7ad8c8db04d5a4156976a36a62771a9448c"
+    },
+    "kr-user-db-02-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/e601deb6d103415e234b6b624363b9a1f1eb7c6b9a36564dfecf983ff1b738f0/room_snr20/features.npy",
+      "sha256": "67d792152351b91c92f4ba14135fa89d4cb82e225154de59b7af1a2dcc8c5972"
+    },
+    "kr-user-db-02-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/e601deb6d103415e234b6b624363b9a1f1eb7c6b9a36564dfecf983ff1b738f0/room_snr10/features.npy",
+      "sha256": "d6ea20ef4ff6908dfbbee4821fd7ccd572edbf9bc1324220ebdf3713fad085af"
+    },
+    "kr-user-db-03": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/18e96a8b700505b5c0f95bdd4dcfe18bad3d54f5795a576edc52facd9f9308f6/features.npy",
+      "sha256": "946e48a3141a1db4725bba5fa123548fc7a5aee217e213ca1fb306890305ae26"
+    },
+    "kr-user-db-03-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/18e96a8b700505b5c0f95bdd4dcfe18bad3d54f5795a576edc52facd9f9308f6/quiet/features.npy",
+      "sha256": "42a1f57498888a71a9cc71db09aa242abba5a31e6cc965129e434ec3b393e0ed"
+    },
+    "kr-user-db-03-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/18e96a8b700505b5c0f95bdd4dcfe18bad3d54f5795a576edc52facd9f9308f6/room_snr20/features.npy",
+      "sha256": "74dcfe9a752503a2d44ced0cff530ee19952a007233ede415cd206dcaa14d380"
+    },
+    "kr-user-db-03-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/18e96a8b700505b5c0f95bdd4dcfe18bad3d54f5795a576edc52facd9f9308f6/room_snr10/features.npy",
+      "sha256": "fd5e16c2e0cdb12e1cf11602ed281f23555810ff9838aae6365f666722d19bc3"
+    },
+    "kr-user-db-05": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/4ea45183833aff5ab8ae20332b17c5bc148263824408ccb8faf9955a3829d1aa/features.npy",
+      "sha256": "9533beba29d28aa5eae2a066e2de583cde47d2a4621e3195a37226a512bca24a"
+    },
+    "kr-user-db-05-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/4ea45183833aff5ab8ae20332b17c5bc148263824408ccb8faf9955a3829d1aa/quiet/features.npy",
+      "sha256": "493399935c582ecaa5c22f7b30a0be8e5a91fb4ca1d676b8ad4aafae394d549d"
+    },
+    "kr-user-db-05-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/4ea45183833aff5ab8ae20332b17c5bc148263824408ccb8faf9955a3829d1aa/room_snr20/features.npy",
+      "sha256": "fc5db0dadcae123e9acfa8017e6b5d8741e00023624caedc106b800c1285f1d0"
+    },
+    "kr-user-db-05-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/4ea45183833aff5ab8ae20332b17c5bc148263824408ccb8faf9955a3829d1aa/room_snr10/features.npy",
+      "sha256": "7bc5033a5d23a8431001919cedab26a657e8ac1287d63df9507e7596297548a8"
+    },
+    "kr-user-db-10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/3aada6bce728cfb27b1bbe16988b3fd898e6d4a63fc0b2e05cea9fc5ffa621c0/features.npy",
+      "sha256": "99cb9306d4d4c4aaf5efa3cc9052c4112548b50acb07d17b83750da9a4040902"
+    },
+    "kr-user-db-10-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3aada6bce728cfb27b1bbe16988b3fd898e6d4a63fc0b2e05cea9fc5ffa621c0/quiet/features.npy",
+      "sha256": "ef7ee49d18841ac8398f9e516fbaa386e6a69a3a02efb9b5ad3593d74e698a2b"
+    },
+    "kr-user-db-10-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3aada6bce728cfb27b1bbe16988b3fd898e6d4a63fc0b2e05cea9fc5ffa621c0/room_snr20/features.npy",
+      "sha256": "ec126e8e913f43893b25b1dc82e27c046918267711aaaf0581e98ed668ef5357"
+    },
+    "kr-user-db-10-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/3aada6bce728cfb27b1bbe16988b3fd898e6d4a63fc0b2e05cea9fc5ffa621c0/room_snr10/features.npy",
+      "sha256": "f95e863e3ee0a69bd302be041f3d720207beafcf45c22ae5aed7dae9cd00caf2"
+    },
+    "kr-user-db-08": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/527ab938c3b3669f3232ca9cb2a49a20ada3d45ccb9ba8e323e8bd4faf7d537f/features.npy",
+      "sha256": "6c1c771ae4de2e2ac4779ec50c6d1487b0b42924c4e642fc7dba43acb1d9ec8e"
+    },
+    "kr-user-db-08-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/527ab938c3b3669f3232ca9cb2a49a20ada3d45ccb9ba8e323e8bd4faf7d537f/quiet/features.npy",
+      "sha256": "2b796e79c76b747fc4aced24bd1e269019105b3fe99308b57387b2e891f1a463"
+    },
+    "kr-user-db-08-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/527ab938c3b3669f3232ca9cb2a49a20ada3d45ccb9ba8e323e8bd4faf7d537f/room_snr20/features.npy",
+      "sha256": "892bf0a2df14bcc43af54e0ca236e5b03686326b0bd650de99a4b3631dec597f"
+    },
+    "kr-user-db-08-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/527ab938c3b3669f3232ca9cb2a49a20ada3d45ccb9ba8e323e8bd4faf7d537f/room_snr10/features.npy",
+      "sha256": "a54b3c56beaf8b4d2a3383bfd3889722153f4ebf2dd5baf321d6c439f90e25ca"
+    },
+    "kr-user-db-09": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/2228b846af42d6cfc24f2890993c9e6625a5f81d52ca8efe3aecb72fb86cc027/features.npy",
+      "sha256": "fd7a599c6376782fa360a05e92c3049657ecf38e1644ae77201b8c1d39b6b9a3"
+    },
+    "kr-user-db-09-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2228b846af42d6cfc24f2890993c9e6625a5f81d52ca8efe3aecb72fb86cc027/quiet/features.npy",
+      "sha256": "226462e863a769eb57627e449bcc6d423093934339606ac9ca84a8f683dd3a93"
+    },
+    "kr-user-db-09-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2228b846af42d6cfc24f2890993c9e6625a5f81d52ca8efe3aecb72fb86cc027/room_snr20/features.npy",
+      "sha256": "4fe6b555b3a372fa773fe8d3b3f72b5acb0993eb909a02f0fe93296ec18da600"
+    },
+    "kr-user-db-09-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2228b846af42d6cfc24f2890993c9e6625a5f81d52ca8efe3aecb72fb86cc027/room_snr10/features.npy",
+      "sha256": "2b556453f8a5410f9e63f6fdf85402e65d3a8a308ee02573e28f47326dc78619"
+    },
+    "kr-user-db-07": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/89466ef97146c974dd52cc9b0fd4994f8a473de5413a5e91beee0abe529fadc4/features.npy",
+      "sha256": "7952ef09b60226601b6d54ae5a3070768f8daff54b6267ff2e926ee5a3498e16"
+    },
+    "kr-user-db-07-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/89466ef97146c974dd52cc9b0fd4994f8a473de5413a5e91beee0abe529fadc4/quiet/features.npy",
+      "sha256": "62c17947eb52226d535071b74cd220dc0bb2ac70fc7b11efa204fbe40328b8ae"
+    },
+    "kr-user-db-07-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/89466ef97146c974dd52cc9b0fd4994f8a473de5413a5e91beee0abe529fadc4/room_snr20/features.npy",
+      "sha256": "24078ca7a3e32a8918359c77baa7463c5bad716132dc762dd4ca35f72ed40b7d"
+    },
+    "kr-user-db-07-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/89466ef97146c974dd52cc9b0fd4994f8a473de5413a5e91beee0abe529fadc4/room_snr10/features.npy",
+      "sha256": "c41a861738a6e6a3087f4b691145ef05cb84809db813cb4ed9606c63429e3005"
+    },
+    "kr-user-db-06": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/5e2d757f3c9777b392c11234c0c94d09159fccc42605f564e1b8b450f4032f83/features.npy",
+      "sha256": "46ad5c4b8b2db0d9196080e334e22434ea14c6a6e88cf17c6b9db4d262a56a0c"
+    },
+    "kr-user-db-06-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5e2d757f3c9777b392c11234c0c94d09159fccc42605f564e1b8b450f4032f83/quiet/features.npy",
+      "sha256": "55a5214f05717c2701532875ad1828196687186b6c69df66832e28c95e8ed82a"
+    },
+    "kr-user-db-06-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5e2d757f3c9777b392c11234c0c94d09159fccc42605f564e1b8b450f4032f83/room_snr20/features.npy",
+      "sha256": "a54e2b70ff72d46c876070fd979387e887f8abb5e57249cb0175008cc3929ecd"
+    },
+    "kr-user-db-06-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/5e2d757f3c9777b392c11234c0c94d09159fccc42605f564e1b8b450f4032f83/room_snr10/features.npy",
+      "sha256": "1a0d4f8ba197f67d1bcd73a4d69493fb53e33dec075ad417c9a532280cf1e692"
+    },
+    "kr-db-03": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/ffcdbfd3ad96ec4e8d335f9597257b9b6799988d196ac142da2a7d84950fcea8/features.npy",
+      "sha256": "1b10659a7e0904835fa3597d948477268ebebcaec1069a6bbd7b29e7c897c8bf"
+    },
+    "kr-db-03-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/ffcdbfd3ad96ec4e8d335f9597257b9b6799988d196ac142da2a7d84950fcea8/quiet/features.npy",
+      "sha256": "eb5de1bd615f73f9c5d930efda8fded74c0bf67e7421538fb0f52ddbf65e63c1"
+    },
+    "kr-db-03-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/ffcdbfd3ad96ec4e8d335f9597257b9b6799988d196ac142da2a7d84950fcea8/room_snr20/features.npy",
+      "sha256": "81bf5d37f246e198b700eaf9ec1932613e649b84ef64d18e0a2f4ed56924f266"
+    },
+    "kr-db-03-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/ffcdbfd3ad96ec4e8d335f9597257b9b6799988d196ac142da2a7d84950fcea8/room_snr10/features.npy",
+      "sha256": "c112c36a31587d333686fbb2620a2f4cd6b49235a4a5f49852ff30b4522eb89d"
+    },
+    "kr-db-05": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/2bc5824a78d06cb991f7edb212568e4bd4633088ad4968ec2cba5b1f500e4d7d/features.npy",
+      "sha256": "8539bfd02a0e875df932a107b752193f06bc73a1118ca1aca537eee5fbda8de1"
+    },
+    "kr-db-05-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2bc5824a78d06cb991f7edb212568e4bd4633088ad4968ec2cba5b1f500e4d7d/quiet/features.npy",
+      "sha256": "839d555453e6486c26a5ebb566ad02dab3ddfe8f6748002695bd5e626c7b3701"
+    },
+    "kr-db-05-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2bc5824a78d06cb991f7edb212568e4bd4633088ad4968ec2cba5b1f500e4d7d/room_snr20/features.npy",
+      "sha256": "c29640f792001e107ceb28c87112aa94cb670fc69b114c052ccb30c98d3ce4f5"
+    },
+    "kr-db-05-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/2bc5824a78d06cb991f7edb212568e4bd4633088ad4968ec2cba5b1f500e4d7d/room_snr10/features.npy",
+      "sha256": "55db8d396e64a03643b214e53798a505d2cadd2755680a0f3544bda3247944c1"
+    },
+    "kr-db-14": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/04d6ab92f20cb236c57ec22317428e5524ea71e881adcaea37a0baf26fe9f4c6/features.npy",
+      "sha256": "c2f1b3ded1cae858b845b404075632a64ccf457758c6bf98a6e7085375b1a37a"
+    },
+    "kr-db-14-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/04d6ab92f20cb236c57ec22317428e5524ea71e881adcaea37a0baf26fe9f4c6/quiet/features.npy",
+      "sha256": "d9c553e4be15f634007068bbdc02ce0163038530ca4d1cd6adb5b398e8faad75"
+    },
+    "kr-db-14-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/04d6ab92f20cb236c57ec22317428e5524ea71e881adcaea37a0baf26fe9f4c6/room_snr20/features.npy",
+      "sha256": "9755007871340bb88db4f0ad8cab4fc7efc62d990b0b08e3754288cb361fdad4"
+    },
+    "kr-db-14-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/04d6ab92f20cb236c57ec22317428e5524ea71e881adcaea37a0baf26fe9f4c6/room_snr10/features.npy",
+      "sha256": "f962fdd452321da5c94b651a891ba24d762b2d3fb6f4bd4771db9f18456ee470"
+    },
+    "kr-fa-04": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/29e52c4450b81560c67e2bdd18b31fbaa8cbc10c2f9b2e5113e2455313ba52e4/features.npy",
+      "sha256": "33567db5293da0f1ce83821f7cd1dc38bf149a304b6e2e3f4fbb43fcbf0acca1"
+    },
+    "kr-fa-04-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/29e52c4450b81560c67e2bdd18b31fbaa8cbc10c2f9b2e5113e2455313ba52e4/quiet/features.npy",
+      "sha256": "2498f2bd5c7a79afb492fd16da3edd603d0656baebf178696e1bb4adf9af2022"
+    },
+    "kr-fa-04-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/29e52c4450b81560c67e2bdd18b31fbaa8cbc10c2f9b2e5113e2455313ba52e4/room_snr20/features.npy",
+      "sha256": "5f979fa3f2fc4bded786db3452ecfe09d17a400ee6b2edb0e58651eea7062d83"
+    },
+    "kr-fa-04-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/29e52c4450b81560c67e2bdd18b31fbaa8cbc10c2f9b2e5113e2455313ba52e4/room_snr10/features.npy",
+      "sha256": "6a3bdfe0cfd948472b5219ccc013c9bf45710fc345f1383453f471dd9f9c2623"
+    },
+    "kr-fa-10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/719ad4565574c6d07aab31ab2064b787e7160514337f93df985841c9d0d70c32/features.npy",
+      "sha256": "9b6d5b8cc0f1becf437e00a0f244bc8358934c4f5454c1543714047d9218fd61"
+    },
+    "kr-fa-10-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/719ad4565574c6d07aab31ab2064b787e7160514337f93df985841c9d0d70c32/quiet/features.npy",
+      "sha256": "73493c9de34bc2e9a83134b805a9ea6cede543766a424a9d01069c67c20b62e3"
+    },
+    "kr-fa-10-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/719ad4565574c6d07aab31ab2064b787e7160514337f93df985841c9d0d70c32/room_snr20/features.npy",
+      "sha256": "53d9d5ace3d63967981d2c3bcacb721f1dc1a87084c302e34986954d8a5b1433"
+    },
+    "kr-fa-10-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/719ad4565574c6d07aab31ab2064b787e7160514337f93df985841c9d0d70c32/room_snr10/features.npy",
+      "sha256": "504ddef4db4989b10d225cc100c07cf138c33aceb14e7774eb37911d1c5a79de"
+    },
+    "kr-fa-15": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/0ac0d97f39f1a1ecdcdceb48354d28f101960547878b59c591eaac1e8419b529/features.npy",
+      "sha256": "7f939863f6ba9d24fa7673e636b32f30c3c49e129f575544ed8b6add2458ed13"
+    },
+    "kr-fa-15-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/0ac0d97f39f1a1ecdcdceb48354d28f101960547878b59c591eaac1e8419b529/quiet/features.npy",
+      "sha256": "e07420e99624546866fdad6f18f5ae6c894a41f3feac61af00e4728e837b8d56"
+    },
+    "kr-fa-15-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/0ac0d97f39f1a1ecdcdceb48354d28f101960547878b59c591eaac1e8419b529/room_snr20/features.npy",
+      "sha256": "09bb68571806ea6052735adeb0953ae473c047977f7e6eacb183fc44aee92273"
+    },
+    "kr-fa-15-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/0ac0d97f39f1a1ecdcdceb48354d28f101960547878b59c591eaac1e8419b529/room_snr10/features.npy",
+      "sha256": "f15bd263b34e64f8371d37874ed1a67da04753c57ba3bb603618195487113751"
+    },
+    "kr-fa-17": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/14463be41dce4b9e672106b3f9fea21722e1c0bf58891b1f7d1059d9eac3d0da/features.npy",
+      "sha256": "d2b534c73c922675d1a34db901f3466ce39ca011a5c15d993452c2abc3f6b5e9"
+    },
+    "kr-fa-17-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/14463be41dce4b9e672106b3f9fea21722e1c0bf58891b1f7d1059d9eac3d0da/quiet/features.npy",
+      "sha256": "7e6b71cbeecdffdfc26ec0397eae1e18a5845bf9f6fe3401854cbcba4907f068"
+    },
+    "kr-fa-17-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/14463be41dce4b9e672106b3f9fea21722e1c0bf58891b1f7d1059d9eac3d0da/room_snr20/features.npy",
+      "sha256": "31d648f0d7e07ae29bd41e72d933af9d003832450a2d319cceac7b3694e31569"
+    },
+    "kr-fa-17-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/14463be41dce4b9e672106b3f9fea21722e1c0bf58891b1f7d1059d9eac3d0da/room_snr10/features.npy",
+      "sha256": "bc02ce2cebf8785f0ccf04d8a35e2ee2449286d92a093aae56c98a9a5f9dece1"
+    },
+    "kr-user-db-04": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_features_v1/63d15cb5a8241e471730fdf59983616ebaf090bd229e32b35ab49ac9e253fe6a/features.npy",
+      "sha256": "fd5b34167c3a13b8d66428b7520bf286505743e8c6bd9572f66a2acd0324d41a"
+    },
+    "kr-user-db-04-probe-quiet": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/63d15cb5a8241e471730fdf59983616ebaf090bd229e32b35ab49ac9e253fe6a/quiet/features.npy",
+      "sha256": "567c846570f9320f28f70f95e1a7b951a4aae37671fb1c26292ba8f4b25e61bd"
+    },
+    "kr-user-db-04-probe-room_snr20": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/63d15cb5a8241e471730fdf59983616ebaf090bd229e32b35ab49ac9e253fe6a/room_snr20/features.npy",
+      "sha256": "c8dbb2d8f684209dda6ecfdf25591c8c927d4c955cba6d87dfa2f051d9b491d9"
+    },
+    "kr-user-db-04-probe-room_snr10": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/pursuit_waveform_aug_v1/63d15cb5a8241e471730fdf59983616ebaf090bd229e32b35ab49ac9e253fe6a/room_snr10/features.npy",
+      "sha256": "876fd65677229d0d02862f52f50c1a4db3654fe1a475b4c48c3ccb5cb7e1ca8e"
+    }
+  },
+  "readouts_frozen_before_probes": true,
+  "independent_target_recordings": 0,
+  "actual_product_targets_verified": false
+}

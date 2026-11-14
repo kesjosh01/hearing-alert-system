@@ -1,0 +1,67 @@
+{
+  "input": {
+    "shape": [
+      1,
+      96,
+      64,
+      1
+    ],
+    "dtype": "int8",
+    "scale": 0.0475328266620636,
+    "zero_point": 17
+  },
+  "output": {
+    "shape": [
+      1,
+      3
+    ],
+    "dtype": "int8",
+    "scale": 0.00390625,
+    "zero_point": -128
+  },
+  "operator_set": [
+    "AVERAGE_POOL_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "RESHAPE",
+    "SOFTMAX"
+  ],
+  "labels": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "model_sha256": "5b8e811b87f4381c466ab94932b8a1659e6c2cc440931d6ac5350a410905f247",
+  "model_bytes": 642536,
+  "frontend": {
+    "sample_rate": 16000,
+    "sample_count": 15600,
+    "frame_length": 400,
+    "frame_step": 160,
+    "fft_length": 512,
+    "hann_periodic": true,
+    "spectrum": "magnitude",
+    "mel_bins": 64,
+    "mel_lower_hz": 125.0,
+    "mel_upper_hz": 7500.0,
+    "log_offset": 0.001,
+    "shape": [
+      96,
+      64,
+      1
+    ],
+    "waveform_scale": 32768.0,
+    "window_start_grid": "existing 1-second/0.5-second-hop, final end-aligned"
+  },
+  "output_semantics": "probability",
+  "export_logit_temperature": 4.0,
+  "export_transformation": "Divide only final Dense weights/bias by positive temperature; source checkpoint unchanged",
+  "representative_role": "train",
+  "representative_windows": 2420,
+  "pipeline_only": false,
+  "deployment_ready": false,
+  "board_validated": false,
+  "actual_product_targets_verified": false,
+  "frontend_sha256": "0191402800fbbc5a214b35d0906708cdadcaf0121afe6128ea7108bf55f91a5d"
+}

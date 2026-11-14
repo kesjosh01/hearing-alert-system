@@ -1,0 +1,19 @@
+{
+  "minimal_gpu_validation_complete": true,
+  "official_packages_only": true,
+  "profile": "official221",
+  "environment": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/.venv-gpu-official221",
+  "gpu_update_passed": true,
+  "real_fold0_save_reload_passed": true,
+  "reload_max_abs_difference": 0.0,
+  "cpu_gpu_parity_max_abs_difference": 1.9073486328125e-06,
+  "validation_seconds": 40.82518756599893,
+  "installation_seconds": 249.02753630200095,
+  "existing_files_unchanged": true,
+  "existing_file_count": 7137,
+  "existing_environments_unchanged": true,
+  "fixed_test_embeddings": 0,
+  "regular_cv_completed_folds": 0,
+  "model_quality_assessed": false,
+  "worker_terminated": true
+}

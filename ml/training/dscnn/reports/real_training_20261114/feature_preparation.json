@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "kind": "development_feature_preparation_not_training",
+  "development_identity": {
+    "parent_protocol": "ko-source-cv4-20261108-v1",
+    "effective_fold_fingerprints": [
+      "7d843ebce67123b512641ce03c0a0e6a85bf0e1309cd095db2a62dcdf3465409",
+      "8bc347cc7ba51b42e995e213b9c485214b37822c64da6c9c990ea18d4823ea90",
+      "bb283505ed7fac721c19aa0c87027138d808006f2e21dcc5721090225a551a96",
+      "22929dec9de9532bb8cbda057ecf698752432404450721255881caa3c22270c0"
+    ],
+    "extension_version": "ko-source-cv4-20261114-dscnn-v2",
+    "extension_sha256": "31f63fd509bbb01b5adadfe7a45ca1c1474851d5222821a217b6d9adaaf72e9b"
+  },
+  "clips": 1640,
+  "windows": 15502,
+  "cache": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.cache/features",
+  "test_audio_decoded": 0,
+  "human_review_applied": false,
+  "elapsed_seconds": 126.03725050899811
+}

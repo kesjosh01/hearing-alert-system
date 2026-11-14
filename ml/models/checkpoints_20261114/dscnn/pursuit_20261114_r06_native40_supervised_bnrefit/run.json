@@ -1,0 +1,32 @@
+{
+  "specification_sha256": "052cca646ea12db15e610156aa90e853c01952caf9d687d1c111b1db7656539c",
+  "parent_source": "pursuit_20261114_r06_native40_supervised",
+  "parent_model_sha256": "20a088788d66f45c61aa69e2af77c7583c04c4b4a229befbe4359072b0fcb227",
+  "dataset_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "options": {
+    "architecture": "temporal24",
+    "pooling_fraction": 1.0,
+    "negative_sampler": "coverage_cycle",
+    "hard_negative_multiplier": 1.0,
+    "domestic_weight": 4.0,
+    "other_mass": 0.3333333333333333,
+    "kd_weight": 0.0,
+    "learning_rate": 0.0007,
+    "lr_schedule": "constant",
+    "added_training_data": false,
+    "epochs": 100,
+    "patience": 20,
+    "steps_per_epoch": 40,
+    "batch_size": 36,
+    "microbatch_files": 6,
+    "temperature": 2.0,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "actual_optimizer_steps": 0,
+  "parent_selected_epoch": 51,
+  "parent_selected_optimizer_steps": 2040,
+  "stable_learned_arrays_preserved": 41,
+  "moving_statistic_arrays_changed": 26,
+  "source_sampling_receipts_sha256": "438dcb1dedc084a412ee93fb5fcf903e20f6fcdf0858f82155a600cb0a3a297a"
+}

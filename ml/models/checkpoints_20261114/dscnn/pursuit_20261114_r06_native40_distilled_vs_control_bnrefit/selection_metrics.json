@@ -1,0 +1,42 @@
+{
+  "mode": "margin",
+  "temperature": 1.0,
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "thresholds": [
+    7.123293280601502,
+    4.104740962386132
+  ],
+  "fire_recall": 0.18604651162790697,
+  "doorbell_recall": 0.2804878048780488,
+  "macro_recall": 0.2332671582529779,
+  "classes": {
+    "fire_alarm": {
+      "files": 91,
+      "detected_files": 18,
+      "source_groups": 86,
+      "source_mean_file_recall": 0.18604651162790697,
+      "wrong_target_or_negative_alert_files": 0
+    },
+    "doorbell": {
+      "files": 47,
+      "detected_files": 13,
+      "source_groups": 41,
+      "source_mean_file_recall": 0.2804878048780488,
+      "wrong_target_or_negative_alert_files": 0
+    }
+  },
+  "other_false_alert_files": 0,
+  "other_files": 1053,
+  "cross_or_negative_alert_files": 0,
+  "selection_zero_errors_by_construction": true,
+  "true_event_or_monthly_rate_verified": false
+}

@@ -1,0 +1,22 @@
+{
+  "role": "teacher",
+  "candidate": "freq24",
+  "fold": 2,
+  "exit_code": 0,
+  "device": "gpu",
+  "test_evaluated": false,
+  "deployment_ready": false,
+  "distillation_applied": false,
+  "event_annotations_used": false,
+  "epochs_completed": 30,
+  "selected_epoch": 29,
+  "optimizer_steps": 900,
+  "distillation_optimizer_steps": 0,
+  "model_sha256": "1737199e97041c1f44878ac07a09ccc3e5d1c7066d7a1579170cc9c47988d9e7",
+  "model_variable_devices": [
+    "/job:localhost/replica:0/task:0/device:GPU:0"
+  ],
+  "save_reload_verified": true,
+  "training_siren_clips": 24,
+  "elapsed_seconds": 20.829905219000466
+}

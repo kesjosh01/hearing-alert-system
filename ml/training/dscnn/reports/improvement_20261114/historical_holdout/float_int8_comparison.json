@@ -1,0 +1,17 @@
+{
+  "clips": {
+    "count": 411,
+    "probability_max_abs": 0.03386390209197998,
+    "argmax_agreement": 0.9927007299270073,
+    "declared_decision_agreement": 0.9951338199513382,
+    "argmax_disagreements": 3
+  },
+  "source_groups": {
+    "count": 319,
+    "probability_max_abs": 0.03386390209197998,
+    "argmax_agreement": 0.9968652037617555,
+    "declared_decision_agreement": 0.9968652037617555,
+    "argmax_disagreements": 1
+  },
+  "note": "Observed differences only; no test-driven recalibration or model reselection."
+}

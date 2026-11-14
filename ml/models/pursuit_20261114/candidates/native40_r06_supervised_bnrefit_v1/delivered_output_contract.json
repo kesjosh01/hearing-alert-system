@@ -1,0 +1,55 @@
+{
+  "class_order": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "output_kind": "probability",
+  "output_scale": 0.00390625,
+  "output_zero_point": -128,
+  "policy": [
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "cuts_integer_units": [
+    190,
+    162
+  ],
+  "input_shape": [
+    1,
+    98,
+    40,
+    1
+  ],
+  "frontend": {
+    "sample_rate": 16000,
+    "window_samples": 16000,
+    "window_hop_samples": 8000,
+    "frame_samples": 400,
+    "frame_hop_samples": 160,
+    "fft_size": 512,
+    "mel_bins": 40,
+    "lower_hz": 80.0,
+    "upper_hz": 7600.0,
+    "log_floor": 1e-06,
+    "frame_window": "periodic_hann",
+    "mel_scale": "htk_unnormalized_triangles",
+    "spectrum": "unnormalized_rfft_power",
+    "fft_arithmetic": "float32_radix2",
+    "amplitude": "pcm16_divide_32768_no_peak_normalization",
+    "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+  },
+  "target_argmax_required": true,
+  "threshold_comparison": "score>=cut and score>0",
+  "tie_break": "First maximum",
+  "existing_portable_frontend_compatible": true,
+  "score_semantics": "Argmax-gated unsigned probability",
+  "notification_controller_on_actual_hardware_validated": false,
+  "board_validated": false
+}

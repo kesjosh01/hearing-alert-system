@@ -1,0 +1,15 @@
+{
+  "study_complete": true,
+  "all_eight_requested_stages_completed": true,
+  "observed_new_test_fpr": 0.1044776119402985,
+  "new_test_false_positives": 7,
+  "new_test_negative_files": 67,
+  "new_test_target_recall": 0.5416666666666666,
+  "previous_expanded_new_test_target_recall": 0.41666666666666663,
+  "initial_new_test_target_recall": 0.5833333333333333,
+  "new_test_fpr_5_percent_target_met": false,
+  "promotion_recommended": false,
+  "field_deployment_ready": false,
+  "new_test_driven_retuning_or_label_exclusions": false,
+  "interpretation": "Improved over previous expanded model on both observed fresh metrics; does not outperform every earlier model and fails the fresh 5% FPR goal."
+}

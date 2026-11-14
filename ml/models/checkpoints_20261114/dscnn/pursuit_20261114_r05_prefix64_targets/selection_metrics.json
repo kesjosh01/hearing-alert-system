@@ -1,0 +1,42 @@
+{
+  "classes": {
+    "fire_alarm": {
+      "files": 16,
+      "detected_files": 2,
+      "source_groups": 11,
+      "source_mean_file_recall": 0.1212121212121212,
+      "wrong_class_or_negative_alert_files": 0
+    },
+    "doorbell": {
+      "files": 37,
+      "detected_files": 6,
+      "source_groups": 31,
+      "source_mean_file_recall": 0.1774193548387097,
+      "wrong_class_or_negative_alert_files": 0
+    }
+  },
+  "fire_recall": 0.1212121212121212,
+  "doorbell_recall": 0.1774193548387097,
+  "target_macro_source_file_recall": 0.14931573802541545,
+  "any_other_false_alert_files": 0,
+  "other_files": 925,
+  "total_cross_class_or_negative_alert_files": 0,
+  "thresholds": {
+    "fire_alarm": 0.9999995231628419,
+    "doorbell": 0.999996304512024
+  },
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "loss": 0.31987273942049826,
+  "positive_margin_mean": -0.19493676469011134,
+  "event_onset_or_device_month_reliability_proven": false,
+  "measure": "Weak-label file detection proxy; not true per-event recall"
+}

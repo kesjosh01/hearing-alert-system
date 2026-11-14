@@ -1,0 +1,114 @@
+{
+  "complete": true,
+  "exit_code": 0,
+  "actual_optimizer_steps": 1980,
+  "fresh_test_used": false,
+  "product_targets_verified": false,
+  "epoch": 66,
+  "selected_epoch": 51,
+  "elapsed_seconds": 1120.5001191049996,
+  "latest_selection": {
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 0,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.0,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 7,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.16129032258064516,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "fire_recall": 0.0,
+    "doorbell_recall": 0.16129032258064516,
+    "target_macro_source_file_recall": 0.08064516129032258,
+    "any_other_false_alert_files": 0,
+    "other_files": 925,
+    "total_cross_class_or_negative_alert_files": 0,
+    "thresholds": {
+      "fire_alarm": 1.0000000000000002,
+      "doorbell": 0.9999995231628419
+    },
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "loss": 0.22343013892804398,
+    "positive_margin_mean": -0.2189032041801598,
+    "event_onset_or_device_month_reliability_proven": false,
+    "measure": "Weak-label file detection proxy; not true per-event recall"
+  },
+  "epochs_completed": 66,
+  "model_sha256": "81229df035abd2f22bfec3956fff9e961445fe269d3dba23f96ca2c81e9c1cec",
+  "selected_metrics": {
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 4,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.3181818181818182,
+        "wrong_class_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 9,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.24193548387096775,
+        "wrong_class_or_negative_alert_files": 0
+      }
+    },
+    "fire_recall": 0.3181818181818182,
+    "doorbell_recall": 0.24193548387096775,
+    "target_macro_source_file_recall": 0.28005865102639294,
+    "any_other_false_alert_files": 0,
+    "other_files": 925,
+    "total_cross_class_or_negative_alert_files": 0,
+    "thresholds": {
+      "fire_alarm": 0.9999995231628419,
+      "doorbell": 0.9999947547912599
+    },
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "loss": 0.24677886301132734,
+    "positive_margin_mean": -0.33978427131220984,
+    "event_onset_or_device_month_reliability_proven": false,
+    "measure": "Weak-label file detection proxy; not true per-event recall"
+  },
+  "complexity": {
+    "parameters_including_bn_statistics": 545219,
+    "convolution_and_dense_macs_per_window": 24169216,
+    "largest_single_int8_activation_bytes": 62720,
+    "input_int8_bytes": 3920,
+    "board_tensor_arena_bytes": null,
+    "board_processing_ms": null,
+    "notice": "Estimates only. History storage excludes input/output tensors and frontend/audio/stack buffers; actual board arena, RAM, latency and energy unmeasured.",
+    "input_shape": [
+      98,
+      40,
+      1
+    ],
+    "past_context_int8_storage_bytes": 0,
+    "past_context_float32_storage_bytes_if_unquantized": 0
+  },
+  "negative_files": 8695,
+  "negative_unique_executed": 8695
+}

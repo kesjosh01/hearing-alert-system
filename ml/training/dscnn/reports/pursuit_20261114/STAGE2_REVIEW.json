@@ -1,0 +1,308 @@
+{
+  "created_at_unix": 1794640530.108998,
+  "completed_scope": "Local stage2 fits, train-only BN comparison, actual int8 exports, frozen new public test and known-source diagnostics",
+  "offline_stage2_complete": true,
+  "completed_real_optimizer_runs": {
+    "pursuit_20261114_domestic_seen_aug_presence": {
+      "optimizer_steps": 2130,
+      "selected_epoch": 56,
+      "epochs_completed": 71,
+      "status_sha256": "f674518df5a68bf891265b14a080ddae3f8e98b5cf2f2055da633fc026c35b9e"
+    },
+    "pursuit_20261114_domestic_seen_enriched_presence": {
+      "optimizer_steps": 1830,
+      "selected_epoch": 46,
+      "epochs_completed": 61,
+      "status_sha256": "df70cd01165e7ef9ca6f4f09a5ca35ab11225809003e11cb619ec2f8f7f1988b"
+    },
+    "pursuit_20261114_domestic_seen_freq24": {
+      "optimizer_steps": 2610,
+      "selected_epoch": 67,
+      "epochs_completed": 87,
+      "status_sha256": "35b4568de3afe4664e4ff6ea0c2d0a3705dd91f6959bae40550c9eb7ce3cf4a0"
+    },
+    "pursuit_20261114_domestic_seen_presence": {
+      "optimizer_steps": 2670,
+      "selected_epoch": 69,
+      "epochs_completed": 89,
+      "status_sha256": "c4047d678edc7a8ef00ddcdf58ff7b2d728b6c40dd56d1d586a9c7c226fc1643"
+    },
+    "pursuit_20261114_domestic_seen_sparse": {
+      "optimizer_steps": 2100,
+      "selected_epoch": 50,
+      "epochs_completed": 70,
+      "status_sha256": "fadbc8ac5f9be3b6a21c5aeba53fa6026b935927abff1c5185e0e96464c24efe"
+    },
+    "pursuit_20261114_r01_context5": {
+      "optimizer_steps": 630,
+      "selected_epoch": 9,
+      "epochs_completed": 21,
+      "status_sha256": "5fec392f5c7af6fd72140266bc0565af6e5e8e341efd55c22b251e7a796b813c"
+    },
+    "pursuit_20261114_r01_deep": {
+      "optimizer_steps": 570,
+      "selected_epoch": 7,
+      "epochs_completed": 19,
+      "status_sha256": "d0cb525ec117887547920c0815a6bd99503de427b65f3ab12bf023649099f348"
+    },
+    "pursuit_20261114_r01_freq24": {
+      "optimizer_steps": 1410,
+      "selected_epoch": 35,
+      "epochs_completed": 47,
+      "status_sha256": "69db469c2cf5a03014f32e49258ef45ff9e1ad174ca78d221a856d18c7d45420"
+    },
+    "pursuit_20261114_r01_freq24_firevote": {
+      "optimizer_steps": 660,
+      "selected_epoch": 10,
+      "epochs_completed": 22,
+      "status_sha256": "e279dd3cd519e8ff9ed9203262b4498c519a9bcc8bd696db850e7b2762df1ec7"
+    },
+    "pursuit_20261114_r01_freq24_kd25": {
+      "optimizer_steps": 780,
+      "selected_epoch": 14,
+      "epochs_completed": 26,
+      "status_sha256": "77f096d60544fd68923beec7a4be6604ba89133e00f215b9d6fb1eeaaaa745dc"
+    },
+    "pursuit_20261114_r01_freq24_kd50": {
+      "optimizer_steps": 570,
+      "selected_epoch": 7,
+      "epochs_completed": 19,
+      "status_sha256": "9006ec92ac648cf12976d17cfff9bed7eef81d060a99bbf430eff602aa3eace0"
+    },
+    "pursuit_20261114_r01_freq24_sparse": {
+      "optimizer_steps": 600,
+      "selected_epoch": 8,
+      "epochs_completed": 20,
+      "status_sha256": "fa828b0fc4410c96198e2f735e4f66ca690b61715d1aa715d77047b7d06ff541"
+    },
+    "pursuit_20261114_r01_freq48": {
+      "optimizer_steps": 690,
+      "selected_epoch": 11,
+      "epochs_completed": 23,
+      "status_sha256": "ccd6cbce718e8ee4f0dfa0c3a8ae6e473b65409e126b81bec4d547f2b9fbe3e4"
+    },
+    "pursuit_20261114_r01_yamnet_mean": {
+      "optimizer_steps": 630,
+      "selected_epoch": 9,
+      "epochs_completed": 21,
+      "status_sha256": "6c1d6e1ad3b5c45f092d3c60cdd182d0628490d8966736eb0971d576ef8cad5f"
+    },
+    "pursuit_20261114_r01_yamnet_sparse": {
+      "optimizer_steps": 660,
+      "selected_epoch": 10,
+      "epochs_completed": 22,
+      "status_sha256": "b17105b64e6eade567d6e29bde8c70174e3de3c295fb0c65f1047457cbbf18d0"
+    },
+    "pursuit_20261114_r02_freq24": {
+      "optimizer_steps": 1080,
+      "selected_epoch": 24,
+      "epochs_completed": 36,
+      "status_sha256": "79cef5d68984f8b0ca2c9c1829b73ce88ad35a890877494bab92673edf84181b"
+    },
+    "pursuit_20261114_r02_freq24_aug": {
+      "optimizer_steps": 930,
+      "selected_epoch": 19,
+      "epochs_completed": 31,
+      "status_sha256": "5d88c23a569519641e3934a4b4ef9fc709cc44414c36869e124592d276ee13de"
+    },
+    "pursuit_20261114_r02_max_ce_control": {
+      "optimizer_steps": 810,
+      "selected_epoch": 12,
+      "epochs_completed": 27,
+      "status_sha256": "d3f14a50e6d1a3f8b486bc1618bd2d1faf70c7208c5585d0a7e943997dad66b4"
+    },
+    "pursuit_20261114_r02_presence_mil": {
+      "optimizer_steps": 2130,
+      "selected_epoch": 56,
+      "epochs_completed": 71,
+      "status_sha256": "564638213c72743b3ccf28c89bfddab19fbb0e7c142b88c86ea4b00a2bb212cb"
+    },
+    "pursuit_20261114_r02_yamnet_sparse": {
+      "optimizer_steps": 1020,
+      "selected_epoch": 22,
+      "epochs_completed": 34,
+      "status_sha256": "c65a2cb7dc2d886fb1cdd56dc007e818fcfbb0e0a117584db4266b1d01c99822"
+    },
+    "pursuit_20261114_r02_yamnet_warm": {
+      "optimizer_steps": 780,
+      "selected_epoch": 14,
+      "epochs_completed": 26,
+      "status_sha256": "8bbc115f54a7656e3d08a970dd266133e7463e335f1350ae9ceca71a0669b408"
+    },
+    "pursuit_20261114_r03_prefix8_pretrained": {
+      "optimizer_steps": 810,
+      "selected_epoch": 12,
+      "epochs_completed": 27,
+      "status_sha256": "61e3e4d7a1f914ec37786935d79ad696bcd170f010d4d09c13f2f82553ca0635"
+    },
+    "pursuit_20261114_r03_prefix8_random": {
+      "optimizer_steps": 960,
+      "selected_epoch": 17,
+      "epochs_completed": 32,
+      "status_sha256": "db5b007c4bd345048a1804233dfcec92974ceb66efaebe561649f098bb1090a5"
+    },
+    "pursuit_20261114_r03_strong": {
+      "optimizer_steps": 720,
+      "selected_epoch": 12,
+      "epochs_completed": 24,
+      "status_sha256": "5df2a0a16df6caaa93390f61077a5ac04a2bf5a9421971c8013535a99ac1057e"
+    },
+    "pursuit_20261114_r03_weak": {
+      "optimizer_steps": 1170,
+      "selected_epoch": 27,
+      "epochs_completed": 39,
+      "status_sha256": "5cf75b1116a5ce2bc752107aa84c5ece6a6eb3fc750ed1bf8db6d5b12caa94f2"
+    },
+    "pursuit_20261114_r04_freq24": {
+      "optimizer_steps": 1650,
+      "selected_epoch": 43,
+      "epochs_completed": 55,
+      "status_sha256": "b54ebcfbe761ce71f517f8681edc247be75f0ad8e27fbf421fa44069703494a9"
+    },
+    "pursuit_20261114_r04_prefix40_pretrained": {
+      "optimizer_steps": 1980,
+      "selected_epoch": 51,
+      "epochs_completed": 66,
+      "status_sha256": "734b5593781b50e4f21b336fe312ee7666022fdd3c62289a044d96086eb3c4af"
+    },
+    "pursuit_20261114_r04_prefix64_pretrained": {
+      "optimizer_steps": 1710,
+      "selected_epoch": 42,
+      "epochs_completed": 57,
+      "status_sha256": "93c83623e31eba7f04d53ff279028fea361b396147fe7e7033fcc9e7e4dbb0e1"
+    },
+    "pursuit_20261114_r05_prefix64_targets": {
+      "optimizer_steps": 1380,
+      "selected_epoch": 31,
+      "epochs_completed": 46,
+      "status_sha256": "45d0388f3e4d4b4033daf90500933605bebb53feb2d3469fe356377591f1aa52"
+    },
+    "pursuit_20261114_r06_full_yamnet_head": {
+      "optimizer_steps": 960,
+      "selected_epoch": 18,
+      "epochs_completed": 24,
+      "status_sha256": "56f31c806c7c80883b5bd80c6b5e165ac880aab3bcabe783cea5f543643d6238"
+    },
+    "pursuit_20261114_r06_full_yamnet_refined_unfused_bn": {
+      "optimizer_steps": 840,
+      "selected_epoch": 9,
+      "epochs_completed": 21,
+      "status_sha256": "74b482d8fda9ffc533d7f0667ff4dc630944bd3b64c9d573d9bcf1a43f4d327b"
+    },
+    "pursuit_20261114_r06_native40_distilled_vs_control": {
+      "optimizer_steps": 2760,
+      "selected_epoch": 49,
+      "epochs_completed": 69,
+      "status_sha256": "46ee3594c65a4b66d2e1c045bdcfbbe4c8f3485a34d16ba2dd1db6397cb7d6ac"
+    },
+    "pursuit_20261114_r06_native40_supervised": {
+      "optimizer_steps": 2840,
+      "selected_epoch": 51,
+      "epochs_completed": 71,
+      "status_sha256": "a085ecff57093759e421bca56bb8dc75ef074319cf05f983595c7ec71d98dd6b"
+    }
+  },
+  "no_optimizer_update_transforms_excluded_from_fit_count": true,
+  "source_refined_teacher_did_not_beat_old_large_reference": true,
+  "actual_native_student_kl_distillation_executed": true,
+  "actual_kd_optimizer_steps": 2760,
+  "kd_selected_epoch": 49,
+  "selected_kd_checkpoint_negative_view_coverage": {
+    "source_draws": 70560,
+    "unique_training_views": 10733,
+    "unique_negative_views": 9457,
+    "unique_negative_canonical_recordings": 9454,
+    "negative_views_with_zero_draws": 0
+  },
+  "pre_test_selected_global_bundle": "native40_r06_v1",
+  "global_winner_alias": "native40_r06_supervised_bnrefit_v1",
+  "new_public_benchmark_sha256": "e2536928b67f5a858577eff1810c3e59274afefc46f3d990c00c6564a635a306",
+  "known_source_diagnostic_sha256": "0796f9e575261d640f61e71df6e2dd5e9e9f2d8ac5eb8811818fa157dfac205c",
+  "additional_fixed_fusion_experiment_complete": true,
+  "fusion_readout_not_selected_from_public_results": true,
+  "fusion_public_metric": {
+    "fire_recall": 0.0,
+    "doorbell_recall": 0.0,
+    "classes": {
+      "fire_alarm": {
+        "files": 41,
+        "detected_files": 0,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.0
+      },
+      "doorbell": {
+        "files": 6,
+        "detected_files": 0,
+        "source_groups": 6,
+        "source_mean_file_recall": 0.0
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 41,
+          "detected_files": 0
+        },
+        "doorbell": {
+          "files": 6,
+          "detected_files": 0
+        }
+      }
+    },
+    "other_files": 512,
+    "other_false_alert_files": 1,
+    "wrong_target_alert_files": 1,
+    "cuts_integer_units": [
+      529,
+      559
+    ],
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "current_domestic_probe_global_membership": {
+    "fire_alarm": {
+      "train": 9,
+      "selection": 2,
+      "calibration": 2,
+      "not_in_global_inventory": 4
+    },
+    "doorbell": {
+      "train": 16,
+      "selection": 3,
+      "calibration": 3,
+      "not_in_global_inventory": 4
+    }
+  },
+  "protected_previous_files_verified": 573,
+  "collection_disabled_by_user": true,
+  "original_audio_or_model_deletion_authorized": false,
+  "actual_device_days": 0,
+  "actual_activation_recall_verified": false,
+  "actual_notification_monthly_rate_verified": false,
+  "actual_product_targets_verified": false,
+  "overall_goal_complete": false,
+  "hardware_available": false,
+  "unresolved_requirements": [
+    "Target microphone and alert hardware",
+    "Independent representative actual fire/button activation ground truth and detection/notification logs",
+    "Real device exposure and false-notification counts with a fixed final system"
+  ],
+  "evidence_sha256": {
+    "stage2_native40_float_matched_comparison.json": "f04afff812e99ccb9bbcdd59c51fb45918c6128e73e603206394e064c024babe",
+    "stage2_train_only_bn_matched_comparison.json": "2aeb1c9b8a58381f7335746d817c1caa6536d528604ddae4b78e5b821a6221fd",
+    "stage2_teacher_matched_comparison.json": "6365ee0052374438f0b28e2dc6cb55bceee84e720b1be7208d4e072367a9747e",
+    "stage2_teacher_vs_native_control.json": "c00dc8a48e83e3e97af9da9b1d60cb64a4280703edd160957f0a0eb71f9b3734",
+    "stage2_native40_export_plan.json": "96de8846460467e2097eda7525af715fd005d87d05dd994848bd40c1773fd334",
+    "stage2_paired_integer_plan.json": "f166d8ac1504762b8379fde22cd1e406b0c815fd821ce827d37ea1675bdb39a3",
+    "stage2_public_benchmark_plan.json": "83f1d640d8e49c7468629aab87841b6ee8114cdc0b1239b9bfd6fec5ec8ce0ce",
+    "collection_stopped_by_user.json": "04c7a45e320a382ff5613995ac606f9794341e46dc51b4a8b4b4fa535f9d277b",
+    "hardware_availability.json": "de02906be2100f69246284581c6d2db84cd1a51f7554304715e3f871970d5056",
+    "actual_product_evidence_gate.json": "6446e8b06bef71526e6dc437b933794fac60585cf42b1cf1adfc5098dd9b5ac5",
+    "stage2_domestic_fusion_plan.json": "007b6f3894d544b25b2f9faaab72df9269f8fc37085ffc778fa75c16e5c1c4c9",
+    "stage2_domestic_fusion_v1/status.json": "d35608e2a83c91e0f8e04aa0b66ee463d788af1e87446486a337b64c25ec59ef",
+    "stage2_domestic_fusion_v1/new_public_results.json": "b57a6786b832ecf4390ae9d4eefa44e60cbb660acf7648d5f29dc84ad9bac88e",
+    "stage2_known_source_membership_clarification.json": "e1c86d93ad107e8f49dcec74d24546245c2e3567f6cbee0a7d53dd580f3e5246",
+    "stage2_other_target_metadata_audit.json": "4bbb80edbb43daa67b5309a68c10a6956033ffb0c27999ccdee362bfecf5751f",
+    "stage2_learning_curves_v1/figure_manifest.json": "687e67a7a623101cbdb004f19215c764c83c920b865e619b6e2ed8071c923294",
+    "stage2_learning_curves_v1/rendered_figure_check.json": "e82ed7ab6166bf26c1b6a5909f25bb78b66cb9232c93bc4ef6de8a5948e9b61c"
+  }
+}

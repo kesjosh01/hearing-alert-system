@@ -1,0 +1,8 @@
+# CPU baseline dependencies for Python 3.11 or 3.12 on x86-64 Linux or Windows.
+# Keep TF and legacy Keras on the same minor version for YAMNet/TF Hub.
+numpy==1.26.4
+tensorflow==2.18.1
+tf-keras==2.18.0
+tensorflow-hub==0.16.1
+# TF Hub 0.16.1 still imports pkg_resources, removed in setuptools 81+.
+setuptools==80.9.0

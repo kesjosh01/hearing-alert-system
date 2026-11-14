@@ -1,0 +1,21 @@
+{
+  "files": {
+    "temporal_policy.json": "ac7e4ecdc6bcca877aee65b24d24fb82cbdd9eab7d2998b16ebc2fb7ec3a22e5",
+    "classifier.keras": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "model_metadata.json": "c284d8ef1a2d3f263ea34ada679f20844ef12dcaca26daaf55713fe80e64f5ff",
+    "frontend.json": "82a05fcd1abf80f05fed111eb0a367a82f18dbbb5c30cb335cf7e285861cf9f1",
+    "RELEASE_STATUS.json": "abb8ce5c0d66eacfa5aff5b3d2c05a8338d0dcb5e1f8c49081482f5fb6e31f4c",
+    "labels.json": "1603b947446053b6325ea0509674c74502ef1dbfc6eeb3da204ad67a3b369e8e",
+    "training_provenance.json": "37015d69f6e5684b7cd2385326d264f9dd978ba8a700d5abf49bc4360fee783c",
+    "README.md": "03eda682ec6bf04eb9cc6689b4edd5947fd1a88ff1ec350fc8aaa84523664e9c",
+    "dscnn_int8.h": "746db973895f3af2bea3dd3cf6153044ce29add670f9ca4f992ddac436b6d381",
+    "PUBLIC_DATA_CREDITS.md": "37cddb4de2d782f169465122b870cd67b7ef0fc79304b03e671149675158fc35",
+    "dscnn_int8.tflite": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+    "decision_policy.json": "05b8ff9b62ae5c53eedbc0cf364816469cb5dfd09329ba5782723d078764336b"
+  },
+  "trained_model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+  "trained_int8_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+  "source_run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42",
+  "actual_training_verified": true,
+  "board_or_microphone_verified": false
+}
