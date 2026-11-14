@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "all100_training_targets_sampled": true,
+  "metadata_predicted_and_actual_draw_counts_identical": true,
+  "original_refit_preserved": true,
+  "selected_seed": 43,
+  "test_used_to_select_seed": false,
+  "refit": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_coverage_final",
+  "additional_training_runs": 1
+}

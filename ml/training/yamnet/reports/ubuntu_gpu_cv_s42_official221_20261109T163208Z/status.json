@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-11-09T16:32:08.615537+00:00",
+  "experiment_completed": true,
+  "gpu_validation_passed": true,
+  "completed_weights": [
+    1,
+    2,
+    4
+  ],
+  "test_evaluated": false,
+  "refit_executed": false,
+  "installation_executed": false,
+  "stage": "complete",
+  "report_directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/reports/ubuntu_gpu_cv_s42_official221_20261109T163208Z",
+  "scope": "regular_gpu_cv",
+  "environment_profile": "official221",
+  "validated_report": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/reports/gpu_training_validation_official221_20261109T135728Z",
+  "minimal_validation_reexecuted": false,
+  "initial_validation_seconds": 5.692818200999682,
+  "integrity_passed": true,
+  "finished_at": "2026-11-09T16:36:50.637385+00:00",
+  "elapsed_seconds": 282.0220346469996,
+  "exit_code": 0
+}

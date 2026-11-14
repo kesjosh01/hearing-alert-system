@@ -1,0 +1,38 @@
+{
+  "experiment_complete": true,
+  "regular_cv_completed_folds": 12,
+  "environment": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/.venv-gpu-official221",
+  "official_packages_only": true,
+  "new_installations": 0,
+  "gpu_training_and_reload_verified": true,
+  "sequential_weight_order": [
+    1,
+    2,
+    4
+  ],
+  "worker_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "first_error": null,
+  "elapsed_seconds": 282.0220346469996,
+  "metric_recalculation_passed": true,
+  "domestic_oof_groups_per_weight": 34,
+  "domestic_oof_class_prediction_changes_vs_w1": {
+    "2": 0,
+    "4": 0
+  },
+  "consistent_domestic_gain_from_increased_weight": false,
+  "guards_passed_folds": 12,
+  "protected_file_count": 7154,
+  "protected_hashes_unchanged": true,
+  "package_lists_unchanged": true,
+  "fixed_test_embeddings": 0,
+  "test_evaluated": false,
+  "refit_executed": false,
+  "final_weight_selected": false,
+  "product_suitability": "not established by development CV",
+  "workers_terminated": true,
+  "gpu_compute_processes_after": 0
+}

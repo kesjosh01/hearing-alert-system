@@ -1,0 +1,962 @@
+[
+  {
+    "scope": "fresh_test",
+    "model": "initial",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 3,
+          "recall": 0.375,
+          "groups": 3,
+          "group_correct": 2,
+          "group_recall": 0.6666666666666666
+        },
+        "other": {
+          "clips": 67,
+          "correct": 63,
+          "recall": 0.9402985074626866,
+          "groups": 10,
+          "group_correct": 10,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.5833333333333333,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.05970149253731343,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5540090528351902,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.6
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.7083333333333333
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "initial",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 3,
+          "recall": 0.375,
+          "groups": 3,
+          "group_correct": 2,
+          "group_recall": 0.6666666666666666
+        },
+        "other": {
+          "clips": 67,
+          "correct": 63,
+          "recall": 0.9402985074626866,
+          "groups": 10,
+          "group_correct": 10,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.5833333333333333,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.05970149253731343,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5543039417335165,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.6
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.7083333333333333
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "initial",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "other": {
+          "clips": 395,
+          "correct": 392,
+          "recall": 0.9924050632911392,
+          "groups": 304,
+          "group_correct": 302,
+          "group_recall": 0.993421052631579
+        }
+      },
+      "target_macro_group_recall": 0.5,
+      "domestic_target_macro_group_recall": 0.5,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 3,
+      "foreign_fpr": 0.007614213197969543,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.18520183845428517,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.6
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.5
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "initial",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "other": {
+          "clips": 395,
+          "correct": 392,
+          "recall": 0.9924050632911392,
+          "groups": 304,
+          "group_correct": 302,
+          "group_recall": 0.993421052631579
+        }
+      },
+      "target_macro_group_recall": 0.5,
+      "domestic_target_macro_group_recall": 0.5,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 3,
+      "foreign_fpr": 0.007614213197969543,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.1854346280460164,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.6
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.5
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "previous_distilled",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 59,
+          "recall": 0.8805970149253731,
+          "groups": 10,
+          "group_correct": 10,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 8,
+      "foreign_fpr": 0.11940298507462686,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5563847432679546,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.5416666666666666
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "previous_distilled",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 59,
+          "recall": 0.8805970149253731,
+          "groups": 10,
+          "group_correct": 10,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 8,
+      "foreign_fpr": 0.11940298507462686,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5591923732941717,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.5416666666666666
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "previous_distilled",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 395,
+          "correct": 369,
+          "recall": 0.9341772151898734,
+          "groups": 304,
+          "group_correct": 287,
+          "group_recall": 0.944078947368421
+        }
+      },
+      "target_macro_group_recall": 0.625,
+      "domestic_target_macro_group_recall": 0.625,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 26,
+      "foreign_fpr": 0.06598984771573604,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.27039320610401146,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.875
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "previous_distilled",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 395,
+          "correct": 371,
+          "recall": 0.9392405063291139,
+          "groups": 304,
+          "group_correct": 286,
+          "group_recall": 0.9407894736842105
+        }
+      },
+      "target_macro_group_recall": 0.625,
+      "domestic_target_macro_group_recall": 0.625,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 24,
+      "foreign_fpr": 0.06091370558375635,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.27123901226410757,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.875
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "previous_expanded",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 47,
+          "recall": 0.7014925373134329,
+          "groups": 10,
+          "group_correct": 9,
+          "group_recall": 0.9
+        }
+      },
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 20,
+      "foreign_fpr": 0.29850746268656714,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.9082071779554906,
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.41666666666666663
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "previous_expanded",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 47,
+          "recall": 0.7014925373134329,
+          "groups": 10,
+          "group_correct": 9,
+          "group_recall": 0.9
+        }
+      },
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 20,
+      "foreign_fpr": 0.29850746268656714,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.9042475951579256,
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.41666666666666663
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "previous_expanded",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "other": {
+          "clips": 395,
+          "correct": 348,
+          "recall": 0.8810126582278481,
+          "groups": 304,
+          "group_correct": 266,
+          "group_recall": 0.875
+        }
+      },
+      "target_macro_group_recall": 0.625,
+      "domestic_target_macro_group_recall": 0.625,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 47,
+      "foreign_fpr": 0.11928934010152284,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.47038169823078535,
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.75
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "previous_expanded",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "other": {
+          "clips": 395,
+          "correct": 349,
+          "recall": 0.8835443037974684,
+          "groups": 304,
+          "group_correct": 268,
+          "group_recall": 0.881578947368421
+        }
+      },
+      "target_macro_group_recall": 0.625,
+      "domestic_target_macro_group_recall": 0.625,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 46,
+      "foreign_fpr": 0.116751269035533,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.46653462186388617,
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.75
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "comparison_baseline",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 63,
+          "recall": 0.9402985074626866,
+          "groups": 10,
+          "group_correct": 9,
+          "group_recall": 0.9
+        }
+      },
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.05970149253731343,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5316597580030894,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.75
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.41666666666666663
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "comparison_baseline",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 63,
+          "recall": 0.9402985074626866,
+          "groups": 10,
+          "group_correct": 9,
+          "group_recall": 0.9
+        }
+      },
+      "target_macro_group_recall": 0.41666666666666663,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.05970149253731343,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5145318238290421,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.75
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.41666666666666663
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "comparison_baseline",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "other": {
+          "clips": 395,
+          "correct": 369,
+          "recall": 0.9341772151898734,
+          "groups": 304,
+          "group_correct": 287,
+          "group_recall": 0.944078947368421
+        }
+      },
+      "target_macro_group_recall": 0.5,
+      "domestic_target_macro_group_recall": 0.5,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 26,
+      "foreign_fpr": 0.06598984771573604,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.2859780673744266,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.75
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.5
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "comparison_baseline",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "other": {
+          "clips": 395,
+          "correct": 370,
+          "recall": 0.9367088607594937,
+          "groups": 304,
+          "group_correct": 287,
+          "group_recall": 0.944078947368421
+        }
+      },
+      "target_macro_group_recall": 0.5,
+      "domestic_target_macro_group_recall": 0.5,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 25,
+      "foreign_fpr": 0.06345177664974619,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.2792696816392761,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.75
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.5
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "final",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 60,
+          "recall": 0.8955223880597015,
+          "groups": 10,
+          "group_correct": 10,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.5416666666666666,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 7,
+      "foreign_fpr": 0.1044776119402985,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5761408960848304,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.5416666666666666
+    }
+  },
+  {
+    "scope": "fresh_test",
+    "model": "final",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "doorbell": {
+          "clips": 8,
+          "correct": 2,
+          "recall": 0.25,
+          "groups": 3,
+          "group_correct": 1,
+          "group_recall": 0.3333333333333333
+        },
+        "other": {
+          "clips": 67,
+          "correct": 60,
+          "recall": 0.8955223880597015,
+          "groups": 10,
+          "group_correct": 10,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.5416666666666666,
+      "domestic_target_macro_group_recall": null,
+      "foreign_negative_clips": 67,
+      "foreign_false_positives": 7,
+      "foreign_fpr": 0.1044776119402985,
+      "domestic_doorlock_groups": 0,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": false,
+      "loss": 0.5786075656247696,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.6
+      },
+      "count": 79,
+      "any_target_alert_macro_recall": 0.5416666666666666
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "final",
+    "backend": "float",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 395,
+          "correct": 377,
+          "recall": 0.9544303797468354,
+          "groups": 304,
+          "group_correct": 292,
+          "group_recall": 0.9605263157894737
+        }
+      },
+      "target_macro_group_recall": 0.625,
+      "domestic_target_macro_group_recall": 0.625,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 18,
+      "foreign_fpr": 0.04568527918781726,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.14611356617589916,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.625
+    }
+  },
+  {
+    "scope": "historical",
+    "model": "final",
+    "backend": "int8",
+    "metrics": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 4,
+          "correct": 2,
+          "recall": 0.5,
+          "groups": 4,
+          "group_correct": 2,
+          "group_recall": 0.5
+        },
+        "doorbell": {
+          "clips": 4,
+          "correct": 3,
+          "recall": 0.75,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 395,
+          "correct": 377,
+          "recall": 0.9544303797468354,
+          "groups": 304,
+          "group_correct": 292,
+          "group_recall": 0.9605263157894737
+        }
+      },
+      "target_macro_group_recall": 0.625,
+      "domestic_target_macro_group_recall": 0.625,
+      "foreign_negative_clips": 394,
+      "foreign_false_positives": 18,
+      "foreign_fpr": 0.04568527918781726,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.1512841854034088,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.6
+      },
+      "count": 403,
+      "any_target_alert_macro_recall": 0.625
+    }
+  }
+]

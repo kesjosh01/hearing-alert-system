@@ -1,0 +1,139 @@
+{
+  "complete": true,
+  "common_selection_files": 978,
+  "chosen_teacher": "pursuit_20261114_r06_yamnet_semantic_prior",
+  "chosen_model_sha256": "3300afe4df325f87001e1dc3aeb027da5f61d5c512b6a5b0fef22c6512b1653e",
+  "teacher_type": "Frozen original class-specific pretrained weights, zero new-task optimizer steps",
+  "selection_only": true,
+  "baseline_model": "pursuit_20261114_r04_prefix64_pretrained",
+  "baseline_previous_best_readout": {
+    "mode": "probability",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      0.9999751499166051,
+      0.9999837804894876
+    ],
+    "fire_recall": 0.4848484848484848,
+    "doorbell_recall": 0.3870967741935484,
+    "macro_recall": 0.43597262952101656,
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 7,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.4848484848484848,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 15,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.3870967741935484,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 925,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "matched_parent_selection": {
+    "mode": "margin",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      3.04595160484314,
+      3.0449061393737797
+    ],
+    "fire_recall": 0.4242424242424242,
+    "doorbell_recall": 0.03225806451612903,
+    "macro_recall": 0.2282502443792766,
+    "classes": {
+      "fire_alarm": {
+        "files": 16,
+        "detected_files": 7,
+        "source_groups": 11,
+        "source_mean_file_recall": 0.4242424242424242,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 37,
+        "detected_files": 1,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.03225806451612903,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 925,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "full_frozen_selection": {
+    "mode": "margin",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      3.04595160484314,
+      3.0449061393737797
+    ],
+    "fire_recall": 0.4844961240310077,
+    "doorbell_recall": 0.12195121951219512,
+    "macro_recall": 0.3032236717716014,
+    "classes": {
+      "fire_alarm": {
+        "files": 91,
+        "detected_files": 44,
+        "source_groups": 86,
+        "source_mean_file_recall": 0.4844961240310077,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 47,
+        "detected_files": 5,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.12195121951219512,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 1053,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "distillation_gate_passed": false,
+  "calibration_or_fresh_used": false,
+  "repeated_selection_is_not_independent_test": true,
+  "actual_product_targets_verified": false
+}

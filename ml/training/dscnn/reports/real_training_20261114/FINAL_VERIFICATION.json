@@ -1,0 +1,91 @@
+{
+  "kind": "dscnn_model_development_and_training_audit",
+  "checked_at_utc": "2026-11-13T19:21:48.552635+00:00",
+  "model_development_and_training_complete": true,
+  "event_intervals_reviewed": false,
+  "independent_microphone_validation_complete": false,
+  "esp_idf_cross_compile_verified": false,
+  "board_executions": 0,
+  "deployment_ready": false,
+  "checks": {
+    "study_completed_12_folds": true,
+    "effective_data_identity_unchanged": true,
+    "file_label_supervision_truthful": true,
+    "all_selected_fold_guards_passed": true,
+    "decision_policy_frozen_from_development": true,
+    "frozen_training_code_and_configuration_unchanged": true,
+    "all_cv_checkpoints_match_recorded_hashes": true,
+    "every_training_run_used_gpu": true,
+    "common_threshold_metrics_match_prediction_files": true,
+    "test_excluded_from_all_training_and_validation": true,
+    "refit_epochs_fixed_from_cv_median": true,
+    "refit_optimizer_steps_match_fixed_budget": true,
+    "all_five_new_doorbells_actually_sampled_in_refit": true,
+    "int8_calibration_train_only": true,
+    "trained_int8_artifact": true,
+    "int8_operator_and_tensor_contract": true,
+    "trained_int8_frontend_host_parity_passed": true,
+    "model_frozen_before_and_after_holdout": true,
+    "historical_holdout_compared_once_and_labelled_correctly": true,
+    "originals_splits_yamnet_and_environments_preserved": true,
+    "dscnn_environment_packages_unchanged": true,
+    "software_unit_tests_passed": true
+  },
+  "limitations": [
+    "File labels supervise mean window probabilities. Individual event timestamps and window detection accuracy are unverified.",
+    "Old YAMNet test was reused for one frozen retrospective comparison, not a fresh independent test.",
+    "New domestic audio and different supervision/training units prevent a controlled architecture-only comparison to YAMNet.",
+    "Board RAM, latency, real microphone streams, false alarms/hour and end-to-end alerts remain unmeasured."
+  ],
+  "new_doorbell_refit_draws": {
+    "kr-user-db-06": 235,
+    "kr-user-db-07": 217,
+    "kr-user-db-08": 234,
+    "kr-user-db-09": 240,
+    "kr-user-db-10": 244
+  },
+  "final_study_real_audio_training_executions": 13,
+  "earlier_development_runs_preserved": [
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f2",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f0",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f1",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f2",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f3",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w2_f0"
+  ],
+  "earlier_run_statuses": {
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f2": {
+      "epochs_recorded": 11,
+      "exit_code": null
+    },
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f0": {
+      "epochs_recorded": 10,
+      "exit_code": 0
+    },
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f1": {
+      "epochs_recorded": 11,
+      "exit_code": 0
+    },
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f2": {
+      "epochs_recorded": 11,
+      "exit_code": 0
+    },
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f3": {
+      "epochs_recorded": 29,
+      "exit_code": 0
+    },
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w2_f0": {
+      "epochs_recorded": 11,
+      "exit_code": 0
+    }
+  },
+  "completed_cv_folds_reused_after_reboot": 2,
+  "new_training_executions_after_reboot": 11,
+  "real_audio_training_executions": 19,
+  "optimizer_steps": 9150,
+  "trained_model": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114r_refit_w1/classifier.keras",
+  "trained_int8_model": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114r_refit_w1/export/dscnn_int8.tflite",
+  "trained_int8_bytes": 13656,
+  "historical_domestic_target_recall": 0.5,
+  "performance_note": "Training and artifact checks do not establish practical detection readiness. Report target misses and the small, historically reused holdout separately from completion."
+}

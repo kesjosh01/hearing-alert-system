@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "actual_delivered_windows": 8907,
+  "source_output_cache_sha256": "e891d86bf55978f3662860ac0b9bec04b875eaca99fdf643106bf10fb1dd7746",
+  "probability_float_threshold_vs_quantized_output_threshold_flags_equal": true,
+  "new_model_inference": false,
+  "board_tested": false
+}

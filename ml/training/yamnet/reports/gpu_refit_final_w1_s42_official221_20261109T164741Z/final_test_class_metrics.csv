@@ -1,0 +1,10 @@
+﻿scope,label,precision,recall,f1,support,correct,predicted
+domestic_groups,fire_alarm,0.8,1.0,0.888888888888889,4,4,5
+domestic_groups,doorbell,1.0,0.75,0.8571428571428571,4,3,3
+domestic_groups,other,1.0,1.0,1.0,1,1,1
+groups,fire_alarm,0.4,1.0,0.5714285714285715,4,4,10
+groups,doorbell,0.6,0.75,0.6666666666666665,4,3,5
+groups,other,1.0,0.977491961414791,0.9886178861788618,311,304,304
+clips,fire_alarm,0.3333333333333333,1.0,0.5,4,4,12
+clips,doorbell,0.6,0.75,0.6666666666666665,4,3,5
+clips,other,1.0,0.9776674937965261,0.9887076537013801,403,394,394

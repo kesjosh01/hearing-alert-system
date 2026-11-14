@@ -1,0 +1,106 @@
+{
+  "created_at_unix": 1794638104.9228413,
+  "dataset": "round06_local_regions",
+  "dataset_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "source_names": [
+    "pursuit_20261114_r06_native40_supervised",
+    "pursuit_20261114_r06_native40_distilled_vs_control",
+    "pursuit_20261114_r06_native40_supervised_bnrefit",
+    "pursuit_20261114_r06_native40_distilled_vs_control_bnrefit"
+  ],
+  "source_admission": "Completed real trained student, or its documented moment-only clone; source checkpoint SHA checked before and after export.",
+  "variants": [
+    [
+      "probability",
+      1.0
+    ],
+    [
+      "probability",
+      4.0
+    ],
+    [
+      "probability",
+      8.0
+    ],
+    [
+      "logits",
+      1.0
+    ]
+  ],
+  "policies": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  ],
+  "representative": "All train-positive file/views and 512 seeded train-negative views; eligible midpoint and maximum mean-log-Mel windows. Native features retained in memory only.",
+  "representative_negative_seed": 843,
+  "selection": "Maximize min(source_mean_fire/.999,source_mean_doorbell/.95), then source-mean macro recall in actual int8 output units.",
+  "calibration": "Only raise the chosen cuts using held-out calibration source groups; never re-rank candidates using calibration.",
+  "native_binary_sha256": "6adf5882c128b0e43804c6c44ae6fafda5b69afa66ebcba8f6843ac91db197ac",
+  "frontend": {
+    "sample_rate": 16000,
+    "window_samples": 16000,
+    "window_hop_samples": 8000,
+    "frame_samples": 400,
+    "frame_hop_samples": 160,
+    "fft_size": 512,
+    "mel_bins": 40,
+    "lower_hz": 80.0,
+    "upper_hz": 7600.0,
+    "log_floor": 1e-06,
+    "frame_window": "periodic_hann",
+    "mel_scale": "htk_unnormalized_triangles",
+    "spectrum": "unnormalized_rfft_power",
+    "fft_arithmetic": "float32_radix2",
+    "amplitude": "pcm16_divide_32768_no_peak_normalization",
+    "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+  },
+  "disk_reserve_bytes": 8589934592,
+  "feature_arrays_saved": false,
+  "collection_allowed": false,
+  "new_fresh_test_used": false,
+  "actual_product_targets_verified": false,
+  "code_identity": {
+    "pursuit/stage2_native_export.py": "16d78f28f6932d7d608c96d9e1300847cd70ddc93cd0455dd8002500a28822b7",
+    "pursuit/stage2_stream.py": "fd472ed168793ffe2ec61786ddbad70fc91d82c6fe83823314e55321f35afd68",
+    "pursuit/delivered_integer.py": "a582250cdc92416efeca1ce82a833aad762769e75ef19d36152a08fa85ac7ea3",
+    "pursuit/cpu_integer.py": "f760b8e1cf70aac580eeb9ef043f3107fd0d818fa7ba85d4d1d45220cb1ec859"
+  }
+}

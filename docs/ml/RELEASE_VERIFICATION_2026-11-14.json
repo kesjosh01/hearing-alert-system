@@ -1,0 +1,40 @@
+{
+  "verification_date": "2026-11-14",
+  "scope": "Repository content and documentation publication; no new training, conversion, data collection, GPU or hardware execution.",
+  "checks": {
+    "existing_main_files_preserved": true,
+    "original_communication_blobs_unchanged": true,
+    "communication_and_structure_files_verified": 23,
+    "original_artifacts_unchanged": 194,
+    "intentional_model_index_documentation_update": "ml/models/README.md",
+    "original_checkpoint_copies_identical": 127,
+    "candidate_and_historical_bundle_manifests_passed": 14,
+    "candidate_release_file_hashes_passed": 78,
+    "cxx_model_headers_match_flatbuffers": true,
+    "python_sources_parsed": 210,
+    "json_files_parsed": 614,
+    "selected_cpu_mock_tests_passed": 33,
+    "latest_probability_temporal_contract_example_passed": true,
+    "tensorflow_imported_for_publication_checks": false,
+    "raw_audio_or_feature_cache_included": false,
+    "private_keys_or_github_tokens_found": false
+  },
+  "existing_dscnn_environment": {
+    "python": "3.12.15",
+    "numpy": "1.26.4",
+    "tensorflow": "2.21.0",
+    "tf-keras": "2.21.0",
+    "wandb": "0.31.0"
+  },
+  "historical_record_notes": [
+    "Archived CSV files keep original CRLF/BOM and generated SVG files keep generator whitespace.",
+    "Historical report links to local-only datasets and original absolute workstation paths are preserved. The current handoff and status documents use repository-relative artifact links.",
+    "Earlier model README files describe the conditions at their original creation time."
+  ],
+  "unverified": [
+    "Final ESP-IDF/TFLM cross compilation",
+    "Target microphone and real-time board inference",
+    "Full system RAM and latency",
+    "Physical alert delivery and monthly false notification rate"
+  ]
+}

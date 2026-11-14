@@ -1,0 +1,76 @@
+{
+  "created_at_unix": 1794637064.1403134,
+  "dataset": "round06_local_regions",
+  "dataset_freeze_sha256": "1fad4da300587f0478675e5c162b66c5743cfea16e754c6dddec9f14a679d401",
+  "teacher_comparison_path": "reports/pursuit_20261114/stage2_teacher_vs_native_control.json",
+  "teacher_comparison_sha256": "c00dc8a48e83e3e97af9da9b1d60cb64a4280703edd160957f0a0eb71f9b3734",
+  "teacher_name": "pursuit_20261114_r06_full_yamnet_refined_unfused_bn",
+  "teacher_model_sha256": "5e1bbf3f123c8623da3d2f38012634ec5bb4889fdb3fe93dcfaa771d1ac67c3f",
+  "stronger_teacher_gate_passed": true,
+  "cpu_gate_sha256": "14073996d6a6ca9a8043d75c33ac470a71b9b4945a494e534fbeeab6dea51d5e",
+  "gpu_gate_sha256": "f1478700b61d00007764fd735a604dc5b00f687b227872098814610864108432",
+  "options": {
+    "architecture": "temporal24",
+    "pooling_fraction": 1.0,
+    "negative_sampler": "coverage_cycle",
+    "hard_negative_multiplier": 1.0,
+    "domestic_weight": 4.0,
+    "other_mass": 0.3333333333333333,
+    "kd_weight": 0.0,
+    "learning_rate": 0.0007,
+    "lr_schedule": "constant",
+    "added_training_data": false,
+    "epochs": 100,
+    "patience": 20,
+    "steps_per_epoch": 40,
+    "batch_size": 36,
+    "microbatch_files": 6,
+    "temperature": 2.0,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "runs": [
+    {
+      "name": "pursuit_20261114_r06_native40_supervised",
+      "kd_weight": 0.0
+    },
+    {
+      "name": "pursuit_20261114_r06_native40_distilled_vs_control",
+      "kd_weight": 0.25
+    }
+  ],
+  "seed": 42,
+  "architecture": "Native 98x40x1 six-block DS-CNN, time receptive field 117 frames, frequency-preserving final time average; time-only downsampling uses average pooling",
+  "source_sampler_and_initialization_seeds_matched": true,
+  "negative_training_views_must_all_be_seen_before_checkpoint_eligibility": true,
+  "weak_bag_mining": "Native student maximum log-odds per alert class; published positives also include one uniform published-positive window.",
+  "kd": "Add alpha * T^2 KL to the unscaled hard presence loss. Teacher sees original aligned official64 windows; student sees masked native40 windows.",
+  "kd_mask": "Teacher argmax matches the file/view label and untempered probability >= 0.7. Masked-out targets contribute no KL and do not reduce hard-loss strength.",
+  "student_mining_may_diverge_after_distillation": true,
+  "selection_readout": {
+    "mode": "margin",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "minimum_disk_reserve_bytes": 8589934592,
+  "no_audio_or_metadata_collection": true,
+  "no_feature_arrays_saved": true,
+  "calibration_or_new_fresh_used_for_training": false,
+  "actual_product_targets_verified": false,
+  "code_identity": {
+    "pursuit/stage2_student_fit.py": "416ca22711dbd631670e2917b040df231f53274b4135e2945d47bbc4a6fd2e83",
+    "pursuit/stage2_student_model.py": "488ac98426e62d392fd79d1033110f36392df24839c0aa674dcdb61d184ee6cd",
+    "pursuit/stage2_student_loss.py": "9b7e495fd6a8eb47e4ea3b778e60f3d8cd6d2d2c4b97b447fc1fc946ff3d429e",
+    "pursuit/stage2_stream.py": "fd472ed168793ffe2ec61786ddbad70fc91d82c6fe83823314e55321f35afd68",
+    "pursuit/stage2_teacher_fit.py": "0567467faa95b54c6ac93e688316e0fcedc71b8771172c4eb0dd1983ebbd11e4"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pid": 98300,
+  "boot_id": "ab5bc73c-5b92-4d2c-89b4-41763da8043e",
+  "start_ticks": "656672",
+  "command": [
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/bin/python",
+    "-B",
+    "-m",
+    "expansion.study"
+  ],
+  "cwd": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn",
+  "gpu_uuid": "GPU-10f7f4b0-eee7-9d43-26de-7bbefdbfc7ce",
+  "selected_cuda_libraries": [
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cublas/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cuda_cupti/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cuda_nvcc/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cuda_nvrtc/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cuda_runtime/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cufft/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/curand/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cusolver/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/cusparse/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/nccl/lib",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/.venv/lib/python3.12/site-packages/nvidia/nvjitlink/lib"
+  ],
+  "process_environment_only": true,
+  "package_or_driver_changes": false,
+  "existing_compute_processes_before": "",
+  "exit_code": 0,
+  "elapsed_seconds": 551.6852755590007
+}

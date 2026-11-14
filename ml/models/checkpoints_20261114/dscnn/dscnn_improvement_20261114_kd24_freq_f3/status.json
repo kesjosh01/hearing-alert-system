@@ -1,0 +1,26 @@
+{
+  "kind": "dscnn_distilled_cv",
+  "device": "gpu",
+  "exit_code": 0,
+  "candidate": "kd24_freq",
+  "fold": 3,
+  "event_annotations_used": false,
+  "test_evaluated": false,
+  "deployment_ready": false,
+  "distillation_applied": true,
+  "epochs_completed": 30,
+  "selected_epoch": 25,
+  "selected_thresholds": {
+    "fire_alarm": 0.55,
+    "doorbell": 0.65
+  },
+  "optimizer_steps": 900,
+  "model_sha256": "0b84ac5a876a000d983a51d119e6fb097f5aadddcada42c93ded31b05da82c38",
+  "model_variable_devices": [
+    "/job:localhost/replica:0/task:0/device:GPU:0"
+  ],
+  "teacher_weights_unchanged": true,
+  "save_reload_verified": true,
+  "distillation_optimizer_steps": 900,
+  "elapsed_seconds": 67.11859326500007
+}

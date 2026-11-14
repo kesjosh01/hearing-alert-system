@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "pipeline_only": true,
+  "real_audio_files": 0,
+  "device": "gpu",
+  "embedding_shape": [
+    1024
+  ],
+  "teacher_output": "logits, not probabilities",
+  "backbone_pb_sha256": "672af6e1e34fe15a42d45d70217fd39f97e10aef9b0effbf9b0bf7826fccd462",
+  "teachers": [
+    {
+      "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_0",
+      "model_sha256": "be975c7162c4f61a8b1a72ab875a0445758d292d1db30781056478dd0581d764",
+      "training_inventory_sha256": "bdf5f89ae4d1d7fdbee0d5885c7701724dde47a92ae0273a183d6f9d6310d3aa",
+      "fold": 0,
+      "training_groups": 946,
+      "validation_group_leakage": false
+    },
+    {
+      "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_1",
+      "model_sha256": "0dc76516674427867d5b5adb0643bd47c0f00fd30c56fb83197b54938300fa56",
+      "training_inventory_sha256": "4ffd005754e152cbb695ab14c451b8396391253885553539f35773c646c7febb",
+      "fold": 1,
+      "training_groups": 948,
+      "validation_group_leakage": false
+    },
+    {
+      "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_2",
+      "model_sha256": "bad2f553298f941316e8c2f87c31d4010aa741364092145a82d2c9b3dd5b2ceb",
+      "training_inventory_sha256": "e46d4be86b4477ce82bb8ddaa80920b9d3155b215647937ed0df079e7537eb72",
+      "fold": 2,
+      "training_groups": 948,
+      "validation_group_leakage": false
+    },
+    {
+      "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_3",
+      "model_sha256": "11de7d393903f8ecd233550b950b5b0e0fb4895f0e4502401050299534cd4186",
+      "training_inventory_sha256": "45ea6616f3644256723b71feddbf52d9fe14342510973fbbcf6c9ac7f5266b52",
+      "fold": 3,
+      "training_groups": 948,
+      "validation_group_leakage": false
+    }
+  ],
+  "elapsed_seconds": 1.4191269619998366
+}

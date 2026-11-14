@@ -1,0 +1,157 @@
+{
+  "candidate": "kd48_freq_aug",
+  "method": {
+    "channels": 48,
+    "keep_frequency": true,
+    "specaugment": true
+  },
+  "options": {
+    "seed": 42,
+    "epochs": 30,
+    "patience": 8,
+    "batch_size": 30,
+    "steps_per_epoch": 30,
+    "microbatch_files": 6,
+    "learning_rate": 0.001,
+    "domestic_weight": 1.0,
+    "temperature": 2.0,
+    "hard_label_weight": 0.5,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "supervision": {
+    "mode": "file_labels",
+    "approval_sha256": "463627e685b038b38fab3c54fba3c7a7a29841997c6fe8e848d151e439345e04",
+    "window_labels_assigned": false,
+    "event_intervals_used": false,
+    "training_loss": "cross_entropy_of_all_window_mean_softmax_per_file",
+    "within_group_sampling": "uniform_file_then_all_valid_windows",
+    "microbatch_files": 6
+  },
+  "teacher": {
+    "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42/fold_2",
+    "model_sha256": "bad2f553298f941316e8c2f87c31d4010aa741364092145a82d2c9b3dd5b2ceb",
+    "training_inventory_sha256": "e46d4be86b4477ce82bb8ddaa80920b9d3155b215647937ed0df079e7537eb72",
+    "fold": 2,
+    "training_groups": 948,
+    "validation_group_leakage": false
+  },
+  "development_identity": {
+    "parent_protocol": "ko-source-cv4-20261108-v1",
+    "effective_fold_fingerprints": [
+      "7d843ebce67123b512641ce03c0a0e6a85bf0e1309cd095db2a62dcdf3465409",
+      "8bc347cc7ba51b42e995e213b9c485214b37822c64da6c9c990ea18d4823ea90",
+      "bb283505ed7fac721c19aa0c87027138d808006f2e21dcc5721090225a551a96",
+      "22929dec9de9532bb8cbda057ecf698752432404450721255881caa3c22270c0"
+    ],
+    "extension_version": "ko-source-cv4-20261114-dscnn-v2",
+    "extension_sha256": "31f63fd509bbb01b5adadfe7a45ca1c1474851d5222821a217b6d9adaaf72e9b"
+  },
+  "teacher_soft_window_targets_used": true,
+  "human_window_labels_assigned": false,
+  "code_identity": {
+    "dscnn_baseline/__init__.py": "f7b0c919d80f0c3729dcb329307dc43ea5e5fe7f731c2fa7ca86b25ed88de02f",
+    "dscnn_baseline/__main__.py": "62a59f5c884dfcd4fdf5ef12db51c53cf7ff164ed98191ad2847e785f663fd40",
+    "dscnn_baseline/common.py": "182d25f180fdc47e4f625ac1687bef3216e00807296c5a7402a808fe3af40411",
+    "dscnn_baseline/data.py": "8ea5f568f8d821565e7c95543c76571ed8a7d5d324e6a085fa34959cd46a9767",
+    "dscnn_baseline/decisions.py": "3471e806a31e340301c0e2f07631bdd29f024174f20d0eba227f41d0e34ba160",
+    "dscnn_baseline/evaluation.py": "7a9139953e9ef12a96aab36c99e4ef592f26b09b919233c32bfb73a664ccc2c6",
+    "dscnn_baseline/export.py": "4131e2c921e70986f0938300f31ff7f7f65b969578f7daf5f5f263bb54a1ab39",
+    "dscnn_baseline/frontend.py": "f386ea2d78fd25a5ece78be5bf47bea64449e4efc1cfad8ee7c61345d267ea6b",
+    "dscnn_baseline/model.py": "2a6048f1bf2664dc442482efd5af29affad500adf056243d910c605b2c47e2a5",
+    "dscnn_baseline/review.py": "cc15bef032414e687a9355d7cdef97cc35799621e807e29efe70be1231036d8d",
+    "dscnn_baseline/selfcheck.py": "cfbce26d1a32fdcb2c4e0249ea8dd47c9b87e8d6054878db9876845fcb374f3d",
+    "dscnn_baseline/study.py": "7cbbda89ae46b59e5c2ff64dd727c2b21044ee11e35d109916a73f3960a96615",
+    "dscnn_baseline/tracking.py": "7e5263f40f8ac5f61f97c3eb7a404d697647d9ca5c380d9c3b2e19c48751af56",
+    "dscnn_baseline/training.py": "c04acd228342c8fd1314f5d5da29351602d00aea7672e53a14efed98adabe021",
+    "dscnn_baseline/weak_labels.py": "24f3a0e48d659971ba3887498cab675c9ca3a31d3d111149d0d7b8d77a042c82",
+    "improvement/__init__.py": "ec71816c6ffbca45d06198d59ce1d93a4d35a06abd3e1b8c6ecb506042218ab0",
+    "improvement/model.py": "390e01bba382eb9c9c1e578f8afd0022d3371e6f412832fc015f07f49e25ae10",
+    "improvement/policy.py": "29570dffcb24f829755d89d79bd7522512fd7c29b2c0c3d96770c975ef446d2c",
+    "improvement/preflight.py": "31fc9b2ce759f9dbadf9d66d34979cdbd844a88cd82b03d3de2cd9295e9826ac",
+    "improvement/protocol.py": "f6e2387fcb93b006a86525c34ba831d08fe6ccf38f1d0043239fba1a997ddb12",
+    "improvement/study.py": "85c43247444bff79d2867db8208070746d8b76885e3c0e4cb50f1cc6c036fbcd",
+    "improvement/teacher.py": "a46a4877f56fd8a7da3b84e9d5b25f32d55e715bf09c30116a1cf888942e9d09",
+    "improvement/train.py": "d9992cd6a8ddf85d9604eba80e29daf0c8d5f5b2b67cc0f8228c5fa57f131a96"
+  },
+  "config": {
+    "version": "dscnn-logmel-v1",
+    "labels": {
+      "fire_alarm": 0,
+      "doorbell": 1,
+      "other": 2
+    },
+    "protocol_version": "ko-source-cv4-20261108-v1",
+    "development_extension_path": "data/domestic_extension_20261114.json",
+    "frontend": {
+      "sample_rate": 16000,
+      "window_samples": 16000,
+      "window_hop_samples": 8000,
+      "frame_samples": 400,
+      "frame_hop_samples": 160,
+      "fft_size": 512,
+      "mel_bins": 40,
+      "lower_hz": 80.0,
+      "upper_hz": 7600.0,
+      "log_floor": 1e-06,
+      "frame_window": "periodic_hann",
+      "mel_scale": "htk_unnormalized_triangles",
+      "spectrum": "unnormalized_rfft_power",
+      "fft_arithmetic": "float32_radix2",
+      "amplitude": "pcm16_divide_32768_no_peak_normalization",
+      "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+    },
+    "model": {
+      "channels": 24,
+      "depthwise_blocks": 3
+    },
+    "training": {
+      "seed": 42,
+      "domestic_weight": 1,
+      "epochs": 30,
+      "patience": 8,
+      "batch_size": 30,
+      "steps_per_epoch": 30,
+      "learning_rate": 0.001,
+      "minimum_event_coverage": 0.8,
+      "file_label_microbatch_files": 6,
+      "file_label_loss": "cross_entropy_of_all_window_mean_softmax_per_file",
+      "file_label_within_group_sampling": "uniform_file_then_all_valid_windows",
+      "file_label_window_labels_assigned": false,
+      "decision_threshold_grid": [
+        0.0,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        0.975,
+        0.99,
+        0.995,
+        1.0
+      ],
+      "decision_policy": "argmax_with_target_confidence_rejection_after_clip_or_group_probability_mean",
+      "augmentation": "none",
+      "validation_aggregation": "all_windows_mean_probability_then_equal_clip_mean_per_source"
+    },
+    "readiness": {
+      "event_annotations_available": false,
+      "microphone_validation_available": false,
+      "board_ram_and_latency_budget_available": false,
+      "deployment_ready": false
+    }
+  },
+  "seed": 44,
+  "refit_epochs": null,
+  "complexity": {
+    "parameters_including_bn_statistics": 12867,
+    "convolution_and_dense_macs_per_window": 8470080,
+    "largest_single_int8_activation_bytes": 47040,
+    "input_int8_bytes": 3920,
+    "board_tensor_arena_bytes": null,
+    "board_processing_ms": null,
+    "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+  }
+}

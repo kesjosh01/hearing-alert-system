@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "method": "Exact seeded sampler replay checked against actual final exposure receipts",
+  "selected_epoch": 9,
+  "epochs_completed": 21,
+  "selected_checkpoint": {
+    "source_draws": 12960,
+    "unique_training_views": 5618,
+    "unique_negative_views": 4410,
+    "unique_negative_canonical_recordings": 4410,
+    "negative_views_with_zero_draws": 5047
+  },
+  "entire_run": {
+    "source_draws": 30240,
+    "unique_training_views": 10705,
+    "unique_negative_views": 9457,
+    "unique_negative_canonical_recordings": 9454,
+    "negative_views_with_zero_draws": 0
+  },
+  "negative_training_views": 9457,
+  "virtual_views_are_not_independent_recordings": true,
+  "warm_start_checkpoint_exposure_not_included_here": true,
+  "model_sha256": "5e1bbf3f123c8623da3d2f38012634ec5bb4889fdb3fe93dcfaa771d1ac67c3f",
+  "used_manifest_sha256": "9775ec9b1062abd69bbce67a52c38fffd19731ef8221835a01868e93ccc63593",
+  "sample_exposure_sha256": "b5edeb160b7ccd309364ee46b3761d273f875f5b7b7cfcaf13e0b6d08f3d9e85",
+  "no_audio_or_model_execution": true
+}

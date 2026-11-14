@@ -1,0 +1,103 @@
+{
+  "complete": true,
+  "exit_code": 0,
+  "actual_optimizer_steps": 2840,
+  "fresh_test_used": false,
+  "calibration_used": false,
+  "distillation": false,
+  "features_written_to_disk": false,
+  "actual_product_targets_verified": false,
+  "epoch": 71,
+  "step": 40,
+  "elapsed_seconds": 982.4405497510015,
+  "selected_epoch": 51,
+  "latest_selection": {
+    "mode": "margin",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      7.101815819740296,
+      8.587682962417604
+    ],
+    "fire_recall": 0.19767441860465115,
+    "doorbell_recall": 0.18292682926829268,
+    "macro_recall": 0.1903006239364719,
+    "classes": {
+      "fire_alarm": {
+        "files": 91,
+        "detected_files": 17,
+        "source_groups": 86,
+        "source_mean_file_recall": 0.19767441860465115,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 47,
+        "detected_files": 9,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.18292682926829268,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 1053,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "full_negative_training_view_coverage": true,
+  "model_sha256": "20a088788d66f45c61aa69e2af77c7583c04c4b4a229befbe4359072b0fcb227",
+  "selected_metrics": {
+    "mode": "margin",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      6.119184017181397,
+      6.827262997627259
+    ],
+    "fire_recall": 0.22093023255813954,
+    "doorbell_recall": 0.25609756097560976,
+    "macro_recall": 0.23851389676687465,
+    "classes": {
+      "fire_alarm": {
+        "files": 91,
+        "detected_files": 19,
+        "source_groups": 86,
+        "source_mean_file_recall": 0.22093023255813954,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 47,
+        "detected_files": 13,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.25609756097560976,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 1053,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "epochs_completed": 71,
+  "negative_training_views": 9457,
+  "negative_unique_views_executed": 9457
+}

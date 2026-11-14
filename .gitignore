@@ -42,3 +42,10 @@ logs/
 .cache/
 
 # 소스, 문서, ESP-IDF 설정, ml/models/ 배포 모델은 제외하지 않음
+
+# 추가 학습 환경·원음·캐시와 실행별 대용량 기록
+.venv*/
+/ml/training/dscnn/data/
+/ml/training/dscnn/reports/
+/ml/training/yamnet/reports/
+# 검토한 요약 보고서는 개별 파일로 추적하고 배포 모델은 ml/models/에 보관

@@ -1,0 +1,22 @@
+{
+  "role": "student",
+  "candidate": "temporal24",
+  "fold": null,
+  "exit_code": 0,
+  "device": "gpu",
+  "test_evaluated": false,
+  "deployment_ready": false,
+  "distillation_applied": true,
+  "event_annotations_used": false,
+  "epochs_completed": 5,
+  "selected_epoch": 5,
+  "optimizer_steps": 150,
+  "distillation_optimizer_steps": 150,
+  "model_sha256": "3dcd1851356452fea8b89a22a4c1db216b729a2db8b1024dd143c7402f2c622e",
+  "model_variable_devices": [
+    "/job:localhost/replica:0/task:0/device:GPU:0"
+  ],
+  "save_reload_verified": true,
+  "training_siren_clips": 24,
+  "elapsed_seconds": 27.941750048999893
+}

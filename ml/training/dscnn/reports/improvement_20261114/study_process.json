@@ -1,0 +1,13 @@
+{
+  "pid": 42883,
+  "start_ticks": 241781,
+  "boot_id": "ab5bc73c-5b92-4d2c-89b4-41763da8043e",
+  "started_at": "2026-11-14T04:41:16.508139+09:00",
+  "command": [
+    "/home/jhh0415/Documents/ChatGPT/\ucea1\uc2a4\ud1a4/hearing-alert-system/ml/training/dscnn/.venv/bin/python",
+    "-B",
+    "-m",
+    "improvement.study"
+  ],
+  "cwd": "/home/jhh0415/Documents/ChatGPT/\ucea1\uc2a4\ud1a4/hearing-alert-system/ml/training/dscnn"
+}

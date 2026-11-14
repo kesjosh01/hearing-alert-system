@@ -1,0 +1,111 @@
+{
+  "models": [
+    {
+      "name": "initial",
+      "float_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/dscnn_filelabels_20261114/classifier.keras",
+      "int8_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/dscnn_filelabels_20261114/dscnn_int8.tflite",
+      "float_thresholds": [
+        0.6,
+        0.6
+      ],
+      "int8_thresholds": [
+        0.6,
+        0.6
+      ],
+      "pooling_fraction": 1.0,
+      "historical_saved": true,
+      "float_sha256": "8bcfe1785ad25d0f33a47cb489de1412ff4a665cf8d5e3fc67feef4c8783df3b",
+      "int8_sha256": "4a888184485d567bd23a74376a0a49ec6c6ab479a4cd4d28577c1cc9a2add615"
+    },
+    {
+      "name": "previous_distilled",
+      "float_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/dscnn_improved_20261114/classifier.keras",
+      "int8_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/dscnn_improved_20261114/dscnn_int8.tflite",
+      "float_thresholds": [
+        0.0,
+        0.55
+      ],
+      "int8_thresholds": [
+        0.0,
+        0.55
+      ],
+      "pooling_fraction": 1.0,
+      "historical_saved": true,
+      "float_sha256": "2e859b8ae3d85c13c72591cff0821f2646cd1a0085feacceb75b73c533772e59",
+      "int8_sha256": "365d1015a3fe90ffdcc2edab0966e140dd190352dc127ba9d8fc30492d5b48a2"
+    },
+    {
+      "name": "previous_expanded",
+      "float_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/dscnn_expanded_20261114/classifier.keras",
+      "int8_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/dscnn_expanded_20261114/dscnn_int8.tflite",
+      "float_thresholds": [
+        0.5,
+        0.55
+      ],
+      "int8_thresholds": [
+        0.5,
+        0.55
+      ],
+      "pooling_fraction": 1.0,
+      "historical_saved": true,
+      "float_sha256": "8edd834615c06336659bbd68c25d34497f49ac9b54c7ebe252aa9620335a21cf",
+      "int8_sha256": "0dc5bedf92e16e14e94e33f34ea2dd7abe3f5fb436083b17fd90337841468c9c"
+    },
+    {
+      "name": "comparison_baseline",
+      "float_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s1_baseline/classifier.keras",
+      "int8_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s1_baseline/export/dscnn_int8.tflite",
+      "float_thresholds": [
+        0.0,
+        0.75
+      ],
+      "int8_thresholds": [
+        0.0,
+        0.75
+      ],
+      "pooling_fraction": 1.0,
+      "historical_saved": false,
+      "float_sha256": "32a3edc7a9c25a8eed5ca869df581aa9d19427dbfebf5ac4b62a5343cbb2a18d",
+      "int8_sha256": "8ca4a2f830f02aef8cca866b703982804e719dd806c0e9e1cb9a25b930845c99"
+    },
+    {
+      "name": "final",
+      "float_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42/classifier.keras",
+      "int8_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42/export/dscnn_int8.tflite",
+      "float_thresholds": [
+        0.0,
+        0.55
+      ],
+      "int8_thresholds": [
+        0.0,
+        0.6
+      ],
+      "pooling_fraction": 0.5,
+      "historical_saved": false,
+      "float_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+      "int8_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc"
+    }
+  ],
+  "dataset_freeze_sha256": "f9ce5ca05c02683069dc1c6ad2578595162fb5fe19931cedf01502d6add70571",
+  "event_policy": {
+    "policy": {
+      "vote_rule": "single",
+      "release_ratio": 1.0,
+      "cooldown_s": 0.0
+    },
+    "float_thresholds": [
+      0.75,
+      0.65
+    ],
+    "int8_thresholds": [
+      0.8,
+      0.7
+    ],
+    "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "int8_sha256": "21062e906b74972090400f8d4400df3289aa2f7188bdd5209c3d5c0561f232cc",
+    "source": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/temporal_replay/calibration.json",
+    "fresh_test_used": false
+  },
+  "thresholds_and_models_fixed_before_test": true,
+  "retune_from_test_forbidden": true
+}

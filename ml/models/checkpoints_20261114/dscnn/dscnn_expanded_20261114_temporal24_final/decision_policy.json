@@ -1,0 +1,6 @@
+{
+  "thresholds": {
+    "fire_alarm": 0.5,
+    "doorbell": 0.55
+  }
+}

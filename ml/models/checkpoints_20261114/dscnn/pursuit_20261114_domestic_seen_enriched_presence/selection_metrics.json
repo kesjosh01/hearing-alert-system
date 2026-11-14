@@ -1,0 +1,97 @@
+{
+  "classes": {
+    "fire_alarm": {
+      "files": 68,
+      "detected_files": 65,
+      "source_groups": 17,
+      "source_mean_file_recall": 0.9558823529411765,
+      "wrong_class_or_negative_alert_files": 0
+    },
+    "doorbell": {
+      "files": 104,
+      "detected_files": 82,
+      "source_groups": 26,
+      "source_mean_file_recall": 0.7884615384615384,
+      "wrong_class_or_negative_alert_files": 0
+    }
+  },
+  "fire_recall": 0.9558823529411765,
+  "doorbell_recall": 0.7884615384615384,
+  "target_macro_source_file_recall": 0.8721719457013575,
+  "any_other_false_alert_files": 0,
+  "other_files": 925,
+  "total_cross_class_or_negative_alert_files": 0,
+  "thresholds": {
+    "fire_alarm": 0.9392024874687196,
+    "doorbell": 0.9960932135581971
+  },
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "loss": 0.05768916647270784,
+  "positive_margin_mean": 0.019296093735583886,
+  "event_onset_or_device_month_reliability_proven": false,
+  "measure": "TRAINING-SEEN original KR files and training waveform variants; source means average four conditions",
+  "training_seen_condition_results": {
+    "original": {
+      "fire_alarm": {
+        "files": 17,
+        "detected_files": 16,
+        "file_recall": 0.9411764705882353
+      },
+      "doorbell": {
+        "files": 26,
+        "detected_files": 24,
+        "file_recall": 0.9230769230769231
+      }
+    },
+    "quiet": {
+      "fire_alarm": {
+        "files": 17,
+        "detected_files": 17,
+        "file_recall": 1.0
+      },
+      "doorbell": {
+        "files": 26,
+        "detected_files": 22,
+        "file_recall": 0.8461538461538461
+      }
+    },
+    "room_snr20": {
+      "fire_alarm": {
+        "files": 17,
+        "detected_files": 16,
+        "file_recall": 0.9411764705882353
+      },
+      "doorbell": {
+        "files": 26,
+        "detected_files": 20,
+        "file_recall": 0.7692307692307693
+      }
+    },
+    "room_snr10": {
+      "fire_alarm": {
+        "files": 17,
+        "detected_files": 16,
+        "file_recall": 0.9411764705882353
+      },
+      "doorbell": {
+        "files": 26,
+        "detected_files": 16,
+        "file_recall": 0.6153846153846154
+      }
+    }
+  },
+  "minimum_condition_fire_recall": 0.9411764705882353,
+  "minimum_condition_doorbell_recall": 0.6153846153846154,
+  "distinct_original_target_recordings": 43,
+  "transformed_probe_files": 172,
+  "independent_target_validation_recordings": 0
+}

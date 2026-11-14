@@ -1,0 +1,42 @@
+{
+  "audience": "Local project review, general diagnostic figure; no journal submission target",
+  "source_data": {
+    "Supervised": {
+      "history_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/pursuit_20261114_r06_native40_supervised/history.csv",
+      "history_sha256": "5fcb681d93ab9b7694ae3da97b1b53719050f1ff8247de37fa42e68f7092df06",
+      "rows": 71,
+      "status_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/pursuit_20261114_r06_native40_supervised/status.json",
+      "status_sha256": "a085ecff57093759e421bca56bb8dc75ef074319cf05f983595c7ec71d98dd6b"
+    },
+    "YAMNet KD": {
+      "history_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/pursuit_20261114_r06_native40_distilled_vs_control/history.csv",
+      "history_sha256": "76b5187414df24736755a35d0c7a89e06fa42b7ae7c460ae0858d8e98c073552",
+      "rows": 69,
+      "status_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/pursuit_20261114_r06_native40_distilled_vs_control/status.json",
+      "status_sha256": "46ee3594c65a4b66d2e1c045bdcfbbe4c8f3485a34d16ba2dd1db6397cb7d6ac"
+    }
+  },
+  "transformations": [
+    "Plot all epochs without filtering or smoothing",
+    "Multiply recall fractions by 100"
+  ],
+  "unit": "Epoch mean training losses and development-selection source-mean file recall",
+  "uncertainty": "No confidence intervals: single run per recipe; selection outcomes are repeatedly optimized",
+  "missing_values": "None; contiguous epochs checked",
+  "width_inches": 11.5,
+  "height_inches": 7.2,
+  "dpi": 160,
+  "palette": {
+    "supervised": "#0072B2",
+    "kd": "#D55E00"
+  },
+  "redundant_encoding": "Solid circles versus dashed squares; selected checkpoints open markers",
+  "matplotlib_version": "3.5.1",
+  "numpy_version": "1.21.5",
+  "publisher_compliance_claimed": false,
+  "code_sha256": "6ec0fc0e68e18a06954dc213f8a7cfe2936ea2815fe8cb4496b2cbdbf4d9b38f",
+  "outputs": {
+    "learning_curves.png": "ac56ca222335f86e270f94c3659341fefa006a7476c9f7cb01591bd05713aa39",
+    "learning_curves.svg": "bb6bbf2993f7f024d26a3af194f3860ffd158167c2ebc8965617b09da1e8e15d"
+  }
+}

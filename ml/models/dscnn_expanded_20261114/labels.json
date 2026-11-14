@@ -1,0 +1,5 @@
+{
+  "fire_alarm": 0,
+  "doorbell": 1,
+  "other": 2
+}

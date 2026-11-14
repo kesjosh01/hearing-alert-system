@@ -1,0 +1,81 @@
+{
+  "spec": {
+    "name": "pursuit_20261114_r01_freq24_kd50",
+    "dataset": "round01",
+    "seed": 42,
+    "channels": 24,
+    "teacher": "pursuit_20261114_r01_yamnet_sparse",
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "options": {
+      "kd_weight": 0.5,
+      "temperature": 2.0
+    }
+  },
+  "options": {
+    "architecture": "temporal24",
+    "pooling_fraction": 0.5,
+    "negative_sampler": "coverage_cycle",
+    "hard_negative_multiplier": 1.0,
+    "domestic_weight": 4.0,
+    "other_mass": 0.3333333333333333,
+    "kd_weight": 0.5,
+    "learning_rate": 0.001,
+    "lr_schedule": "constant",
+    "added_training_data": false,
+    "epochs": 60,
+    "patience": 12,
+    "steps_per_epoch": 30,
+    "batch_size": 30,
+    "microbatch_files": 6,
+    "temperature": 2.0,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "channels": 24,
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "dataset_freeze_sha256": "7d7a085e9b9b89b7f44798c3aaeda6ebb89b96b2a2b87e6ce29ef9f5684e1007",
+  "code_identity": {
+    "pursuit/runner.py": "d7fed27bf918d858d004ef6f4a3092c04dbbfef4338adc52a0501452c3c2523b",
+    "pursuit/embeddings.py": "59f4ccaa901fa2a470d3ae3975a70647dab38cd069fb7e17883db233bf223609",
+    "pursuit/rounds.py": "10c224ecdde13a99736f82147470d366a1f204e7e84946b8b3dffe81a43ce72e",
+    "pursuit/metrics.py": "3074f5da86512466873766b5239f7499638904d69f3e601fc08101010388e353",
+    "pursuit/preflight.py": "f90112a08814caceb73a035fb9e7cecf738ada6fc827ed808e4c946b8fa79d56",
+    "pursuit/native.py": "da1bc59088309a5497aa2f168ac729593a97c2d3c9e486d48d3337c3c1827dbe",
+    "pursuit/context.py": "77237e229cce03fe7fa5ed87aa800d241df04b5fa006a01e0815a7f66dc045eb",
+    "pursuit/fit.py": "8b13e2796d23f567a3daf5b50665feb12758851dbfb3062e8bb3f101819b101a",
+    "pursuit/head.py": "774e1e55434641725ae0d1d61be32ec33f4d098f44c6783e05b3537669b81fad",
+    "pursuit/study.py": "b86f6e7d14b26ed7d29d01196c0a078022ad10d9885aafa1e610ef2ddba7d6e0",
+    "pursuit/__init__.py": "3da354eeb49df843a9677785156f8d374c9b10f93f9dc896c43a4328e39ee552",
+    "pursuit/train.py": "cd3137e49563250315f45d99c036ec7f71f73399f802131b5e304f5ac4d2986e",
+    "pursuit/catalog.py": "62d042e047add548c1d88eef842ce27479af80f771c5d6dfe8686edd82e1fe6b",
+    "pursuit/teacher.py": "491f5eda3a8ac1eaacd1a6454b8a36829489313e13a437c3c572fd86bbc72392",
+    "pursuit/realdesed_intake.py": "f8f89e0fa54637c07bc8af595b7398f57bb008e0e00389a24aaf98b72f836adb",
+    "pursuit/paths.py": "dcaba4c1a1b03b25ba47357139b6623bdfc1f494929e2db7b375722d5dd232f6",
+    "pursuit/head_preflight.py": "87c7454eead76a62c760a90bc52e4a2737b13a853d28db78af37a8a0c4307e7d",
+    "pursuit/data.py": "ca42b477fc1b9f9dfbde4063e6c9f97f90caaa98fb7ae4bf43cf2c3bf1023a49",
+    "pursuit/context_fit.py": "c09884664e2718371b411d0b517d80fb27d915c6b92a408741be01b08f94b93f",
+    "pursuit/fsd_intake.py": "34b7e651e6bb99e0b15e70d1c5c976bccc9556c94b4eec8bce009458c899f447"
+  },
+  "supervision": "Weak file-label bags; no human event timestamps",
+  "selection_proxy": "Zero observed other and wrong-target-class alerts, maximize smaller recall/target ratio",
+  "calibration_used": false,
+  "fresh_test_used": false
+}

@@ -1,0 +1,5 @@
+﻿check,passed
+gpu_forward_backward_adam,True
+fold0_1epoch_2steps_save_reload,True
+existing_checkpoint_cpu_gpu_parity,True
+originals_and_packages_preserved,True

@@ -1,0 +1,21 @@
+{
+  "status": {
+    "study_complete": true,
+    "all_eight_requested_stages_completed": true,
+    "observed_new_test_fpr": 0.1044776119402985,
+    "new_test_false_positives": 7,
+    "new_test_negative_files": 67,
+    "new_test_target_recall": 0.5416666666666666,
+    "previous_expanded_new_test_target_recall": 0.41666666666666663,
+    "initial_new_test_target_recall": 0.5833333333333333,
+    "new_test_fpr_5_percent_target_met": false,
+    "promotion_recommended": false,
+    "field_deployment_ready": false,
+    "new_test_driven_retuning_or_label_exclusions": false,
+    "interpretation": "Improved over previous expanded model on both observed fresh metrics; does not outperform every earlier model and fails the fresh 5% FPR goal."
+  },
+  "unchanged_model_and_decision_hashes": true,
+  "verified_cli_numerical_artifacts_unchanged": true,
+  "bundle_manifest_sha256": "47da2b3530bfdad031d6cf494a51e788b1f035cc76dec95773b984d5d2600ca7",
+  "note": "Only documentation and an explicit research-release status were added after CPU CLI parity verification."
+}

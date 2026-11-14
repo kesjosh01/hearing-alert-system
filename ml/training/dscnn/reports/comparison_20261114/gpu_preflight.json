@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "real_audio_files": 0,
+  "checks": [
+    {
+      "teacher_head_gradient": true,
+      "optimizer_steps": 1,
+      "losses": [
+        1.1379401683807373,
+        1.1379401683807373,
+        0.0
+      ]
+    },
+    {
+      "pooling_fraction": 1.0,
+      "losses": [
+        1.8362255096435547,
+        1.1343269348144531,
+        2.5381240844726562
+      ],
+      "optimizer_steps": 1,
+      "variables_on_gpu": true
+    },
+    {
+      "pooling_fraction": 0.5,
+      "losses": [
+        1.849708080291748,
+        1.151696801185608,
+        2.5477194786071777
+      ],
+      "optimizer_steps": 1,
+      "variables_on_gpu": true
+    },
+    {
+      "pooling_fraction": 0.25,
+      "losses": [
+        1.7855408191680908,
+        1.042509913444519,
+        2.528571605682373
+      ],
+      "optimizer_steps": 1,
+      "variables_on_gpu": true
+    }
+  ],
+  "integer": {
+    "input": {
+      "shape": [
+        1,
+        98,
+        40,
+        1
+      ],
+      "dtype": "int8",
+      "scale": 0.030000390484929085,
+      "zero_point": 2
+    },
+    "output": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int8",
+      "scale": 0.00390625,
+      "zero_point": -128
+    },
+    "operators": [
+      "CONV_2D",
+      "DEPTHWISE_CONV_2D",
+      "CONV_2D",
+      "DEPTHWISE_CONV_2D",
+      "CONV_2D",
+      "DEPTHWISE_CONV_2D",
+      "CONV_2D",
+      "AVERAGE_POOL_2D",
+      "RESHAPE",
+      "FULLY_CONNECTED",
+      "SOFTMAX"
+    ],
+    "operator_set": [
+      "AVERAGE_POOL_2D",
+      "CONV_2D",
+      "DEPTHWISE_CONV_2D",
+      "FULLY_CONNECTED",
+      "RESHAPE",
+      "SOFTMAX"
+    ],
+    "all_tensor_types": [
+      "int32",
+      "int8"
+    ],
+    "board_tflm_allocate_tensors_verified": false,
+    "model_sha256": "ecfc5a2d841884453ee4758ef6184ffa5fe9c78306213e90af2113c83971e0be",
+    "model_bytes": 16896,
+    "labels": {
+      "fire_alarm": 0,
+      "doorbell": 1,
+      "other": 2
+    },
+    "frontend": {
+      "sample_rate": 16000,
+      "window_samples": 16000,
+      "window_hop_samples": 8000,
+      "frame_samples": 400,
+      "frame_hop_samples": 160,
+      "fft_size": 512,
+      "mel_bins": 40,
+      "lower_hz": 80.0,
+      "upper_hz": 7600.0,
+      "log_floor": 1e-06,
+      "frame_window": "periodic_hann",
+      "mel_scale": "htk_unnormalized_triangles",
+      "spectrum": "unnormalized_rfft_power",
+      "fft_arithmetic": "float32_radix2",
+      "amplitude": "pcm16_divide_32768_no_peak_normalization",
+      "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+    },
+    "frontend_sha256": "b0cfbccaf11745e46aa07d6b6451ec94d1dc3230faa4de12979ea0416ecc640d",
+    "pipeline_only": true,
+    "deployment_ready": false,
+    "calibration_windows": 4,
+    "calibration_role": "synthetic",
+    "calibration_sha256": "b036cef5694816b8a46a4bd75ef1d49bf63ded54c3214f3a4edf964e625471a8"
+  },
+  "apps_or_packages_installed": false
+}

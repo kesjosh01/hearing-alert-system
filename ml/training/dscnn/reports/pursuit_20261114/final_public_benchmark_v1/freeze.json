@@ -1,0 +1,102 @@
+{
+  "created_at_unix": 1794626261.5252397,
+  "names": [
+    "domestic_known_v1",
+    "domestic_known_aug_v2",
+    "domestic_known_enriched_v3",
+    "general_prefix64_v1"
+  ],
+  "candidates": {
+    "domestic_known_v1": {
+      "model_int8.tflite": "64b447f66a279eaf3e4fefbf900892cf7ea9025f104f19e2b603f3eb43d13a68",
+      "model_metadata.json": "768f4c03ac913e39953630d2db2985b99f179eef65b2de6c5230c529e7df5f14",
+      "delivered_output_contract.json": "defd15c4140dbe817301faa2b4b32db58dcfcbd54d8284a4e4ffdd47b9420146",
+      "candidate.json": "d81dddac2e0b1436d6552c6b22fa8206c9f32ef7d7b98bb5f625efde8388fb55"
+    },
+    "domestic_known_aug_v2": {
+      "model_int8.tflite": "209ef89235cd38c9d3d80aec3b6ffc6b05a4ddcac2bf37d3c446ff86d458f5ce",
+      "model_metadata.json": "0c1c6de708555d51c85ed3ca2b802c6320dca4519302855bb8a0afe17674b2ab",
+      "delivered_output_contract.json": "0cf63e4c9f9b00955f6ebfc5afd20ba1bd4ceecdff708aba899c93572fef9cda",
+      "candidate.json": "35fe4db4949e0eff36d440313f1ac9aeea043f07d07c1f7c674e3245b5940457"
+    },
+    "domestic_known_enriched_v3": {
+      "model_int8.tflite": "7bb0d2d5a9318630b384b3e9f5d83bcad1281bf82930e10516184b2c3982c04b",
+      "model_metadata.json": "8e7584493654554a8d7b49f8e48612121ed8cca2d5045ae52a7b7f030bae42a0",
+      "delivered_output_contract.json": "35489a640d6dd5f01692d1a41a75b03351bca6143a67fd81d48f15b7d2e3a11b",
+      "candidate.json": "abef43af0fe017b6338a74039584c8f9542c58f5ef9ffcc781d8c4fddc021be1"
+    },
+    "general_prefix64_v1": {
+      "model_int8.tflite": "5b8e811b87f4381c466ab94932b8a1659e6c2cc440931d6ac5350a410905f247",
+      "model_metadata.json": "be7e4f9223fc514dc1318ba33977d492605d7abcb394016179013bb18ba73dc9",
+      "delivered_output_contract.json": "fe3f71afb1cc5711a993b903753e2d592224f2c3785d5eec42766efc0ed95b0a",
+      "candidate.json": "53120721ee2362d091116dfc19847a20f7641476a01b452cf2f568847d705466"
+    }
+  },
+  "manifest_sha256": "d6f0a889830e7f5f209dd0c8b7ea61041b5fdb1ed8d02e80d8c6a36cc6217f00",
+  "identity_audit_sha256": "826fdbf62f5f7442ac0fd862fe71eaf094ed8bdaa0b8fde743ad1325159faccd",
+  "cohort_identity_overlaps": {
+    "domestic_seen_enriched_v1": {
+      "recordings": 0,
+      "groups": 0,
+      "creators": 0,
+      "pcm": 0
+    },
+    "domestic_seen_v1": {
+      "recordings": 0,
+      "groups": 0,
+      "creators": 0,
+      "pcm": 0
+    },
+    "round04_enriched": {
+      "recordings": 0,
+      "groups": 0,
+      "creators": 0,
+      "pcm": 0
+    }
+  },
+  "code_sha256": {
+    "pursuit/final_public_benchmark.py": "100de0256cef39fe20e90796a5b1fb4633a02163360f75c73d0cc540597d46e0",
+    "pursuit/delivered_integer.py": "a582250cdc92416efeca1ce82a833aad762769e75ef19d36152a08fa85ac7ea3",
+    "pursuit/cpu_integer.py": "f760b8e1cf70aac580eeb9ef043f3107fd0d818fa7ba85d4d1d45220cb1ec859",
+    "pursuit/yamnet_frontend.py": "ece1bc0a33b1c1c677e44e79cb6aad14302d791841a1d1e814b9f3f5fc0e0cec",
+    "pursuit/native.py": "da1bc59088309a5497aa2f168ac729593a97c2d3c9e486d48d3337c3c1827dbe"
+  },
+  "native_binary_sha256": "6adf5882c128b0e43804c6c44ae6fafda5b69afa66ebcba8f6843ac91db197ac",
+  "frontend64": {
+    "sample_rate": 16000,
+    "sample_count": 15600,
+    "frame_length": 400,
+    "frame_step": 160,
+    "fft_length": 512,
+    "hann_periodic": true,
+    "spectrum": "magnitude",
+    "mel_bins": 64,
+    "mel_lower_hz": 125.0,
+    "mel_upper_hz": 7500.0,
+    "log_offset": 0.001,
+    "shape": [
+      96,
+      64,
+      1
+    ],
+    "waveform_scale": 32768.0,
+    "window_start_grid": "existing 1-second/0.5-second-hop, final end-aligned"
+  },
+  "class_counts": {
+    "fire_alarm": 47,
+    "doorbell": 118,
+    "other": 1794
+  },
+  "evaluation": "One final fixed public-recording comparison; no changes from its outcomes",
+  "file_detection": "At least one positive causal model window anywhere in recording; not activation-event recall",
+  "other_error": "Only label=other recordings in denominator; known overseas target labels remain positive",
+  "wrong_target_confusions": "Reported separately from eligible-other errors",
+  "bout_coverage": "RealDESED published bell acoustic intervals only; any positive endpoint between onset and offset+1s",
+  "rising_edges": "One-to-one greedy match of positive rising edges to published acoustic bouts with 1s offset tolerance; diagnostic only",
+  "acoustic_bouts_are_button_activations": false,
+  "independent_domestic_positive_recordings": 0,
+  "all_physical_device_identity_or_foundation_pretraining_exposure_certified": false,
+  "actual_device_days": 0,
+  "actual_product_targets_verified": false,
+  "no_test_based_model_or_threshold_tuning": true
+}

@@ -1,0 +1,340 @@
+{
+  "complete": true,
+  "freeze_sha256": "44aea1ad1ca43e440849eb78a812deac5bf22f46526bb861528360abd6b78f56",
+  "recordings": 1959,
+  "results": {
+    "domestic_known_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 47,
+          "detected_files": 2,
+          "file_recall": 0.0425531914893617,
+          "known_source_groups": 36,
+          "source_mean_file_recall": 0.023148148148148147,
+          "wrong_other_target_alert_files": 2
+        },
+        "doorbell": {
+          "files": 118,
+          "detected_files": 24,
+          "file_recall": 0.2033898305084746,
+          "known_source_groups": 90,
+          "source_mean_file_recall": 0.20185185185185184,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 1794,
+      "other_false_alert_files": 16,
+      "other_false_alert_recording_fraction": 0.008918617614269788,
+      "by_source": {
+        "FLEURS-ko": {
+          "files": 380,
+          "other_files": 380,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 1439,
+          "other_files": 1353,
+          "other_false_alert_files": 16,
+          "targets": {
+            "fire_alarm": {
+              "files": 47,
+              "detected_files": 2
+            },
+            "doorbell": {
+              "files": 39,
+              "detected_files": 9
+            }
+          }
+        },
+        "RealDESED-20056072": {
+          "files": 140,
+          "other_files": 61,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 79,
+              "detected_files": 15
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 79,
+        "published_acoustic_bouts": 104,
+        "bouts_with_any_positive_endpoint": 15,
+        "positive_rising_edges": 18,
+        "matched_rising_edges": 15,
+        "unmatched_rising_edges": 3
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "domestic_known_aug_v2": {
+      "classes": {
+        "fire_alarm": {
+          "files": 47,
+          "detected_files": 1,
+          "file_recall": 0.02127659574468085,
+          "known_source_groups": 36,
+          "source_mean_file_recall": 0.009259259259259259,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 118,
+          "detected_files": 25,
+          "file_recall": 0.211864406779661,
+          "known_source_groups": 90,
+          "source_mean_file_recall": 0.19814814814814813,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 1794,
+      "other_false_alert_files": 10,
+      "other_false_alert_recording_fraction": 0.005574136008918618,
+      "by_source": {
+        "FLEURS-ko": {
+          "files": 380,
+          "other_files": 380,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 1439,
+          "other_files": 1353,
+          "other_false_alert_files": 10,
+          "targets": {
+            "fire_alarm": {
+              "files": 47,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 39,
+              "detected_files": 8
+            }
+          }
+        },
+        "RealDESED-20056072": {
+          "files": 140,
+          "other_files": 61,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 79,
+              "detected_files": 17
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 79,
+        "published_acoustic_bouts": 104,
+        "bouts_with_any_positive_endpoint": 17,
+        "positive_rising_edges": 20,
+        "matched_rising_edges": 17,
+        "unmatched_rising_edges": 3
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "domestic_known_enriched_v3": {
+      "classes": {
+        "fire_alarm": {
+          "files": 47,
+          "detected_files": 1,
+          "file_recall": 0.02127659574468085,
+          "known_source_groups": 36,
+          "source_mean_file_recall": 0.009259259259259259,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 118,
+          "detected_files": 12,
+          "file_recall": 0.1016949152542373,
+          "known_source_groups": 90,
+          "source_mean_file_recall": 0.08703703703703702,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 1794,
+      "other_false_alert_files": 3,
+      "other_false_alert_recording_fraction": 0.0016722408026755853,
+      "by_source": {
+        "FLEURS-ko": {
+          "files": 380,
+          "other_files": 380,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 1439,
+          "other_files": 1353,
+          "other_false_alert_files": 3,
+          "targets": {
+            "fire_alarm": {
+              "files": 47,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 39,
+              "detected_files": 4
+            }
+          }
+        },
+        "RealDESED-20056072": {
+          "files": 140,
+          "other_files": 61,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 79,
+              "detected_files": 8
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 79,
+        "published_acoustic_bouts": 104,
+        "bouts_with_any_positive_endpoint": 8,
+        "positive_rising_edges": 9,
+        "matched_rising_edges": 8,
+        "unmatched_rising_edges": 1
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    },
+    "general_prefix64_v1": {
+      "classes": {
+        "fire_alarm": {
+          "files": 47,
+          "detected_files": 13,
+          "file_recall": 0.2765957446808511,
+          "known_source_groups": 36,
+          "source_mean_file_recall": 0.22685185185185183,
+          "wrong_other_target_alert_files": 0
+        },
+        "doorbell": {
+          "files": 118,
+          "detected_files": 18,
+          "file_recall": 0.15254237288135594,
+          "known_source_groups": 90,
+          "source_mean_file_recall": 0.1537037037037037,
+          "wrong_other_target_alert_files": 0
+        }
+      },
+      "other_files": 1794,
+      "other_false_alert_files": 7,
+      "other_false_alert_recording_fraction": 0.0039018952062430325,
+      "by_source": {
+        "FLEURS-ko": {
+          "files": 380,
+          "other_files": 380,
+          "other_false_alert_files": 0,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 0,
+              "detected_files": 0
+            }
+          }
+        },
+        "FSD50K": {
+          "files": 1439,
+          "other_files": 1353,
+          "other_false_alert_files": 6,
+          "targets": {
+            "fire_alarm": {
+              "files": 47,
+              "detected_files": 13
+            },
+            "doorbell": {
+              "files": 39,
+              "detected_files": 3
+            }
+          }
+        },
+        "RealDESED-20056072": {
+          "files": 140,
+          "other_files": 61,
+          "other_false_alert_files": 1,
+          "targets": {
+            "fire_alarm": {
+              "files": 0,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 79,
+              "detected_files": 15
+            }
+          }
+        }
+      },
+      "published_realdesed_doorbell_acoustic_bouts": {
+        "recordings": 79,
+        "published_acoustic_bouts": 104,
+        "bouts_with_any_positive_endpoint": 15,
+        "positive_rising_edges": 22,
+        "matched_rising_edges": 15,
+        "unmatched_rising_edges": 7
+      },
+      "actual_activation_event_recall_verified": false,
+      "actual_notifications_or_monthly_false_rate_verified": false,
+      "actual_device_days": 0,
+      "actual_product_targets_verified": false
+    }
+  },
+  "raw_audio_or_existing_model_modified": false,
+  "features_retained_for_training": false,
+  "test_outcomes_used_to_optimize": false,
+  "actual_product_targets_verified": false,
+  "actual_device_days": 0
+}

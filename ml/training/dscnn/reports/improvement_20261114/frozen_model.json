@@ -1,0 +1,67 @@
+{
+  "refit": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_improvement_20261114_final",
+  "decision": {
+    "candidate": "kd24_freq_aug",
+    "domestic_weight": 1,
+    "refit_epochs": 9,
+    "decision_policy": {
+      "kind": "per_target_argmax_confidence_rejection",
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "clip_aggregation": "all_window_mean_softmax",
+      "group_aggregation": "equal_clip_mean_softmax_then_decide",
+      "selection_source": "domestic_OOF_and_reused_foreign_validation_only"
+    },
+    "summary_sha256": "b6b677807168fe29816ff865df14aa86738ffe4887bbad0aafa7fb40b56bd9de",
+    "selection_rank": [
+      1,
+      0.73125,
+      0.736454157506789,
+      1.0,
+      -4707,
+      -0.02763819095477387
+    ],
+    "test_used_for_selection": false,
+    "distillation_selected": true
+  },
+  "model_sha256": "2e859b8ae3d85c13c72591cff0821f2646cd1a0085feacceb75b73c533772e59",
+  "int8_sha256": "365d1015a3fe90ffdcc2edab0966e140dd190352dc127ba9d8fc30492d5b48a2",
+  "code_identity": {
+    "dscnn_baseline/__init__.py": "f7b0c919d80f0c3729dcb329307dc43ea5e5fe7f731c2fa7ca86b25ed88de02f",
+    "dscnn_baseline/__main__.py": "62a59f5c884dfcd4fdf5ef12db51c53cf7ff164ed98191ad2847e785f663fd40",
+    "dscnn_baseline/common.py": "182d25f180fdc47e4f625ac1687bef3216e00807296c5a7402a808fe3af40411",
+    "dscnn_baseline/data.py": "8ea5f568f8d821565e7c95543c76571ed8a7d5d324e6a085fa34959cd46a9767",
+    "dscnn_baseline/decisions.py": "3471e806a31e340301c0e2f07631bdd29f024174f20d0eba227f41d0e34ba160",
+    "dscnn_baseline/evaluation.py": "7a9139953e9ef12a96aab36c99e4ef592f26b09b919233c32bfb73a664ccc2c6",
+    "dscnn_baseline/export.py": "4131e2c921e70986f0938300f31ff7f7f65b969578f7daf5f5f263bb54a1ab39",
+    "dscnn_baseline/frontend.py": "f386ea2d78fd25a5ece78be5bf47bea64449e4efc1cfad8ee7c61345d267ea6b",
+    "dscnn_baseline/model.py": "2a6048f1bf2664dc442482efd5af29affad500adf056243d910c605b2c47e2a5",
+    "dscnn_baseline/review.py": "cc15bef032414e687a9355d7cdef97cc35799621e807e29efe70be1231036d8d",
+    "dscnn_baseline/selfcheck.py": "cfbce26d1a32fdcb2c4e0249ea8dd47c9b87e8d6054878db9876845fcb374f3d",
+    "dscnn_baseline/study.py": "7cbbda89ae46b59e5c2ff64dd727c2b21044ee11e35d109916a73f3960a96615",
+    "dscnn_baseline/tracking.py": "7e5263f40f8ac5f61f97c3eb7a404d697647d9ca5c380d9c3b2e19c48751af56",
+    "dscnn_baseline/training.py": "c04acd228342c8fd1314f5d5da29351602d00aea7672e53a14efed98adabe021",
+    "dscnn_baseline/weak_labels.py": "24f3a0e48d659971ba3887498cab675c9ca3a31d3d111149d0d7b8d77a042c82",
+    "improvement/__init__.py": "ec71816c6ffbca45d06198d59ce1d93a4d35a06abd3e1b8c6ecb506042218ab0",
+    "improvement/model.py": "390e01bba382eb9c9c1e578f8afd0022d3371e6f412832fc015f07f49e25ae10",
+    "improvement/policy.py": "29570dffcb24f829755d89d79bd7522512fd7c29b2c0c3d96770c975ef446d2c",
+    "improvement/preflight.py": "31fc9b2ce759f9dbadf9d66d34979cdbd844a88cd82b03d3de2cd9295e9826ac",
+    "improvement/protocol.py": "f6e2387fcb93b006a86525c34ba831d08fe6ccf38f1d0043239fba1a997ddb12",
+    "improvement/study.py": "85c43247444bff79d2867db8208070746d8b76885e3c0e4cb50f1cc6c036fbcd",
+    "improvement/teacher.py": "a46a4877f56fd8a7da3b84e9d5b25f32d55e715bf09c30116a1cf888942e9d09",
+    "improvement/train.py": "d9992cd6a8ddf85d9604eba80e29daf0c8d5f5b2b67cc0f8228c5fa57f131a96"
+  },
+  "development_identity": {
+    "parent_protocol": "ko-source-cv4-20261108-v1",
+    "effective_fold_fingerprints": [
+      "7d843ebce67123b512641ce03c0a0e6a85bf0e1309cd095db2a62dcdf3465409",
+      "8bc347cc7ba51b42e995e213b9c485214b37822c64da6c9c990ea18d4823ea90",
+      "bb283505ed7fac721c19aa0c87027138d808006f2e21dcc5721090225a551a96",
+      "22929dec9de9532bb8cbda057ecf698752432404450721255881caa3c22270c0"
+    ],
+    "extension_version": "ko-source-cv4-20261114-dscnn-v2",
+    "extension_sha256": "31f63fd509bbb01b5adadfe7a45ca1c1474851d5222821a217b6d9adaaf72e9b"
+  }
+}

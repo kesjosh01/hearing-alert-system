@@ -1,0 +1,144 @@
+{
+  "version": "source-disjoint-sequential-comparison-20261114-v1",
+  "base": {
+    "architecture": "temporal24",
+    "pooling_fraction": 1.0,
+    "negative_sampler": "weighted_random",
+    "hard_negative_multiplier": 1.0,
+    "domestic_weight": 4.0,
+    "other_mass": 0.3333333333333333,
+    "kd_weight": 0.5,
+    "learning_rate": 0.001,
+    "lr_schedule": "constant",
+    "added_training_data": false,
+    "epochs": 30,
+    "patience": 8,
+    "steps_per_epoch": 30,
+    "batch_size": 30,
+    "microbatch_files": 6,
+    "temperature": 2.0,
+    "max_frequency_mask": 4,
+    "max_time_mask": 10
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "max_foreign_negative_fpr": 0.05,
+  "labels": {
+    "fire_alarm": 0,
+    "doorbell": 1,
+    "other": 2
+  },
+  "roles": [
+    "train",
+    "selection",
+    "calibration",
+    "fresh_test"
+  ],
+  "source_split_seed": 20261114,
+  "historical_test": "Retrospective only, excluded from every optimization and calibration.",
+  "fresh_test": "New public source identities, exact/PCM duplicate checks, conservative related-source groups; frozen before model fitting. Foundation-model pretraining exposure unknown.",
+  "calibration": "Only after checkpoint and settings chosen; actual delivered float/int8 model outputs, held-out source groups. Calibration metrics never rank candidates.",
+  "selection": "Source-held-out positives and negatives; select maximum target macro recall subject to <=5% negative FPR and no domestic-doorlock FP. No passing candidate is reported if constraints fail.",
+  "stages": [
+    {
+      "stage": 1,
+      "factor": "final_model_selection_and_calibration",
+      "changes": "separate source-held-out train/selection/calibration; baseline retrained from scratch"
+    },
+    {
+      "stage": 2,
+      "factor": "negative_sampler",
+      "values": [
+        "weighted_random",
+        "coverage_cycle"
+      ]
+    },
+    {
+      "stage": 2,
+      "factor": "hard_negative_multiplier",
+      "values": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "stage": 3,
+      "factor": "pooling_fraction",
+      "values": [
+        1.0,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "stage": 4,
+      "factor": "added_training_data",
+      "values": [
+        false,
+        true
+      ]
+    },
+    {
+      "stage": 5,
+      "factor": "domestic_weight",
+      "values": [
+        4.0,
+        2.0
+      ]
+    },
+    {
+      "stage": 5,
+      "factor": "other_mass",
+      "values": [
+        0.3333333333333333,
+        0.5
+      ]
+    },
+    {
+      "stage": 6,
+      "factor": "kd_weight",
+      "values": [
+        0.5,
+        0.25,
+        0.0
+      ]
+    },
+    {
+      "stage": 7,
+      "factor": "architecture",
+      "values": [
+        "temporal24",
+        "freq24"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "stage": 7,
+      "factor": "lr_schedule",
+      "values": [
+        "constant",
+        "plateau"
+      ]
+    },
+    {
+      "stage": 8,
+      "factor": "temporal_policy",
+      "values": [
+        "single",
+        "two_of_three",
+        "hysteresis"
+      ]
+    }
+  ],
+  "acceptance": "Report per-class recall, eligible foreign FPR, source counts, sample exposure, parameter/MAC counts, float/int8 discrepancy and fresh-test uncertainty. Preserve all negative results.",
+  "no_install": true,
+  "no_microphone_or_board": true,
+  "tracking": "local"
+}

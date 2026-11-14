@@ -1,0 +1,7 @@
+{
+  "kind": "software_correction_before_human_review",
+  "first_error": "YAMNet classifier emits logits; draft candidate generator incorrectly treated raw logits as probabilities.",
+  "fix": "Apply existing source.softmax before threshold/display and assert rows sum to one.",
+  "old_draft_preserved": "annotation_review_logits_draft",
+  "real_training_started": false
+}

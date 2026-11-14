@@ -1,0 +1,10 @@
+{
+  "protected_file_count": 7137,
+  "protected_hashes_unchanged": true,
+  "differences": {},
+  "package_lists_unchanged": true,
+  "fixed_test_embeddings": 0,
+  "test_evaluated": false,
+  "before_fingerprint": "e6ef233337716269e7e1819e486f7d1db45b8ef8fd74d86adaef0d681d32e98e",
+  "after_fingerprint": "e6ef233337716269e7e1819e486f7d1db45b8ef8fd74d86adaef0d681d32e98e"
+}

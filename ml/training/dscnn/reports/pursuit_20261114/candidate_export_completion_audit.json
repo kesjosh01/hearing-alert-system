@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "candidates": {
+    "domestic_known_v1": {
+      "files_sha256": {
+        "model_metadata.json": "768f4c03ac913e39953630d2db2985b99f179eef65b2de6c5230c529e7df5f14",
+        "representative_training_windows.json": "390316bb544cfa82da99b988c444c9c50653d2a5038f7804eba9ff9b0adc64b1",
+        "classifier_training_status.json": "c4047d678edc7a8ef00ddcdf58ff7b2d728b6c40dd56d1d586a9c7c226fc1643",
+        "model_int8.h": "dc3c44ab0edc98d46c648d722726c7a67ba84352382e8b9bf08a503e33047049",
+        "readout_config.json": "691f51355b28db311b1a2096e372ceb603c1ad24efb0b299d16b8ecea581b26f",
+        "model_int8.tflite": "64b447f66a279eaf3e4fefbf900892cf7ea9025f104f19e2b603f3eb43d13a68",
+        "dataset_boundary.json": "c98838bb5d6aa6dec00eaf6ac3bf93cb1ccdb1fcb8bd6f59d75880f875a05e31",
+        "analysis.json": "060b01b9bf0c144718e1c5311469af1bc45f5e0a2739a4451de262ff1e7d48b1",
+        "known_training_positive_files.csv": "5cbb89c9225476fe0133b15842f7986fb72e21c706b0498b03683536d3666c64",
+        "delivered_output_contract.json": "defd15c4140dbe817301faa2b4b32db58dcfcbd54d8284a4e4ffdd47b9420146"
+      },
+      "candidate_json_sha256": "d81dddac2e0b1436d6552c6b22fa8206c9f32ef7d7b98bb5f625efde8388fb55"
+    },
+    "domestic_known_aug_v2": {
+      "files_sha256": {
+        "model_metadata.json": "0c1c6de708555d51c85ed3ca2b802c6320dca4519302855bb8a0afe17674b2ab",
+        "model_int8.h": "ff5cfa9d7d7c31acb416a817c2b3078a3817584475372b5cb1c671fc439b4a67",
+        "known_training_condition_probes.csv": "cd06338c7281e32e1380dc454f398d422373b21c148313952ecdba63935eff9b",
+        "readout_config.json": "8de0f9eecb8bc428a76712bc36cdcee7213bbce6ad892f3a6ccb62f4d1427cf0",
+        "model_int8.tflite": "209ef89235cd38c9d3d80aec3b6ffc6b05a4ddcac2bf37d3c446ff86d458f5ce",
+        "README.md": "14a10ff1ec87ab567f49c5ee28ac7ae84444adbf36a9d5e568396a26eb6913d9",
+        "analysis.json": "a68f45846a8f20e45e748ff1586e7415c1b6e85bc520f11524fd4c726e14885b",
+        "delivered_output_contract.json": "0cf63e4c9f9b00955f6ebfc5afd20ba1bd4ceecdff708aba899c93572fef9cda"
+      },
+      "candidate_json_sha256": "35fe4db4949e0eff36d440313f1ac9aeea043f07d07c1f7c674e3245b5940457"
+    },
+    "domestic_known_enriched_v3": {
+      "files_sha256": {
+        "model_metadata.json": "8e7584493654554a8d7b49f8e48612121ed8cca2d5045ae52a7b7f030bae42a0",
+        "model_int8.h": "f79110091ee246210e83d17d2310598a72a1cdc69cf84060a874132344910378",
+        "known_training_condition_probes.csv": "cd06338c7281e32e1380dc454f398d422373b21c148313952ecdba63935eff9b",
+        "readout_config.json": "07ba6c5132a00ac791ae12493b3aa2424beffd5c72753e239a6e3c1cbef43e11",
+        "model_int8.tflite": "7bb0d2d5a9318630b384b3e9f5d83bcad1281bf82930e10516184b2c3982c04b",
+        "README.md": "3d39b8476a4668d1a58f99b803ea1487b88592cef2d35d9026831f8bf00ad81b",
+        "analysis.json": "036c151114f55d227056c84939f20c7076c52b034bfd45cb1a192f608d2cb619",
+        "delivered_output_contract.json": "35489a640d6dd5f01692d1a41a75b03351bca6143a67fd81d48f15b7d2e3a11b"
+      },
+      "candidate_json_sha256": "abef43af0fe017b6338a74039584c8f9542c58f5ef9ffcc781d8c4fddc021be1"
+    },
+    "general_prefix64_v1": {
+      "files_sha256": {
+        "model_metadata.json": "be7e4f9223fc514dc1318ba33977d492605d7abcb394016179013bb18ba73dc9",
+        "model_int8.h": "9b976276d740b2f77fe79ddbe771408cb312c2c520af9f3a6057eda34b8200bd",
+        "model_int8.tflite": "5b8e811b87f4381c466ab94932b8a1659e6c2cc440931d6ac5350a410905f247",
+        "README.md": "012acd8e1abfc6c4e8c9be65109029ac684f334817be9b46b914f35fa79b37a0",
+        "analysis.json": "3d9529511f5e5c5582973ec80edbb4315d474a7860f512e0c751fe989ed7c950",
+        "delivered_output_contract.json": "fe3f71afb1cc5711a993b903753e2d592224f2c3785d5eec42766efc0ed95b0a"
+      },
+      "candidate_json_sha256": "53120721ee2362d091116dfc19847a20f7641476a01b452cf2f568847d705466"
+    }
+  },
+  "checked_at_unix": 1794626327.726759,
+  "board_executed": false,
+  "actual_product_targets_verified": false
+}

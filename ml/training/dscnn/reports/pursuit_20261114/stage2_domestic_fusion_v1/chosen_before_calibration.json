@@ -1,0 +1,4778 @@
+{
+  "chosen": {
+    "alpha": 0.75,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cuts": [
+      185,
+      452
+    ],
+    "known": {
+      "fire_recall": 1.0,
+      "doorbell_recall": 0.8846153846153846,
+      "classes": {
+        "fire_alarm": {
+          "files": 68,
+          "detected_files": 68,
+          "source_groups": 17,
+          "source_mean_file_recall": 1.0
+        },
+        "doorbell": {
+          "files": 104,
+          "detected_files": 92,
+          "source_groups": 26,
+          "source_mean_file_recall": 0.8846153846153846
+        }
+      },
+      "conditions": {
+        "original": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 26
+          }
+        },
+        "quiet": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 23
+          }
+        },
+        "room_snr10": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 21
+          }
+        },
+        "room_snr20": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 22
+          }
+        }
+      },
+      "other_files": 0,
+      "other_false_alert_files": 0,
+      "wrong_target_alert_files": 0,
+      "cuts_integer_units": [
+        185,
+        452
+      ],
+      "actual_event_or_monthly_rate_verified": false
+    },
+    "selection": {
+      "fire_recall": 0.08139534883720931,
+      "doorbell_recall": 0.1951219512195122,
+      "classes": {
+        "fire_alarm": {
+          "files": 91,
+          "detected_files": 7,
+          "source_groups": 86,
+          "source_mean_file_recall": 0.08139534883720931
+        },
+        "doorbell": {
+          "files": 47,
+          "detected_files": 9,
+          "source_groups": 41,
+          "source_mean_file_recall": 0.1951219512195122
+        }
+      },
+      "conditions": {
+        "original": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 7
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9
+          }
+        }
+      },
+      "other_files": 1053,
+      "other_false_alert_files": 0,
+      "wrong_target_alert_files": 0,
+      "cuts_integer_units": [
+        185,
+        452
+      ],
+      "actual_event_or_monthly_rate_verified": false
+    },
+    "key": [
+      0.8502024291497976,
+      0.9038461538461539,
+      0.08147682566287218,
+      0.13825865002836074
+    ]
+  },
+  "trials": [
+    {
+      "alpha": 0.0,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        187,
+        227
+      ],
+      "known": {
+        "fire_recall": 0.014705882352941176,
+        "doorbell_recall": 0.25,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 1,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.014705882352941176
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 26,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.25
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 10
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 7
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 3
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 6
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          187,
+          227
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.27906976744186046,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 24,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.27906976744186046
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 24
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          187,
+          227
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.0,
+        0.057692307692307696,
+        0.20539152759948653,
+        0.23709585933068633
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        187,
+        119
+      ],
+      "known": {
+        "fire_recall": 0.014705882352941176,
+        "doorbell_recall": 0.5,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 1,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.014705882352941176
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 52,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.5
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 17
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 12
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 11
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 12
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          187,
+          119
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.27906976744186046,
+        "doorbell_recall": 0.35365853658536583,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 24,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.27906976744186046
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 17,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.35365853658536583
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 24
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 17
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          187,
+          119
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.0,
+        0.21153846153846154,
+        0.2793491165584189,
+        0.3163641520136131
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        174,
+        227
+      ],
+      "known": {
+        "fire_recall": 0.014705882352941176,
+        "doorbell_recall": 0.25,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 1,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.014705882352941176
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 26,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.25
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 10
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 7
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 3
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 6
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          174,
+          227
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.22093023255813954,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 19,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.22093023255813954
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 19
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          174,
+          227
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.0,
+        0.057692307692307696,
+        0.20539152759948653,
+        0.20802609188882587
+      ]
+    },
+    {
+      "alpha": 0.0,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        174,
+        119
+      ],
+      "known": {
+        "fire_recall": 0.014705882352941176,
+        "doorbell_recall": 0.5,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 1,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.014705882352941176
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 52,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.5
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 17
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 12
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 0
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 11
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 1
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 12
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          174,
+          119
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.22093023255813954,
+        "doorbell_recall": 0.35365853658536583,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 19,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.22093023255813954
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 17,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.35365853658536583
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 19
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 17
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          174,
+          119
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.0,
+        0.21153846153846154,
+        0.22115138394208161,
+        0.2872943845717527
+      ]
+    },
+    {
+      "alpha": 0.125,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        108,
+        208
+      ],
+      "known": {
+        "fire_recall": 0.6470588235294118,
+        "doorbell_recall": 0.5384615384615384,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 44,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.6470588235294118
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 56,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.5384615384615384
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 9
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 13
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 12
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 11
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 13
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          108,
+          208
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.26744186046511625,
+        "doorbell_recall": 0.23170731707317074,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 23,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.26744186046511625
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 12,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.23170731707317074
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 23
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 12
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          108,
+          208
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.4858299595141701,
+        0.49547511312217196,
+        0.24390243902439027,
+        0.2495745887691435
+      ]
+    },
+    {
+      "alpha": 0.125,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        108,
+        154
+      ],
+      "known": {
+        "fire_recall": 0.6470588235294118,
+        "doorbell_recall": 0.5961538461538461,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 44,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.6470588235294118
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 62,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.5961538461538461
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 9
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 13
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 11
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 15
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          108,
+          154
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.26744186046511625,
+        "doorbell_recall": 0.25609756097560976,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 23,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.26744186046511625
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 12,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.25609756097560976
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 23
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 12
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          108,
+          154
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.5263157894736842,
+        0.5147058823529411,
+        0.2677095700351514,
+        0.26176971072036304
+      ]
+    },
+    {
+      "alpha": 0.125,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        76,
+        208
+      ],
+      "known": {
+        "fire_recall": 0.6911764705882353,
+        "doorbell_recall": 0.5384615384615384,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 47,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.6911764705882353
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 56,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.5384615384615384
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 11
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 13
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 12
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 13
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          76,
+          208
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.3488372093023256,
+        "doorbell_recall": 0.23170731707317074,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 30,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.3488372093023256
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 12,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.23170731707317074
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 30
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 12
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          76,
+          208
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.4858299595141701,
+        0.5542986425339367,
+        0.24390243902439027,
+        0.2902722631877482
+      ]
+    },
+    {
+      "alpha": 0.125,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        76,
+        154
+      ],
+      "known": {
+        "fire_recall": 0.6911764705882353,
+        "doorbell_recall": 0.5961538461538461,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 47,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.6911764705882353
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 62,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.5961538461538461
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 11
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 13
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 12
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 15
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          76,
+          154
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.3488372093023256,
+        "doorbell_recall": 0.25609756097560976,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 30,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.3488372093023256
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 12,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.25609756097560976
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 30
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 12
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          76,
+          154
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.5263157894736842,
+        0.5735294117647058,
+        0.2695763799743261,
+        0.30246738513896765
+      ]
+    },
+    {
+      "alpha": 0.25,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        83,
+        219
+      ],
+      "known": {
+        "fire_recall": 0.9558823529411765,
+        "doorbell_recall": 0.75,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 65,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.9558823529411765
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 78,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.75
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          83,
+          219
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.22093023255813954,
+        "doorbell_recall": 0.23170731707317074,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 19,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.22093023255813954
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 11,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.23170731707317074
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 19
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 11
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          83,
+          219
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8167420814479638,
+        0.22115138394208161,
+        0.22631877481565515
+      ]
+    },
+    {
+      "alpha": 0.25,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        83,
+        195
+      ],
+      "known": {
+        "fire_recall": 0.9558823529411765,
+        "doorbell_recall": 0.6826923076923077,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 65,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.9558823529411765
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 71,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.6826923076923077
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 17
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          83,
+          195
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.22093023255813954,
+        "doorbell_recall": 0.2073170731707317,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 19,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.22093023255813954
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.2073170731707317
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 19
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          83,
+          195
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.6477732793522268,
+        0.7782805429864253,
+        0.21822849807445444,
+        0.21412365286443563
+      ]
+    },
+    {
+      "alpha": 0.25,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        50,
+        219
+      ],
+      "known": {
+        "fire_recall": 0.9852941176470589,
+        "doorbell_recall": 0.75,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 67,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.9852941176470589
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 78,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.75
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          50,
+          219
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.2441860465116279,
+        "doorbell_recall": 0.23170731707317074,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 21,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.2441860465116279
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 11,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.23170731707317074
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 21
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 11
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          50,
+          219
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8167420814479638,
+        0.24390243902439027,
+        0.2379466817923993
+      ]
+    },
+    {
+      "alpha": 0.25,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        50,
+        195
+      ],
+      "known": {
+        "fire_recall": 0.9852941176470589,
+        "doorbell_recall": 0.6826923076923077,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 67,
+            "source_groups": 17,
+            "source_mean_file_recall": 0.9852941176470589
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 71,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.6826923076923077
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 16
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 17
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          50,
+          195
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.2441860465116279,
+        "doorbell_recall": 0.2073170731707317,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 21,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.2441860465116279
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.2073170731707317
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 21
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          50,
+          195
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.6477732793522268,
+        0.7782805429864253,
+        0.21822849807445444,
+        0.22575155984117978
+      ]
+    },
+    {
+      "alpha": 0.375,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        94,
+        277
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8365384615384616,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 87,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8365384615384616
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          94,
+          277
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.1511627906976744,
+        "doorbell_recall": 0.23170731707317074,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 13,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.1511627906976744
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 11,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.23170731707317074
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 13
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 11
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          94,
+          277
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.7692307692307693,
+        0.8653846153846154,
+        0.1513141048024769,
+        0.1914350538854226
+      ]
+    },
+    {
+      "alpha": 0.375,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        94,
+        241
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7596153846153846,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 79,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7596153846153846
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          94,
+          241
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.1511627906976744,
+        "doorbell_recall": 0.18292682926829268,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 13,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.1511627906976744
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.18292682926829268
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 13
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          94,
+          241
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8461538461538461,
+        0.1513141048024769,
+        0.16704480998298354
+      ]
+    },
+    {
+      "alpha": 0.375,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        69,
+        277
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8365384615384616,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 87,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8365384615384616
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          69,
+          277
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.09302325581395349,
+        "doorbell_recall": 0.23170731707317074,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 8,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.09302325581395349
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 11,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.23170731707317074
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 11
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          69,
+          277
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.7692307692307693,
+        0.8653846153846154,
+        0.09311637218613962,
+        0.16236528644356213
+      ]
+    },
+    {
+      "alpha": 0.375,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        69,
+        241
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7596153846153846,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 79,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7596153846153846
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          69,
+          241
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.09302325581395349,
+        "doorbell_recall": 0.18292682926829268,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 8,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.09302325581395349
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.18292682926829268
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          69,
+          241
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8461538461538461,
+        0.09311637218613962,
+        0.13797504254112308
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        124,
+        335
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.875,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 91,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.875
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          124,
+          335
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.11627906976744186,
+        "doorbell_recall": 0.21951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 10,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.11627906976744186
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.21951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 10
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          124,
+          335
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8097165991902835,
+        0.8846153846153846,
+        0.11639546523267454,
+        0.16789563244469655
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        124,
+        293
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7788461538461539,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 81,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7788461538461539
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          124,
+          293
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.11627906976744186,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 10,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.11627906976744186
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 10
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          124,
+          293
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8461538461538461,
+        0.11639546523267454,
+        0.15570051049347702
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        87,
+        335
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.875,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 91,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.875
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          87,
+          335
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.09302325581395349,
+        "doorbell_recall": 0.21951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 8,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.09302325581395349
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.21951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          87,
+          335
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8097165991902835,
+        0.8846153846153846,
+        0.09311637218613962,
+        0.15626772546795237
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        87,
+        293
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7788461538461539,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 81,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7788461538461539
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          87,
+          293
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.09302325581395349,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 8,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.09302325581395349
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          87,
+          293
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8461538461538461,
+        0.09311637218613962,
+        0.14407260351673284
+      ]
+    },
+    {
+      "alpha": 0.625,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        155,
+        393
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.875,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 91,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.875
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          155,
+          393
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.09302325581395349,
+        "doorbell_recall": 0.21951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 8,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.09302325581395349
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.21951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          155,
+          393
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8097165991902835,
+        0.8846153846153846,
+        0.09311637218613962,
+        0.15626772546795237
+      ]
+    },
+    {
+      "alpha": 0.625,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        155,
+        345
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7788461538461539,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 81,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7788461538461539
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          155,
+          345
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.09302325581395349,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 8,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.09302325581395349
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 8
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          155,
+          345
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8461538461538461,
+        0.09311637218613962,
+        0.14407260351673284
+      ]
+    },
+    {
+      "alpha": 0.625,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        105,
+        393
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.875,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 91,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.875
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          105,
+          393
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.08139534883720931,
+        "doorbell_recall": 0.21951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 7,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.08139534883720931
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 10,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.21951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 7
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 10
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          105,
+          393
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8097165991902835,
+        0.8846153846153846,
+        0.08147682566287218,
+        0.15045377197958026
+      ]
+    },
+    {
+      "alpha": 0.625,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        105,
+        345
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7788461538461539,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 81,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7788461538461539
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 18
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          105,
+          345
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.08139534883720931,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 7,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.08139534883720931
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 7
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          105,
+          345
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.728744939271255,
+        0.8461538461538461,
+        0.08147682566287218,
+        0.13825865002836074
+      ]
+    },
+    {
+      "alpha": 0.75,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        185,
+        452
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8846153846153846,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 92,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8846153846153846
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          185,
+          452
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.08139534883720931,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 7,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.08139534883720931
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 7
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          185,
+          452
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8502024291497976,
+        0.9038461538461539,
+        0.08147682566287218,
+        0.13825865002836074
+      ]
+    },
+    {
+      "alpha": 0.75,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        185,
+        397
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7788461538461539,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 81,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7788461538461539
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 25
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 17
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          185,
+          397
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.08139534883720931,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 7,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.08139534883720931
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 7
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          185,
+          397
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.688259109311741,
+        0.8269230769230769,
+        0.08147682566287218,
+        0.13825865002836074
+      ]
+    },
+    {
+      "alpha": 0.75,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        123,
+        452
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8846153846153846,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 92,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8846153846153846
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 23
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          123,
+          452
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.06976744186046512,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 6,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.06976744186046512
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          123,
+          452
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8502024291497976,
+        0.9038461538461539,
+        0.06983727913960472,
+        0.13244469653998867
+      ]
+    },
+    {
+      "alpha": 0.75,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        123,
+        397
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7788461538461539,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 81,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7788461538461539
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 25
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 17
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          123,
+          397
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.06976744186046512,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 6,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.06976744186046512
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          123,
+          397
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.688259109311741,
+        0.8269230769230769,
+        0.06983727913960472,
+        0.13244469653998867
+      ]
+    },
+    {
+      "alpha": 0.875,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        216,
+        510
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8942307692307693,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 93,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8942307692307693
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          216,
+          510
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.06976744186046512,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 6,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.06976744186046512
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          216,
+          510
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8502024291497976,
+        0.9038461538461539,
+        0.06983727913960472,
+        0.13244469653998867
+      ]
+    },
+    {
+      "alpha": 0.875,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        216,
+        450
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7692307692307693,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 80,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7692307692307693
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 25
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          216,
+          450
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.06976744186046512,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 6,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.06976744186046512
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          216,
+          450
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.6477732793522268,
+        0.8076923076923077,
+        0.06983727913960472,
+        0.13244469653998867
+      ]
+    },
+    {
+      "alpha": 0.875,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        138,
+        510
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8942307692307693,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 93,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8942307692307693
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          138,
+          510
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.05813953488372093,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 5,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.05813953488372093
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 5
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          138,
+          510
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8502024291497976,
+        0.9038461538461539,
+        0.05819773261633727,
+        0.12663074305161656
+      ]
+    },
+    {
+      "alpha": 0.875,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        138,
+        450
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7692307692307693,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 80,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7692307692307693
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 25
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 20
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          138,
+          450
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.05813953488372093,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 5,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.05813953488372093
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 5
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          138,
+          450
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.6477732793522268,
+        0.8076923076923077,
+        0.05819773261633727,
+        0.12663074305161656
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        247,
+        568
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8942307692307693,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 93,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8942307692307693
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          247,
+          568
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.06976744186046512,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 6,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.06976744186046512
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          247,
+          568
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8502024291497976,
+        0.9038461538461539,
+        0.06983727913960472,
+        0.13244469653998867
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "policy": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        247,
+        502
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7596153846153846,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 79,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7596153846153846
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 25
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          247,
+          502
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.06976744186046512,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 6,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.06976744186046512
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 6
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          247,
+          502
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.6477732793522268,
+        0.8076923076923077,
+        0.06983727913960472,
+        0.13244469653998867
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cuts": [
+        143,
+        568
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.8942307692307693,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 93,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.8942307692307693
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 26
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 24
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 21
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 22
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          143,
+          568
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.05813953488372093,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 5,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.05813953488372093
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 5
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          143,
+          568
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.8502024291497976,
+        0.9038461538461539,
+        0.05819773261633727,
+        0.12663074305161656
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "policy": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cuts": [
+        143,
+        502
+      ],
+      "known": {
+        "fire_recall": 1.0,
+        "doorbell_recall": 0.7596153846153846,
+        "classes": {
+          "fire_alarm": {
+            "files": 68,
+            "detected_files": 68,
+            "source_groups": 17,
+            "source_mean_file_recall": 1.0
+          },
+          "doorbell": {
+            "files": 104,
+            "detected_files": 79,
+            "source_groups": 26,
+            "source_mean_file_recall": 0.7596153846153846
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 25
+            }
+          },
+          "quiet": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          },
+          "room_snr10": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 16
+            }
+          },
+          "room_snr20": {
+            "fire_alarm": {
+              "files": 17,
+              "detected_files": 17
+            },
+            "doorbell": {
+              "files": 26,
+              "detected_files": 19
+            }
+          }
+        },
+        "other_files": 0,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          143,
+          502
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "selection": {
+        "fire_recall": 0.05813953488372093,
+        "doorbell_recall": 0.1951219512195122,
+        "classes": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 5,
+            "source_groups": 86,
+            "source_mean_file_recall": 0.05813953488372093
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9,
+            "source_groups": 41,
+            "source_mean_file_recall": 0.1951219512195122
+          }
+        },
+        "conditions": {
+          "original": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 5
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9
+            }
+          }
+        },
+        "other_files": 1053,
+        "other_false_alert_files": 0,
+        "wrong_target_alert_files": 0,
+        "cuts_integer_units": [
+          143,
+          502
+        ],
+        "actual_event_or_monthly_rate_verified": false
+      },
+      "key": [
+        0.6477732793522268,
+        0.8076923076923077,
+        0.05819773261633727,
+        0.12663074305161656
+      ]
+    }
+  ],
+  "calibration_or_new_public_outputs_used_to_choose": false
+}

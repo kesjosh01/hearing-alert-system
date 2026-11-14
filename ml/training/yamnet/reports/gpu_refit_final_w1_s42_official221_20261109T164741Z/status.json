@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-11-09T16:51:38.328612+00:00",
+  "stage": "stopped",
+  "experiment_completed": false,
+  "refit_completed": true,
+  "test_evaluated": false,
+  "installation_executed": false,
+  "cpu_training_fallback": false,
+  "first_error": "[Errno 2] No such file or directory: '/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/data/processed/yamnet_v1/audio/kr-fa-01.wav'",
+  "output": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/reports/gpu_refit_final_w1_s42_official221_20261109T164741Z",
+  "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_refit_w1_s42",
+  "first_error_type": "FileNotFoundError",
+  "integrity_passed": true,
+  "finished_at": "2026-11-09T16:52:33.092560+00:00",
+  "elapsed_seconds": 54.76391278400024,
+  "exit_code": 1
+}

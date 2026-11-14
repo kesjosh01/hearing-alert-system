@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "all_manifest_hashes_match": true,
+  "header_bytes_match_tflite": true,
+  "header_syntax_compile_exit_code": 0,
+  "compiler": "Existing host g++",
+  "tflite_sha256": "64b447f66a279eaf3e4fefbf900892cf7ea9025f104f19e2b603f3eb43d13a68",
+  "model_bytes": 15600,
+  "actual_board_or_firmware_build_performed": false
+}

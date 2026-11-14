@@ -1,0 +1,34 @@
+{
+  "frozen_at": "2026-11-09T16:51:38.456002+00:00",
+  "selected_weight": 1,
+  "seed": 42,
+  "refit_epochs": 18,
+  "cv_selected_epochs": [
+    16,
+    20,
+    11,
+    30
+  ],
+  "epoch_rule": "median selected epoch from four folds",
+  "weight_rule": "compare_1x_2x_4x_on_identical_folds_and_seeds_choose_smallest_if_no_consistent_gain",
+  "reason": "All four paired domestic recalls and all 34 domestic OOF class predictions match; no consistent gain from increased weight.",
+  "source_cv_run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/runs/yamnet/ubuntu_gpu_cv_w1_s42",
+  "source_cv_summary_sha256": "0ee6bfb2d8dc1171c21cce5a1208f22e2ce45b7ff211a0d76781b91aabe7a572",
+  "comparison_sha256": "016195420ba0a253c137cced215fc9ada9fa4fdf22d964d1935dd8d519d5bab5",
+  "refit_split_sha256": "d7d3cc7a6030dbe631e1c4fca5ad2b2fe9070198e78f613710d9e0f1a6c9e38f",
+  "baseline_sha256": "2833c13aec5162bf0bfc94674dcf6659517a13f5790db3214fdfa33794cb9ece",
+  "protocol_sha256": "dacbb57eff5d7c31a65760a0191737322163e6f33b680394cf44b4b35691db6b",
+  "fresh_classifier": true,
+  "fresh_optimizer": true,
+  "warm_start": false,
+  "prediction_policy": "mean patch softmax per clip -> equal clip mean per source -> argmax",
+  "threshold_tuning": false,
+  "test_based_selection": false,
+  "official_model_download_authorized": true,
+  "official_model_handle": "https://tfhub.dev/google/yamnet/1",
+  "embedding_probe_tolerance": {
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "tf32": false
+  }
+}

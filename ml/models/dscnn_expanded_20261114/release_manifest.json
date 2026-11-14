@@ -1,0 +1,21 @@
+{
+  "kind": "public_target_expanded_trained_dscnn_bundle",
+  "pipeline_only": false,
+  "distillation_applied": true,
+  "public_audio_added": 39,
+  "training_sirens_positive": 24,
+  "usage": "experimental_review_only",
+  "deployment_ready": false,
+  "files": {
+    "PUBLIC_DATA_CREDITS.md": "9c13c69e1f8da0412e7ba843566e4ea69a1095d0ed82f1590c0b76863f1e209f",
+    "README.md": "8236d3d91e8896925f220d1865d65317f79a14c62cd6e9c8125fc8cd70038560",
+    "classifier.keras": "8edd834615c06336659bbd68c25d34497f49ac9b54c7ebe252aa9620335a21cf",
+    "decision_policy.json": "0136b59e527184b723ee4268b9410df11e9b68816c4611d17a4f1d304f60b262",
+    "dscnn_int8.h": "03fcfbec3b1851e6246ed159b75706b597cf613afaf358517e15140248ecce83",
+    "dscnn_int8.tflite": "0dc5bedf92e16e14e94e33f34ea2dd7abe3f5fb436083b17fd90337841468c9c",
+    "frontend.json": "82a05fcd1abf80f05fed111eb0a367a82f18dbbb5c30cb335cf7e285861cf9f1",
+    "labels.json": "1603b947446053b6325ea0509674c74502ef1dbfc6eeb3da204ad67a3b369e8e",
+    "model_metadata.json": "2c2c91cc9730414378be2196fe4bc84a7b6572a19a35300b8bbfee88cd9b375f",
+    "training_provenance.json": "3d7c6487ae066f4ee8faad36e06ee71896b9b37d8a6ff825115fb6d51e431659"
+  }
+}

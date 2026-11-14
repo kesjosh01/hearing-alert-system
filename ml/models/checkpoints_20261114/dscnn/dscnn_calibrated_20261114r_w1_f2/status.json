@@ -1,0 +1,23 @@
+{
+  "kind": "dscnn_development",
+  "fold": 2,
+  "device": "gpu",
+  "test_evaluated": false,
+  "deployment_ready": false,
+  "exit_code": 0,
+  "wandb": {
+    "mode": "disabled"
+  },
+  "selected_epoch": 17,
+  "epochs_completed": 25,
+  "validation_guards_passed": true,
+  "model_variable_devices": [
+    "/job:localhost/replica:0/task:0/device:GPU:0"
+  ],
+  "optimizer_steps": 750,
+  "model_sha256": "5f095408ad72bbf0c0da2036f5142182c7fda19d7fa898b20e7700b9d75e6ae6",
+  "selected_threshold": 0.7,
+  "save_reload_verified": true,
+  "int8_export_skipped_for_float_cv": true,
+  "elapsed_seconds": 60.79358934499999
+}

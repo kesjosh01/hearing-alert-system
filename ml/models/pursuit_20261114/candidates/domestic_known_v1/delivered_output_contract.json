@@ -1,0 +1,31 @@
+{
+  "output_semantics": "Quantized softmax probabilities",
+  "class_order": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "output_scale": 0.00390625,
+  "output_zero_point": -128,
+  "target_argmax_required": true,
+  "per_class_int8_minimum_q": [
+    34,
+    93
+  ],
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "tie_break": "First maximum, matching numpy.argmax",
+  "threshold_semantics": "Class must win argmax and its int8 value must be >= its class q threshold",
+  "multiple_notifications_per_recording_controlled": false,
+  "actual_notification_controller_tested": false,
+  "old_firmware_thresholds_automatically_updated": false,
+  "board_validated": false
+}

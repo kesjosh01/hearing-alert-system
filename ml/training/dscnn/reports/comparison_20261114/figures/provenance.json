@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/ledger.json": "3bbfce5be2c72aca0048ac322c96a7d83bd6437b946850dfd97edde41f69e571",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/final_candidate.json": "bfff29fcf5cd0f77f2320e9bb7f6760562fca217032dc6cf50c6fd20b1d22970",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/architecture_replicates.json": "57ae0ea3af7e1330373146e512ed6597f8aca77ea7c7258885c974eed2ae35f0",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/evaluation/results.json": "f213d7c6e4432d1733375616bde63e3c85aab1351a769ea6aa65f826bd28bf4b",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/evaluation/fresh_paired_source_uncertainty.json": "a5f4e879456434c17f74a764c3fcf40fafa466a23fa27f7782267ae2c02a53ba",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/comparison_20261114/temporal_replay/selection.json": "dfc31f80409d3057d42facb1ef0fe7a0f3af1111995e96d841ffb9082dc309ca",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/data/comparison_20261114/source_freeze.json": "f9ce5ca05c02683069dc1c6ad2578595162fb5fe19931cedf01502d6add70571"
+  },
+  "figures": {
+    "selection_runs.png": "c4553612265eacd4eaf003d50cc86dd5596e7154c0f1f15fa26f41ccfc662ea5",
+    "selection_runs.svg": "380ea2fcc391ca6a3a0b216077b7a2fe2c2941b28590e95bfb3e91bc8809b2ea",
+    "architecture_seeds.png": "ac743ae44a1ab2dde4c12752736de28dfc140669f25b0b7eabdcaa819b54409b",
+    "architecture_seeds.svg": "6385ee5a2a1d4e174ccddc16d0e4e01a682a649c268a0ec76758e8150c35a800",
+    "frozen_evaluation.png": "00d8f967555d40f842aff4e4f9754f150ae3cde163746c5f8ace7246b3b0f6e0",
+    "frozen_evaluation.svg": "9cc38911616b60755cc006a6a17a0f53b6c8d61f768db22e6c177b60573e7bef",
+    "learning_curves.png": "c6cc880917f06432d47bb913c8438dffe81dea612ed785e9d4cd4b054e948678",
+    "learning_curves.svg": "2eff5ef14ae9c08628db1473704aeb6486c252f3f5792b5ecfdf8a0f390730b3",
+    "temporal_selection.png": "59feddea9637011c032ac31b2907952e47fb417c417406328be0a94a768a2b16",
+    "temporal_selection.svg": "db7c59669c6a876651012eb4eec163b356db38986c6af59b493c7413b7b6bb4f"
+  },
+  "plotting_python": "3.10.12",
+  "matplotlib": "3.5.1",
+  "existing_system_environment": true,
+  "no_install": true,
+  "grouping": "Target source-group mean-probability decisions; temporal source-mean file recall is explicitly separate",
+  "smoothing": "None",
+  "error_bars": "None; architecture plots show all three raw seeds and their arithmetic mean",
+  "axes": "Zero-based bars and common evaluation scales",
+  "publisher": "No target journal specified; general project report",
+  "manual_visual_review_required": true
+}

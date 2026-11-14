@@ -1,0 +1,154 @@
+{
+  "cases": [
+    {
+      "sample_id": "bsb-comparison-0302",
+      "source_group": "bsb-new-recording-family-creak",
+      "label": "other",
+      "predicted": "fire_alarm",
+      "category": "door_wood_creaks",
+      "title": "Creaking Door #1",
+      "source_url": "https://bigsoundbank.com/creaking-door-s0302.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "bsb-comparison-0994",
+      "source_group": "bsb-new-recording-family-church-group",
+      "label": "other",
+      "predicted": "fire_alarm",
+      "category": "church_bells",
+      "title": "Church Bells 10 Hours",
+      "source_url": "https://bigsoundbank.com/church-bells-10-hours-s0994.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "bsb-comparison-1269",
+      "source_group": "bsb-new-recording-family-industrial-bell",
+      "label": "doorbell",
+      "predicted": "other",
+      "category": "doorbell",
+      "title": "Industrial Doorbell #1",
+      "source_url": "https://bigsoundbank.com/industrial-doorbell-s1269.html",
+      "error_type": "miss_or_wrong_target_class"
+    },
+    {
+      "sample_id": "bsb-comparison-1922",
+      "source_group": "bsb-new-recording-family-industrial-bell",
+      "label": "doorbell",
+      "predicted": "fire_alarm",
+      "category": "doorbell",
+      "title": "Industrial doorbell #2",
+      "source_url": "https://bigsoundbank.com/industrial-doorbell-2-s1922.html",
+      "error_type": "miss_or_wrong_target_class"
+    },
+    {
+      "sample_id": "bsb-comparison-1923",
+      "source_group": "bsb-new-recording-family-industrial-bell",
+      "label": "doorbell",
+      "predicted": "other",
+      "category": "doorbell",
+      "title": "Industrial doorbell #3",
+      "source_url": "https://bigsoundbank.com/industrial-doorbell-3-s1923.html",
+      "error_type": "miss_or_wrong_target_class"
+    },
+    {
+      "sample_id": "bsb-comparison-1924",
+      "source_group": "bsb-new-recording-family-industrial-bell",
+      "label": "doorbell",
+      "predicted": "other",
+      "category": "doorbell",
+      "title": "Industrial doorbell #4",
+      "source_url": "https://bigsoundbank.com/industrial-doorbell-4-s1924.html",
+      "error_type": "miss_or_wrong_target_class"
+    },
+    {
+      "sample_id": "bsb-comparison-1925",
+      "source_group": "bsb-new-recording-family-industrial-bell",
+      "label": "doorbell",
+      "predicted": "other",
+      "category": "doorbell",
+      "title": "Industrial doorbell #5",
+      "source_url": "https://bigsoundbank.com/industrial-doorbell-5-s1925.html",
+      "error_type": "miss_or_wrong_target_class"
+    },
+    {
+      "sample_id": "bsb-comparison-2811",
+      "source_group": "bsb-new-recording-family-clock-mechanical",
+      "label": "other",
+      "predicted": "fire_alarm",
+      "category": "clock_alarm",
+      "title": "Mechanical alarm clock, ringtone #8",
+      "source_url": "https://bigsoundbank.com/mechanical-alarm-clock-ringtone-8-s2811.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "bsb-comparison-2812",
+      "source_group": "bsb-new-recording-family-clock-mechanical",
+      "label": "other",
+      "predicted": "fire_alarm",
+      "category": "clock_alarm",
+      "title": "Mechanical alarm clock, ringtone #9",
+      "source_url": "https://bigsoundbank.com/mechanical-alarm-clock-ringtone-9-s2812.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "bsb-comparison-2813",
+      "source_group": "bsb-new-recording-family-clock-mechanical",
+      "label": "other",
+      "predicted": "fire_alarm",
+      "category": "clock_alarm",
+      "title": "Mechanical alarm clock, ringtone #10",
+      "source_url": "https://bigsoundbank.com/mechanical-alarm-clock-ringtone-10-s2813.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "bsb-comparison-2814",
+      "source_group": "bsb-new-recording-family-clock-mechanical",
+      "label": "other",
+      "predicted": "fire_alarm",
+      "category": "clock_alarm",
+      "title": "Mechanical Alarm Clock, Ringtone #11",
+      "source_url": "https://bigsoundbank.com/mechanical-alarm-clock-ringtone-11-s2814.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "bsb-comparison-3445",
+      "source_group": "bsb-new-recording-family-church-group",
+      "label": "other",
+      "predicted": "doorbell",
+      "category": "church_bells",
+      "title": "Bell 5 O'clock",
+      "source_url": "https://bigsoundbank.com/bell-5-o-clock-s3445.html",
+      "error_type": "false_positive"
+    },
+    {
+      "sample_id": "soundbible-2022",
+      "source_group": "soundbible-cullen-card-fire_alarm",
+      "label": "fire_alarm",
+      "predicted": "other",
+      "category": "fire_alarm",
+      "title": "2022-School-Fire-Alarm",
+      "source_url": "https://soundbible.com/2022-School-Fire-Alarm.html",
+      "error_type": "miss_or_wrong_target_class"
+    },
+    {
+      "sample_id": "soundbible-2160",
+      "source_group": "soundbible-daniel-simion-doorbell",
+      "label": "doorbell",
+      "predicted": "other",
+      "category": "doorbell",
+      "title": "2160-Old-Fashion-Door-Bell",
+      "source_url": "https://soundbible.com/2160-Old-Fashion-Door-Bell.html",
+      "error_type": "miss_or_wrong_target_class"
+    }
+  ],
+  "false_positive_categories": {
+    "door_wood_creaks": 1,
+    "church_bells": 2,
+    "clock_alarm": 4
+  },
+  "performed_after_frozen_evaluation": true,
+  "labels_or_predictions_changed": false,
+  "used_for_current_model_reselection": false,
+  "fresh_domestic_recordings": 0,
+  "domestic_recall_interpretation": "Not evaluated. A zero in the raw replay domestic metric is an empty-support placeholder, not a measured domestic recall."
+}

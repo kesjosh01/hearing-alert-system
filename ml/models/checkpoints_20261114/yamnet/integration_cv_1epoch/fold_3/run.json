@@ -1,0 +1,65 @@
+{
+  "kind": "development",
+  "fold": 3,
+  "labels": {
+    "fire_alarm": 0,
+    "doorbell": 1,
+    "other": 2
+  },
+  "baseline": {
+    "version": "yamnet-baseline-v1",
+    "protocol_path": "config/training_protocol_v1.json",
+    "processed_dir": "data/processed/yamnet_v1",
+    "runs_dir": "runs/yamnet",
+    "model_handle": "https://tfhub.dev/google/yamnet/1",
+    "sample_rate": 16000,
+    "minimum_samples": 15600,
+    "embedding_dimension": 1024,
+    "embedding_unit": "native_yamnet_patch_0.96s_hop_0.48s",
+    "short_audio_policy": "right_zero_pad_to_15600_samples",
+    "amplitude_policy": "PCM16_to_float32_divide_32768_no_peak_normalization",
+    "file_label_policy": "weak_file_label_applied_to_native_patches",
+    "clip_prediction": "arithmetic_mean_of_patch_softmax_probabilities",
+    "group_prediction": "arithmetic_mean_of_clip_probabilities_within_source_group",
+    "hidden_units": 128,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "max_epochs": 30,
+    "patience": 8,
+    "validation_guards": {
+      "max_overseas_other_clip_fpr": 0.05,
+      "max_domestic_doorlock_false_positive_groups": 0,
+      "note": "Provisional checkpoint-selection limits, not validated product requirements."
+    },
+    "augmentation": "none_for_first_cached_embedding_baseline",
+    "wandb_mode": "disabled"
+  },
+  "protocol_version": "ko-source-cv4-20261108-v1",
+  "options": {
+    "seed": 42,
+    "domestic_weight": 4,
+    "epochs": 1,
+    "patience": 8,
+    "batch_size": 30,
+    "steps_per_epoch": 1,
+    "learning_rate": 0.001,
+    "wandb_mode": "disabled",
+    "validation_guards": {
+      "max_overseas_other_clip_fpr": 0.05,
+      "max_domestic_doorlock_false_positive_groups": 0,
+      "note": "Provisional checkpoint-selection limits, not validated product requirements."
+    }
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "tensorflow": "2.18.1",
+    "tensorflow-hub": "0.16.1",
+    "tf-keras": "2.18.0",
+    "setuptools": "80.9.0",
+    "wandb": null
+  },
+  "feature_provenance_fingerprint": "37860e32303d76dad8f879024f759443ad26c98c5e9eadd73db3ecfc3c4e0169",
+  "code_fingerprint": "eb4c4280610e3be55d9901d810946d4123be3be007f02d98afe7c879e067028c",
+  "split_sha256": "79cc4f98b0d0c470a2f2829415b1495c8fce4bdfeb54f69fb9151be617f58d68",
+  "evaluation_policy": "native patch -> mean softmax per clip -> equal clip mean per source; argmax, no event threshold tuning"
+}

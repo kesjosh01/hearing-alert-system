@@ -1,0 +1,26 @@
+{
+  "candidate": "kd24_freq_aug",
+  "domestic_weight": 1,
+  "refit_epochs": 9,
+  "decision_policy": {
+    "kind": "per_target_argmax_confidence_rejection",
+    "thresholds": {
+      "fire_alarm": 0.0,
+      "doorbell": 0.55
+    },
+    "clip_aggregation": "all_window_mean_softmax",
+    "group_aggregation": "equal_clip_mean_softmax_then_decide",
+    "selection_source": "domestic_OOF_and_reused_foreign_validation_only"
+  },
+  "summary_sha256": "b6b677807168fe29816ff865df14aa86738ffe4887bbad0aafa7fb40b56bd9de",
+  "selection_rank": [
+    1,
+    0.73125,
+    0.736454157506789,
+    1.0,
+    -4707,
+    -0.02763819095477387
+  ],
+  "test_used_for_selection": false,
+  "distillation_selected": true
+}

@@ -1,0 +1,1 @@
+Trained research comparison model, selected on development data and calibrated before the new fixed public test. See delivered_output_contract.json for exact integer readout. Microphone, board and field reliability remain unverified.

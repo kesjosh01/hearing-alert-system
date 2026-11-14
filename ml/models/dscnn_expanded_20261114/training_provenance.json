@@ -1,0 +1,616 @@
+{
+  "study": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/expansion_20261114",
+  "model_audit": {
+    "kind": "expanded_dscnn_requirement_audit",
+    "model_development_and_training_complete": true,
+    "checks": {
+      "public_audio_actually_collected_and_licensed": true,
+      "korean_first_and_overseas_shortfall_supplemented": true,
+      "positive_class_data_ratio_and_source_counts_recorded": true,
+      "code_and_dataset_frozen_before_real_training": true,
+      "training24_and_validation8_sirens_positive": true,
+      "all15_actual_training_runs_gpu_and_split_scope_verified": true,
+      "coverage_seed_amended_before_test_without_score_selection": true,
+      "class_mass_thirds_and_domestic_to_foreign_group_weight4_in_every_run": true,
+      "corrected_label_teachers_and_aligned_KL_actually_used": true,
+      "architecture_comparison_and_selection_without_test": true,
+      "all_reported_cv_metrics_match_saved_predictions": true,
+      "final_refit_epochs_fixed_from_cv": true,
+      "all39_public_files_actually_sampled_in_final_training": true,
+      "all24_siren_files_actually_sampled_as_fire_alarm": true,
+      "trained_float_and_full_int8_models_match_freeze": true,
+      "int8_calibration_training_only": true,
+      "one_retrospective_comparison_after_freeze_with_sirens_excluded": true,
+      "cpp_frontend_and_actual_int8_host_outputs_match": true,
+      "previous_dscnn_code_models_and_data_preserved": true,
+      "originals_yamnet_and_all_environments_preserved": true,
+      "synthetic_gpu_integer_and_data_contract_gates_passed": true
+    },
+    "public_audio_files_added": 39,
+    "training_sirens_reclassified": 24,
+    "domestic_positive_group_weight": 4,
+    "overseas_positive_group_weight": 1,
+    "actual_teacher_training_runs": 5,
+    "actual_student_distillation_training_runs": 10,
+    "initial_refit_preserved_for_target_coverage_gap": true,
+    "final_refit_seed": 43,
+    "actual_teacher_optimizer_steps": 2910,
+    "actual_student_optimizer_steps": 4290,
+    "selected_architecture": "temporal24",
+    "structure_changed_from_previous": true,
+    "selected_cv_target_recall": 0.76875,
+    "refit_epochs": 5,
+    "trained_model": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_coverage_final/classifier.keras",
+    "trained_int8_model": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_coverage_final/export/dscnn_int8.tflite",
+    "trained_int8_bytes": 16896,
+    "new_public_refit_draws": {
+      "gongu-13254669": 8,
+      "gongu-13254671": 5,
+      "gongu-13254676": 3,
+      "gongu-13254675": 10,
+      "gongu-13254674": 5,
+      "gongu-13254673": 4,
+      "gongu-13254672": 6,
+      "gongu-13254670": 5,
+      "gongu-13254678": 5,
+      "gongu-13254677": 6,
+      "gongu-13254448": 8,
+      "gongu-13254447": 3,
+      "gongu-13254446": 2,
+      "gongu-13254445": 3,
+      "gongu-13254444": 7,
+      "gongu-13254443": 5,
+      "gongu-13254442": 3,
+      "gongu-13254430": 7,
+      "gongu-13254429": 5,
+      "gongu-13254428": 7,
+      "gongu-13254431": 6,
+      "gongu-13254439": 6,
+      "gongu-13254557": 58,
+      "gongu-13220897": 46,
+      "bsb-new-2249": 8,
+      "bsb-new-3411": 2,
+      "bsb-new-3413": 4,
+      "bsb-new-0800": 5,
+      "bsb-new-0268": 6,
+      "bsb-new-3412": 9,
+      "bsb-new-0269": 5,
+      "bsb-new-1151": 10,
+      "bsb-new-2250": 4,
+      "bsb-new-2365": 14,
+      "bsb-new-3588": 13,
+      "bsb-new-3046": 15,
+      "bsb-new-1605": 12,
+      "bsb-new-0161": 5,
+      "bsb-new-0160": 4
+    },
+    "independent_new_test_available": false,
+    "device_country_of_public_catalog_recordings_verified": false,
+    "public_file_labels_basis": "Publisher category/title; no human listening verification claimed",
+    "event_intervals_human_reviewed": false,
+    "apps_packages_or_drivers_installed": false,
+    "deployment_ready": false,
+    "board_executions": 0
+  },
+  "frozen_model": {
+    "refit": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_coverage_final",
+    "decision": {
+      "candidate": "temporal24",
+      "refit_epochs": 5,
+      "decision_policy": {
+        "kind": "per_target_argmax_confidence_rejection",
+        "thresholds": {
+          "fire_alarm": 0.5,
+          "doorbell": 0.55
+        },
+        "clip_aggregation": "all_window_mean_softmax",
+        "group_aggregation": "equal_clip_mean_softmax_then_decide",
+        "selection_source": "domestic_OOF_and_corrected_foreign_validation_only"
+      },
+      "domestic_weight": 4.0,
+      "selection_rank": [
+        1,
+        0.76875,
+        0.7666352582222821,
+        0.9411764705882353,
+        -6003,
+        -0.030128205128205125
+      ],
+      "summary_sha256": "2c6c482c791ec630866ad8f973fed6f107f1102d772b98ae1ac152117fd07403",
+      "fixed_test_used": false
+    },
+    "model_sha256": "8edd834615c06336659bbd68c25d34497f49ac9b54c7ebe252aa9620335a21cf",
+    "int8_sha256": "0dc5bedf92e16e14e94e33f34ea2dd7abe3f5fb436083b17fd90337841468c9c",
+    "code_identity": {
+      "dscnn_baseline/__init__.py": "f7b0c919d80f0c3729dcb329307dc43ea5e5fe7f731c2fa7ca86b25ed88de02f",
+      "dscnn_baseline/__main__.py": "62a59f5c884dfcd4fdf5ef12db51c53cf7ff164ed98191ad2847e785f663fd40",
+      "dscnn_baseline/common.py": "182d25f180fdc47e4f625ac1687bef3216e00807296c5a7402a808fe3af40411",
+      "dscnn_baseline/data.py": "8ea5f568f8d821565e7c95543c76571ed8a7d5d324e6a085fa34959cd46a9767",
+      "dscnn_baseline/decisions.py": "3471e806a31e340301c0e2f07631bdd29f024174f20d0eba227f41d0e34ba160",
+      "dscnn_baseline/evaluation.py": "7a9139953e9ef12a96aab36c99e4ef592f26b09b919233c32bfb73a664ccc2c6",
+      "dscnn_baseline/export.py": "4131e2c921e70986f0938300f31ff7f7f65b969578f7daf5f5f263bb54a1ab39",
+      "dscnn_baseline/frontend.py": "f386ea2d78fd25a5ece78be5bf47bea64449e4efc1cfad8ee7c61345d267ea6b",
+      "dscnn_baseline/model.py": "2a6048f1bf2664dc442482efd5af29affad500adf056243d910c605b2c47e2a5",
+      "dscnn_baseline/review.py": "cc15bef032414e687a9355d7cdef97cc35799621e807e29efe70be1231036d8d",
+      "dscnn_baseline/selfcheck.py": "cfbce26d1a32fdcb2c4e0249ea8dd47c9b87e8d6054878db9876845fcb374f3d",
+      "dscnn_baseline/study.py": "7cbbda89ae46b59e5c2ff64dd727c2b21044ee11e35d109916a73f3960a96615",
+      "dscnn_baseline/tracking.py": "7e5263f40f8ac5f61f97c3eb7a404d697647d9ca5c380d9c3b2e19c48751af56",
+      "dscnn_baseline/training.py": "c04acd228342c8fd1314f5d5da29351602d00aea7672e53a14efed98adabe021",
+      "dscnn_baseline/weak_labels.py": "24f3a0e48d659971ba3887498cab675c9ca3a31d3d111149d0d7b8d77a042c82",
+      "improvement/__init__.py": "ec71816c6ffbca45d06198d59ce1d93a4d35a06abd3e1b8c6ecb506042218ab0",
+      "improvement/model.py": "390e01bba382eb9c9c1e578f8afd0022d3371e6f412832fc015f07f49e25ae10",
+      "improvement/policy.py": "29570dffcb24f829755d89d79bd7522512fd7c29b2c0c3d96770c975ef446d2c",
+      "improvement/preflight.py": "31fc9b2ce759f9dbadf9d66d34979cdbd844a88cd82b03d3de2cd9295e9826ac",
+      "improvement/protocol.py": "f6e2387fcb93b006a86525c34ba831d08fe6ccf38f1d0043239fba1a997ddb12",
+      "improvement/study.py": "85c43247444bff79d2867db8208070746d8b76885e3c0e4cb50f1cc6c036fbcd",
+      "improvement/teacher.py": "a46a4877f56fd8a7da3b84e9d5b25f32d55e715bf09c30116a1cf888942e9d09",
+      "improvement/train.py": "d9992cd6a8ddf85d9604eba80e29daf0c8d5f5b2b67cc0f8228c5fa57f131a96",
+      "expansion/__init__.py": "c7d4f3caf87ad82f7aae324ea24de3db2d4f8d16a5be4f68327417db5c2c4477",
+      "expansion/data.py": "4d008b9f7a8de5ada3288eae4bc886a5d58106eec8a59c23fb162a4c4318386e",
+      "expansion/model.py": "23060d06a5304706b729b3ee00acecd89a0a59a098bfa2740665361ef3b17069",
+      "expansion/protocol.py": "7c0d43f9d8be15a3351da7c120247693573a2159f92a009672586f81008e8311",
+      "expansion/runtime.py": "bd24de40ec7552f7d44d2e7cd9304af99d5b06929950d90c6049eb0506b59dac",
+      "expansion/study.py": "08e0088a0cf9153503da6288aafc9abd10822210c2f560dcb88475c1130ed46c",
+      "expansion/train.py": "5e55e8aed54b6d09dde95335a538c6759246a57bc8fccc66281c48b3efb505b0"
+    },
+    "dataset_identity": {
+      "accepted_public.json": "808229ec570d81b39e50b59997389b2dae3da954962edaa774478b8ebcad9707",
+      "label_overrides.csv": "3aee64f86c55da6fd21dd158fd206d091e0cd8c24f9bc374023eda63aaaef6b9",
+      "dataset.json": "f0c6b749314c1e09f130394022d1ba2571a2d889e39fa55b267be163e680251d",
+      "refit.csv": "566b4c0961dc18561af587eb4a5f785b44e451598821c98422a802a90d17e4a4",
+      "fold_0.csv": "23ef6ab8e48c7a0ae1ea1e7b09dadf57f4ce53625fe1c80b7d34dcfa324f3ce7",
+      "fold_1.csv": "ffd5538637e2fec22a999e623169946bfe44c3c9bb0f6dbea6b75419365a3b29",
+      "fold_2.csv": "b2f8645654adfe9ff74eb0ef54750fbbf2261805c4af5d401f67e93003c9ab29",
+      "fold_3.csv": "226228ecf2fda6ba5dea256c90958df5161a666b227088a619844e22e595ed3a"
+    },
+    "refit_coverage_amendment": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/expansion_20261114/refit_coverage_amendment.json",
+      "sha256": "8cbd1f4330ff05b8b9d6636779ab6b7d88a831d64e294dc6ab25a823575c82a5",
+      "execution_wrapper_sha256": "68cd7f3a2cf008bbad693328ed028ab93bb0e3c2ef9ee694b87561434a3e0da4",
+      "changes": "final random seed and output directory only"
+    }
+  },
+  "training_run": {
+    "role": "student",
+    "candidate": "temporal24",
+    "options": {
+      "seed": 43,
+      "epochs": 30,
+      "patience": 8,
+      "batch_size": 30,
+      "steps_per_epoch": 30,
+      "microbatch_files": 6,
+      "learning_rate": 0.001,
+      "domestic_weight": 4.0,
+      "foreign_target_weight": 1.0,
+      "temperature": 2.0,
+      "hard_label_weight": 0.5,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "dataset_identity": {
+      "accepted_public.json": "808229ec570d81b39e50b59997389b2dae3da954962edaa774478b8ebcad9707",
+      "label_overrides.csv": "3aee64f86c55da6fd21dd158fd206d091e0cd8c24f9bc374023eda63aaaef6b9",
+      "dataset.json": "f0c6b749314c1e09f130394022d1ba2571a2d889e39fa55b267be163e680251d",
+      "refit.csv": "566b4c0961dc18561af587eb4a5f785b44e451598821c98422a802a90d17e4a4",
+      "fold_0.csv": "23ef6ab8e48c7a0ae1ea1e7b09dadf57f4ce53625fe1c80b7d34dcfa324f3ce7",
+      "fold_1.csv": "ffd5538637e2fec22a999e623169946bfe44c3c9bb0f6dbea6b75419365a3b29",
+      "fold_2.csv": "b2f8645654adfe9ff74eb0ef54750fbbf2261805c4af5d401f67e93003c9ab29",
+      "fold_3.csv": "226228ecf2fda6ba5dea256c90958df5161a666b227088a619844e22e595ed3a"
+    },
+    "code_identity": {
+      "dscnn_baseline/__init__.py": "f7b0c919d80f0c3729dcb329307dc43ea5e5fe7f731c2fa7ca86b25ed88de02f",
+      "dscnn_baseline/__main__.py": "62a59f5c884dfcd4fdf5ef12db51c53cf7ff164ed98191ad2847e785f663fd40",
+      "dscnn_baseline/common.py": "182d25f180fdc47e4f625ac1687bef3216e00807296c5a7402a808fe3af40411",
+      "dscnn_baseline/data.py": "8ea5f568f8d821565e7c95543c76571ed8a7d5d324e6a085fa34959cd46a9767",
+      "dscnn_baseline/decisions.py": "3471e806a31e340301c0e2f07631bdd29f024174f20d0eba227f41d0e34ba160",
+      "dscnn_baseline/evaluation.py": "7a9139953e9ef12a96aab36c99e4ef592f26b09b919233c32bfb73a664ccc2c6",
+      "dscnn_baseline/export.py": "4131e2c921e70986f0938300f31ff7f7f65b969578f7daf5f5f263bb54a1ab39",
+      "dscnn_baseline/frontend.py": "f386ea2d78fd25a5ece78be5bf47bea64449e4efc1cfad8ee7c61345d267ea6b",
+      "dscnn_baseline/model.py": "2a6048f1bf2664dc442482efd5af29affad500adf056243d910c605b2c47e2a5",
+      "dscnn_baseline/review.py": "cc15bef032414e687a9355d7cdef97cc35799621e807e29efe70be1231036d8d",
+      "dscnn_baseline/selfcheck.py": "cfbce26d1a32fdcb2c4e0249ea8dd47c9b87e8d6054878db9876845fcb374f3d",
+      "dscnn_baseline/study.py": "7cbbda89ae46b59e5c2ff64dd727c2b21044ee11e35d109916a73f3960a96615",
+      "dscnn_baseline/tracking.py": "7e5263f40f8ac5f61f97c3eb7a404d697647d9ca5c380d9c3b2e19c48751af56",
+      "dscnn_baseline/training.py": "c04acd228342c8fd1314f5d5da29351602d00aea7672e53a14efed98adabe021",
+      "dscnn_baseline/weak_labels.py": "24f3a0e48d659971ba3887498cab675c9ca3a31d3d111149d0d7b8d77a042c82",
+      "improvement/__init__.py": "ec71816c6ffbca45d06198d59ce1d93a4d35a06abd3e1b8c6ecb506042218ab0",
+      "improvement/model.py": "390e01bba382eb9c9c1e578f8afd0022d3371e6f412832fc015f07f49e25ae10",
+      "improvement/policy.py": "29570dffcb24f829755d89d79bd7522512fd7c29b2c0c3d96770c975ef446d2c",
+      "improvement/preflight.py": "31fc9b2ce759f9dbadf9d66d34979cdbd844a88cd82b03d3de2cd9295e9826ac",
+      "improvement/protocol.py": "f6e2387fcb93b006a86525c34ba831d08fe6ccf38f1d0043239fba1a997ddb12",
+      "improvement/study.py": "85c43247444bff79d2867db8208070746d8b76885e3c0e4cb50f1cc6c036fbcd",
+      "improvement/teacher.py": "a46a4877f56fd8a7da3b84e9d5b25f32d55e715bf09c30116a1cf888942e9d09",
+      "improvement/train.py": "d9992cd6a8ddf85d9604eba80e29daf0c8d5f5b2b67cc0f8228c5fa57f131a96",
+      "expansion/__init__.py": "c7d4f3caf87ad82f7aae324ea24de3db2d4f8d16a5be4f68327417db5c2c4477",
+      "expansion/data.py": "4d008b9f7a8de5ada3288eae4bc886a5d58106eec8a59c23fb162a4c4318386e",
+      "expansion/model.py": "23060d06a5304706b729b3ee00acecd89a0a59a098bfa2740665361ef3b17069",
+      "expansion/protocol.py": "7c0d43f9d8be15a3351da7c120247693573a2159f92a009672586f81008e8311",
+      "expansion/runtime.py": "bd24de40ec7552f7d44d2e7cd9304af99d5b06929950d90c6049eb0506b59dac",
+      "expansion/study.py": "08e0088a0cf9153503da6288aafc9abd10822210c2f560dcb88475c1130ed46c",
+      "expansion/train.py": "5e55e8aed54b6d09dde95335a538c6759246a57bc8fccc66281c48b3efb505b0"
+    },
+    "teacher": {
+      "directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_teacher_final",
+      "model_sha256": "06975b3851f7392731199ecf545f47755a5fdbc134b420ba4a3b045822eb1d54",
+      "soft_logits_sha256": "438f2fb20d2f5e58377d9f7d464aa56346d0fcf574e5e650626940b3b928b217",
+      "output": "pre_softmax_logits",
+      "validation_group_leakage": false,
+      "teacher_weights_unchanged": true,
+      "corrected_siren_labels_used": true
+    },
+    "seed": 43,
+    "refit_epochs": 5,
+    "supervision": "file-label bags; public catalog labels and explicit siren policy",
+    "human_window_labels_assigned": false,
+    "complexity": {
+      "parameters_including_bn_statistics": 6003,
+      "convolution_and_dense_macs_per_window": 3811680,
+      "largest_single_int8_activation_bytes": 23520,
+      "input_int8_bytes": 3920,
+      "board_tensor_arena_bytes": null,
+      "board_processing_ms": null,
+      "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+    },
+    "refit_coverage_amendment": {
+      "path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/expansion_20261114/refit_coverage_amendment.json",
+      "sha256": "8cbd1f4330ff05b8b9d6636779ab6b7d88a831d64e294dc6ab25a823575c82a5",
+      "execution_wrapper_sha256": "68cd7f3a2cf008bbad693328ed028ab93bb0e3c2ef9ee694b87561434a3e0da4",
+      "changes": "final random seed and output directory only"
+    }
+  },
+  "dataset": {
+    "version": "public-target-siren-expansion-20261114-v1",
+    "accepted_new_public_files": 39,
+    "excluded_duplicate_files": 0,
+    "new_public_counts": {
+      "KR_public_catalog:doorbell": 24,
+      "overseas_public_catalog:fire_alarm": 9,
+      "overseas_public_catalog:doorbell": 6
+    },
+    "training_clips_by_class": {
+      "fire_alarm": 47,
+      "doorbell": 53,
+      "other": 1181
+    },
+    "training_groups_by_class": {
+      "fire_alarm": 31,
+      "doorbell": 32,
+      "other": 909
+    },
+    "fire_to_doorbell_training_clip_ratio": 0.8867924528301887,
+    "training_sirens_reclassified": 24,
+    "validation_sirens_reclassified": 8,
+    "new_public_role": "train_only",
+    "new_public_country_basis": "Publication catalog, not verified physical device country",
+    "new_public_human_listening_verified": false,
+    "event_interval_annotations_used": false,
+    "frozen_test_files_in_development": 0,
+    "test_audio_decoded": 0,
+    "test_membership_unchanged": true
+  },
+  "float_historical_metrics": {
+    "clips": {
+      "count": 403,
+      "accuracy": 0.8759305210918115,
+      "macro_f1": 0.421019005582764,
+      "loss": 0.47038169823078535,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.09090909090909091,
+          "recall": 0.75,
+          "f1": 0.16216216216216214,
+          "support": 4,
+          "correct": 3,
+          "predicted": 33
+        },
+        "doorbell": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1": 0.16666666666666669,
+          "support": 4,
+          "correct": 2,
+          "predicted": 20
+        },
+        "other": {
+          "precision": 0.9942857142857143,
+          "recall": 0.8810126582278481,
+          "f1": 0.934228187919463,
+          "support": 395,
+          "correct": 348,
+          "predicted": 350
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          30,
+          17,
+          348
+        ]
+      ]
+    },
+    "groups": {
+      "count": 312,
+      "accuracy": 0.8685897435897436,
+      "macro_f1": 0.4391899766899767,
+      "loss": 0.443144373138917,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.10714285714285714,
+          "recall": 0.75,
+          "f1": 0.1875,
+          "support": 4,
+          "correct": 3,
+          "predicted": 28
+        },
+        "doorbell": {
+          "precision": 0.125,
+          "recall": 0.5,
+          "f1": 0.2,
+          "support": 4,
+          "correct": 2,
+          "predicted": 16
+        },
+        "other": {
+          "precision": 0.9925373134328358,
+          "recall": 0.875,
+          "f1": 0.9300699300699301,
+          "support": 304,
+          "correct": 266,
+          "predicted": 268
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          25,
+          13,
+          266
+        ]
+      ]
+    },
+    "domestic_groups": {
+      "count": 9,
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.6428571428571429,
+      "loss": 1.0736003934544978,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "support": 4,
+          "correct": 3,
+          "predicted": 3
+        },
+        "doorbell": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285715,
+          "support": 4,
+          "correct": 2,
+          "predicted": 3
+        },
+        "other": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 1,
+          "correct": 1,
+          "predicted": 3
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "domestic_target_macro_recall": 0.625,
+    "overseas_other_clip_count": 394,
+    "overseas_other_clip_false_positives": 47,
+    "overseas_other_clip_fpr": 0.11928934010152284,
+    "domestic_doorlock_group_count": 1,
+    "domestic_doorlock_false_positive_groups": 0,
+    "decision_policy": {
+      "kind": "per_target_argmax_confidence_rejection",
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      }
+    }
+  },
+  "int8_historical_metrics": {
+    "clips": {
+      "count": 403,
+      "accuracy": 0.8784119106699751,
+      "macro_f1": 0.4229967232648198,
+      "loss": 0.46653462186388617,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.09375,
+          "recall": 0.75,
+          "f1": 0.16666666666666666,
+          "support": 4,
+          "correct": 3,
+          "predicted": 32
+        },
+        "doorbell": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1": 0.16666666666666669,
+          "support": 4,
+          "correct": 2,
+          "predicted": 20
+        },
+        "other": {
+          "precision": 0.9943019943019943,
+          "recall": 0.8835443037974684,
+          "f1": 0.935656836461126,
+          "support": 395,
+          "correct": 349,
+          "predicted": 351
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          29,
+          17,
+          349
+        ]
+      ]
+    },
+    "groups": {
+      "count": 312,
+      "accuracy": 0.875,
+      "macro_f1": 0.44595753743130445,
+      "loss": 0.4392027821338824,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.1111111111111111,
+          "recall": 0.75,
+          "f1": 0.19354838709677416,
+          "support": 4,
+          "correct": 3,
+          "predicted": 27
+        },
+        "doorbell": {
+          "precision": 0.13333333333333333,
+          "recall": 0.5,
+          "f1": 0.2105263157894737,
+          "support": 4,
+          "correct": 2,
+          "predicted": 15
+        },
+        "other": {
+          "precision": 0.9925925925925926,
+          "recall": 0.881578947368421,
+          "f1": 0.9337979094076654,
+          "support": 304,
+          "correct": 268,
+          "predicted": 270
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          24,
+          12,
+          268
+        ]
+      ]
+    },
+    "domestic_groups": {
+      "count": 9,
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.6428571428571429,
+      "loss": 1.1175192686601527,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "support": 4,
+          "correct": 3,
+          "predicted": 3
+        },
+        "doorbell": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285715,
+          "support": 4,
+          "correct": 2,
+          "predicted": 3
+        },
+        "other": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 1,
+          "correct": 1,
+          "predicted": 3
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "domestic_target_macro_recall": 0.625,
+    "overseas_other_clip_count": 394,
+    "overseas_other_clip_false_positives": 46,
+    "overseas_other_clip_fpr": 0.116751269035533,
+    "domestic_doorlock_group_count": 1,
+    "domestic_doorlock_false_positive_groups": 0,
+    "decision_policy": {
+      "kind": "per_target_argmax_confidence_rejection",
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.55
+      }
+    }
+  }
+}

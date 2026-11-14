@@ -1,0 +1,29 @@
+{
+  "kind": "pre_test_training_coverage_seed_amendment",
+  "reason": "one added public target had zero direct draws in the initial five-epoch refit",
+  "original_refit": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_final",
+  "original_frozen_sha256": "db3c85a00057ab7b913c48d44134f14a758601fc097726c0c0e083d34775531c",
+  "original_seed": 42,
+  "missing_target_ids": [
+    "bsb-new-0268"
+  ],
+  "selected_refit_seed": 43,
+  "seed_selection_rule": "First integer greater than original seed whose metadata-only exact sampling schedule covers every training target; no model performance used",
+  "same_candidate": "temporal24",
+  "same_epochs": 5,
+  "same_optimizer_steps": 150,
+  "same_thresholds": {
+    "fire_alarm": 0.5,
+    "doorbell": 0.55
+  },
+  "same_domestic_group_weight": 4,
+  "same_class_probabilities": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "new_test_evaluations_before_amendment": 0,
+  "training_target_count": 100,
+  "wrapper_sha256": "68cd7f3a2cf008bbad693328ed028ab93bb0e3c2ef9ee694b87561434a3e0da4",
+  "output": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_expanded_20261114_temporal24_coverage_final"
+}

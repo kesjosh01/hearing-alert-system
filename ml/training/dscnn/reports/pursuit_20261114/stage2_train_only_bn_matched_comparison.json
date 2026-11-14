@@ -1,0 +1,222 @@
+{
+  "complete": true,
+  "results": [
+    {
+      "name": "pursuit_20261114_r06_native40_supervised_bnrefit",
+      "status": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 0,
+        "parent_model_sha256": "20a088788d66f45c61aa69e2af77c7583c04c4b4a229befbe4359072b0fcb227",
+        "inherited_real_trained_checkpoint": true,
+        "bn_moment_reestimation": true,
+        "fresh_test_used": false,
+        "calibration_used": false,
+        "feature_arrays_saved": false,
+        "actual_product_targets_verified": false,
+        "bn_batches": 100,
+        "elapsed_seconds": 122.99797683500219,
+        "model_sha256": "5b9b3aaa6ee5aaebb2dcb015a1ea38bda0314cda2a3b752b9edbbab7cb0a4e27",
+        "selected_metrics": {
+          "mode": "margin",
+          "temperature": 1.0,
+          "policy": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "thresholds": [
+            5.832513239234687,
+            6.939287185668946
+          ],
+          "fire_recall": 0.27906976744186046,
+          "doorbell_recall": 0.2073170731707317,
+          "macro_recall": 0.2431934203062961,
+          "classes": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 24,
+              "source_groups": 86,
+              "source_mean_file_recall": 0.27906976744186046,
+              "wrong_target_or_negative_alert_files": 0
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 11,
+              "source_groups": 41,
+              "source_mean_file_recall": 0.2073170731707317,
+              "wrong_target_or_negative_alert_files": 0
+            }
+          },
+          "other_false_alert_files": 0,
+          "other_files": 1053,
+          "cross_or_negative_alert_files": 0,
+          "selection_zero_errors_by_construction": true,
+          "true_event_or_monthly_rate_verified": false
+        },
+        "parent_selection": {
+          "mode": "margin",
+          "temperature": 1.0,
+          "policy": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "thresholds": [
+            6.119184017181397,
+            6.827262997627259
+          ],
+          "fire_recall": 0.22093023255813954,
+          "doorbell_recall": 0.25609756097560976,
+          "macro_recall": 0.23851389676687465,
+          "classes": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 19,
+              "source_groups": 86,
+              "source_mean_file_recall": 0.22093023255813954,
+              "wrong_target_or_negative_alert_files": 0
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 13,
+              "source_groups": 41,
+              "source_mean_file_recall": 0.25609756097560976,
+              "wrong_target_or_negative_alert_files": 0
+            }
+          },
+          "other_false_alert_files": 0,
+          "other_files": 1053,
+          "cross_or_negative_alert_files": 0,
+          "selection_zero_errors_by_construction": true,
+          "true_event_or_monthly_rate_verified": false
+        },
+        "selection_better_than_parent": false,
+        "stable_learned_arrays_preserved": 41,
+        "moving_statistic_arrays_changed": 26
+      },
+      "source_window_receipts_sha256": "438dcb1dedc084a412ee93fb5fcf903e20f6fcdf0858f82155a600cb0a3a297a"
+    },
+    {
+      "name": "pursuit_20261114_r06_native40_distilled_vs_control_bnrefit",
+      "status": {
+        "complete": true,
+        "exit_code": 0,
+        "actual_optimizer_steps": 0,
+        "parent_model_sha256": "d46d577596475062f59006abce1c7e0cf417d47a8d95a14d4c75aff4ade90592",
+        "inherited_real_trained_checkpoint": true,
+        "bn_moment_reestimation": true,
+        "fresh_test_used": false,
+        "calibration_used": false,
+        "feature_arrays_saved": false,
+        "actual_product_targets_verified": false,
+        "bn_batches": 100,
+        "elapsed_seconds": 129.604228780001,
+        "model_sha256": "76046896645f42dd171925f68d3f7529f07e19d704b82ebaa921c7061dbda591",
+        "selected_metrics": {
+          "mode": "margin",
+          "temperature": 1.0,
+          "policy": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "thresholds": [
+            7.123293280601502,
+            4.104740962386132
+          ],
+          "fire_recall": 0.18604651162790697,
+          "doorbell_recall": 0.2804878048780488,
+          "macro_recall": 0.2332671582529779,
+          "classes": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 18,
+              "source_groups": 86,
+              "source_mean_file_recall": 0.18604651162790697,
+              "wrong_target_or_negative_alert_files": 0
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 13,
+              "source_groups": 41,
+              "source_mean_file_recall": 0.2804878048780488,
+              "wrong_target_or_negative_alert_files": 0
+            }
+          },
+          "other_false_alert_files": 0,
+          "other_files": 1053,
+          "cross_or_negative_alert_files": 0,
+          "selection_zero_errors_by_construction": true,
+          "true_event_or_monthly_rate_verified": false
+        },
+        "parent_selection": {
+          "mode": "margin",
+          "temperature": 1.0,
+          "policy": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "thresholds": [
+            6.808505356311799,
+            4.969501852989198
+          ],
+          "fire_recall": 0.19767441860465115,
+          "doorbell_recall": 0.18292682926829268,
+          "macro_recall": 0.1903006239364719,
+          "classes": {
+            "fire_alarm": {
+              "files": 91,
+              "detected_files": 19,
+              "source_groups": 86,
+              "source_mean_file_recall": 0.19767441860465115,
+              "wrong_target_or_negative_alert_files": 0
+            },
+            "doorbell": {
+              "files": 47,
+              "detected_files": 9,
+              "source_groups": 41,
+              "source_mean_file_recall": 0.18292682926829268,
+              "wrong_target_or_negative_alert_files": 0
+            }
+          },
+          "other_false_alert_files": 0,
+          "other_files": 1053,
+          "cross_or_negative_alert_files": 0,
+          "selection_zero_errors_by_construction": true,
+          "true_event_or_monthly_rate_verified": false
+        },
+        "selection_better_than_parent": false,
+        "stable_learned_arrays_preserved": 41,
+        "moving_statistic_arrays_changed": 26
+      },
+      "source_window_receipts_sha256": "438dcb1dedc084a412ee93fb5fcf903e20f6fcdf0858f82155a600cb0a3a297a"
+    }
+  ],
+  "identical_training_source_windows": true,
+  "optimizer_updates": 0,
+  "learned_weights_changed": false,
+  "calibration_or_new_fresh_used": false,
+  "actual_product_targets_verified": false
+}

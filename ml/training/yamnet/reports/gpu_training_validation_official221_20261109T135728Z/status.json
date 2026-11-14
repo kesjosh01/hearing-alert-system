@@ -1,0 +1,19 @@
+{
+  "started_at": "2026-11-09T13:57:28.036771+00:00",
+  "experiment_completed": true,
+  "gpu_validation_passed": true,
+  "completed_weights": [],
+  "test_evaluated": false,
+  "refit_executed": false,
+  "installation_executed": false,
+  "stage": "complete",
+  "report_directory": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/yamnet/reports/gpu_training_validation_official221_20261109T135728Z",
+  "scope": "gpu_validation_only",
+  "environment_profile": "official221",
+  "validation_run_name": "ubuntu_gpu_validation_1e2s_s42_20261109T135728Z",
+  "initial_validation_seconds": 38.195019934999436,
+  "integrity_passed": true,
+  "finished_at": "2026-11-09T13:58:08.861602+00:00",
+  "elapsed_seconds": 40.82518756599893,
+  "exit_code": 0
+}

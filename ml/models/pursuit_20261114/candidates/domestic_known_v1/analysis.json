@@ -1,0 +1,118 @@
+{
+  "kind": "probability",
+  "selection_before_calibration": {
+    "mode": "delivered_probability",
+    "temperature": 1.0,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      0.6289062500000001,
+      0.8593750000000001
+    ],
+    "fire_recall": 1.0,
+    "doorbell_recall": 1.0,
+    "macro_recall": 1.0,
+    "classes": {
+      "fire_alarm": {
+        "files": 17,
+        "detected_files": 17,
+        "source_groups": 17,
+        "source_mean_file_recall": 1.0,
+        "wrong_target_or_negative_alert_files": 0
+      },
+      "doorbell": {
+        "files": 26,
+        "detected_files": 26,
+        "source_groups": 26,
+        "source_mean_file_recall": 1.0,
+        "wrong_target_or_negative_alert_files": 0
+      }
+    },
+    "other_false_alert_files": 0,
+    "other_files": 422,
+    "cross_or_negative_alert_files": 0,
+    "selection_zero_errors_by_construction": true,
+    "true_event_or_monthly_rate_verified": false
+  },
+  "selection_after_calibration": {
+    "classes": {
+      "fire_alarm": {
+        "training_seen_files": 17,
+        "detected_files": 17
+      },
+      "doorbell": {
+        "training_seen_files": 26,
+        "detected_files": 26
+      }
+    },
+    "other_files": 422,
+    "other_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "independent_target_test_files": 0,
+    "actual_monthly_false_rate_proven": false
+  },
+  "calibration_after_threshold_fit": {
+    "classes": {
+      "fire_alarm": {
+        "training_seen_files": 0,
+        "detected_files": 0
+      },
+      "doorbell": {
+        "training_seen_files": 0,
+        "detected_files": 0
+      }
+    },
+    "other_files": 312,
+    "other_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "independent_target_test_files": 0,
+    "actual_monthly_false_rate_proven": false
+  },
+  "policy": {
+    "output_semantics": "probability",
+    "score_mode": "delivered_probability",
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "thresholds": [
+      0.6289062500000001,
+      0.8593750000000001
+    ],
+    "margin_units": "Delivered dequantized probabilities",
+    "threshold_rule": "At least one above-zero causal score >= threshold; selection/calibration maxima excluded strictly",
+    "firmware_frontend": "Existing portable 98x40",
+    "input_shape": [
+      1,
+      98,
+      40,
+      1
+    ],
+    "trained_model_sha256": "ebbddfb3a54216baed943753295db440e68ff86f4b4bd019d6e51e274ffbbed3",
+    "tflite_sha256": "64b447f66a279eaf3e4fefbf900892cf7ea9025f104f19e2b603f3eb43d13a68",
+    "target_files_training_seen": true,
+    "independent_domestic_target_test_files": 0,
+    "calibration_only_raises_selected_thresholds": true,
+    "calibration_other_files": 312,
+    "notification_cooldown_implemented": false,
+    "board_tested": false,
+    "deployment_ready": false
+  },
+  "calibration_is_threshold_fit_not_independent_test": true,
+  "fresh_test_used": false,
+  "product_targets_verified": false
+}

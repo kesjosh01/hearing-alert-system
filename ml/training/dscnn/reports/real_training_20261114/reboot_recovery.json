@@ -1,0 +1,14 @@
+{
+  "kind": "reboot_recovery_record",
+  "boot_id": "ab5bc73c-5b92-4d2c-89b4-41763da8043e",
+  "resumed_at": "2026-11-14T04:09:10.261792+09:00",
+  "source_study": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/real_training_20261114/study_calibrated_v2",
+  "resumed_study": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/real_training_20261114/study_calibrated_v2_resumed",
+  "completed_fold_reuse": "Exit0, exact model hash, code, config, dataset and supervision match",
+  "interrupted_fold": "dscnn_calibrated_20261114_w1_f2",
+  "interrupted_fold_epochs_recorded": 11,
+  "interruption_evidence": "User reported reboot; prior training/GPU processes absent; no first_error recorded. Original partial status and checkpoint preserved.",
+  "optimizer_state_available": false,
+  "recovery": "Restart only incomplete and remaining folds in fresh directories with original seeds; completed folds reused",
+  "installation_executed": false
+}

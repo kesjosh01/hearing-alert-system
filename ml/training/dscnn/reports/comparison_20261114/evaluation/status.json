@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "models": 5,
+  "fresh_test_clips": 79,
+  "historical_clips": 403,
+  "excluded_historical_sirens": [
+    "ESC50-5-117118-A-42",
+    "ESC50-5-117120-A-42",
+    "ESC50-5-117122-A-42",
+    "ESC50-5-133989-A-42",
+    "ESC50-5-133989-B-42",
+    "ESC50-5-150409-A-42",
+    "ESC50-5-160551-A-42",
+    "ESC50-5-184323-A-42"
+  ],
+  "no_test_driven_reselection": true,
+  "observed_new_test_fpr_le_5_percent": false,
+  "fresh_target_recall_not_lower": true,
+  "fresh_fpr_not_higher": true,
+  "actual_event_onset_latency_unverified": true,
+  "real_microphone_or_board_runs": 0,
+  "field_deployment_ready": false,
+  "fresh_test_independence_basis": "Publisher recording identities + related-source families + exact source and PCM checks; physical device/country/full excerpt reuse not certified"
+}

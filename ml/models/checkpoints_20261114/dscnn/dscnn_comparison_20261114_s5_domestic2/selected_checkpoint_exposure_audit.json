@@ -1,0 +1,25 @@
+{
+  "selected_epoch": 2,
+  "epochs_executed": 10,
+  "selected_checkpoint": {
+    "fire_alarm": {
+      "total": 36,
+      "sampled": 36,
+      "draws": 614
+    },
+    "doorbell": {
+      "total": 44,
+      "sampled": 41,
+      "draws": 595
+    },
+    "other": {
+      "total": 1179,
+      "sampled": 591,
+      "draws": 591
+    }
+  },
+  "deterministic_sampling_replay_matches_logged_full_run_exactly": true,
+  "reconstruction_only": true,
+  "model_weights_changed": false,
+  "note": "Full-run exposure includes optimizer steps after the saved checkpoint. This audit explicitly stops at the saved epoch."
+}

@@ -1,0 +1,18 @@
+{
+  "code_identity": {
+    "comparison/runner.py": "9a0ef3541b7e31dee1b14493d478c868759aeead7cf03766294fc0a3220116c6",
+    "comparison/metrics.py": "e904dc79a325c123449d9189f160dab296355bb84778e5d2e2750b3e4df10601",
+    "comparison/preflight.py": "cfc668424cad0513eae00f04a10764b2f1c10e7eb636d3f4fd40cbfab03ba552",
+    "comparison/review_sources.py": "5cc328db2d7137aaa271ff483954c3b678fd4164a66380454d8d71d536007647",
+    "comparison/features.py": "3d3f6fa1f0651bc1f7986bacf15f763c601981db0e44751211aafe2cda6a2072",
+    "comparison/sampling.py": "880542c97323ab7caf0f246ac7ae037f9e761206f60e9a536f6dfcbaef23f370",
+    "comparison/dataset.py": "43faa36ff48177be471ced0f557602b4712a6bdead67bee0b42128121a039179",
+    "comparison/__init__.py": "d01acb181dedd4c4799ee92410b69f7fabf79a00531fae591bf7be358633a521",
+    "comparison/train.py": "727beb86cc30318a4dc5eff5321a6201091b402d792022c73bd0eea7d0edff17",
+    "comparison/model.py": "58be41cfdaef23e8d0c5e960a05efd678db97665cbc6e849fbd7254df4754055",
+    "comparison/protocol.py": "78f0da1b15a13989590ca6f69e0d22e2f17c5374f57cb78324c7ff41593732bd",
+    "comparison/collect.py": "7ec1d6ab8483fb991797f00cb336cd83209442f22f6f626142e1a43a8a172b0d"
+  },
+  "development_sha256": "d77534df65e6eebff297901f40d5ddad45bf74e3de23cec9c8cb2aa6cddb2699",
+  "preflight_sha256": "4496d9e3c4ee9ae9304bfcc7192333799f13920b438b9f9fbba576aadc480fc0"
+}

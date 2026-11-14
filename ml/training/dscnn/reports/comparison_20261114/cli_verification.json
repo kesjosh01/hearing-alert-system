@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "sample_id": "commons-20677472",
+      "backend": "int8",
+      "mode": "clip",
+      "max_probability_abs_difference": 0.0,
+      "decision_matches": true,
+      "windows": 12
+    },
+    {
+      "sample_id": "commons-20677472",
+      "backend": "int8",
+      "mode": "replay",
+      "max_probability_abs_difference": 0.0,
+      "decision_matches": true,
+      "windows": 12
+    },
+    {
+      "sample_id": "soundbible-1599",
+      "backend": "int8",
+      "mode": "clip",
+      "max_probability_abs_difference": 0.0,
+      "decision_matches": true,
+      "windows": 3
+    },
+    {
+      "sample_id": "soundbible-1599",
+      "backend": "int8",
+      "mode": "replay",
+      "max_probability_abs_difference": 0.0,
+      "decision_matches": true,
+      "windows": 3
+    },
+    {
+      "sample_id": "bsb-comparison-0302",
+      "backend": "int8",
+      "mode": "clip",
+      "max_probability_abs_difference": 0.0,
+      "decision_matches": true,
+      "windows": 2
+    },
+    {
+      "sample_id": "bsb-comparison-0302",
+      "backend": "int8",
+      "mode": "replay",
+      "max_probability_abs_difference": 0.0,
+      "decision_matches": true,
+      "windows": 2
+    },
+    {
+      "sample_id": "commons-20677472",
+      "backend": "float",
+      "mode": "clip",
+      "max_probability_abs_difference": 1.7881393432617188e-07,
+      "decision_matches": true
+    }
+  ],
+  "backend": "CPU only; existing venv; no installs or microphone",
+  "final_model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+  "test_driven_reselection": false,
+  "purpose": "User CLI integration and actual frontend/aggregation parity, not a new performance estimate"
+}

@@ -1,0 +1,264 @@
+{
+  "created_at_unix": 1794631959.5517528,
+  "offline_model_study_complete": true,
+  "completed_study_scope": "Registered first 29-model study and locked public benchmark only; broader goal continues with additional source audio and a new validation protocol",
+  "broader_goal_work_ongoing": true,
+  "overall_goal_complete": false,
+  "actual_product_targets_verified": false,
+  "hardware_available": false,
+  "actual_device_days": 0,
+  "completed_training_experiments": {
+    "pursuit_20261114_r01_freq24_kd25": {
+      "epochs": 26,
+      "selected_epoch": 14,
+      "actual_optimizer_steps": 780,
+      "source_status_sha256": "77f096d60544fd68923beec7a4be6604ba89133e00f215b9d6fb1eeaaaa745dc",
+      "model_sha256": "7268560d417013bc65fbb1eac8891dae4e9c1e209c092fc4a3c1654238ec795a"
+    },
+    "pursuit_20261114_r02_freq24_aug": {
+      "epochs": 31,
+      "selected_epoch": 19,
+      "actual_optimizer_steps": 930,
+      "source_status_sha256": "5d88c23a569519641e3934a4b4ef9fc709cc44414c36869e124592d276ee13de",
+      "model_sha256": "0c7ff9ace4efcc628dcee7a8603dd65f38b7c0afcc6007fa6fa63a7d196ecdee"
+    },
+    "pursuit_20261114_domestic_seen_freq24": {
+      "epochs": 87,
+      "selected_epoch": 67,
+      "actual_optimizer_steps": 2610,
+      "source_status_sha256": "35b4568de3afe4664e4ff6ea0c2d0a3705dd91f6959bae40550c9eb7ce3cf4a0",
+      "model_sha256": "83eaf7d5eedb9f7abbb6bc206f67c1e96b7d34485f4aa5ac4a026ad8e2a821a3"
+    },
+    "pursuit_20261114_r01_freq24_kd50": {
+      "epochs": 19,
+      "selected_epoch": 7,
+      "actual_optimizer_steps": 570,
+      "source_status_sha256": "9006ec92ac648cf12976d17cfff9bed7eef81d060a99bbf430eff602aa3eace0",
+      "model_sha256": "ba5b1fa4603cce9f02da54040eb6095a8657b77a478eab58d17aa2fc8a03ac42"
+    },
+    "pursuit_20261114_r01_yamnet_sparse": {
+      "epochs": 22,
+      "selected_epoch": 10,
+      "actual_optimizer_steps": 660,
+      "source_status_sha256": "b17105b64e6eade567d6e29bde8c70174e3de3c295fb0c65f1047457cbbf18d0",
+      "model_sha256": "28f68b467501caba2f4dfabac13ad1ddd227b28f2ab31267f7bb06e64e92076c"
+    },
+    "pursuit_20261114_r03_weak": {
+      "epochs": 39,
+      "selected_epoch": 27,
+      "actual_optimizer_steps": 1170,
+      "source_status_sha256": "5cf75b1116a5ce2bc752107aa84c5ece6a6eb3fc750ed1bf8db6d5b12caa94f2",
+      "model_sha256": "4cd12d6031234eaa8e4dbd56923f464d788484cd2832f251a2e662c9e1f861a2"
+    },
+    "pursuit_20261114_r03_prefix8_pretrained": {
+      "epochs": 27,
+      "selected_epoch": 12,
+      "actual_optimizer_steps": 810,
+      "source_status_sha256": "61e3e4d7a1f914ec37786935d79ad696bcd170f010d4d09c13f2f82553ca0635",
+      "model_sha256": "05e1518a151032dcf2a82c858d3ff5524fce8849ce9b9209e79e61aa3a6d6a47"
+    },
+    "pursuit_20261114_r02_yamnet_warm": {
+      "epochs": 26,
+      "selected_epoch": 14,
+      "actual_optimizer_steps": 780,
+      "source_status_sha256": "8bbc115f54a7656e3d08a970dd266133e7463e335f1350ae9ceca71a0669b408",
+      "model_sha256": "04bfd3c242af95c9b381b8c6a385608c8cb0ac918f7e5401637a0bb2a2be006a"
+    },
+    "pursuit_20261114_r02_presence_mil": {
+      "epochs": 71,
+      "selected_epoch": 56,
+      "actual_optimizer_steps": 2130,
+      "source_status_sha256": "564638213c72743b3ccf28c89bfddab19fbb0e7c142b88c86ea4b00a2bb212cb",
+      "model_sha256": "0220db9da841b051fd2880b270934a74659266e36b08833b488c20b52a0adf6f"
+    },
+    "pursuit_20261114_r02_freq24": {
+      "epochs": 36,
+      "selected_epoch": 24,
+      "actual_optimizer_steps": 1080,
+      "source_status_sha256": "79cef5d68984f8b0ca2c9c1829b73ce88ad35a890877494bab92673edf84181b",
+      "model_sha256": "d043912753abe2ff2a3e2d73e1330b6d0e1604322e1619ec78567ca9af43d674"
+    },
+    "pursuit_20261114_r01_freq24": {
+      "epochs": 47,
+      "selected_epoch": 35,
+      "actual_optimizer_steps": 1410,
+      "source_status_sha256": "69db469c2cf5a03014f32e49258ef45ff9e1ad174ca78d221a856d18c7d45420",
+      "model_sha256": "0550fcc61c901174ee79624af6fd0b2ec2c8175b9309da25664abd2b36753bcd"
+    },
+    "pursuit_20261114_r03_prefix8_random": {
+      "epochs": 32,
+      "selected_epoch": 17,
+      "actual_optimizer_steps": 960,
+      "source_status_sha256": "db5b007c4bd345048a1804233dfcec92974ceb66efaebe561649f098bb1090a5",
+      "model_sha256": "a141c1b91eef3ec955ec218d5fa986f72257892e5372c650473d71839d1649fc"
+    },
+    "pursuit_20261114_r01_deep": {
+      "epochs": 19,
+      "selected_epoch": 7,
+      "actual_optimizer_steps": 570,
+      "source_status_sha256": "d0cb525ec117887547920c0815a6bd99503de427b65f3ab12bf023649099f348",
+      "model_sha256": "c59281de6193e1f8f5b31d5afeb7c7b13c8c410d1515dc9727375272b46dd016"
+    },
+    "pursuit_20261114_r02_max_ce_control": {
+      "epochs": 27,
+      "selected_epoch": 12,
+      "actual_optimizer_steps": 810,
+      "source_status_sha256": "d3f14a50e6d1a3f8b486bc1618bd2d1faf70c7208c5585d0a7e943997dad66b4",
+      "model_sha256": "24c3408c085cfded12766ce2251869f3b12d8365d35d7503cac3626f446d2bdd"
+    },
+    "pursuit_20261114_r03_strong": {
+      "epochs": 24,
+      "selected_epoch": 12,
+      "actual_optimizer_steps": 720,
+      "source_status_sha256": "5df2a0a16df6caaa93390f61077a5ac04a2bf5a9421971c8013535a99ac1057e",
+      "model_sha256": "8948ec1e5a8106d0e38c4b2c0acfae73042350d9882b02c56af10910d5bb2ef1"
+    },
+    "pursuit_20261114_r01_context5": {
+      "epochs": 21,
+      "selected_epoch": 9,
+      "actual_optimizer_steps": 630,
+      "source_status_sha256": "5fec392f5c7af6fd72140266bc0565af6e5e8e341efd55c22b251e7a796b813c",
+      "model_sha256": "1bd6b1a9cc77666d7aa6a4a6515b9bacde6931aa0eb2571f98112ef01215fd4b"
+    },
+    "pursuit_20261114_r04_prefix40_pretrained": {
+      "epochs": 66,
+      "selected_epoch": 51,
+      "actual_optimizer_steps": 1980,
+      "source_status_sha256": "734b5593781b50e4f21b336fe312ee7666022fdd3c62289a044d96086eb3c4af",
+      "model_sha256": "81229df035abd2f22bfec3956fff9e961445fe269d3dba23f96ca2c81e9c1cec"
+    },
+    "pursuit_20261114_domestic_seen_presence": {
+      "epochs": 89,
+      "selected_epoch": 69,
+      "actual_optimizer_steps": 2670,
+      "source_status_sha256": "c4047d678edc7a8ef00ddcdf58ff7b2d728b6c40dd56d1d586a9c7c226fc1643",
+      "model_sha256": "ebbddfb3a54216baed943753295db440e68ff86f4b4bd019d6e51e274ffbbed3"
+    },
+    "pursuit_20261114_domestic_seen_sparse": {
+      "epochs": 70,
+      "selected_epoch": 50,
+      "actual_optimizer_steps": 2100,
+      "source_status_sha256": "fadbc8ac5f9be3b6a21c5aeba53fa6026b935927abff1c5185e0e96464c24efe",
+      "model_sha256": "b2e1f4c7b753f0db857e4e99256d6ca74576196fa1dba381fda3d57a37e37d93"
+    },
+    "pursuit_20261114_r01_freq24_sparse": {
+      "epochs": 20,
+      "selected_epoch": 8,
+      "actual_optimizer_steps": 600,
+      "source_status_sha256": "fa828b0fc4410c96198e2f735e4f66ca690b61715d1aa715d77047b7d06ff541",
+      "model_sha256": "8578474e1d955d6bfc4222339434977dec1eb0f8a5c4f9962b56e87580d1e6ac"
+    },
+    "pursuit_20261114_r01_yamnet_mean": {
+      "epochs": 21,
+      "selected_epoch": 9,
+      "actual_optimizer_steps": 630,
+      "source_status_sha256": "6c1d6e1ad3b5c45f092d3c60cdd182d0628490d8966736eb0971d576ef8cad5f",
+      "model_sha256": "e917d4da306401e98c1c2e16e6e8c9e5b1d14a4e6cba8de7955df8a73e3756a9"
+    },
+    "pursuit_20261114_r02_yamnet_sparse": {
+      "epochs": 34,
+      "selected_epoch": 22,
+      "actual_optimizer_steps": 1020,
+      "source_status_sha256": "c65a2cb7dc2d886fb1cdd56dc007e818fcfbb0e0a117584db4266b1d01c99822",
+      "model_sha256": "af896825a0a082a1f1bed1403e2f62131202f76b2c0ac360dacc5ed85d856d61"
+    },
+    "pursuit_20261114_domestic_seen_enriched_presence": {
+      "epochs": 61,
+      "selected_epoch": 46,
+      "actual_optimizer_steps": 1830,
+      "source_status_sha256": "df70cd01165e7ef9ca6f4f09a5ca35ab11225809003e11cb619ec2f8f7f1988b",
+      "model_sha256": "8c9bb86c0b38ca5b1d31caed19b9a8ad8aead63403aef9d7c2223eef742869d6"
+    },
+    "pursuit_20261114_r04_prefix64_pretrained": {
+      "epochs": 57,
+      "selected_epoch": 42,
+      "actual_optimizer_steps": 1710,
+      "source_status_sha256": "93c83623e31eba7f04d53ff279028fea361b396147fe7e7033fcc9e7e4dbb0e1",
+      "model_sha256": "99470e770ef338fb98879c8c40c885c1706e10c69f5b0a9a5135f343f3d54884"
+    },
+    "pursuit_20261114_r01_freq24_firevote": {
+      "epochs": 22,
+      "selected_epoch": 10,
+      "actual_optimizer_steps": 660,
+      "source_status_sha256": "e279dd3cd519e8ff9ed9203262b4498c519a9bcc8bd696db850e7b2762df1ec7",
+      "model_sha256": "c33b35ffc08ffe3f84338524fcdb7ecd62adaf727157fb336ee875c06b5dd26b"
+    },
+    "pursuit_20261114_r01_freq48": {
+      "epochs": 23,
+      "selected_epoch": 11,
+      "actual_optimizer_steps": 690,
+      "source_status_sha256": "ccd6cbce718e8ee4f0dfa0c3a8ae6e473b65409e126b81bec4d547f2b9fbe3e4",
+      "model_sha256": "ea934345aff6436a3eb5c1160610ee3e3c38e0d25b7d21d84df690e490929533"
+    },
+    "pursuit_20261114_r04_freq24": {
+      "epochs": 55,
+      "selected_epoch": 43,
+      "actual_optimizer_steps": 1650,
+      "source_status_sha256": "b54ebcfbe761ce71f517f8681edc247be75f0ad8e27fbf421fa44069703494a9",
+      "model_sha256": "e4a7cde6d3cb9b865691a4fcf758af05f7b27c6219e426ebdf9b419819b6cee7"
+    },
+    "pursuit_20261114_domestic_seen_aug_presence": {
+      "epochs": 71,
+      "selected_epoch": 56,
+      "actual_optimizer_steps": 2130,
+      "source_status_sha256": "f674518df5a68bf891265b14a080ddae3f8e98b5cf2f2055da633fc026c35b9e",
+      "model_sha256": "8624c96c80dba7246f54570ee8b567a7aed28fd81bcb01a3f36f3865c2c88f39"
+    },
+    "pursuit_20261114_r05_prefix64_targets": {
+      "epochs": 46,
+      "selected_epoch": 31,
+      "actual_optimizer_steps": 1380,
+      "source_status_sha256": "45d0388f3e4d4b4033daf90500933605bebb53feb2d3469fe356377591f1aa52",
+      "model_sha256": "0414b21d8f5ecab605ab79c8d1d8f277937b91200bbe15d89baf0b406cd735c2"
+    }
+  },
+  "collection": {
+    "FSD50K_targets": {
+      "verified_shards": 3,
+      "verified_files": 270,
+      "planned_files": 270,
+      "full_queue_complete": true
+    },
+    "FSD50K_hard_negatives": {
+      "verified_shards": 25,
+      "verified_files": 3166,
+      "planned_files": 3166,
+      "full_queue_complete": true
+    },
+    "FSD50K_background": {
+      "verified_shards": 184,
+      "verified_files": 23545,
+      "planned_files": 23545,
+      "full_queue_complete": true
+    },
+    "FSD50K_noncommercial_research_targets": 30,
+    "RealDESED_official_native_recordings": 5711,
+    "FLEURS_ko_native_recordings": 2915,
+    "AudioSet_strong_training_targets_retained": 803,
+    "AudioSet_train_source_shards_scanned": 881,
+    "Synthetic_smoke_procedural_files_not_independent_devices": 250
+  },
+  "public_benchmark_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/pursuit_20261114/final_public_benchmark_v1/results.json",
+  "public_benchmark_sha256": "7304969e6f0177761d21d8c71c620d25a241c2e0442b0959acb7fc914e046e2d",
+  "actual_product_evidence_requirements": {
+    "assumptions": "Per-endpoint one-sided 95%; independent representative activations with zero misses, homogeneous Poisson with zero false notifications",
+    "fire_zero_miss_minimum": 2995,
+    "doorbell_zero_miss_minimum": 59,
+    "zero_false_minimum_device_days": 89.87196820661973,
+    "simultaneous_three_endpoint_95_percent_certification_claimed": false,
+    "current_recording_counts_are_not_actual_activation_counts": true
+  },
+  "external_dependencies": [
+    "Exact target microphone and alert hardware",
+    "Independent operational domestic recordings with actual alarm/button activation times",
+    "Real notification logs and representative device exposure; microphone, placement, distance, SNR and failure states"
+  ],
+  "conclusions": [
+    "Training-seen domestic file success does not verify activation recall",
+    "Augmentation helped some fire conditions, but did not consistently improve doorbells",
+    "The latest enriched models are preserved but not automatically promoted",
+    "Known overseas sirens and doorbells remain target examples, never eligible-other false positives",
+    "No weights or thresholds are tuned on the final public benchmark",
+    "Commercial clearance and actual board compatibility are separate unresolved gates"
+  ]
+}

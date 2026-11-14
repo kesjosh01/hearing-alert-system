@@ -1,0 +1,42 @@
+{
+  "results": {
+    "temporal24": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "runs": [
+        "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s6_kd0",
+        "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_temporal24_seed43",
+        "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_temporal24_seed44"
+      ],
+      "target_recall_mean": 0.8750000000000001,
+      "target_recall_std": 0.07216878364870322,
+      "domestic_recall_mean": 0.9444444444444444,
+      "foreign_fpr_mean": 0.008680555555555556,
+      "all_guards_passed": true
+    },
+    "freq24": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "runs": [
+        "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42",
+        "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed43",
+        "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed44"
+      ],
+      "target_recall_mean": 0.8750000000000001,
+      "target_recall_std": 0.07216878364870322,
+      "domestic_recall_mean": 0.9444444444444444,
+      "foreign_fpr_mean": 0.005208333333333333,
+      "all_guards_passed": true
+    }
+  },
+  "chosen": "freq24",
+  "delivered_seed": 42,
+  "seed_not_selected_by_score": true,
+  "paired_settings_except_architecture": true
+}

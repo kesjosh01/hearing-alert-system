@@ -1,0 +1,108 @@
+{
+  "complete": true,
+  "exit_code": 0,
+  "actual_optimizer_steps": 570,
+  "fresh_test_used": false,
+  "calibration_used_for_selection": false,
+  "epoch": 19,
+  "selected_epoch": 11,
+  "elapsed_seconds": 67.6543319479988,
+  "latest_selection": {
+    "classes": {
+      "fire_alarm": {
+        "clips": 9,
+        "correct": 6,
+        "recall": 0.6666666666666666,
+        "groups": 6,
+        "group_correct": 5,
+        "group_recall": 0.8333333333333334
+      },
+      "doorbell": {
+        "clips": 5,
+        "correct": 4,
+        "recall": 0.8,
+        "groups": 4,
+        "group_correct": 3,
+        "group_recall": 0.75
+      },
+      "other": {
+        "clips": 193,
+        "correct": 188,
+        "recall": 0.9740932642487047,
+        "groups": 146,
+        "group_correct": 144,
+        "group_recall": 0.9863013698630136
+      }
+    },
+    "target_macro_group_recall": 0.7916666666666667,
+    "domestic_target_macro_group_recall": 0.8333333333333333,
+    "foreign_negative_clips": 192,
+    "foreign_false_positives": 5,
+    "foreign_fpr": 0.026041666666666668,
+    "domestic_doorlock_groups": 1,
+    "domestic_doorlock_fp": 0,
+    "guards_passed": true,
+    "loss": 0.19606794789786622,
+    "thresholds": {
+      "fire_alarm": 0.0,
+      "doorbell": 0.6
+    },
+    "count": 207
+  },
+  "epochs_completed": 19,
+  "model_sha256": "9d60956a8318914a0aad4f44db7a990e9c3968374f7ceaafb4a5588890d49169",
+  "selected_metrics": {
+    "classes": {
+      "fire_alarm": {
+        "clips": 9,
+        "correct": 6,
+        "recall": 0.6666666666666666,
+        "groups": 6,
+        "group_correct": 5,
+        "group_recall": 0.8333333333333334
+      },
+      "doorbell": {
+        "clips": 5,
+        "correct": 4,
+        "recall": 0.8,
+        "groups": 4,
+        "group_correct": 3,
+        "group_recall": 0.75
+      },
+      "other": {
+        "clips": 193,
+        "correct": 193,
+        "recall": 1.0,
+        "groups": 146,
+        "group_correct": 146,
+        "group_recall": 1.0
+      }
+    },
+    "target_macro_group_recall": 0.7916666666666667,
+    "domestic_target_macro_group_recall": 0.8333333333333333,
+    "foreign_negative_clips": 192,
+    "foreign_false_positives": 0,
+    "foreign_fpr": 0.0,
+    "domestic_doorlock_groups": 1,
+    "domestic_doorlock_fp": 0,
+    "guards_passed": true,
+    "loss": 0.1883781432517457,
+    "thresholds": {
+      "fire_alarm": 0.65,
+      "doorbell": 0.8
+    },
+    "count": 207
+  },
+  "complexity": {
+    "parameters_including_bn_statistics": 4707,
+    "convolution_and_dense_macs_per_window": 2541600,
+    "largest_single_int8_activation_bytes": 23520,
+    "input_int8_bytes": 3920,
+    "board_tensor_arena_bytes": null,
+    "board_processing_ms": null,
+    "notice": "Single tensor size is not peak RAM; excludes arena scratch/overlap, frontend, audio buffers, stack and firmware."
+  },
+  "all_training_positives_sampled": true,
+  "negative_files": 1179,
+  "negative_unique_sampled": 1179
+}

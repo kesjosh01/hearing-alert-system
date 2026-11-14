@@ -1,0 +1,16 @@
+{
+  "kind": "trained_dscnn_local_bundle",
+  "pipeline_only": false,
+  "deployment_ready": false,
+  "files": {
+    "README.md": "29281ba92c6fcf314e16ab5c2c3dcfba1602a3dccfefc03fbf50109b422ad0cf",
+    "classifier.keras": "8bcfe1785ad25d0f33a47cb489de1412ff4a665cf8d5e3fc67feef4c8783df3b",
+    "decision_policy.json": "8ceb905203347a36a3d50a89282ed54e6af293356f59bd37ce5e74bfdc4412a4",
+    "dscnn_int8.h": "0ca6f8e34108c04f3d784b9d2ec8f1483e4e300028a9c4f86a28741eb0a2bd54",
+    "dscnn_int8.tflite": "4a888184485d567bd23a74376a0a49ec6c6ab479a4cd4d28577c1cc9a2add615",
+    "frontend.json": "82a05fcd1abf80f05fed111eb0a367a82f18dbbb5c30cb335cf7e285861cf9f1",
+    "labels.json": "1603b947446053b6325ea0509674c74502ef1dbfc6eeb3da204ad67a3b369e8e",
+    "model_metadata.json": "83967e428512f262d450837cb26e9e95302590df67377385cb892e83fdc5d0ef",
+    "training_provenance.json": "e004b28bc18557a2dc132e16456812094c561eb44757ba524a3ef0fae7fde539"
+  }
+}

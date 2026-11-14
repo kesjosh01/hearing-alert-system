@@ -1,0 +1,823 @@
+{
+  "kind": "aligned_teacher_development_OOF_reference",
+  "host_only": true,
+  "fixed_test_accessed": false,
+  "thresholds": {
+    "fire_alarm": 0.0,
+    "doorbell": 0.5
+  },
+  "folds": [
+    {
+      "clips": {
+        "count": 410,
+        "accuracy": 0.9634146341463414,
+        "macro_f1": 0.6895692971338359,
+        "loss": 0.11714977873992669,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.26666666666666666,
+            "recall": 1.0,
+            "f1": 0.4210526315789474,
+            "support": 4,
+            "correct": 4,
+            "predicted": 15
+          },
+          "doorbell": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1": 0.6666666666666666,
+            "support": 6,
+            "correct": 4,
+            "predicted": 6
+          },
+          "other": {
+            "precision": 0.9948586118251928,
+            "recall": 0.9675,
+            "f1": 0.9809885931558935,
+            "support": 400,
+            "correct": 387,
+            "predicted": 389
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            11,
+            2,
+            387
+          ]
+        ]
+      },
+      "groups": {
+        "count": 307,
+        "accuracy": 0.9706840390879479,
+        "macro_f1": 0.7611403876259564,
+        "loss": 0.11479393148028713,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715,
+            "support": 4,
+            "correct": 4,
+            "predicted": 10
+          },
+          "doorbell": {
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f1": 0.7272727272727272,
+            "support": 6,
+            "correct": 4,
+            "predicted": 5
+          },
+          "other": {
+            "precision": 0.9931506849315068,
+            "recall": 0.9764309764309764,
+            "f1": 0.9847198641765704,
+            "support": 297,
+            "correct": 290,
+            "predicted": 292
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            6,
+            1,
+            290
+          ]
+        ]
+      },
+      "domestic_groups": {
+        "count": 12,
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.8222222222222223,
+        "loss": 0.5527816626781196,
+        "classes": {
+          "fire_alarm": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4,
+            "correct": 4,
+            "predicted": 4
+          },
+          "doorbell": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "support": 6,
+            "correct": 4,
+            "predicted": 4
+          },
+          "other": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 2,
+            "correct": 2,
+            "predicted": 4
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "domestic_target_macro_recall": 0.8333333333333333,
+      "overseas_other_clip_count": 398,
+      "overseas_other_clip_false_positives": 13,
+      "overseas_other_clip_fpr": 0.032663316582914576,
+      "domestic_doorlock_group_count": 2,
+      "domestic_doorlock_false_positive_groups": 0,
+      "decision_policy": {
+        "kind": "per_target_argmax_confidence_rejection",
+        "thresholds": {
+          "fire_alarm": 0.0,
+          "doorbell": 0.5
+        }
+      }
+    },
+    {
+      "clips": {
+        "count": 407,
+        "accuracy": 0.9778869778869779,
+        "macro_f1": 0.7113684130077572,
+        "loss": 0.07368127188639016,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6,
+            "support": 3,
+            "correct": 3,
+            "predicted": 7
+          },
+          "doorbell": {
+            "precision": 0.5,
+            "recall": 0.6,
+            "f1": 0.5454545454545454,
+            "support": 5,
+            "correct": 3,
+            "predicted": 6
+          },
+          "other": {
+            "precision": 0.9949238578680203,
+            "recall": 0.9824561403508771,
+            "f1": 0.9886506935687264,
+            "support": 399,
+            "correct": 392,
+            "predicted": 394
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            4,
+            3,
+            392
+          ]
+        ]
+      },
+      "groups": {
+        "count": 304,
+        "accuracy": 0.9802631578947368,
+        "macro_f1": 0.7799435028248588,
+        "loss": 0.0738506291533193,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.7499999999999999,
+            "support": 3,
+            "correct": 3,
+            "predicted": 5
+          },
+          "doorbell": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1": 0.6,
+            "support": 5,
+            "correct": 3,
+            "predicted": 5
+          },
+          "other": {
+            "precision": 0.9931972789115646,
+            "recall": 0.9864864864864865,
+            "f1": 0.9898305084745763,
+            "support": 296,
+            "correct": 292,
+            "predicted": 294
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            2,
+            2,
+            292
+          ]
+        ]
+      },
+      "domestic_groups": {
+        "count": 9,
+        "accuracy": 0.7777777777777778,
+        "macro_f1": 0.75,
+        "loss": 0.5729372349759966,
+        "classes": {
+          "fire_alarm": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3,
+            "correct": 3,
+            "predicted": 3
+          },
+          "doorbell": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999,
+            "support": 5,
+            "correct": 3,
+            "predicted": 3
+          },
+          "other": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 1,
+            "correct": 1,
+            "predicted": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "domestic_target_macro_recall": 0.8,
+      "overseas_other_clip_count": 398,
+      "overseas_other_clip_false_positives": 7,
+      "overseas_other_clip_fpr": 0.017587939698492462,
+      "domestic_doorlock_group_count": 1,
+      "domestic_doorlock_false_positive_groups": 0,
+      "decision_policy": {
+        "kind": "per_target_argmax_confidence_rejection",
+        "thresholds": {
+          "fire_alarm": 0.0,
+          "doorbell": 0.5
+        }
+      }
+    },
+    {
+      "clips": {
+        "count": 407,
+        "accuracy": 0.9754299754299754,
+        "macro_f1": 0.7180028129395217,
+        "loss": 0.11715168608577728,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.2222222222222222,
+            "recall": 0.6666666666666666,
+            "f1": 0.3333333333333333,
+            "support": 3,
+            "correct": 2,
+            "predicted": 9
+          },
+          "doorbell": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333333,
+            "support": 5,
+            "correct": 5,
+            "predicted": 7
+          },
+          "other": {
+            "precision": 0.9974424552429667,
+            "recall": 0.9774436090225563,
+            "f1": 0.9873417721518988,
+            "support": 399,
+            "correct": 390,
+            "predicted": 391
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            7,
+            2,
+            390
+          ]
+        ]
+      },
+      "groups": {
+        "count": 304,
+        "accuracy": 0.9802631578947368,
+        "macro_f1": 0.7811104239675668,
+        "loss": 0.11970090347586071,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.3333333333333333,
+            "recall": 0.6666666666666666,
+            "f1": 0.4444444444444444,
+            "support": 3,
+            "correct": 2,
+            "predicted": 6
+          },
+          "doorbell": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5,
+            "correct": 5,
+            "predicted": 6
+          },
+          "other": {
+            "precision": 0.9965753424657534,
+            "recall": 0.9831081081081081,
+            "f1": 0.989795918367347,
+            "support": 296,
+            "correct": 291,
+            "predicted": 292
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            4,
+            1,
+            291
+          ]
+        ]
+      },
+      "domestic_groups": {
+        "count": 9,
+        "accuracy": 0.8888888888888888,
+        "macro_f1": 0.8222222222222223,
+        "loss": 0.22773392423820196,
+        "classes": {
+          "fire_alarm": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "support": 3,
+            "correct": 2,
+            "predicted": 2
+          },
+          "doorbell": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5,
+            "correct": 5,
+            "predicted": 5
+          },
+          "other": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1,
+            "correct": 1,
+            "predicted": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "domestic_target_macro_recall": 0.8333333333333333,
+      "overseas_other_clip_count": 398,
+      "overseas_other_clip_false_positives": 9,
+      "overseas_other_clip_fpr": 0.022613065326633167,
+      "domestic_doorlock_group_count": 1,
+      "domestic_doorlock_false_positive_groups": 0,
+      "decision_policy": {
+        "kind": "per_target_argmax_confidence_rejection",
+        "thresholds": {
+          "fire_alarm": 0.0,
+          "doorbell": 0.5
+        }
+      }
+    },
+    {
+      "clips": {
+        "count": 407,
+        "accuracy": 0.9828009828009828,
+        "macro_f1": 0.7378057302585604,
+        "loss": 0.08214240326256524,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.16666666666666666,
+            "recall": 0.3333333333333333,
+            "f1": 0.2222222222222222,
+            "support": 3,
+            "correct": 1,
+            "predicted": 6
+          },
+          "doorbell": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5,
+            "correct": 5,
+            "predicted": 5
+          },
+          "other": {
+            "precision": 0.9949494949494949,
+            "recall": 0.9874686716791979,
+            "f1": 0.9911949685534591,
+            "support": 399,
+            "correct": 394,
+            "predicted": 396
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            5,
+            0,
+            394
+          ]
+        ]
+      },
+      "groups": {
+        "count": 304,
+        "accuracy": 0.9868421052631579,
+        "macro_f1": 0.7755255255255254,
+        "loss": 0.08387690582490624,
+        "classes": {
+          "fire_alarm": {
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "f1": 0.3333333333333333,
+            "support": 3,
+            "correct": 1,
+            "predicted": 3
+          },
+          "doorbell": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5,
+            "correct": 5,
+            "predicted": 5
+          },
+          "other": {
+            "precision": 0.9932432432432432,
+            "recall": 0.9932432432432432,
+            "f1": 0.9932432432432432,
+            "support": 296,
+            "correct": 294,
+            "predicted": 296
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            2,
+            0,
+            294
+          ]
+        ]
+      },
+      "domestic_groups": {
+        "count": 9,
+        "accuracy": 0.7777777777777778,
+        "macro_f1": 0.6666666666666666,
+        "loss": 1.2062283274309895,
+        "classes": {
+          "fire_alarm": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "support": 3,
+            "correct": 1,
+            "predicted": 1
+          },
+          "doorbell": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5,
+            "correct": 5,
+            "predicted": 5
+          },
+          "other": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 1,
+            "correct": 1,
+            "predicted": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "domestic_target_macro_recall": 0.6666666666666666,
+      "overseas_other_clip_count": 398,
+      "overseas_other_clip_false_positives": 5,
+      "overseas_other_clip_fpr": 0.01256281407035176,
+      "domestic_doorlock_group_count": 1,
+      "domestic_doorlock_false_positive_groups": 0,
+      "decision_policy": {
+        "kind": "per_target_argmax_confidence_rejection",
+        "thresholds": {
+          "fire_alarm": 0.0,
+          "doorbell": 0.5
+        }
+      }
+    }
+  ],
+  "pooled_domestic": {
+    "clips": {
+      "count": 39,
+      "accuracy": 0.8205128205128205,
+      "macro_f1": 0.7841791178714049,
+      "loss": 0.6332173162036956,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.7692307692307693,
+          "f1": 0.8695652173913044,
+          "support": 13,
+          "correct": 10,
+          "predicted": 10
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.8095238095238095,
+          "f1": 0.8947368421052632,
+          "support": 21,
+          "correct": 17,
+          "predicted": 17
+        },
+        "other": {
+          "precision": 0.4166666666666667,
+          "recall": 1.0,
+          "f1": 0.5882352941176471,
+          "support": 5,
+          "correct": 5,
+          "predicted": 12
+        }
+      },
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          3
+        ],
+        [
+          0,
+          17,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    "groups": {
+      "count": 39,
+      "accuracy": 0.8205128205128205,
+      "macro_f1": 0.7841791178714049,
+      "loss": 0.6332173162036956,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.7692307692307693,
+          "f1": 0.8695652173913044,
+          "support": 13,
+          "correct": 10,
+          "predicted": 10
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.8095238095238095,
+          "f1": 0.8947368421052632,
+          "support": 21,
+          "correct": 17,
+          "predicted": 17
+        },
+        "other": {
+          "precision": 0.4166666666666667,
+          "recall": 1.0,
+          "f1": 0.5882352941176471,
+          "support": 5,
+          "correct": 5,
+          "predicted": 12
+        }
+      },
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          3
+        ],
+        [
+          0,
+          17,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    "domestic_groups": {
+      "count": 39,
+      "accuracy": 0.8205128205128205,
+      "macro_f1": 0.7841791178714049,
+      "loss": 0.6332173162036956,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.7692307692307693,
+          "f1": 0.8695652173913044,
+          "support": 13,
+          "correct": 10,
+          "predicted": 10
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.8095238095238095,
+          "f1": 0.8947368421052632,
+          "support": 21,
+          "correct": 17,
+          "predicted": 17
+        },
+        "other": {
+          "precision": 0.4166666666666667,
+          "recall": 1.0,
+          "f1": 0.5882352941176471,
+          "support": 5,
+          "correct": 5,
+          "predicted": 12
+        }
+      },
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          3
+        ],
+        [
+          0,
+          17,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    "domestic_target_macro_recall": 0.7893772893772895,
+    "overseas_other_clip_count": 0,
+    "overseas_other_clip_false_positives": 0,
+    "overseas_other_clip_fpr": null,
+    "domestic_doorlock_group_count": 5,
+    "domestic_doorlock_false_positive_groups": 0,
+    "decision_policy": {
+      "kind": "per_target_argmax_confidence_rejection",
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.5
+      }
+    }
+  },
+  "mean_domestic_target_recall": 0.7833333333333333,
+  "note": "Fold teachers exclude their student-validation groups. Same aligned 0.975s view as distillation. A reference score, not a guaranteed student upper bound."
+}

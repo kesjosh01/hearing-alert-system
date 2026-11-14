@@ -1,0 +1,14 @@
+{
+  "kind": "historical_reused_holdout_comparison",
+  "is_fresh_independent_test": false,
+  "test_evaluation_invocations": 1,
+  "exit_code": 0,
+  "deployment_ready": false,
+  "model_sha256_before": "8bcfe1785ad25d0f33a47cb489de1412ff4a665cf8d5e3fc67feef4c8783df3b",
+  "completed_clips": 411,
+  "evaluated_clips": 411,
+  "model_sha256_after": "8bcfe1785ad25d0f33a47cb489de1412ff4a665cf8d5e3fc67feef4c8783df3b",
+  "int8_sha256_after": "4a888184485d567bd23a74376a0a49ec6c6ab479a4cd4d28577c1cc9a2add615",
+  "model_unchanged": true,
+  "elapsed_seconds": 40.94674101600003
+}

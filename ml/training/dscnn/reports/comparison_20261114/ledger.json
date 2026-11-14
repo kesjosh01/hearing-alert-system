@@ -1,0 +1,1202 @@
+[
+  {
+    "name": "dscnn_comparison_20261114_s1_baseline",
+    "stage": 1,
+    "factor": "source_disjoint_selection_and_calibration",
+    "parent": "historical_models_not_control",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 1.0,
+      "negative_sampler": "weighted_random",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s1_baseline",
+    "seed": 42,
+    "selected_epoch": 5,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 5,
+          "recall": 0.5555555555555556,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 190,
+          "recall": 0.9844559585492227,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 3,
+      "foreign_fpr": 0.015625,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.29585798162566307,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.85
+      },
+      "count": 207
+    },
+    "model_sha256": "32a3edc7a9c25a8eed5ca869df581aa9d19427dbfebf5ac4b62a5343cbb2a18d",
+    "negative_files": 1179,
+    "negative_unique_sampled": 982,
+    "actual_optimizer_steps": 390
+  },
+  {
+    "name": "dscnn_comparison_20261114_s2_coverage",
+    "stage": 2,
+    "factor": "negative_sampler",
+    "parent": "dscnn_comparison_20261114_s1_baseline",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 1.0,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s2_coverage",
+    "seed": 42,
+    "selected_epoch": 12,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 5,
+          "recall": 0.5555555555555556,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 4,
+          "recall": 0.8,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.19503529803323597,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.0
+      },
+      "count": 207
+    },
+    "model_sha256": "9373be41a6c9b73b85b3d65e2141e470f79f1a97a74f9419ec81c4529a62208b",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 600
+  },
+  {
+    "name": "dscnn_comparison_20261114_s2_hardneg",
+    "stage": 2,
+    "factor": "hard_negative_multiplier",
+    "parent": "dscnn_comparison_20261114_s2_coverage",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 1.0,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 2.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s2_hardneg",
+    "seed": 42,
+    "selected_epoch": 10,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 5,
+          "recall": 0.5555555555555556,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.25439564154260075,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.65
+      },
+      "count": 207
+    },
+    "model_sha256": "47ad749b1edd3b82a335b9ab4b048424d2b6ffdcf331a50516ebdb9fe1d739f6",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 540
+  },
+  {
+    "name": "dscnn_comparison_20261114_s3_top50",
+    "stage": 3,
+    "factor": "pooling_fraction",
+    "parent": "dscnn_comparison_20261114_s2_coverage",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s3_top50",
+    "seed": 42,
+    "selected_epoch": 10,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 5,
+          "recall": 0.5555555555555556,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.2896030716702861,
+      "thresholds": {
+        "fire_alarm": 0.85,
+        "doorbell": 0.85
+      },
+      "count": 207
+    },
+    "model_sha256": "17ea6a8b706e5c72d5f277290ce38c018e49c47cbff3efb4305d5770054cad2b",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 540
+  },
+  {
+    "name": "dscnn_comparison_20261114_s3_top25",
+    "stage": 3,
+    "factor": "pooling_fraction",
+    "parent": "dscnn_comparison_20261114_s3_top50",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.25,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s3_top25",
+    "seed": 42,
+    "selected_epoch": 3,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 5,
+          "recall": 0.5555555555555556,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 4,
+          "recall": 0.8,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.3057648311114489,
+      "thresholds": {
+        "fire_alarm": 0.75,
+        "doorbell": 0.6
+      },
+      "count": 207
+    },
+    "model_sha256": "a09f502523e6617b09c28ac81ed292e6faee96fb8110f2dbc5c7413a0bd58b7f",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 330
+  },
+  {
+    "name": "dscnn_comparison_20261114_s4_added",
+    "stage": 4,
+    "factor": "added_training_data",
+    "parent": "dscnn_comparison_20261114_s3_top50",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": true,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s4_added",
+    "seed": 42,
+    "selected_epoch": 3,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 191,
+          "recall": 0.9896373056994818,
+          "groups": 146,
+          "group_correct": 144,
+          "group_recall": 0.9863013698630136
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 2,
+      "foreign_fpr": 0.010416666666666666,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.4094799632308989,
+      "thresholds": {
+        "fire_alarm": 0.8,
+        "doorbell": 0.0
+      },
+      "count": 207
+    },
+    "model_sha256": "b1662cd417925388d597f4e6f4e7da164ad24da555edd6cbbb3663e9ba8fcf54",
+    "negative_files": 1210,
+    "negative_unique_sampled": 1210,
+    "actual_optimizer_steps": 330
+  },
+  {
+    "name": "dscnn_comparison_20261114_s5_domestic2",
+    "stage": 5,
+    "factor": "domestic_weight",
+    "parent": "dscnn_comparison_20261114_s3_top50",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 2.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s5_domestic2",
+    "seed": 42,
+    "selected_epoch": 2,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.5784140959766203,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.4
+      },
+      "count": 207
+    },
+    "model_sha256": "ae998a807a026ab2581d9da5087f3caa722be705bd901e87a608083a598de045",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 300
+  },
+  {
+    "name": "dscnn_comparison_20261114_s5_other50",
+    "stage": 5,
+    "factor": "other_mass",
+    "parent": "dscnn_comparison_20261114_s3_top50",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.5,
+      "kd_weight": 0.5,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s5_other50",
+    "seed": 42,
+    "selected_epoch": 3,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.19392916314824427,
+      "thresholds": {
+        "fire_alarm": 0.5,
+        "doorbell": 0.0
+      },
+      "count": 207
+    },
+    "model_sha256": "6bce33913b423fbf48d5597a4ec85eb4d3bb60d16d1d4923c256fe0322acac78",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 330
+  },
+  {
+    "name": "dscnn_comparison_20261114_s6_kd25",
+    "stage": 6,
+    "factor": "kd_weight",
+    "parent": "dscnn_comparison_20261114_s3_top50",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.25,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s6_kd25",
+    "seed": 42,
+    "selected_epoch": 13,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 3,
+          "recall": 0.6,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.17906235218947866,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.7
+      },
+      "count": 207
+    },
+    "model_sha256": "0c6e6f220be48a9c39c73a841cf80f5e7c09973a8d091e83b7b083dee1ff0a6a",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 630
+  },
+  {
+    "name": "dscnn_comparison_20261114_s6_kd0",
+    "stage": 6,
+    "factor": "kd_weight",
+    "parent": "dscnn_comparison_20261114_s3_top50",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s6_kd0",
+    "seed": 42,
+    "selected_epoch": 12,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 189,
+          "recall": 0.9792746113989638,
+          "groups": 146,
+          "group_correct": 142,
+          "group_recall": 0.9726027397260274
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 4,
+      "foreign_fpr": 0.020833333333333332,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.20362031867145694,
+      "thresholds": {
+        "fire_alarm": 0.0,
+        "doorbell": 0.55
+      },
+      "count": 207
+    },
+    "model_sha256": "a877e426ecb8c39bf277c4dfdb62a1552e4747997e524005082572854587aee6",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 600
+  },
+  {
+    "name": "dscnn_comparison_20261114_s7_temporal24_seed43",
+    "stage": 7,
+    "factor": "architecture_paired_seed",
+    "parent": "dscnn_comparison_20261114_s6_kd0",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_temporal24_seed43",
+    "seed": 43,
+    "selected_epoch": 18,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 192,
+          "recall": 0.9948186528497409,
+          "groups": 146,
+          "group_correct": 145,
+          "group_recall": 0.9931506849315068
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 1,
+      "foreign_fpr": 0.005208333333333333,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.19303463821690445,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.0
+      },
+      "count": 207
+    },
+    "model_sha256": "49001dbd5e8e33a630b572a87c289817cb6b2340dd3c7b550d7b8969d9421b3f",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 780
+  },
+  {
+    "name": "dscnn_comparison_20261114_s7_temporal24_seed44",
+    "stage": 7,
+    "factor": "architecture_paired_seed",
+    "parent": "dscnn_comparison_20261114_s6_kd0",
+    "options": {
+      "architecture": "temporal24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_temporal24_seed44",
+    "seed": 44,
+    "selected_epoch": 3,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 4,
+          "recall": 0.8,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.15595926220877931,
+      "thresholds": {
+        "fire_alarm": 0.6,
+        "doorbell": 0.0
+      },
+      "count": 207
+    },
+    "model_sha256": "64928632c3c87e3bc5ab77821bee1894d11d9994969e7333aeb2a0e5d0a7dde3",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 330
+  },
+  {
+    "name": "dscnn_comparison_20261114_s7_freq24_seed42",
+    "stage": 7,
+    "factor": "architecture_paired_seed",
+    "parent": "dscnn_comparison_20261114_s6_kd0",
+    "options": {
+      "architecture": "freq24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed42",
+    "seed": 42,
+    "selected_epoch": 19,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.18496558891973847,
+      "thresholds": {
+        "fire_alarm": 0.7,
+        "doorbell": 0.55
+      },
+      "count": 207
+    },
+    "model_sha256": "613bfb837ba42e5b9db65babbb512e3b0a1b3bddca0fe3d263ea617e7fc669b3",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 810
+  },
+  {
+    "name": "dscnn_comparison_20261114_s7_freq24_seed43",
+    "stage": 7,
+    "factor": "architecture_paired_seed",
+    "parent": "dscnn_comparison_20261114_s6_kd0",
+    "options": {
+      "architecture": "freq24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed43",
+    "seed": 43,
+    "selected_epoch": 11,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 4,
+          "recall": 0.8,
+          "groups": 4,
+          "group_correct": 3,
+          "group_recall": 0.75
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.7916666666666667,
+      "domestic_target_macro_group_recall": 0.8333333333333333,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.1883781432517457,
+      "thresholds": {
+        "fire_alarm": 0.65,
+        "doorbell": 0.8
+      },
+      "count": 207
+    },
+    "model_sha256": "9d60956a8318914a0aad4f44db7a990e9c3968374f7ceaafb4a5588890d49169",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 570
+  },
+  {
+    "name": "dscnn_comparison_20261114_s7_freq24_seed44",
+    "stage": 7,
+    "factor": "architecture_paired_seed",
+    "parent": "dscnn_comparison_20261114_s6_kd0",
+    "options": {
+      "architecture": "freq24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "constant",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_freq24_seed44",
+    "seed": 44,
+    "selected_epoch": 4,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 5,
+          "recall": 0.5555555555555556,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 190,
+          "recall": 0.9844559585492227,
+          "groups": 146,
+          "group_correct": 143,
+          "group_recall": 0.9794520547945206
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 3,
+      "foreign_fpr": 0.015625,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.25731971431248934,
+      "thresholds": {
+        "fire_alarm": 0.8,
+        "doorbell": 0.0
+      },
+      "count": 207
+    },
+    "model_sha256": "5ef13498b8f271ab7d66d9c676bf71c6eee8f794d4ec7f2cb40f4e932b1b2e9f",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 360
+  },
+  {
+    "name": "dscnn_comparison_20261114_s7_plateau",
+    "stage": 7,
+    "factor": "lr_schedule",
+    "parent": "dscnn_comparison_20261114_s7_freq24_seed42",
+    "options": {
+      "architecture": "freq24",
+      "pooling_fraction": 0.5,
+      "negative_sampler": "coverage_cycle",
+      "hard_negative_multiplier": 1.0,
+      "domestic_weight": 4.0,
+      "other_mass": 0.3333333333333333,
+      "kd_weight": 0.0,
+      "learning_rate": 0.001,
+      "lr_schedule": "plateau",
+      "added_training_data": false,
+      "epochs": 30,
+      "patience": 8,
+      "steps_per_epoch": 30,
+      "batch_size": 30,
+      "microbatch_files": 6,
+      "temperature": 2.0,
+      "max_frequency_mask": 4,
+      "max_time_mask": 10
+    },
+    "run": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_comparison_20261114_s7_plateau",
+    "seed": 42,
+    "selected_epoch": 19,
+    "selection": {
+      "classes": {
+        "fire_alarm": {
+          "clips": 9,
+          "correct": 6,
+          "recall": 0.6666666666666666,
+          "groups": 6,
+          "group_correct": 5,
+          "group_recall": 0.8333333333333334
+        },
+        "doorbell": {
+          "clips": 5,
+          "correct": 5,
+          "recall": 1.0,
+          "groups": 4,
+          "group_correct": 4,
+          "group_recall": 1.0
+        },
+        "other": {
+          "clips": 193,
+          "correct": 193,
+          "recall": 1.0,
+          "groups": 146,
+          "group_correct": 146,
+          "group_recall": 1.0
+        }
+      },
+      "target_macro_group_recall": 0.9166666666666667,
+      "domestic_target_macro_group_recall": 1.0,
+      "foreign_negative_clips": 192,
+      "foreign_false_positives": 0,
+      "foreign_fpr": 0.0,
+      "domestic_doorlock_groups": 1,
+      "domestic_doorlock_fp": 0,
+      "guards_passed": true,
+      "loss": 0.18496558891973847,
+      "thresholds": {
+        "fire_alarm": 0.7,
+        "doorbell": 0.55
+      },
+      "count": 207
+    },
+    "model_sha256": "fb7424bd762533c26ec7873cdceb729091268e6fb6accf1acd2a2b24c34745b9",
+    "negative_files": 1179,
+    "negative_unique_sampled": 1179,
+    "actual_optimizer_steps": 810
+  }
+]

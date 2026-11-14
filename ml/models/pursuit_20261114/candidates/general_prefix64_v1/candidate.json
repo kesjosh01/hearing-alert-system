@@ -1,0 +1,17 @@
+{
+  "kind": "GENERAL_64BIN_RESEARCH_CANDIDATE",
+  "source_model": "pursuit_20261114_r04_prefix64_pretrained",
+  "source_model_sha256": "99470e770ef338fb98879c8c40c885c1706e10c69f5b0a9a5135f343f3d54884",
+  "actual_device_days": 0,
+  "deployment_ready": false,
+  "actual_product_targets_verified": false,
+  "files_sha256": {
+    "model_metadata.json": "be7e4f9223fc514dc1318ba33977d492605d7abcb394016179013bb18ba73dc9",
+    "model_int8.h": "9b976276d740b2f77fe79ddbe771408cb312c2c520af9f3a6057eda34b8200bd",
+    "model_int8.tflite": "5b8e811b87f4381c466ab94932b8a1659e6c2cc440931d6ac5350a410905f247",
+    "README.md": "012acd8e1abfc6c4e8c9be65109029ac684f334817be9b46b914f35fa79b37a0",
+    "analysis.json": "3d9529511f5e5c5582973ec80edbb4315d474a7860f512e0c751fe989ed7c950",
+    "delivered_output_contract.json": "fe3f71afb1cc5711a993b903753e2d592224f2c3785d5eec42766efc0ed95b0a"
+  },
+  "frontend_header_identity_completion_backup": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/pursuit_20261114/frontend_metadata_completion/general_prefix64_v1"
+}

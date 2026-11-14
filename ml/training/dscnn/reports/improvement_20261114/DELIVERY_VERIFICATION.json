@@ -1,0 +1,50 @@
+{
+  "kind": "dscnn_training_and_user_evaluation_revision_delivery",
+  "model_development_and_training_complete": true,
+  "requested_data_and_epoch_assessments_complete": true,
+  "requested_foreign_target_like_exclusion_applied": true,
+  "original_artifact_audit": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/FINAL_VERIFICATION.json",
+  "original_artifact_checks_passed": 22,
+  "latest_negative_evaluation_policy": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/evaluation_scope_v2/policy.json",
+  "evaluation_revision_verification": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/evaluation_scope_v2/verification.json",
+  "saved_policy_evaluations_recomputed": 45,
+  "latest_historical_fpr": {
+    "baseline_float_historical": {
+      "false_positives": 3,
+      "eligible_negative_clips": 394,
+      "fpr": 0.007614213197969543
+    },
+    "baseline_int8_historical": {
+      "false_positives": 3,
+      "eligible_negative_clips": 394,
+      "fpr": 0.007614213197969543
+    },
+    "improved_float_historical": {
+      "false_positives": 26,
+      "eligible_negative_clips": 394,
+      "fpr": 0.06598984771573604
+    },
+    "improved_int8_historical": {
+      "false_positives": 24,
+      "eligible_negative_clips": 394,
+      "fpr": 0.06091370558375635
+    }
+  },
+  "new_training_executions_for_latest_request": 0,
+  "new_model_inference_executions_for_latest_request": 0,
+  "threshold_recalibrations_for_latest_request": 0,
+  "models_training_code_labels_splits_original_evaluations_unchanged": true,
+  "independent_test_available": false,
+  "practical_model_replacement_recommended": false,
+  "deployment_ready": false,
+  "data_recommendation": "Prioritize training label scope and additional independent sources; no collection performed.",
+  "epoch_recommendation": "No simple increase recommended; selected fold best epochs 4/7/11/17, all stopped before cap30.",
+  "assessment": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/evaluation_scope_v2/REPORT_KO.md",
+  "delivery_documents_sha256": {
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/evaluation_scope_v2/REPORT_KO.md": "afe5118c86e1acf354f8e50b15a60076a171a1289e07825070848b4e28419994",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/REPORT_KO.md": "b0d3926365f6766de833bab3985c9548ee0613d25d6b99454f7e9989d22f188c",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/improvement_20261114/TRAINING_REPORT.html": "ed240c6c045414e669f2efa3bd99d2b8cf3cba675059a26d96e2a56d45082df7",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/README.md": "c9cd40ca7f4693d8945552044893c6398250c4083989f9e6f5c8a38a3e7cec3e",
+    "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/models/README.md": "ad7f5d5726681b0d109b189e43ec3db27bc1e0510aa6ad95d8c5c4285f9cd31c"
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "study": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/real_training_20261114/study_calibrated_v2_resumed",
+  "refit": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114r_refit_w1",
+  "supervision": {
+    "mode": "file_labels",
+    "approval_sha256": "463627e685b038b38fab3c54fba3c7a7a29841997c6fe8e848d151e439345e04",
+    "window_labels_assigned": false,
+    "event_intervals_used": false,
+    "training_loss": "cross_entropy_of_all_window_mean_softmax_per_file",
+    "within_group_sampling": "uniform_file_then_all_valid_windows",
+    "microbatch_files": 6
+  },
+  "decision": {
+    "selected_weight": 1,
+    "refit_epochs": 19,
+    "decision_threshold": 0.6,
+    "summary": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/real_training_20261114/study_calibrated_v2_resumed/w1_cv_summary.json",
+    "summary_sha256": "086dd052fe25159076fec243c46ba09a9039571c3263b6b14e3d450527f198c6",
+    "test_seen_for_this_selection": false
+  },
+  "frozen": {
+    "model_sha256": "8bcfe1785ad25d0f33a47cb489de1412ff4a665cf8d5e3fc67feef4c8783df3b",
+    "int8_sha256": "4a888184485d567bd23a74376a0a49ec6c6ab479a4cd4d28577c1cc9a2add615",
+    "development_identity": {
+      "parent_protocol": "ko-source-cv4-20261108-v1",
+      "effective_fold_fingerprints": [
+        "7d843ebce67123b512641ce03c0a0e6a85bf0e1309cd095db2a62dcdf3465409",
+        "8bc347cc7ba51b42e995e213b9c485214b37822c64da6c9c990ea18d4823ea90",
+        "bb283505ed7fac721c19aa0c87027138d808006f2e21dcc5721090225a551a96",
+        "22929dec9de9532bb8cbda057ecf698752432404450721255881caa3c22270c0"
+      ],
+      "extension_version": "ko-source-cv4-20261114-dscnn-v2",
+      "extension_sha256": "31f63fd509bbb01b5adadfe7a45ca1c1474851d5222821a217b6d9adaaf72e9b"
+    },
+    "decision_sha256": "2174d114f3d3c4a98aa104622efdccbcad3eae42e81ecfc39bc504e583568602",
+    "decision_policy": {
+      "kind": "argmax_with_target_confidence_rejection",
+      "threshold": 0.6,
+      "selection_source": "domestic_development_OOF_and_reused_overseas_validation_only",
+      "selection_grid": [
+        0.0,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        0.975,
+        0.99,
+        0.995,
+        1.0
+      ]
+    },
+    "prediction_policy": "All 1s windows mean softmax per file, equal-file mean per source, then argmax and fixed target confidence rejection",
+    "test_note": "Previously evaluated for YAMNet; historical comparison only, no fresh-test claim"
+  },
+  "verification": {
+    "kind": "dscnn_model_development_and_training_audit",
+    "checked_at_utc": "2026-11-13T19:21:48.552635+00:00",
+    "model_development_and_training_complete": true,
+    "event_intervals_reviewed": false,
+    "independent_microphone_validation_complete": false,
+    "esp_idf_cross_compile_verified": false,
+    "board_executions": 0,
+    "deployment_ready": false,
+    "checks": {
+      "study_completed_12_folds": true,
+      "effective_data_identity_unchanged": true,
+      "file_label_supervision_truthful": true,
+      "all_selected_fold_guards_passed": true,
+      "decision_policy_frozen_from_development": true,
+      "frozen_training_code_and_configuration_unchanged": true,
+      "all_cv_checkpoints_match_recorded_hashes": true,
+      "every_training_run_used_gpu": true,
+      "common_threshold_metrics_match_prediction_files": true,
+      "test_excluded_from_all_training_and_validation": true,
+      "refit_epochs_fixed_from_cv_median": true,
+      "refit_optimizer_steps_match_fixed_budget": true,
+      "all_five_new_doorbells_actually_sampled_in_refit": true,
+      "int8_calibration_train_only": true,
+      "trained_int8_artifact": true,
+      "int8_operator_and_tensor_contract": true,
+      "trained_int8_frontend_host_parity_passed": true,
+      "model_frozen_before_and_after_holdout": true,
+      "historical_holdout_compared_once_and_labelled_correctly": true,
+      "originals_splits_yamnet_and_environments_preserved": true,
+      "dscnn_environment_packages_unchanged": true,
+      "software_unit_tests_passed": true
+    },
+    "limitations": [
+      "File labels supervise mean window probabilities. Individual event timestamps and window detection accuracy are unverified.",
+      "Old YAMNet test was reused for one frozen retrospective comparison, not a fresh independent test.",
+      "New domestic audio and different supervision/training units prevent a controlled architecture-only comparison to YAMNet.",
+      "Board RAM, latency, real microphone streams, false alarms/hour and end-to-end alerts remain unmeasured."
+    ],
+    "new_doorbell_refit_draws": {
+      "kr-user-db-06": 235,
+      "kr-user-db-07": 217,
+      "kr-user-db-08": 234,
+      "kr-user-db-09": 240,
+      "kr-user-db-10": 244
+    },
+    "final_study_real_audio_training_executions": 13,
+    "earlier_development_runs_preserved": [
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f2",
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f0",
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f1",
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f2",
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f3",
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w2_f0"
+    ],
+    "earlier_run_statuses": {
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114_w1_f2": {
+        "epochs_recorded": 11,
+        "exit_code": null
+      },
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f0": {
+        "epochs_recorded": 10,
+        "exit_code": 0
+      },
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f1": {
+        "epochs_recorded": 11,
+        "exit_code": 0
+      },
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f2": {
+        "epochs_recorded": 11,
+        "exit_code": 0
+      },
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w1_f3": {
+        "epochs_recorded": 29,
+        "exit_code": 0
+      },
+      "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_filelabels_20261114_w2_f0": {
+        "epochs_recorded": 11,
+        "exit_code": 0
+      }
+    },
+    "completed_cv_folds_reused_after_reboot": 2,
+    "new_training_executions_after_reboot": 11,
+    "real_audio_training_executions": 19,
+    "optimizer_steps": 9150,
+    "trained_model": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114r_refit_w1/classifier.keras",
+    "trained_int8_model": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/runs/dscnn_calibrated_20261114r_refit_w1/export/dscnn_int8.tflite",
+    "trained_int8_bytes": 13656,
+    "historical_domestic_target_recall": 0.5,
+    "performance_note": "Training and artifact checks do not establish practical detection readiness. Report target misses and the small, historically reused holdout separately from completion."
+  },
+  "historical_holdout_float": {
+    "clips": {
+      "count": 411,
+      "accuracy": 0.975669099756691,
+      "macro_f1": 0.6625207296849088,
+      "loss": 0.19620084158003118,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333,
+          "support": 4,
+          "correct": 2,
+          "predicted": 8
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "other": {
+          "precision": 0.9900249376558603,
+          "recall": 0.9851116625310173,
+          "f1": 0.9875621890547264,
+          "support": 403,
+          "correct": 397,
+          "predicted": 401
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          6,
+          0,
+          397
+        ]
+      ]
+    },
+    "groups": {
+      "count": 319,
+      "accuracy": 0.9749216300940439,
+      "macro_f1": 0.6846016434440871,
+      "loss": 0.19011445068147317,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "support": 4,
+          "correct": 2,
+          "predicted": 6
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "other": {
+          "precision": 0.9871382636655949,
+          "recall": 0.9871382636655949,
+          "f1": 0.9871382636655949,
+          "support": 311,
+          "correct": 307,
+          "predicted": 311
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          307
+        ]
+      ]
+    },
+    "domestic_groups": {
+      "count": 9,
+      "accuracy": 0.5555555555555556,
+      "macro_f1": 0.5555555555555555,
+      "loss": 0.7308559605278941,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "other": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.33333333333333337,
+          "support": 1,
+          "correct": 1,
+          "predicted": 5
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "domestic_target_macro_recall": 0.5,
+    "overseas_other_clip_count": 402,
+    "overseas_other_clip_false_positives": 6,
+    "overseas_other_clip_fpr": 0.014925373134328358,
+    "domestic_doorlock_group_count": 1,
+    "domestic_doorlock_false_positive_groups": 0,
+    "decision_policy": {
+      "kind": "argmax_with_target_confidence_rejection",
+      "threshold": 0.6
+    },
+    "loss_note": "Cross entropy uses raw probabilities; confusion matrices and FPR use the declared rejection policy."
+  },
+  "historical_holdout_int8": {
+    "clips": {
+      "count": 411,
+      "accuracy": 0.975669099756691,
+      "macro_f1": 0.6625207296849088,
+      "loss": 0.19661389147115985,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333,
+          "support": 4,
+          "correct": 2,
+          "predicted": 8
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "other": {
+          "precision": 0.9900249376558603,
+          "recall": 0.9851116625310173,
+          "f1": 0.9875621890547264,
+          "support": 403,
+          "correct": 397,
+          "predicted": 401
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          6,
+          0,
+          397
+        ]
+      ]
+    },
+    "groups": {
+      "count": 319,
+      "accuracy": 0.9749216300940439,
+      "macro_f1": 0.6846016434440871,
+      "loss": 0.19038948145916115,
+      "classes": {
+        "fire_alarm": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "support": 4,
+          "correct": 2,
+          "predicted": 6
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "other": {
+          "precision": 0.9871382636655949,
+          "recall": 0.9871382636655949,
+          "f1": 0.9871382636655949,
+          "support": 311,
+          "correct": 307,
+          "predicted": 311
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          307
+        ]
+      ]
+    },
+    "domestic_groups": {
+      "count": 9,
+      "accuracy": 0.5555555555555556,
+      "macro_f1": 0.5555555555555555,
+      "loss": 0.7372369523120883,
+      "classes": {
+        "fire_alarm": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "doorbell": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4,
+          "correct": 2,
+          "predicted": 2
+        },
+        "other": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.33333333333333337,
+          "support": 1,
+          "correct": 1,
+          "predicted": 5
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "domestic_target_macro_recall": 0.5,
+    "overseas_other_clip_count": 402,
+    "overseas_other_clip_false_positives": 6,
+    "overseas_other_clip_fpr": 0.014925373134328358,
+    "domestic_doorlock_group_count": 1,
+    "domestic_doorlock_false_positive_groups": 0,
+    "decision_policy": {
+      "kind": "argmax_with_target_confidence_rejection",
+      "threshold": 0.6
+    },
+    "loss_note": "Cross entropy uses raw probabilities; confusion matrices and FPR use the declared rejection policy."
+  }
+}

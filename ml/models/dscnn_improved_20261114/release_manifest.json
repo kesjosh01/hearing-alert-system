@@ -1,0 +1,18 @@
+{
+  "kind": "improved_trained_dscnn_local_bundle",
+  "pipeline_only": false,
+  "distillation_applied": true,
+  "usage": "experimental_review_only",
+  "deployment_ready": false,
+  "files": {
+    "README.md": "5d18b5854dfcd0511ba8a83641ff8a09469bdd814a521f45793eb9401808e71b",
+    "classifier.keras": "2e859b8ae3d85c13c72591cff0821f2646cd1a0085feacceb75b73c533772e59",
+    "decision_policy.json": "844e3119116d8b6d5aa66fd7d67246a9c8bb56dedae0bbf96b73247d757d66c5",
+    "dscnn_int8.h": "87f27b9b8df4eeeb2e723d18ee4f4e39d46d6d279543f4f83293360d2a2719b5",
+    "dscnn_int8.tflite": "365d1015a3fe90ffdcc2edab0966e140dd190352dc127ba9d8fc30492d5b48a2",
+    "frontend.json": "82a05fcd1abf80f05fed111eb0a367a82f18dbbb5c30cb335cf7e285861cf9f1",
+    "labels.json": "1603b947446053b6325ea0509674c74502ef1dbfc6eeb3da204ad67a3b369e8e",
+    "model_metadata.json": "ea9cd45df1862c09794c575e51d7413b12971a221b3133e19c4eb0931290303f",
+    "training_provenance.json": "b94477b828caf074cf3b774efe01ced03e4db1108409bc6a99968b9ebaa71748"
+  }
+}

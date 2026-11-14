@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "pixels": [
+    1840,
+    1152
+  ],
+  "mode": "RGBA",
+  "dpi": [
+    159.9946,
+    159.9946
+  ],
+  "all_pixels_opaque": true,
+  "manual_visual_review": "Fonts, axes, legend, selected checkpoint markers and caption inspected; no clipping observed",
+  "publisher_compliance_claimed": false
+}

@@ -1,0 +1,324 @@
+{
+  "complete": true,
+  "plan_sha256": "007b6f3894d544b25b2f9faaab72df9269f8fc37085ffc778fa75c16e5c1c4c9",
+  "code_sha256": "c092b812ebd2eb5ebbf3d9a0ee96b687b12843b22e6c4f7975578c2a06f8cab1",
+  "alpha": 0.75,
+  "policy": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "source_names": [
+    "domestic_known_aug_v2",
+    "native40_r06_v1"
+  ],
+  "source_models_sha256": {
+    "domestic_known_aug_v2": "209ef89235cd38c9d3d80aec3b6ffc6b05a4ddcac2bf37d3c446ff86d458f5ce",
+    "native40_r06_v1": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd"
+  },
+  "output_metadata": [
+    {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int8",
+      "scale": 0.00390625,
+      "zero_point": -128
+    },
+    {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int8",
+      "scale": 0.00390625,
+      "zero_point": -128
+    }
+  ],
+  "cuts_integer_units": [
+    529,
+    559
+  ],
+  "known_after_calibration": {
+    "fire_recall": 0.7647058823529411,
+    "doorbell_recall": 0.7788461538461539,
+    "classes": {
+      "fire_alarm": {
+        "files": 68,
+        "detected_files": 52,
+        "source_groups": 17,
+        "source_mean_file_recall": 0.7647058823529411
+      },
+      "doorbell": {
+        "files": 104,
+        "detected_files": 81,
+        "source_groups": 26,
+        "source_mean_file_recall": 0.7788461538461539
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 17,
+          "detected_files": 15
+        },
+        "doorbell": {
+          "files": 26,
+          "detected_files": 26
+        }
+      },
+      "quiet": {
+        "fire_alarm": {
+          "files": 17,
+          "detected_files": 15
+        },
+        "doorbell": {
+          "files": 26,
+          "detected_files": 21
+        }
+      },
+      "room_snr10": {
+        "fire_alarm": {
+          "files": 17,
+          "detected_files": 8
+        },
+        "doorbell": {
+          "files": 26,
+          "detected_files": 15
+        }
+      },
+      "room_snr20": {
+        "fire_alarm": {
+          "files": 17,
+          "detected_files": 14
+        },
+        "doorbell": {
+          "files": 26,
+          "detected_files": 19
+        }
+      }
+    },
+    "other_files": 0,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      529,
+      559
+    ],
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "selection_after_calibration": {
+    "fire_recall": 0.03488372093023256,
+    "doorbell_recall": 0.1951219512195122,
+    "classes": {
+      "fire_alarm": {
+        "files": 91,
+        "detected_files": 3,
+        "source_groups": 86,
+        "source_mean_file_recall": 0.03488372093023256
+      },
+      "doorbell": {
+        "files": 47,
+        "detected_files": 9,
+        "source_groups": 41,
+        "source_mean_file_recall": 0.1951219512195122
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 91,
+          "detected_files": 3
+        },
+        "doorbell": {
+          "files": 47,
+          "detected_files": 9
+        }
+      }
+    },
+    "other_files": 1053,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      529,
+      559
+    ],
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "calibration_after_fit": {
+    "fire_recall": 0.034482758620689655,
+    "doorbell_recall": 0.3548387096774194,
+    "classes": {
+      "fire_alarm": {
+        "files": 62,
+        "detected_files": 2,
+        "source_groups": 58,
+        "source_mean_file_recall": 0.034482758620689655
+      },
+      "doorbell": {
+        "files": 34,
+        "detected_files": 11,
+        "source_groups": 31,
+        "source_mean_file_recall": 0.3548387096774194
+      }
+    },
+    "conditions": {
+      "original": {
+        "fire_alarm": {
+          "files": 62,
+          "detected_files": 2
+        },
+        "doorbell": {
+          "files": 34,
+          "detected_files": 11
+        }
+      }
+    },
+    "other_files": 788,
+    "other_false_alert_files": 0,
+    "wrong_target_alert_files": 0,
+    "cuts_integer_units": [
+      529,
+      559
+    ],
+    "actual_event_or_monthly_rate_verified": false
+  },
+  "prior_selected": {
+    "alpha": 0.75,
+    "policy": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cuts": [
+      185,
+      452
+    ],
+    "known": {
+      "fire_recall": 1.0,
+      "doorbell_recall": 0.8846153846153846,
+      "classes": {
+        "fire_alarm": {
+          "files": 68,
+          "detected_files": 68,
+          "source_groups": 17,
+          "source_mean_file_recall": 1.0
+        },
+        "doorbell": {
+          "files": 104,
+          "detected_files": 92,
+          "source_groups": 26,
+          "source_mean_file_recall": 0.8846153846153846
+        }
+      },
+      "conditions": {
+        "original": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 26
+          }
+        },
+        "quiet": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 23
+          }
+        },
+        "room_snr10": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 21
+          }
+        },
+        "room_snr20": {
+          "fire_alarm": {
+            "files": 17,
+            "detected_files": 17
+          },
+          "doorbell": {
+            "files": 26,
+            "detected_files": 22
+          }
+        }
+      },
+      "other_files": 0,
+      "other_false_alert_files": 0,
+      "wrong_target_alert_files": 0,
+      "cuts_integer_units": [
+        185,
+        452
+      ],
+      "actual_event_or_monthly_rate_verified": false
+    },
+    "selection": {
+      "fire_recall": 0.08139534883720931,
+      "doorbell_recall": 0.1951219512195122,
+      "classes": {
+        "fire_alarm": {
+          "files": 91,
+          "detected_files": 7,
+          "source_groups": 86,
+          "source_mean_file_recall": 0.08139534883720931
+        },
+        "doorbell": {
+          "files": 47,
+          "detected_files": 9,
+          "source_groups": 41,
+          "source_mean_file_recall": 0.1951219512195122
+        }
+      },
+      "conditions": {
+        "original": {
+          "fire_alarm": {
+            "files": 91,
+            "detected_files": 7
+          },
+          "doorbell": {
+            "files": 47,
+            "detected_files": 9
+          }
+        }
+      },
+      "other_files": 1053,
+      "other_false_alert_files": 0,
+      "wrong_target_alert_files": 0,
+      "cuts_integer_units": [
+        185,
+        452
+      ],
+      "actual_event_or_monthly_rate_verified": false
+    },
+    "key": [
+      0.8502024291497976,
+      0.9038461538461539,
+      0.08147682566287218,
+      0.13825865002836074
+    ]
+  },
+  "new_public_test_used": false,
+  "feature_arrays_written": false,
+  "actual_product_targets_verified": false
+}

@@ -1,0 +1,14 @@
+{
+  "protected_file_count": 7436,
+  "protected_hashes_unchanged": true,
+  "differences": {},
+  "package_lists_unchanged": true,
+  "new_test_files": 1649,
+  "unexpected_new_protected_files": [],
+  "new_feature_files": 1644,
+  "new_evaluation_files": 5,
+  "fixed_test_embeddings": 411,
+  "fixed_test_embeddings_before": 0,
+  "existing_files_fingerprint_before": "765f294b2b6e19c931896309e00466054b26ab58e7b843bc9ee214fa1a3ee488",
+  "existing_files_fingerprint_after": "765f294b2b6e19c931896309e00466054b26ab58e7b843bc9ee214fa1a3ee488"
+}

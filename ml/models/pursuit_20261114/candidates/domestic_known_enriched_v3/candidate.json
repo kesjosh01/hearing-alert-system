@@ -1,0 +1,24 @@
+{
+  "kind": "DOMESTIC_TRAINING_SEEN_AUGMENTED_RESEARCH_CANDIDATE",
+  "source_model": "pursuit_20261114_domestic_seen_enriched_presence",
+  "source_model_sha256": "8c9bb86c0b38ca5b1d31caed19b9a8ad8aead63403aef9d7c2223eef742869d6",
+  "original_target_recordings": 43,
+  "training_condition_probes": 172,
+  "independent_target_test_recordings": 0,
+  "actual_device_days": 0,
+  "deployment_ready": false,
+  "actual_product_targets_verified": false,
+  "files_sha256": {
+    "model_metadata.json": "8e7584493654554a8d7b49f8e48612121ed8cca2d5045ae52a7b7f030bae42a0",
+    "model_int8.h": "f79110091ee246210e83d17d2310598a72a1cdc69cf84060a874132344910378",
+    "known_training_condition_probes.csv": "cd06338c7281e32e1380dc454f398d422373b21c148313952ecdba63935eff9b",
+    "readout_config.json": "07ba6c5132a00ac791ae12493b3aa2424beffd5c72753e239a6e3c1cbef43e11",
+    "model_int8.tflite": "7bb0d2d5a9318630b384b3e9f5d83bcad1281bf82930e10516184b2c3982c04b",
+    "README.md": "3d39b8476a4668d1a58f99b803ea1487b88592cef2d35d9026831f8bf00ad81b",
+    "analysis.json": "036c151114f55d227056c84939f20c7076c52b034bfd45cb1a192f608d2cb619",
+    "delivered_output_contract.json": "35489a640d6dd5f01692d1a41a75b03351bca6143a67fd81d48f15b7d2e3a11b"
+  },
+  "representative_provenance_path": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/pursuit_20261114/domestic_enriched_delivered_v1/representative_training_provenance.json",
+  "research_terms": "Legacy noncommercial and original source restrictions retained; commercial clearance not claimed",
+  "frontend_header_identity_completion_backup": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/pursuit_20261114/frontend_metadata_completion/domestic_known_enriched_v3"
+}

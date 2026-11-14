@@ -1,0 +1,7 @@
+{
+  "kind": "argmax_with_target_confidence_rejection",
+  "threshold": 0.6,
+  "clip_aggregation": "all_window_mean_softmax",
+  "group_aggregation": "equal_clip_mean_softmax_then_decide",
+  "threshold_selection": "development_only_fixed_before_refit_and_test"
+}

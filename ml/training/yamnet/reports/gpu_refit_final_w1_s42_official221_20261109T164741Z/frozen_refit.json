@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-11-09T16:52:26.822770+00:00",
+  "classifier_sha256": "70b9da2319abecf27fb55ef748ca3e65ceb2dcb21207eb9e32f3bb9f446982b2",
+  "run_sha256": "852c1c963ab5cb8f6be239cb6adc1e4aa09b37554c846c81f8dbb0ae06324bfe",
+  "decision_sha256": "625bf36208567a93b181a724af1f459b7316095ebb56cf31e11dc85205a48f51",
+  "epochs": 18,
+  "weight": 1,
+  "seed": 42,
+  "test_evaluated": false
+}
