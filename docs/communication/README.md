@@ -2,6 +2,19 @@
 
 작성일: 2026-11-07. 공유 대상: S3 제어·ML 팀, C3 디스플레이·진동 팀.
 
+> **2026-11-15 갱신 — 제품 통신 펌웨어 구현과 범위 변경**
+>
+> - 제품용 통신 펌웨어를 `firmware/transmitter_s3/`, `firmware/receiver_c3/`, 공통 코어 `firmware/common/ha_comm/`에 구현했습니다. 실기기 시험은 아직 하지 않았습니다(9절).
+> - **A안 확정:** 대기 이벤트를 S3가 반복 송신하고, C3는 접수에 성공하면 ACK하며, S3는 세 필드가 맞는 ACK를 받으면 재전송을 멈춥니다. C3의 POLL/READY를 기다리는 B안은 구현하지 않습니다.
+> - **C3 절전 주기 300ms 확정:** S3 비콘 100 TU × DTIM 3 + C3 MIN_MODEM으로 설정하며, 명목 간격은 307.2ms입니다. 아래 0절의 “300 ms 절전 적용 금지”와 7절의 “토의 후 결정” 문구는 이번 결정으로 대체합니다.
+> - **담당 범위:** 이번 범위는 통신·접수 인터페이스·절전 설정입니다. 0절 표의 “ML·LED·디스플레이·진동 구현 범위 포함” 지시는 대체합니다. ML(오디오·추론·판정 정책)과 확인되지 않은 주변장치 드라이버는 각 팀의 후속 작업입니다.
+> - 7절의 미결정 정책 중 큐·포화·TTL·재시도는 개발 기본값으로 구현했습니다(9절). 프레임 형식(4절), ID(3절), 벡터(6절)는 바뀌지 않았습니다.
+> - 아래 0~8절은 2026-11-07 작성 당시의 지시와 기록으로 그대로 보존합니다.
+
+## 통신 시험 로그
+
+- [261111_통신원거리테스트v1](261111_통신원거리테스트v1.md): 약 4m·같은 층·같은 방 초기 시험. 전체 169개 이벤트의 ACK, C3 재접속 및 최종 안정 구간 44개를 기록했다. 사용자 요청으로 종료하여 동일 세션 연속 100개 목표는 미완료다.
+
 ## 0. 이 문서로 Codex에 구현을 맡길 때의 작업 규칙
 
 ### 읽는 방법과 우선 확인
@@ -202,3 +215,40 @@ ACK는 **소프트웨어 접수 확인**이며 디스플레이 표시·모터 �
 6. 장기 단절·재접속·S3/C3 각각의 재부팅·세션 변경 및 큐 넘침/만료를 확정 정책에 맞춰 시험한다. RAM 유실·중복 재처리 가능성도 기록한다.
 
 시험 조건, 펌웨어 리비전, 원본 양측 로그, 고유 감지/접수/ACK 수와 실제 알림 결과를 시험 기록 영역 (`docs/test_results/README.md`)에 남긴다. ACK 수만으로 물리 알림 성공을 판정하지 않는다.
+
+## 9. 2026-11-15 제품 통신 펌웨어 구현 반영
+
+### 구현 위치와 프로토콜 적용
+
+| 항목 | 위치 | 내용 |
+| --- | --- | --- |
+| 공통 프레임·검증 | `firmware/common/ha_comm/src/ha_proto.c` | 4절 v1을 그대로 구현했습니다. 길이 → magic → version → type 순서로 검사하고, 큰 수신 버퍼로 초과 길이를 검출합니다 |
+| 이벤트 등록 테이블 | `firmware/common/ha_comm/src/ha_events.c` | 3절 ID, 제품 허용(TEST 제외), 동시 감지 순서 FIRE → DOORBELL, 포화 보호, TTL |
+| S3 큐·재전송·ACK | `firmware/common/ha_comm/src/ha_tx.c`, `firmware/transmitter_s3/components/ha_sender/` | 등록된 C3 IP·포트와 활성 이벤트의 session·seq·event_id가 모두 맞아야 ACK로 인정합니다. seq는 송신을 시작할 때 부여합니다 |
+| C3 접수·중복 | `firmware/common/ha_comm/src/ha_rx.c`, `firmware/receiver_c3/components/ha_receiver/` | AP IP·포트만 받습니다. UI 소비자 접수에 성공한 뒤에만 기록·ACK합니다. 같은 session·seq에 다른 ID가 오면 충돌로 보고 ACK하지 않습니다 |
+| ML 입력 API | `firmware/transmitter_s3/components/ha_sender/include/ha_sender.h` | `ha_publish_event()`, `ha_publish_events()`. 사용법은 `firmware/transmitter_s3/README.md` |
+| UI 접수 API | `firmware/receiver_c3/components/ha_receiver/include/ha_receiver.h` | `ha_receiver_attach_consumer()`, `ha_receiver_wait_alert()`. 사용법은 `firmware/receiver_c3/README.md` |
+| 시각 확장 | v2 TIME_SYNC 28바이트 | 정의는 `firmware/common/ha_comm/README.md`. v1 알림 경로는 바뀌지 않습니다 |
+
+v1 프레임 표에서 HELLO·EVENT·ACK·PM_STATS·POWER_STATE의 필드 의미는 바뀌지 않았습니다. 기존 `value == 1` 제한은 양쪽 모두 등록 ID 검사로 바꿨습니다.
+
+### 7절 미결정 항목에 적용한 개발 기본값
+
+아래 값은 설정(Kconfig)으로 바꿀 수 있는 개발 기본값입니다. 제품 요구사항이나 실측값으로 확정된 것이 아닙니다.
+
+| 항목 | 기본값 | 근거 |
+| --- | --- | --- |
+| 큐 크기 | 8 (활성 포함) | 설계값 |
+| 포화 | 가장 오래된 대기 이벤트를 폐기합니다. FIRE_ALARM은 FIRE_ALARM으로만 밀려나고, 활성 이벤트는 폐기하지 않습니다. 남은 것이 모두 화재면 새 DOORBELL은 거부합니다 | 2026-11-15 사용자 결정 |
+| TTL | FIRE_ALARM 10분, DOORBELL 2분 | 2026-11-15 사용자 결정 |
+| 재시도 | 시도당 ACK 대기 700ms, 4회 묶음, 2~16s backoff | 설계값. 307.2ms 수신 간격 기준이며 미측정입니다 |
+| 장기 단절 | station이 떠나면 송신을 멈추고 큐는 유지합니다. 큐 항목은 TTL에 따라 만료됩니다 | 설계값 |
+| 우선순위 | 기본 FIFO. 화재 우선은 옵션(기본 꺼짐)이며 선점은 하지 않습니다 | 향후 정책을 위한 경계 |
+| C3 중복 기록 | 최근 S3 세션 4개의 최대 seq와, 최근 8건의 (session, seq, id) | 지연된 이전 세션 패킷의 재알림을 막습니다. RAM 보관이라 C3가 재부팅되면 사라집니다 |
+| UI 미연결 | ACK하지 않음 | 2026-11-15 사용자 결정 |
+
+`ACK_TIMEOUT_MS=300`(TEST 펌웨어 값)을 절전 주기로 해석하지 않았습니다. 새 ACK 대기 시간은 307.2ms 수신 간격에 맞춰 따로 정했습니다. exactly-once 전달, 영구 보존, 기한 내 전달은 보장하지 않습니다.
+
+### 검증 상태
+
+자동 검증과 빌드 결과는 `docs/test_results/product_firmware_2026-11-15.md`에 있습니다. 6절의 정상·오류 벡터는 실제 공통 코드로 자동 검증했습니다. 8절의 실기기 통합 시험은 아직 하지 않았습니다. 기존 TEST 펌웨어의 측정값(10-30, 11-11)은 새 펌웨어의 성능으로 인용하지 않습니다.

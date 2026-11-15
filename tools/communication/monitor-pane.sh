@@ -2,7 +2,13 @@
 set -uo pipefail
 role=$1
 source "$HEARING_IDF_PATH/export.sh" >/dev/null 2>&1
-elf="$HEARING_PROJECT_ROOT/communication_tests/softap_udp/build/$role/hearing_softap_test.elf"
+# HEARING_FIRMWARE=product selects firmware/{transmitter_s3,receiver_c3}; default: TEST experiment.
+if [[ "${HEARING_FIRMWARE:-test}" = product ]]; then
+    if [[ "$role" = s3 ]]; then elf="$HEARING_PROJECT_ROOT/firmware/transmitter_s3/build/hearing_alert_s3.elf"
+    else elf="$HEARING_PROJECT_ROOT/firmware/receiver_c3/build/hearing_alert_c3.elf"; fi
+else
+    elf="$HEARING_PROJECT_ROOT/communication_tests/softap_udp/build/$role/hearing_softap_test.elf"
+fi
 control="$HEARING_MONITOR_LOG_DIR/$role.control"
 [[ -p "$control" ]] || mkfifo "$control"
 # Keep the command pipe open; tests can request a reset without closing the GUI.
@@ -23,7 +29,7 @@ else
     tail -n 0 -F "$HEARING_MONITOR_LOG_DIR/c3.log" "$HEARING_MONITOR_LOG_DIR/s3.log" \
         | stdbuf -oL awk -v s3="$HEARING_MONITOR_LOG_DIR/s3.log" '
             /^==> / { source = index($0, s3) ? "[C3→S3 Wi-Fi] " : "[C3 USB · 표시 지연 가능] "; next }
-            /TEST event|STA got IP|auto Light-sleep|C3_PM|C3_STATE|ACK seq=|FAILED|ERROR|Waiting for|disconnected reason/ {
+            /TEST event|EVENT accepted|EVENT dup|EVENT stale|NOT accepted|EVENT dropped|DIAG_CONSUMER|STA got IP|auto Light-sleep|auto light-sleep|C3_PM|C3_STATE|ACK seq=|EXPIRED|EVICTED|FAILED|ERROR|Waiting for|disconnected reason/ {
                 print source $0; fflush();
             }'
 fi

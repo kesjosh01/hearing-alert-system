@@ -1,0 +1,77 @@
+menu "Hearing Alert S3 sender"
+
+    config HA_TX_QUEUE_CAPACITY
+        int "Event queue capacity (including the in-flight event)"
+        range 2 32
+        default 8
+        help
+            Design default. When full: evict the oldest queued event, but
+            FIRE_ALARM is only evicted by another FIRE_ALARM; the in-flight
+            event is never evicted. A DOORBELL is rejected (QUEUE_FULL) if only
+            FIRE_ALARM entries remain.
+
+    config HA_TX_ACK_WAIT_MS
+        int "ACK wait per attempt [ms]"
+        default 700
+        help
+            Design default derived from the 307.2 ms DTIM receive interval
+            (one missed beacon -> ~614 ms) plus processing. Not measured.
+
+    config HA_TX_ATTEMPTS_PER_BURST
+        int "Attempts per retry burst"
+        range 1 20
+        default 4
+
+    config HA_TX_BACKOFF_MIN_MS
+        int "Pause after a failed burst [ms] (doubles each time)"
+        default 2000
+
+    config HA_TX_BACKOFF_MAX_MS
+        int "Maximum pause between bursts [ms]"
+        default 16000
+
+    config HA_TTL_FIRE_ALARM_S
+        int "FIRE_ALARM lifetime in queue [s] (0 = no expiry)"
+        default 600
+        help
+            Development default selected 2026-11-15 (10 min).
+
+    config HA_TTL_DOORBELL_S
+        int "DOORBELL lifetime in queue [s] (0 = no expiry)"
+        default 120
+        help
+            Development default selected 2026-11-15 (2 min).
+
+    config HA_TX_FIRE_FIRST
+        bool "Send queued FIRE_ALARM before older DOORBELL (no preemption)"
+        default n
+        help
+            Optional. Default is plain FIFO. The in-flight event is never
+            preempted; seq is assigned at send time so C3 duplicate detection
+            stays valid with either order.
+
+    config HA_TIME_SYNC_TX
+        bool "Send TIME_SYNC (v2) when a time provider is registered"
+        default n
+        help
+            Optional extension. No SNTP / home Wi-Fi client is included; the
+            application must register ha_sender_set_time_provider().
+
+    config HA_TIME_SYNC_PERIOD_S
+        int "TIME_SYNC period [s]"
+        depends on HA_TIME_SYNC_TX
+        default 600
+
+    config HA_DIAG_INJECT_EVENTS
+        bool "DIAGNOSTIC: inject synthetic FIRE/DOORBELL events periodically"
+        default n
+        help
+            For radio-path tests without ML. Never enable in a product build and
+            never report its results as sound detection.
+
+    config HA_DIAG_INJECT_PERIOD_MS
+        int "DIAGNOSTIC injection period [ms]"
+        depends on HA_DIAG_INJECT_EVENTS
+        default 5000
+
+endmenu

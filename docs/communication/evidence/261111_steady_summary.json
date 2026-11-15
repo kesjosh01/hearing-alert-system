@@ -1,0 +1,29 @@
+{
+  "log": "build/verification/2026-11-11/final-steady-s3.log",
+  "requested_events": 100,
+  "transmitted_unique": 44,
+  "acknowledged_unique": 44,
+  "sequence_first": 126,
+  "sequence_last": 169,
+  "missing_ack_sequences": [],
+  "retransmissions": 0,
+  "failed_events": [],
+  "ack_round_trip_ms": {
+    "min": 11,
+    "mean": 57.09,
+    "max": 113
+  },
+  "first_confirmed_sleep": {
+    "session": 698852790,
+    "successful": 110,
+    "rejected": 0
+  },
+  "last_sleep": {
+    "session": 698852790,
+    "successful": 1488,
+    "rejected": 0
+  },
+  "single_c3_session": true,
+  "sleep_counter_increased": true,
+  "passed": false
+}

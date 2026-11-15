@@ -1,0 +1,11 @@
+CONFIG_IDF_TARGET="esp32c3"
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+# Keep the Wi-Fi association while CPU and radio sleep when idle
+# (same PM base as the verified communication_tests/softap_udp C3 build).
+CONFIG_PM_ENABLE=y
+CONFIG_FREERTOS_USE_TICKLESS_IDLE=y
+CONFIG_PM_PROFILING=y
+# USB Serial/JTAG must not block real light-sleep; logs may pause.
+CONFIG_USJ_NO_AUTO_LS_ON_CONNECTION=n
