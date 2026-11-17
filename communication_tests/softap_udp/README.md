@@ -1,5 +1,7 @@
 # SoftAP + UDP 기초 통신 실험
 
+> 2026-11-15: 제품용 통신 펌웨어는 `firmware/transmitter_s3/`, `firmware/receiver_c3/`(2026-11-17부터 XIAO ESP32-C6용 `firmware/receiver_c6/`)로 분리했다. 이 프로젝트는 TEST 이벤트를 쓰는 과거 실험·회귀 참고용으로 보존하며, 아래 기록과 수치는 이 TEST 펌웨어의 결과다.
+
 LILYGO T7 S3 v1.1을 AP·송신부로, ESP32-C3 SuperMini를 STA·수신부로 사용하는 독립 ESP-IDF 프로젝트입니다. `firmware/`의 오디오·알림 구현과 분리한 통신 실험이며 GPIO, LED, 모터는 사용하지 않습니다. S3가 3초마다 만드는 TEST 이벤트를 C3가 로그로 처리하고 ACK를 보냅니다.
 
 - 코드: `main/main.c` (칩 타깃에 따라 역할 선택)

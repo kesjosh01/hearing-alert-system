@@ -84,16 +84,16 @@ runner가 반환하는 `probabilities[k]`는 `(q[k] + 128) / 256`이다. 다음 
 
 두 결과가 함께 새 이벤트로 접수되면 FIRE_ALARM, DOORBELL 순서로 별도 순번을 부여하고 stop-and-wait로 전송한다. 재전송은 원래 `(session, seq, event_id)`를 유지한다. ACK 대기 중 새 감지를 덮어쓰지 않도록 큐가 필요하다.
 
-현재 [`communication_tests/softap_udp/main/main.c`](../../communication_tests/softap_udp/main/main.c)는 **TEST 전용**이다. 아래 작업은 소리 이벤트 통합 시 양 보드에서 함께 수행해야 하며, 이번 모델 정리에서 기존 통신 코드는 변경하지 않았다.
+통신 쪽 통합 지점은 제품 펌웨어에 구현돼 있다(2026-11-15 S3·C3, 2026-11-17 수신부 C6 변경). `communication_tests/softap_udp/`는 TEST 전용 과거 실험이다.
 
-| 위치 | 통합할 내용 |
+| 위치 | 상태 |
 |---|---|
-| S3 TEST 생성 부분 | 모델 판정과 ID 매핑·대기열을 이벤트 생성 입력으로 연결 |
-| S3 ACK 검사 | 기다리는 session·seq·event_id 세 값을 모두 비교 |
-| C3의 `value == 1` 검사 | 소리 ID 허용 목록과 실제 알림 처리기 접수에 연결 |
-| C3 ACK | 처리기 접수 성공 뒤 원래 세 값으로 응답, 중복 이벤트는 알림 반복 없이 ACK |
+| S3 이벤트 입력 | `ha_publish_event()` / `ha_publish_events()` ([송신부 안내](../../firmware/transmitter_s3/README.md)). 모델 판정·ID 매핑·반복 억제는 ML/제어 쪽에서 이 API를 호출해 연결한다 |
+| S3 ACK 검사 | session·seq·event_id 세 값을 모두 비교 (구현됨) |
+| 수신부 ID 검사·접수 | 등록 ID만 받고 화면·진동 UI로 전달 (구현됨, [수신부 안내](../../firmware/receiver_c6/README.md)) |
+| 수신부 ACK | 알림 화면을 LCD로 보낸 뒤 원래 세 값으로 응답, 중복 이벤트는 알림 반복 없이 ACK (구현됨) |
 
-현재 예제에 새 ID만 보내면 수신되지 않는다. ACK는 소프트웨어 접수 확인이며 LED·진동 동작 완료 확인은 아니다. 상세 길이·세션·중복·절전·오류 벡터는 기존 프로토콜 문서를 따른다.
+ACK는 사용자가 알림을 봤다는 확인이 아니다. 상세 길이·세션·중복·절전·오류 벡터는 [프로토콜 문서](../communication/README.md)를 따른다.
 
 ## 6. 저장소를 받은 뒤 모델 무결성 확인
 

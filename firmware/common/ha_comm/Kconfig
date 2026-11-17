@@ -1,0 +1,72 @@
+menu "Hearing Alert communication"
+
+    config HA_WIFI_SSID
+        string "SoftAP SSID (S3 creates, C3 joins)"
+        default "HearingAlert-Test"
+        help
+            Must be identical on both boards. Set a product-specific value in
+            menuconfig; never commit a household Wi-Fi password.
+
+    config HA_WIFI_PASSWORD
+        string "SoftAP WPA2 password (8..63 chars)"
+        default "hearing-test-2026"
+        help
+            Development credential reused from the TEST firmware. The firmware
+            never prints it.
+
+    config HA_WIFI_CHANNEL
+        int "SoftAP channel (2.4 GHz)"
+        range 1 13
+        default 6
+
+    config HA_UDP_PORT
+        int "UDP port (both directions)"
+        range 1024 65535
+        default 4210
+
+    config HA_AP_BEACON_INTERVAL_TU
+        int "S3 beacon interval [TU, multiples of 100]"
+        range 100 1000
+        default 100
+        help
+            1 TU = 1024 us. ESP-IDF requires multiples of 100.
+
+    config HA_AP_DTIM_PERIOD
+        int "S3 DTIM period [beacons]"
+        range 1 10
+        default 3
+        help
+            C3 uses WIFI_PS_MIN_MODEM and wakes for every DTIM beacon.
+            100 TU x 3 = 307.2 ms nominal receive interval, the closest supported
+            value to the 300 ms target (2026-11-10 meeting). Exactly 300 ms is
+            not configurable. The old TEST firmware used DTIM=1 (102.4 ms).
+
+    config HA_HELLO_INTERVAL_MS
+        int "C3 HELLO/heartbeat interval [ms]"
+        default 10000
+
+    config HA_PEER_STALE_MS
+        int "S3: mark C3 stale after no HELLO for [ms]"
+        default 35000
+
+    config HA_DIAG_ALLOW_TEST_EVENT
+        bool "DIAGNOSTIC: allow TEST(1) event id (enable on BOTH boards)"
+        default n
+        help
+            Product builds reject TEST. Only for communication experiments.
+
+    config HA_TIME_DELIVERY_BOUND_MS
+        int "TIME_SYNC delivery-delay bound added to uncertainty [ms]"
+        default 1000
+
+    config HA_TIME_DRIFT_PPM
+        int "C3 clock drift assumed for uncertainty growth [ppm]"
+        default 1000
+        help
+            Conservative placeholder; not measured on the SuperMini.
+
+    config HA_TIME_STALE_AFTER_S
+        int "C3 clock considered stale after no sync for [s]"
+        default 86400
+
+endmenu

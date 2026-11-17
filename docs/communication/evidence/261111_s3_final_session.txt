@@ -1,0 +1,140 @@
+2026-11-11 19:28:44 I (366924) softap_test: receiver registered session=698852790
+2026-11-11 19:28:44 W (366924) softap_test: RETRY_PENDING seq=117; retrying retained event
+2026-11-11 19:28:44 I (366924) softap_test: TX seq=117 attempt=1
+2026-11-11 19:28:44 I (366944) softap_test: ACK seq=117 elapsed=14449ms attempts=1
+2026-11-11 19:28:44 I (366954) softap_test: TX seq=118 attempt=1
+2026-11-11 19:28:44 I (366954) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=0
+2026-11-11 19:28:44 I (366964) softap_test: ACK seq=118 elapsed=15ms attempts=1
+2026-11-11 19:28:47 I (369964) softap_test: TX seq=119 attempt=1
+2026-11-11 19:28:47 I (370004) softap_test: ACK seq=119 elapsed=40ms attempts=1
+2026-11-11 19:28:50 I (373004) softap_test: TX seq=120 attempt=1
+2026-11-11 19:28:50 I (373074) softap_test: ACK seq=120 elapsed=76ms attempts=1
+2026-11-11 19:28:53 I (376024) softap_test: TX seq=121 attempt=1
+2026-11-11 19:28:53 I (376144) softap_test: ACK seq=121 elapsed=123ms attempts=1
+2026-11-11 19:28:54 I (377154) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=0
+2026-11-11 19:28:56 I (379054) softap_test: TX seq=122 attempt=1
+2026-11-11 19:28:56 I (379114) softap_test: ACK seq=122 elapsed=64ms attempts=1
+2026-11-11 19:28:56 I (379114) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:28:56 I (379114) softap_test: C3_PM session=698852790 sleep_count=0 reject_count=0
+2026-11-11 19:28:59 I (382064) softap_test: TX seq=123 attempt=1
+2026-11-11 19:28:59 I (382174) softap_test: ACK seq=123 elapsed=113ms attempts=1
+2026-11-11 19:29:02 I (385074) softap_test: TX seq=124 attempt=1
+2026-11-11 19:29:02 I (385154) softap_test: ACK seq=124 elapsed=85ms attempts=1
+2026-11-11 19:29:05 I (388104) softap_test: TX seq=125 attempt=1
+2026-11-11 19:29:05 I (388114) softap_test: ACK seq=125 elapsed=10ms attempts=1
+2026-11-11 19:29:06 I (389184) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:29:06 I (389184) softap_test: C3_PM session=698852790 sleep_count=110 reject_count=0
+2026-11-11 19:29:08 I (391134) softap_test: TX seq=126 attempt=1
+2026-11-11 19:29:08 I (391214) softap_test: ACK seq=126 elapsed=82ms attempts=1
+2026-11-11 19:29:11 I (394164) softap_test: TX seq=127 attempt=1
+2026-11-11 19:29:11 I (394274) softap_test: ACK seq=127 elapsed=113ms attempts=1
+2026-11-11 19:29:14 I (397174) softap_test: TX seq=128 attempt=1
+2026-11-11 19:29:14 I (397224) softap_test: ACK seq=128 elapsed=56ms attempts=1
+2026-11-11 19:29:16 I (399344) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:29:16 I (399354) softap_test: C3_PM session=698852790 sleep_count=217 reject_count=0
+2026-11-11 19:29:17 I (400204) softap_test: TX seq=129 attempt=1
+2026-11-11 19:29:17 I (400294) softap_test: ACK seq=129 elapsed=96ms attempts=1
+2026-11-11 19:29:20 I (403244) softap_test: TX seq=130 attempt=1
+2026-11-11 19:29:20 I (403264) softap_test: ACK seq=130 elapsed=28ms attempts=1
+2026-11-11 19:29:23 I (406264) softap_test: TX seq=131 attempt=1
+2026-11-11 19:29:23 I (406374) softap_test: ACK seq=131 elapsed=113ms attempts=1
+2026-11-11 19:29:26 I (409294) softap_test: TX seq=132 attempt=1
+2026-11-11 19:29:26 I (409324) softap_test: ACK seq=132 elapsed=31ms attempts=1
+2026-11-11 19:29:27 I (410374) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:29:27 I (410374) softap_test: C3_PM session=698852790 sleep_count=335 reject_count=0
+2026-11-11 19:29:29 I (412324) softap_test: TX seq=133 attempt=1
+2026-11-11 19:29:29 I (412374) softap_test: ACK seq=133 elapsed=57ms attempts=1
+2026-11-11 19:29:32 I (415324) softap_test: TX seq=134 attempt=1
+2026-11-11 19:29:32 I (415354) softap_test: ACK seq=134 elapsed=32ms attempts=1
+2026-11-11 19:29:35 I (418354) softap_test: TX seq=135 attempt=1
+2026-11-11 19:29:35 I (418424) softap_test: ACK seq=135 elapsed=70ms attempts=1
+2026-11-11 19:29:38 I (420544) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:29:38 I (420544) softap_test: C3_PM session=698852790 sleep_count=447 reject_count=0
+2026-11-11 19:29:38 I (421394) softap_test: TX seq=136 attempt=1
+2026-11-11 19:29:38 I (421494) softap_test: ACK seq=136 elapsed=106ms attempts=1
+2026-11-11 19:29:41 I (424394) softap_test: TX seq=137 attempt=1
+2026-11-11 19:29:41 I (424464) softap_test: ACK seq=137 elapsed=75ms attempts=1
+2026-11-11 19:29:44 I (427414) softap_test: TX seq=138 attempt=1
+2026-11-11 19:29:44 I (427434) softap_test: ACK seq=138 elapsed=24ms attempts=1
+2026-11-11 19:29:47 I (430434) softap_test: TX seq=139 attempt=1
+2026-11-11 19:29:48 I (430504) softap_test: ACK seq=139 elapsed=74ms attempts=1
+2026-11-11 19:29:49 I (431564) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:29:49 I (431564) softap_test: C3_PM session=698852790 sleep_count=568 reject_count=0
+2026-11-11 19:29:50 I (433464) softap_test: TX seq=140 attempt=1
+2026-11-11 19:29:50 I (433474) softap_test: ACK seq=140 elapsed=11ms attempts=1
+2026-11-11 19:29:53 I (436474) softap_test: TX seq=141 attempt=1
+2026-11-11 19:29:54 I (436544) softap_test: ACK seq=141 elapsed=77ms attempts=1
+2026-11-11 19:29:56 I (439494) softap_test: TX seq=142 attempt=1
+2026-11-11 19:29:57 I (439514) softap_test: ACK seq=142 elapsed=25ms attempts=1
+2026-11-11 19:29:59 I (441644) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:29:59 I (441644) softap_test: C3_PM session=698852790 sleep_count=676 reject_count=0
+2026-11-11 19:29:59 I (442494) softap_test: TX seq=143 attempt=1
+2026-11-11 19:30:00 I (442584) softap_test: ACK seq=143 elapsed=96ms attempts=1
+2026-11-11 19:30:03 I (445534) softap_test: TX seq=144 attempt=1
+2026-11-11 19:30:03 I (445564) softap_test: ACK seq=144 elapsed=35ms attempts=1
+2026-11-11 19:30:06 I (448564) softap_test: TX seq=145 attempt=1
+2026-11-11 19:30:06 I (448624) softap_test: ACK seq=145 elapsed=67ms attempts=1
+2026-11-11 19:30:09 I (451584) softap_test: TX seq=146 attempt=1
+2026-11-11 19:30:09 I (451604) softap_test: ACK seq=146 elapsed=25ms attempts=1
+2026-11-11 19:30:10 I (452654) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:30:10 I (452654) softap_test: C3_PM session=698852790 sleep_count=796 reject_count=0
+2026-11-11 19:30:12 I (454604) softap_test: TX seq=147 attempt=1
+2026-11-11 19:30:12 I (454674) softap_test: ACK seq=147 elapsed=74ms attempts=1
+2026-11-11 19:30:15 I (457624) softap_test: TX seq=148 attempt=1
+2026-11-11 19:30:15 I (457664) softap_test: ACK seq=148 elapsed=48ms attempts=1
+2026-11-11 19:30:18 I (460664) softap_test: TX seq=149 attempt=1
+2026-11-11 19:30:18 I (460714) softap_test: ACK seq=149 elapsed=51ms attempts=1
+2026-11-11 19:30:20 I (462844) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:30:20 I (462844) softap_test: C3_PM session=698852790 sleep_count=906 reject_count=0
+2026-11-11 19:30:21 I (463694) softap_test: TX seq=150 attempt=1
+2026-11-11 19:30:21 I (463784) softap_test: ACK seq=150 elapsed=93ms attempts=1
+2026-11-11 19:30:24 I (466734) softap_test: TX seq=151 attempt=1
+2026-11-11 19:30:24 I (466754) softap_test: ACK seq=151 elapsed=20ms attempts=1
+2026-11-11 19:30:27 I (469754) softap_test: TX seq=152 attempt=1
+2026-11-11 19:30:27 I (469824) softap_test: ACK seq=152 elapsed=75ms attempts=1
+2026-11-11 19:30:30 I (472784) softap_test: TX seq=153 attempt=1
+2026-11-11 19:30:30 I (472794) softap_test: ACK seq=153 elapsed=15ms attempts=1
+2026-11-11 19:30:31 I (473854) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:30:31 I (473854) softap_test: C3_PM session=698852790 sleep_count=1025 reject_count=0
+2026-11-11 19:30:33 I (475804) softap_test: TX seq=154 attempt=1
+2026-11-11 19:30:33 I (475864) softap_test: ACK seq=154 elapsed=66ms attempts=1
+2026-11-11 19:30:36 I (478814) softap_test: TX seq=155 attempt=1
+2026-11-11 19:30:36 I (478834) softap_test: ACK seq=155 elapsed=24ms attempts=1
+2026-11-11 19:30:39 I (481834) softap_test: TX seq=156 attempt=1
+2026-11-11 19:30:39 I (481904) softap_test: ACK seq=156 elapsed=75ms attempts=1
+2026-11-11 19:30:41 I (484034) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:30:41 I (484034) softap_test: C3_PM session=698852790 sleep_count=1135 reject_count=0
+2026-11-11 19:30:42 I (484834) softap_test: TX seq=157 attempt=1
+2026-11-11 19:30:42 I (484874) softap_test: ACK seq=157 elapsed=46ms attempts=1
+2026-11-11 19:30:45 I (487874) softap_test: TX seq=158 attempt=1
+2026-11-11 19:30:45 I (487944) softap_test: ACK seq=158 elapsed=78ms attempts=1
+2026-11-11 19:30:48 I (490894) softap_test: TX seq=159 attempt=1
+2026-11-11 19:30:48 I (490914) softap_test: ACK seq=159 elapsed=29ms attempts=1
+2026-11-11 19:30:51 I (493894) softap_test: TX seq=160 attempt=1
+2026-11-11 19:30:51 I (493984) softap_test: ACK seq=160 elapsed=99ms attempts=1
+2026-11-11 19:30:52 I (495034) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:30:52 I (495034) softap_test: C3_PM session=698852790 sleep_count=1255 reject_count=0
+2026-11-11 19:30:54 I (496934) softap_test: TX seq=161 attempt=1
+2026-11-11 19:30:54 I (496954) softap_test: ACK seq=161 elapsed=28ms attempts=1
+2026-11-11 19:30:57 I (499954) softap_test: TX seq=162 attempt=1
+2026-11-11 19:30:57 I (500034) softap_test: ACK seq=162 elapsed=82ms attempts=1
+2026-11-11 19:31:00 I (502984) softap_test: TX seq=163 attempt=1
+2026-11-11 19:31:00 I (503004) softap_test: ACK seq=163 elapsed=22ms attempts=1
+2026-11-11 19:31:02 I (505124) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:31:02 I (505124) softap_test: C3_PM session=698852790 sleep_count=1368 reject_count=0
+2026-11-11 19:31:03 I (506024) softap_test: TX seq=164 attempt=1
+2026-11-11 19:31:03 I (506074) softap_test: ACK seq=164 elapsed=52ms attempts=1
+2026-11-11 19:31:06 I (509024) softap_test: TX seq=165 attempt=1
+2026-11-11 19:31:06 I (509044) softap_test: ACK seq=165 elapsed=22ms attempts=1
+2026-11-11 19:31:09 I (512044) softap_test: TX seq=166 attempt=1
+2026-11-11 19:31:09 I (512114) softap_test: ACK seq=166 elapsed=75ms attempts=1
+2026-11-11 19:31:12 I (515064) softap_test: TX seq=167 attempt=1
+2026-11-11 19:31:12 I (515084) softap_test: ACK seq=167 elapsed=26ms attempts=1
+2026-11-11 19:31:13 I (516144) softap_test: C3_STATE modem_sleep=MIN auto_light_sleep=1
+2026-11-11 19:31:13 I (516154) softap_test: C3_PM session=698852790 sleep_count=1488 reject_count=0
+2026-11-11 19:31:15 I (518104) softap_test: TX seq=168 attempt=1
+2026-11-11 19:31:15 I (518154) softap_test: ACK seq=168 elapsed=57ms attempts=1
+2026-11-11 19:31:18 I (521104) softap_test: TX seq=169 attempt=1
+2026-11-11 19:31:18 I (521164) softap_test: ACK seq=169 elapsed=62ms attempts=1
+--- Command: 'exit'
+

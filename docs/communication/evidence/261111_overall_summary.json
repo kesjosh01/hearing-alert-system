@@ -1,0 +1,31 @@
+{
+  "unique_events": 169,
+  "acks": 169,
+  "missing_ack": [],
+  "total_transmissions": 194,
+  "extra_transmissions": 25,
+  "sessions": [
+    "3900311573",
+    "1949936990",
+    "698852790"
+  ],
+  "recovered_events": [
+    {
+      "time": "2026-11-11 19:24:46",
+      "seq": 42,
+      "ms": 2958,
+      "batch_attempt": 2,
+      "total_transmissions": 6
+    },
+    {
+      "time": "2026-11-11 19:28:44",
+      "seq": 117,
+      "ms": 14449,
+      "batch_attempt": 1,
+      "total_transmissions": 21
+    }
+  ],
+  "test_stopped_by_user": true,
+  "requested_steady_events": 100,
+  "steady_events_observed": 44
+}
