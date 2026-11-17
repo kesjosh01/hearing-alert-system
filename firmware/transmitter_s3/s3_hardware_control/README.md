@@ -1,10 +1,12 @@
-# Transmitter 하드웨어 제어 테스트
+# ESP32-S3 Transmitter
 
 ## 1. 프로젝트 개요
 
-ESP32-S3 기반 송신부(Transmitter)의 하드웨어 기본 동작을 테스트하기 위한 프로젝트입니다.
+ESP32-S3 기반 청각 알림 시스템의 송신부(Transmitter)를 개발하는 프로젝트입니다.
 
-마이크 입력과 LED 제어 기능을 개별적으로 확인하고, 이후 소리 분류 및 무선 통신 기능을 통합하기 위한 기초 환경을 구성합니다.
+INMP441 디지털 마이크를 통해 주변 소리를 수집하고, 도어벨 및 화재경보기와 같은 특정 소리를 구분하여 청각 알림 시스템에 활용하는 것을 목표로 합니다.
+
+현재까지 진행한 작업은 실제 장치에서 소리 수집 및 구분이 가능한지 확인하기 위한 기초 하드웨어 테스트와 사전 실험입니다.
 
 ## 2. 개발 환경
 
@@ -32,34 +34,35 @@ ESP32-S3 기반 송신부(Transmitter)의 하드웨어 기본 동작을 테스�
 
 ## 5. 전원 구성
 
-- INMP441: 3.3V 전원 사용
-- WS2812B: 외부 5V 전원 사용
-- SN74AHCT125N: 5V 전원 사용
-- 모든 부품은 공통 GND를 사용합니다.
+- INMP441: 3.3V 전원
+- WS2812B: 외부 5V 전원
+- SN74AHCT125N: 5V 전원
+- 모든 부품은 공통 GND 사용
 
-## 6. 구현 기능
+## 6. 현재까지 진행한 작업
 
-- INMP441 마이크의 I2S 오디오 데이터 입력
-- 시리얼 모니터를 통한 오디오 신호 크기 확인
-- WS2812B RGB LED 색상 제어
-- LED 밝기 제어
-- SN74AHCT125N을 이용한 데이터 신호 레벨 변환
+- ESP32-S3 초기화 및 기본 동작 확인
+- INMP441을 이용한 I2S 오디오 데이터 수집
+- PCM 오디오 데이터 녹음 및 파형 분석
+- 도어벨과 화재경보기 소리 구분 가능성 테스트
+- DTW 기반 기준 파형 비교 실험
+- WS2812B RGB LED 제어 테스트
 
-## 7. 현재 개발 상태
+※ DTW는 소리 구분 가능성을 확인하기 위해 사용한 실험적인 방법이며, 최종 소리 분류 알고리즘으로 확정된 것은 아닙니다.
 
-| 기능 | 진행 상태 |
-|---|---|
-| ESP32-S3 초기화 | 완료 |
-| INMP441 마이크 입력 테스트 | 완료 |
-| 오디오 신호 크기 확인 | 완료 |
-| WS2812B LED 제어 | 테스트 진행 |
-| LED 밝기 제어 | 테스트 진행 |
-| DS-CNN 소리 분류 통합 | 미진행 |
-| SoftAP 무선 통신 통합 | 미진행 |
+## 7. 향후 개발 방향
+
+- 실제 장치 환경에 적합한 소리 분류 방식 선정
+- 소리 종류별 판별 성능 및 정확도 개선
+- 소리 발생 초기 구간에서의 빠른 판정
+- LED를 통한 소리 종류 표시
+- SoftAP 기반 무선 통신 및 수신부 통합
 
 ## 8. 빌드 및 실행 방법
 
-프로젝트 루트 디렉터리에서 다음 명령어를 실행합니다.
+프로젝트 루트 디렉터리에서 실행합니다.
+
+빌드:
 
 ```bash
 idf.py build
@@ -71,7 +74,7 @@ idf.py build
 idf.py -p PORT flash
 ```
 
-시리얼 모니터 실행:
+시리얼 모니터:
 
 ```bash
 idf.py -p PORT monitor
@@ -85,15 +88,20 @@ idf.py -p PORT monitor
 s3_hardware_control/
 ├── main/
 │   ├── main.c
+│   ├── dtw_classifier.c
+│   ├── dtw_classifier.h
+│   ├── dtw_reference.h
 │   └── CMakeLists.txt
+├── doorbell_reference.npy
+├── fire_alarm_reference.npy
+├── generate_dtw_reference.py
+├── compare_dtw.py
+├── compare_waveforms.py
+├── check_reference.py
+├── convert_to_header.py
+├── receive_wav.py
 ├── CMakeLists.txt
 ├── sdkconfig
-├── .gitignore
 └── README.md
 ```
 
-## 10. 참고 사항
-
-본 프로젝트는 송신부 하드웨어 제어 기능을 독립적으로 테스트하기 위한 프로젝트입니다.
-
-소리 분류 기능(DS-CNN)과 SoftAP 기반 무선 통신 기능은 추후 통합할 예정입니다.
