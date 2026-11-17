@@ -104,7 +104,7 @@ int ha_frame_version(const uint8_t *buf, size_t len);
 size_t ha_time_sync_encode(const ha_time_sync_t *msg, uint8_t out[HA_V2_TIME_SYNC_LEN]);
 ha_decode_result_t ha_time_sync_decode(const uint8_t *buf, size_t len, ha_time_sync_t *out);
 
-/* Field rules from docs/communication/README.md section 4. */
+/* Field rules from docs/communication/README.md section 3. */
 bool ha_v1_hello_fields_valid(const ha_v1_frame_t *f);  /* seq==0 && value==0 */
 bool ha_v1_event_fields_valid(const ha_v1_frame_t *f);  /* seq!=0 (id checked separately) */
 

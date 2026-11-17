@@ -2,11 +2,15 @@
 set -uo pipefail
 role=$1
 source "$HEARING_IDF_PATH/export.sh" >/dev/null 2>&1
-# HEARING_FIRMWARE=product selects firmware/{transmitter_s3,receiver_c3}; default: TEST experiment.
+# HEARING_FIRMWARE=product selects firmware/{transmitter_s3,receiver_c6} (XIAO ESP32-C6
+# receiver); default: TEST experiment (C3 SuperMini). The receiver role/port keep the
+# historical "c3" name (HEARING_C3_PORT, c3.log) so existing commands still work.
 if [[ "${HEARING_FIRMWARE:-test}" = product ]]; then
+    rx_target=esp32c6
     if [[ "$role" = s3 ]]; then elf="$HEARING_PROJECT_ROOT/firmware/transmitter_s3/build/hearing_alert_s3.elf"
-    else elf="$HEARING_PROJECT_ROOT/firmware/receiver_c3/build/hearing_alert_c3.elf"; fi
+    else elf="$HEARING_PROJECT_ROOT/firmware/receiver_c6/build/hearing_alert_c6.elf"; fi
 else
+    rx_target=esp32c3
     elf="$HEARING_PROJECT_ROOT/communication_tests/softap_udp/build/$role/hearing_softap_test.elf"
 fi
 control="$HEARING_MONITOR_LOG_DIR/$role.control"
@@ -22,7 +26,7 @@ else
     printf '[C3 USB]는 늦게 표시될 수 있습니다. [C3→S3 Wi-Fi]의 ACK가 실제 무선 응답입니다.\n'
     printf 'ACK는 S3에 도착한 소프트웨어 처리 확인이며, LED·진동 동작 확인은 아닙니다.\n'
     python -m esp_idf_monitor --no-reset --timestamps \
-        --target esp32c3 -p "$HEARING_C3_PORT" -b 115200 "$elf" \
+        --target "$rx_target" -p "$HEARING_C3_PORT" -b 115200 "$elf" \
         <&3 > "$HEARING_MONITOR_LOG_DIR/c3.log" 2>&1 &
     monitor_pid=$!
     trap 'kill "$monitor_pid" 2>/dev/null || true' EXIT

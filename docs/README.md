@@ -1,13 +1,10 @@
 # 문서
 
-- `architecture/`: 시스템 구성, 데이터 흐름 및 하드웨어 설계를 기록할 예정입니다.
-- `communication/`: 확정된 Wi-Fi SoftAP 통신의 선정 배경 및 세부 설계를 기록할 예정입니다.
-- `ml/`: 데이터·모델 조사와 경량화 계획을 기록할 예정입니다.
-- `test_results/`: 실험 조건, 측정 결과 및 한계를 기록할 예정입니다.
+| 디렉터리 | 내용 |
+| --- | --- |
+| [`architecture/`](architecture/README.md) | 시스템 구성과 절전 통신 구조 |
+| [`communication/`](communication/README.md) | S3 ↔ 수신부 이벤트 프로토콜 v1, 전송·ACK 정책, 통신 시험 로그 |
+| [`ml/`](ml/README.md) | 모델 개발 현황, [통신 담당자용 모델 연결 안내](ml/MODEL_HANDOFF.md) |
+| [`test_results/`](test_results/README.md) | 실험 조건·측정 결과·한계, 원본 로그(`evidence/`) |
 
-현재는 초기 안내 문서만 있습니다. 조사·계획과 실제 구현·측정 결과를 구분해 기록합니다.
-
-- [모델 개발·학습 진행 상황](ml/DEVELOPMENT_STATUS_2026-11-14.md)
-- [통신 담당자용 모델 연결 안내](ml/MODEL_HANDOFF.md)
-
-ML 코드·모델·평가 기록은 위 안내에서 연결하며 기존 통신·시험 기록은 각 디렉터리에 보존합니다.
+보드별 사용법은 각 펌웨어 README([송신부 S3](../firmware/transmitter_s3/README.md), [수신부 C6](../firmware/receiver_c6/README.md))에 있습니다. 조사·계획과 실제 구현·측정 결과를 구분해 기록합니다.

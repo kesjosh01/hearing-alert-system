@@ -1,6 +1,6 @@
 # ha_comm — S3·C3 공통 통신 코어
 
-ESP32-S3 송신부(`firmware/transmitter_s3/`)와 ESP32-C3 수신부(`firmware/receiver_c3/`)가 함께 링크하는 ESP-IDF 컴포넌트입니다. `src/`에는 ESP-IDF API가 없는 portable C만 두어, 펌웨어에 들어가는 코드와 **같은 파일**을 PC에서 단위 시험합니다. Wi-Fi·소켓·FreeRTOS 연결부는 각 보드의 `components/ha_sender`, `components/ha_receiver`에 있습니다.
+ESP32-S3 송신부(`firmware/transmitter_s3/`)와 XIAO ESP32-C6 수신부(`firmware/receiver_c6/`)가 함께 링크하는 ESP-IDF 컴포넌트입니다. 코드·문서의 "C3"(`c3_session`, `HA_HELLO_C3_REBOOTED` 등)는 2026-11-17 보드 변경 뒤에도 "수신부"를 뜻하는 이름으로 유지합니다. `src/`에는 ESP-IDF API가 없는 portable C만 두어, 펌웨어에 들어가는 코드와 **같은 파일**을 PC에서 단위 시험합니다. Wi-Fi·소켓·FreeRTOS 연결부는 각 보드의 `components/ha_sender`, `components/ha_receiver`에 있습니다.
 
 | 파일 | 역할 |
 | --- | --- |
@@ -8,6 +8,7 @@ ESP32-S3 송신부(`firmware/transmitter_s3/`)와 ESP32-C3 수신부(`firmware/r
 | `include/ha_events.h`, `src/ha_events.c` | 공개 이벤트 등록 테이블: ID·이름·제품 허용 여부·포화 보호·TTL·동시 감지 순서 |
 | `include/ha_tx.h`, `src/ha_tx.c` | S3 대기열, stop-and-wait 재전송·backoff, ACK 세 필드 검증, 단일 수신기 등록 상태 |
 | `include/ha_rx.h`, `src/ha_rx.c` | C3 EVENT 검증, 중복·충돌 판정, “접수 성공 → 기록 → ACK” 계약 |
+| `include/ha_rx_pending.h`, `src/ha_rx_pending.c` | 수신부 "접수했지만 아직 화면에 안 뜬" 이벤트 표. 화면 전송 후 ACK 계약(2026-11-17)에서 그 사이 재전송에 ACK하지 않게 하고, 화면 감시에 가장 오래 기다린 항목을 알려 줌 |
 | `include/ha_time.h`, `src/ha_time.c` | C3 시각 상태(미동기화/동기화/오래됨), 경과 시간·불확실성 계산 |
 | `include/ha_config.h`, `Kconfig` | SSID·포트·비콘/DTIM·타이밍·큐 크기 등 공동 설정. 펌웨어는 Kconfig, 호스트 시험은 같은 기본값 사용 |
 | `test/host/` | 호스트 단위 시험 (`run_tests.sh`) |
@@ -24,7 +25,7 @@ bash firmware/common/ha_comm/test/host/run_tests.sh
 
 ### v1 (변경 없음)
 
-`docs/communication/README.md` 4절의 16바이트 프레임을 그대로 사용합니다. 길이를 먼저 검사하므로 17바이트 이상의 데이터그램을 16바이트로 잘라 정상으로 처리하지 않습니다. 수신 버퍼는 `HA_RX_BUFFER_LEN`(최대 프레임 + 1바이트)입니다.
+`docs/communication/README.md` 3절의 16바이트 프레임을 그대로 사용합니다. 길이를 먼저 검사하므로 17바이트 이상의 데이터그램을 16바이트로 잘라 정상으로 처리하지 않습니다. 수신 버퍼는 `HA_RX_BUFFER_LEN`(최대 프레임 + 1바이트)입니다.
 
 ### v2 TIME_SYNC (신규 확장, 선택 기능)
 
@@ -58,7 +59,7 @@ v1 EVENT의 `event_id`를 timestamp로 재해석하지 않고, 버전과 길이 
 2. `ha_events.c` 테이블에 한 줄을 추가합니다: 이름, `product`, 포화 보호(`evict_protected`), TTL. 테이블 순서가 동시 감지 시 접수 순서입니다.
 3. TTL을 설정으로 바꾸려면 `transmitter_s3/components/ha_sender/Kconfig`와 `ha_config.h`에 항목을 추가합니다.
 4. `test/host/test_ha_comm.c`에 EVENT/ACK 벡터와 허용 시험을 추가합니다.
-5. C3 UI 팀의 ID → 표시·진동 매핑, ML 팀의 라벨 → ID 매핑을 함께 갱신합니다.
+5. 수신부 화면·진동 매핑(`firmware/receiver_c6/components/ha_ui_core/`의 presenter·화면·글꼴)과 ML 팀의 라벨 → ID 매핑을 함께 갱신합니다.
 6. **C3를 먼저 배포**합니다. 구형 C3는 미등록 ID를 폐기하므로(알림·ACK·중복 기록 없음) S3가 재전송만 하다가 TTL로 만료됩니다.
 7. 프레임 필드·크기·의미를 바꿀 때만 새 프로토콜 버전을 만듭니다. ID 추가만으로는 v1을 유지합니다.
 

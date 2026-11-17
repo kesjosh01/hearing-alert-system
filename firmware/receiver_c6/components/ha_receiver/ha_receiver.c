@@ -1,5 +1,6 @@
 /*
- * C3 receiver glue around the portable ha_rx / ha_time core.
+ * C6 receiver (Seeed XIAO ESP32-C6) glue around the portable ha_rx / ha_time
+ * core.
  *
  * Tasks:
  *  - rx task: blocks in recvfrom() (no timeout, no polling) so the CPU can
@@ -30,6 +31,7 @@
 #include "esp_random.h"
 #include "esp_timer.h"
 #include "esp_wifi.h"
+#include "driver/gpio.h"
 #include "freertos/event_groups.h"
 #include "freertos/queue.h"
 #include "freertos/semphr.h"
@@ -39,18 +41,25 @@
 
 #include "ha_config.h"
 #include "ha_proto.h"
+#include "ha_rx_pending.h"
 
-#if !CONFIG_IDF_TARGET_ESP32C3
-#error "ha_receiver is the ESP32-C3 STA receiver"
+#if !CONFIG_IDF_TARGET_ESP32C6
+#error "ha_receiver is the ESP32-C6 (XIAO) STA receiver"
 #endif
 #if !CONFIG_PM_ENABLE || !CONFIG_FREERTOS_USE_TICKLESS_IDLE
-#error "C3 receiver requires CONFIG_PM_ENABLE and CONFIG_FREERTOS_USE_TICKLESS_IDLE"
+#error "C6 receiver requires CONFIG_PM_ENABLE and CONFIG_FREERTOS_USE_TICKLESS_IDLE"
 #endif
 #if CONFIG_HA_RX_PM_REPORT && !CONFIG_PM_PROFILING
 #error "CONFIG_HA_RX_PM_REPORT needs CONFIG_PM_PROFILING for the SDK sleep counters"
 #endif
 
 static const char *TAG = "ha_receiver";
+
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+#define HA_RX_ACK_MODE_STR "after display"
+#else
+#define HA_RX_ACK_MODE_STR "on acceptance"
+#endif
 
 #define GOT_IP_BIT BIT0
 #define HELLO_DUE_BIT BIT1
@@ -60,13 +69,17 @@ static QueueHandle_t s_alert_q;
 static SemaphoreHandle_t s_state_lock; /* stats copy + clock */
 static volatile bool s_consumer;
 static ha_rx_t s_rx;
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+static ha_rx_pending_t s_pending; /* accepted, waiting for the screen; under s_state_lock */
+#endif
 static ha_clock_t s_clock;
-static uint32_t s_c3_session;
+static uint32_t s_rx_session; /* receiver boot session (HELLO session field) */
 static int s_fd = -1;
 static struct sockaddr_in s_ap;
 static uint32_t s_not_accepted_logged;
 
 static int64_t now_ms(void) { return esp_timer_get_time() / 1000; }
+static void send_v1(uint8_t type, uint32_t session, uint32_t seq, uint32_t value);
 
 /* ------------------------------------------------------------- public API */
 
@@ -86,6 +99,40 @@ bool ha_receiver_consumer_attached(void) { return s_consumer; }
 
 bool ha_receiver_wait_alert(ha_alert_t *out, TickType_t wait) {
     return s_alert_q && xQueueReceive(s_alert_q, out, wait) == pdTRUE;
+}
+
+esp_err_t ha_receiver_alert_displayed(const ha_alert_t *a) {
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+    if (!s_state_lock || !a) return ESP_ERR_INVALID_STATE;
+    xSemaphoreTake(s_state_lock, portMAX_DELAY);
+    bool was_pending = ha_rx_pending_take(&s_pending, a->s3_session, a->seq, a->event_id);
+    xSemaphoreGive(s_state_lock);
+    if (!was_pending) {
+        ESP_LOGW(TAG, "displayed seq=%" PRIu32 " was not waiting for display; no ACK", a->seq);
+        return ESP_ERR_NOT_FOUND;
+    }
+    send_v1(HA_MSG_ACK, a->s3_session, a->seq, a->event_id);
+    ESP_LOGI(TAG, "EVENT displayed id=0x%08" PRIx32 "(%s) seq=%" PRIu32 " -> ACK (%" PRId64
+             " ms after reception)", a->event_id, ha_event_name(a->event_id), a->seq,
+             now_ms() - a->received_mono_ms);
+    return ESP_OK;
+#else
+    (void)a;
+    return ESP_ERR_NOT_SUPPORTED;
+#endif
+}
+
+bool ha_receiver_oldest_undisplayed(int64_t *since) {
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+    if (!s_state_lock) return false;
+    xSemaphoreTake(s_state_lock, portMAX_DELAY);
+    bool any = ha_rx_pending_oldest(&s_pending, now_ms(), since);
+    xSemaphoreGive(s_state_lock);
+    return any;
+#else
+    (void)since;
+    return false;
+#endif
 }
 
 ha_clock_state_t ha_receiver_get_time(int64_t *utc_ms, uint32_t *uncertainty_ms) {
@@ -152,25 +199,45 @@ static void send_v1(uint8_t type, uint32_t session, uint32_t seq, uint32_t value
 static bool accept_alert(void *ctx, const ha_v1_frame_t *f) {
     (void)ctx;
     if (!s_consumer) return false;
-    ha_alert_t a = {f->value, f->session, f->seq, now_ms()};
-    return xQueueSend(s_alert_q, &a, 0) == pdTRUE;
+    int64_t now = now_ms();
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+    // Runs under s_state_lock (inside ha_rx_handle_event).
+    if (!ha_rx_pending_has_room(&s_pending, now)) return false;
+#endif
+    ha_alert_t a = {f->value, f->session, f->seq, now};
+    if (xQueueSend(s_alert_q, &a, 0) != pdTRUE) return false;
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+    ha_rx_pending_add(&s_pending, f->session, f->seq, f->value, now); // room checked above
+#endif
+    return true;
 }
 
 static void handle_event(const ha_v1_frame_t *f) {
     xSemaphoreTake(s_state_lock, portMAX_DELAY);
     ha_rx_outcome_t o = ha_rx_handle_event(&s_rx, f, accept_alert, NULL);
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+    // Accepted but not on screen yet: the ACK is sent by ha_receiver_alert_displayed().
+    bool waiting = ha_rx_pending_contains(&s_pending, f->session, f->seq);
+#else
+    bool waiting = false;
+#endif
     xSemaphoreGive(s_state_lock);
     // ACK repeats the received three fields (only after acceptance/dup check).
-    if (ha_rx_should_ack(o)) send_v1(HA_MSG_ACK, f->session, f->seq, f->value);
+    if (ha_rx_should_ack(o) && !waiting) send_v1(HA_MSG_ACK, f->session, f->seq, f->value);
     switch (o) {
     case HA_RX_ACK_NEW:
-        ESP_LOGI(TAG, "EVENT accepted id=0x%08" PRIx32 "(%s) session=%" PRIu32 " seq=%" PRIu32,
-                 f->value, ha_event_name(f->value), f->session, f->seq);
+        ESP_LOGI(TAG, "EVENT accepted id=0x%08" PRIx32 "(%s) session=%" PRIu32 " seq=%" PRIu32 "%s",
+                 f->value, ha_event_name(f->value), f->session, f->seq,
+                 waiting ? "; ACK after display" : "");
         break;
     case HA_RX_ACK_DUPLICATE:
     case HA_RX_ACK_STALE:
-        ESP_LOGI(TAG, "EVENT %s seq=%" PRIu32 "; re-ACK without new alert",
-                 ha_rx_outcome_name(o), f->seq);
+        if (waiting)
+            ESP_LOGI(TAG, "EVENT %s seq=%" PRIu32 "; not displayed yet, no ACK",
+                     ha_rx_outcome_name(o), f->seq);
+        else
+            ESP_LOGI(TAG, "EVENT %s seq=%" PRIu32 "; re-ACK without new alert",
+                     ha_rx_outcome_name(o), f->seq);
         break;
     case HA_RX_DROP_NOT_ACCEPTED:
         // Rate-limited: the S3 retransmits the same event until accepted.
@@ -228,7 +295,7 @@ static void rx_task(void *arg) {
             continue;
         }
         if (f.type == HA_MSG_EVENT) handle_event(&f);
-        // HELLO/ACK/PM/POWER are C3->S3 only: wrong direction, ignored.
+        // HELLO/ACK/PM/POWER are receiver->S3 only: wrong direction, ignored.
     }
 }
 
@@ -245,20 +312,20 @@ static void housekeeping_task(void *arg) {
             if (left <= 0) {
                 configure_pm(true);
                 light_sleep = true;
-                ESP_LOGI(TAG, "auto light-sleep enabled; USB console may pause (see S3 C3_PM)");
+                ESP_LOGI(TAG, "auto light-sleep enabled; USB console may pause (see S3 log C3_PM)");
             } else if (left < HA_HELLO_INTERVAL_MS) {
                 wait = pdMS_TO_TICKS(left);
             }
         }
         if (xEventGroupGetBits(s_bits) & GOT_IP_BIT) {
-            send_v1(HA_MSG_HELLO, s_c3_session, 0, 0);
+            send_v1(HA_MSG_HELLO, s_rx_session, 0, 0);
             wifi_ps_type_t ps = WIFI_PS_NONE;
             esp_wifi_get_ps(&ps);
-            send_v1(HA_MSG_POWER_STATE, s_c3_session, light_sleep ? 1 : 0, (uint32_t)ps);
+            send_v1(HA_MSG_POWER_STATE, s_rx_session, light_sleep ? 1 : 0, (uint32_t)ps);
 #if CONFIG_HA_RX_PM_REPORT
             uint32_t slept = 0, rejected = 0;
             if (light_sleep && get_sleep_counts(&slept, &rejected))
-                send_v1(HA_MSG_PM_STATS, s_c3_session, slept, rejected);
+                send_v1(HA_MSG_PM_STATS, s_rx_session, slept, rejected);
 #endif
         }
         xEventGroupWaitBits(s_bits, HELLO_DUE_BIT, pdTRUE, pdFALSE, wait);
@@ -266,6 +333,33 @@ static void housekeeping_task(void *arg) {
 }
 
 /* ------------------------------------------------------------------ Wi-Fi */
+
+/* XIAO ESP32-C6 RF switch (Seeed wiki): GPIO3 LOW enables switch control,
+ * GPIO14 selects the antenna (LOW on-board, HIGH U.FL). Must run before
+ * esp_wifi_start(). Held so the level survives automatic light-sleep. */
+#define XIAO_RF_SWITCH_EN_GPIO GPIO_NUM_3
+#define XIAO_RF_ANT_SEL_GPIO GPIO_NUM_14
+
+static esp_err_t board_rf_switch_init(void) {
+#if CONFIG_HA_RX_ANTENNA_EXTERNAL
+    const int ant_level = 1;
+#else
+    const int ant_level = 0;
+#endif
+    const gpio_config_t io = {
+        .pin_bit_mask = (1ULL << XIAO_RF_SWITCH_EN_GPIO) | (1ULL << XIAO_RF_ANT_SEL_GPIO),
+        .mode = GPIO_MODE_OUTPUT,
+    };
+    esp_err_t err = gpio_config(&io);
+    if (err != ESP_OK) return err;
+    gpio_set_level(XIAO_RF_SWITCH_EN_GPIO, 0);
+    gpio_set_level(XIAO_RF_ANT_SEL_GPIO, ant_level);
+    gpio_hold_en(XIAO_RF_SWITCH_EN_GPIO);
+    gpio_hold_en(XIAO_RF_ANT_SEL_GPIO);
+    ESP_LOGI(TAG, "RF switch: GPIO3=0 GPIO14=%d (%s antenna)", ant_level,
+             ant_level ? "external U.FL" : "on-board");
+    return ESP_OK;
+}
 
 static void net_event(void *arg, esp_event_base_t base, int32_t id, void *data) {
     (void)arg;
@@ -291,6 +385,8 @@ static esp_err_t start_sta(void) {
         err = nvs_flash_init();
     }
     if (err != ESP_OK) return err;
+    err = board_rf_switch_init();
+    if (err != ESP_OK) return err;
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     esp_netif_create_default_wifi_sta();
@@ -315,12 +411,17 @@ static esp_err_t start_sta(void) {
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &cfg));
     ESP_ERROR_CHECK(esp_wifi_start());
-    // This SuperMini associated reliably at 11 dBm in the 2026-10 bench comparison.
-    ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(44));
+#if CONFIG_HA_RX_MAX_TX_POWER_QDBM > 0
+    // Optional cap (0.25 dBm units). The C3 SuperMini's 11 dBm workaround is not
+    // assumed for the XIAO C6; set only after a bench comparison on this board.
+    ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(CONFIG_HA_RX_MAX_TX_POWER_QDBM));
+#endif
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_MIN_MODEM));
-    ESP_LOGI(TAG, "C3 STA ready; SSID=%s UDP=%d MIN_MODEM (wake per AP DTIM; expected %" PRIu32
-             "us with S3 defaults) tx_power=11dBm", HA_WIFI_SSID, HA_UDP_PORT,
-             (uint32_t)HA_NOMINAL_WAKE_US);
+    int8_t txp = 0;
+    esp_wifi_get_max_tx_power(&txp);
+    ESP_LOGI(TAG, "C6 STA ready; SSID=%s UDP=%d MIN_MODEM (wake per AP DTIM; expected %" PRIu32
+             "us with S3 defaults) max_tx_power=%d.%02d dBm", HA_WIFI_SSID, HA_UDP_PORT,
+             (uint32_t)HA_NOMINAL_WAKE_US, txp / 4, (txp % 4) * 25);
     return ESP_OK;
 }
 
@@ -332,9 +433,13 @@ static void diag_consumer_task(void *arg) {
     ha_receiver_attach_consumer();
     for (;;) {
         ha_alert_t a;
-        if (ha_receiver_wait_alert(&a, portMAX_DELAY))
+        if (ha_receiver_wait_alert(&a, portMAX_DELAY)) {
             ESP_LOGW(TAG, "DIAG_CONSUMER id=0x%08" PRIx32 "(%s) seq=%" PRIu32
                      " (log only; no UI output)", a.event_id, ha_event_name(a.event_id), a.seq);
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+            ha_receiver_alert_displayed(&a); // diagnostic: no screen, confirm after the log
+#endif
+        }
     }
 }
 #endif
@@ -347,10 +452,13 @@ esp_err_t ha_receiver_start(void) {
     s_state_lock = xSemaphoreCreateMutex();
     if (!s_bits || !s_alert_q || !s_state_lock) return ESP_ERR_NO_MEM;
     ha_rx_init(&s_rx, HA_ALLOW_TEST_EVENT);
+#if CONFIG_HA_RX_ACK_ON_DISPLAY
+    ha_rx_pending_init(&s_pending, 0); // keep entries up to the longest event TTL
+#endif
     ha_clock_config_t ccfg;
     ha_clock_default_config(&ccfg);
     ha_clock_init(&s_clock, &ccfg);
-    s_c3_session = esp_random();
+    s_rx_session = esp_random();
     s_ap = (struct sockaddr_in){.sin_family = AF_INET, .sin_port = htons(HA_UDP_PORT)};
     inet_pton(AF_INET, HA_AP_IP_STR, &s_ap.sin_addr);
 
@@ -368,8 +476,9 @@ esp_err_t ha_receiver_start(void) {
     if (xTaskCreate(rx_task, "ha_rx", 4096, NULL, 6, NULL) != pdPASS ||
         xTaskCreate(housekeeping_task, "ha_hk", 3072, NULL, 4, NULL) != pdPASS)
         return ESP_ERR_NO_MEM;
-    ESP_LOGI(TAG, "receiver started c3_session=%" PRIu32 " alert_queue=%d", s_c3_session,
-             HA_RX_ALERT_QUEUE_LEN);
+    ESP_LOGI(TAG, "receiver started session=%" PRIu32 " alert_queue=%d ack=%s", s_rx_session,
+             HA_RX_ALERT_QUEUE_LEN,
+             HA_RX_ACK_MODE_STR);
 #if CONFIG_HA_RX_DIAG_LOG_CONSUMER
     ESP_LOGW(TAG, "DIAGNOSTIC log consumer ENABLED (no real UI output)");
     xTaskCreate(diag_consumer_task, "ha_diag_ui", 3072, NULL, 3, NULL);

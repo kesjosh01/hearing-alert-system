@@ -14,6 +14,7 @@
 #include "ha_events.h"
 #include "ha_proto.h"
 #include "ha_rx.h"
+#include "ha_rx_pending.h"
 #include "ha_time.h"
 #include "ha_tx.h"
 
@@ -41,7 +42,7 @@ static int hex_to_bytes(const char *hex, uint8_t *out) {
 }
 
 /* ---------------------------------------------------------------- vectors */
-/* From docs/communication/README.md section 6 (session 0x12345678). */
+/* From docs/communication/README.md section 5 (session 0x12345678). */
 static const char *V_FIRE_EVENT = "48 41 01 02 12 34 56 78 00 00 00 01 00 00 01 00";
 static const char *V_FIRE_ACK = "48 41 01 03 12 34 56 78 00 00 00 01 00 00 01 00";
 static const char *V_DOOR_EVENT = "48 41 01 02 12 34 56 78 00 00 00 02 00 00 01 01";
@@ -638,6 +639,68 @@ static void test_registry(void) {
     CHECK_EQ(HA_NOMINAL_WAKE_US, 307200);
 }
 
+/* ACK-on-display (2026-11-17): accepted -> pending (no ACK) -> displayed -> ACK.
+ * Retransmissions while pending must stay silent; after display they re-ACK. */
+static bool accept_into_pending(void *ctx, const ha_v1_frame_t *f) {
+    ha_rx_pending_t *p = ctx;
+    return ha_rx_pending_add(p, f->session, f->seq, f->value, 0);
+}
+
+static void test_rx_pending_ack_on_display(void) {
+    ha_rx_pending_t p;
+    ha_rx_pending_init(&p, 0);
+    CHECK_EQ(p.max_age_ms, HA_TTL_FIRE_ALARM_MS); // longest registered TTL
+    CHECK_EQ(ha_rx_pending_count(&p), 0);
+
+    ha_rx_t rx;
+    ha_rx_init(&rx, false);
+    ha_v1_frame_t fire = {HA_MSG_EVENT, 77, 1, HA_EVENT_FIRE_ALARM};
+
+    // First reception: accepted into the UI queue, pending, ACK withheld by glue.
+    CHECK_EQ(ha_rx_handle_event(&rx, &fire, accept_into_pending, &p), HA_RX_ACK_NEW);
+    CHECK(ha_rx_pending_contains(&p, 77, 1));
+    // S3 retransmits before the screen is drawn: duplicate, still pending -> no ACK.
+    CHECK_EQ(ha_rx_handle_event(&rx, &fire, accept_into_pending, &p), HA_RX_ACK_DUPLICATE);
+    CHECK(ha_rx_pending_contains(&p, 77, 1));
+    CHECK_EQ(ha_rx_pending_count(&p), 1); // no second alert queued
+
+    // Wrong event id never confirms.
+    CHECK(!ha_rx_pending_take(&p, 77, 1, HA_EVENT_DOORBELL));
+    // Displayed: entry removed exactly once -> glue sends the ACK.
+    CHECK(ha_rx_pending_take(&p, 77, 1, HA_EVENT_FIRE_ALARM));
+    CHECK(!ha_rx_pending_take(&p, 77, 1, HA_EVENT_FIRE_ALARM));
+    // Retransmission after display (ACK lost): duplicate, not pending -> re-ACK.
+    CHECK_EQ(ha_rx_handle_event(&rx, &fire, accept_into_pending, &p), HA_RX_ACK_DUPLICATE);
+    CHECK(!ha_rx_pending_contains(&p, 77, 1));
+
+    // Full table refuses acceptance (no record, S3 keeps retransmitting).
+    ha_rx_pending_init(&p, 0);
+    for (uint32_t i = 0; i < HA_RX_PENDING_LEN; ++i)
+        CHECK(ha_rx_pending_add(&p, 9, i + 1, HA_EVENT_DOORBELL, (int64_t)i));
+    CHECK(!ha_rx_pending_has_room(&p, HA_TTL_DOORBELL_MS));
+    ha_rx_init(&rx, false);
+    ha_v1_frame_t bell = {HA_MSG_EVENT, 9, 100, HA_EVENT_DOORBELL};
+    CHECK_EQ(ha_rx_handle_event(&rx, &bell, accept_into_pending, &p), HA_RX_DROP_NOT_ACCEPTED);
+    // Oldest waiting entry (display watchdog input).
+    int64_t since = -1;
+    CHECK(ha_rx_pending_oldest(&p, 10, &since));
+    CHECK_EQ(since, 0);
+    // A doorbell entry ages out after the DOORBELL TTL (S3 gave up), not the fire TTL.
+    CHECK(ha_rx_pending_has_room(&p, (int64_t)HA_TTL_DOORBELL_MS + 1));
+    CHECK_EQ(ha_rx_pending_count(&p), HA_RX_PENDING_LEN - 1);
+    CHECK_EQ(p.aged_out, 1);
+    CHECK(ha_rx_pending_oldest(&p, (int64_t)HA_TTL_DOORBELL_MS + 1, &since));
+    CHECK_EQ(since, 1);
+    CHECK(ha_rx_pending_add(&p, 9, 100, HA_EVENT_DOORBELL, (int64_t)HA_TTL_DOORBELL_MS + 1));
+    // A fire entry of the same age is still waiting (10 min TTL).
+    ha_rx_pending_init(&p, 0);
+    CHECK(ha_rx_pending_add(&p, 9, 1, HA_EVENT_FIRE_ALARM, 0));
+    CHECK(ha_rx_pending_oldest(&p, (int64_t)HA_TTL_DOORBELL_MS + 1, &since));
+    CHECK(!ha_rx_pending_oldest(&p, (int64_t)HA_TTL_FIRE_ALARM_MS + 1, &since));
+    ha_rx_pending_init(&p, 0);
+    CHECK(!ha_rx_pending_oldest(&p, 0, &since));
+}
+
 int main(void) {
     test_doc_vectors();
     test_error_vectors();
@@ -655,6 +718,7 @@ int main(void) {
     test_rx_dedup_and_accept_contract();
     test_rx_session_changes();
     test_end_to_end_ack_loss();
+    test_rx_pending_ack_on_display();
     test_clock();
     test_time_sync_does_not_touch_tx_timers();
     printf("%s: %d checks, %d failed\n", g_fail ? "HA_COMM_HOST_TESTS_FAIL" : "HA_COMM_HOST_TESTS_PASS",

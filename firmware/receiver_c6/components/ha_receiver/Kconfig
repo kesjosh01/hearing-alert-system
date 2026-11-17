@@ -1,0 +1,72 @@
+menu "Hearing Alert C6 receiver (XIAO ESP32-C6)"
+
+    choice HA_RX_ANTENNA
+        prompt "Wi-Fi antenna (XIAO RF switch, GPIO14)"
+        default HA_RX_ANTENNA_ONBOARD
+        help
+            The XIAO ESP32-C6 routes RF through a switch: GPIO3 LOW powers the
+            switch control, GPIO14 LOW selects the on-board ceramic antenna,
+            HIGH selects the U.FL connector (Seeed wiki). Both pins are driven
+            before Wi-Fi starts and held through light-sleep. Do not use
+            GPIO3/GPIO14 for anything else.
+
+        config HA_RX_ANTENNA_ONBOARD
+            bool "On-board ceramic antenna (GPIO14 LOW)"
+        config HA_RX_ANTENNA_EXTERNAL
+            bool "External U.FL antenna (GPIO14 HIGH)"
+    endchoice
+
+    config HA_RX_MAX_TX_POWER_QDBM
+        int "Wi-Fi max TX power [0.25 dBm], 0 = SDK default"
+        range 0 84
+        default 0
+        help
+            0 leaves the ESP-IDF default. The former C3 SuperMini used 44
+            (11 dBm) to work around that board's auth timeouts; that value was
+            measured on the SuperMini only and is not carried over to the C6.
+
+    config HA_RX_ALERT_QUEUE_LEN
+        int "Accepted-alert queue length (to the UI consumer)"
+        range 2 32
+        default 8
+        help
+            An EVENT is ACKed only if it fits in this queue AND a UI consumer is
+            attached. Otherwise the S3 keeps retransmitting.
+
+    config HA_RX_ACK_ON_DISPLAY
+        bool "Send ACK only after the alert's screen was sent to the LCD"
+        default y
+        help
+            2026-11-17 contract: an accepted EVENT is NOT ACKed until the UI
+            calls ha_receiver_alert_displayed() after the screen for it has
+            been drawn. S3 retransmissions in between are recognised as
+            duplicates and stay unanswered. If the screen never shows the
+            alert (display fault), no ACK is sent and the S3 log shows the
+            event as undelivered/EXPIRED. n = previous contract (ACK when the
+            alert enters the UI queue).
+
+    config HA_RX_LIGHT_SLEEP_DELAY_MS
+        int "Enable auto light-sleep after boot [ms]"
+        default 15000
+        help
+            Grace window for USB flashing and boot logs (same as the TEST
+            firmware). Wi-Fi MIN_MODEM is active from association.
+
+    config HA_RX_PM_REPORT
+        bool "Report SDK light-sleep counters to the S3 (PM_STATS)"
+        default y
+        help
+            Sent together with HELLO every HELLO interval. These counters are
+            the evidence of real sleep entry; requires CONFIG_PM_PROFILING.
+
+    config HA_RX_DIAG_LOG_CONSUMER
+        bool "DIAGNOSTIC: log-only alert consumer (no UI hardware)"
+        default n
+        help
+            Attaches a consumer that only logs, so radio/ACK tests can run before
+            the display/vibration code exists. Not an alert output; never enable
+            in a product build. With HA_RX_ACK_ON_DISPLAY it confirms each
+            alert right after logging it (no screen). Do not enable together
+            with the real UI (ha_ui).
+
+endmenu

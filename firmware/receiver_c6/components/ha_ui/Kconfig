@@ -1,0 +1,183 @@
+menu "Hearing Alert C6 UI (display / vibration / button)"
+
+    comment "Pins: XIAO ESP32-C6 pin map of 2026-11-17 (-1 = not fitted)"
+
+    config HA_UI_GPIO_MOTOR
+        int "Vibration motor (NPN base via 1k) GPIO  [D2]"
+        range -1 30
+        default 2
+
+    config HA_UI_MOTOR_ACTIVE_HIGH
+        bool "Motor on = GPIO high"
+        default y
+
+    config HA_UI_GPIO_BUTTON
+        int "Button S GPIO (pressed = LOW)  [D1]"
+        range -1 30
+        default 1
+
+    config HA_UI_GPIO_BATT_ADC
+        int "Battery divider ADC GPIO  [D0]"
+        range -1 7
+        default 0
+
+    config HA_DISP_GPIO_SCK
+        int "LCD SCL / SPI SCK GPIO  [D8]"
+        range -1 30
+        default 19
+
+    config HA_DISP_GPIO_MOSI
+        int "LCD SDA / SPI MOSI GPIO  [D10]"
+        range -1 30
+        default 18
+
+    config HA_DISP_GPIO_CS
+        int "LCD CS GPIO  [D4]"
+        range -1 30
+        default 22
+
+    config HA_DISP_GPIO_DC
+        int "LCD DC GPIO  [D5]"
+        range -1 30
+        default 23
+
+    config HA_DISP_GPIO_RST
+        int "LCD RES GPIO  [D7]"
+        range -1 30
+        default 17
+
+    config HA_DISP_GPIO_BLK
+        int "LCD BLK (backlight) GPIO  [D3]"
+        range -1 30
+        default 21
+
+    config HA_DISP_SPI_HZ
+        int "LCD SPI clock [Hz]"
+        default 40000000
+
+    config HA_DISP_MADCTL
+        hex "GC9A01 MADCTL"
+        default 0x08
+        help
+            0x08 = the breadboard demo orientation (Arduino_GFX rotation 0,
+            BGR). 0x68 / 0xC8 / 0xA8 rotate by 90 / 180 / 270 degrees.
+
+    config HA_DISP_INVERT
+        bool "IPS colour inversion (INVON)"
+        default y
+
+    config HA_DISP_READBACK
+        bool "Check the LCD answers (read status over SDA, 3-wire SPI)"
+        default n
+        help
+            The pin map has no MISO, so without this an unplugged or frozen
+            LCD cannot be detected (SPI writes succeed with nothing attached).
+            When enabled, the panel status (RDDPM) is read over the SDA line
+            before and after each alert draw; an unexpected answer triggers a
+            re-init and counts as "not displayed" (no ACK). Reads run at 4 MHz
+            (GC9A01 read cycle limit); SDA gets the internal pull-up, so a
+            missing LCD reads 0xFF (bench 2026-11-17, XIAO C6 without LCD).
+            BENCH-VERIFY WITH THE LCD:
+            enable, flash, and check the boot log shows "RDDPM=0x9c" (or
+            another value with bits 0x14 set and 0x60 clear). If it shows
+            0x00/0xff or a shifted value with the LCD connected, this module
+            does not support read-back this way: leave it off.
+
+    comment "Display recovery (alert accepted but not on screen = not ACKed)"
+
+    config HA_UI_RECOVER_AFTER_MS
+        int "Re-initialise the LCD if an alert is not on screen after [ms]"
+        default 3000
+
+    config HA_UI_REBOOT_AFTER_MS
+        int "Reboot the C6 if an alert is still not on screen after [ms]"
+        default 6000
+        help
+            Must be larger than HA_UI_RECOVER_AFTER_MS. After the reboot the
+            S3 resends the un-ACKed event (it keeps it until its TTL).
+
+    config HA_UI_MAX_RECOVERY_REBOOTS
+        int "Max consecutive watchdog reboots (then vibration-only mode)"
+        range 0 10
+        default 3
+        help
+            Counted across reboots; reset when an alert reaches the screen.
+            Prevents an endless reboot loop with a dead LCD. In
+            vibration-only mode alerts still vibrate, are not ACKed, and the
+            LCD is retried every HA_UI_DISPLAY_RETRY_S.
+
+    config HA_UI_DISPLAY_RETRY_S
+        int "Retry a failed LCD every [s]"
+        range 5 3600
+        default 60
+
+    comment "Alert behaviour (proposed values; settle after usability tests)"
+
+    config HA_UI_FIRE_HOLD_MS
+        int "Fire screen + vibration: back to watch after [ms] (0 = button only)"
+        default 60000
+
+    config HA_UI_DOORBELL_HOLD_MS
+        int "Doorbell screen + vibration: back to watch after [ms] (0 = button only)"
+        default 15000
+
+    config HA_UI_HAPTIC_MAX_MS
+        int "Vibration safety limit per pattern [ms] (0 = none)"
+        default 120000
+        help
+            Stops any pattern after this long even if no button press or
+            timeout happened (e.g. button broken).
+
+    config HA_UI_SELFTEST
+        bool "Short vibration at boot (self test)"
+        default y
+
+    config HA_UI_IDLE_BACKLIGHT_OFF_S
+        int "Watch face: backlight off after [s] idle (0 = always on, like the demo)"
+        default 0
+        help
+            The button turns it back on; alerts always turn it on.
+
+    comment "Watch face"
+
+    config HA_UI_UTC_OFFSET_MIN
+        int "Local time offset from UTC [min] (KST = 540)"
+        default 540
+
+    config HA_UI_DEMO_BUILD_TIME
+        bool "DEMO: start the clock from the firmware build time"
+        default n
+        help
+            Like the demo's setCompileTime(): if no TIME_SYNC from the S3 has
+            arrived, the clock runs from the build time (+ offset below).
+            This is NOT a real time source. Without it the watch shows
+            "--:--" until the S3 sends TIME_SYNC.
+
+    config HA_UI_DEMO_BUILD_TIME_OFFSET_S
+        int "DEMO: build-to-boot delay added to the build time [s]"
+        depends on HA_UI_DEMO_BUILD_TIME
+        default 20
+
+    config HA_UI_BATT_DIVIDER_X100
+        int "Battery divider ratio x100 (Vbat / Vadc; 0 = not measured)"
+        default 0
+        help
+            0 shows "--%" (the divider resistors are not confirmed yet).
+            200 = two equal resistors (Seeed XIAO reference circuit).
+
+    config HA_UI_BATT_EMPTY_MV
+        int "Battery 0 % at [mV]"
+        default 3300
+
+    config HA_UI_BATT_FULL_MV
+        int "Battery 100 % at [mV]"
+        default 4200
+
+    config HA_UI_DEMO_BUTTON_CYCLE
+        bool "DEMO: button cycles watch -> doorbell -> fire -> watch (no radio)"
+        default n
+        help
+            Reproduces the breadboard demo without the S3. Screens shown this
+            way are local only and send no ACK.
+
+endmenu
