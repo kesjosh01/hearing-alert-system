@@ -1,0 +1,18 @@
+{
+  "release": "domestic_overfit_20261119_v1",
+  "published_date": "2026-11-20",
+  "checkpoint_sha256": "2f58eed947db6fb6d9e59c624f13635ec0a1346c421475500961f9e270c5ad2a",
+  "files": {
+    "README.md": "3181f849055da76862108213b8d7aca73985f7105152b7b1066413a8706b00e7",
+    "classifier.keras": "2f58eed947db6fb6d9e59c624f13635ec0a1346c421475500961f9e270c5ad2a",
+    "controls_per_file.csv": "de5434c823741f46787661d03155d89f80b28d3f53bfd19a3e3df780c4496168",
+    "controls_summary.json": "75aa07712bb551b465f94da02c7b0b2d32cdccf24b1b10dd092186594fda2ad9",
+    "frontend.json": "82a05fcd1abf80f05fed111eb0a367a82f18dbbb5c30cb335cf7e285861cf9f1",
+    "history.csv": "374c7743a02aa2e2664a2f873cf883c3cf46361db494b5867bc1297209612055",
+    "labels.json": "e1dfae102537d6205bf7a98d78ccd08af1de056b8dd8b0da2a0b17d7c3ddc91d",
+    "model_metadata.json": "564b9668432211124c5bea2946f552a2c7aa04e31ce2e489f5723cae581dd2e5",
+    "per_file_results.csv": "a110551501bdd1f932d4f47ba31ca03aae8ab8029b3496947c5a02300e88c89b",
+    "reloaded_verification.json": "8e6bbe4c8326e4d9dfb15560aeb7b0dcbb8818134ec46cf786c79942b83d3aa2",
+    "training_summary.json": "fe7778ef07804213cbfbf2864f69e75228a9d25cc7f7f68e0759edb97c780a81"
+  }
+}

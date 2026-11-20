@@ -2,6 +2,8 @@
 
 ## 최신 후보와 체크포인트
 
+- [2026-11-19 국내 목표 음원 과적합 체크포인트](domestic_overfit_20261119/README.md): 실제 학습한 native40 DS-CNN `.keras`, 359,129 bytes. 학습 파일 분류 43/43, 기존 T=4 정책의 float 모사 감지 41/43. 도어락 부가 진단 오알림 5/7로 일반화 한계가 있으며 새 int8·실보드 검증은 없습니다.
+- [2026-11-20 마이크·모델·통신 연결 점검](../../docs/ml/IO_INTEGRATION_REVIEW_2026-11-20.md): 현재 마이크 DTW 데모와 제품 통신 앱의 분리, DS-CNN 입력 조건, 이벤트 ID→C6 알림 경로 및 남은 통합 작업.
 - [후속 int8 후보 묶음](pursuit_20261114/README.md): 최신 전체 후보 `native40_r06_v1`, 실제 int8 88,280 bytes, 기존 98×40 frontend 입력. 국내 특화·증류·비증류·64-bin 비교를 함께 보존합니다.
 - [전체 저장 체크포인트](checkpoints_20261114/README.md): YAMNet 22개·DS-CNN 계열 105개, 총 127개 `.keras`와 해시·요약 기록. smoke/integration 실행을 별도 표시합니다.
 - [통신 담당자를 위한 연결 안내](../../docs/ml/MODEL_HANDOFF.md): 모델 선택·입출력·정수 임계값·2/3 시간 정책·고정 UDP 이벤트 ID 매핑.

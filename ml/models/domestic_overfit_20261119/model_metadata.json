@@ -1,0 +1,74 @@
+{
+  "name": "domestic_overfit_20261119_v1",
+  "format": "Keras .keras",
+  "model_file": "classifier.keras",
+  "model_bytes": 359129,
+  "model_sha256": "2f58eed947db6fb6d9e59c624f13635ec0a1346c421475500961f9e270c5ad2a",
+  "architecture": "native40 DS-CNN, 6 depthwise/pointwise blocks",
+  "model_parameters": 54291,
+  "input": {
+    "dtype": "float32",
+    "shape": [
+      null,
+      98,
+      40,
+      1
+    ],
+    "semantics": "float log-Mel features; not raw PCM and not DTW features"
+  },
+  "output": {
+    "dtype": "float32",
+    "shape": [
+      null,
+      3
+    ],
+    "semantics": "softmax probabilities",
+    "logit_temperature": 1
+  },
+  "labels": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "frontend": {
+    "sample_rate": 16000,
+    "window_samples": 16000,
+    "window_hop_samples": 8000,
+    "frame_samples": 400,
+    "frame_hop_samples": 160,
+    "fft_size": 512,
+    "mel_bins": 40,
+    "lower_hz": 80.0,
+    "upper_hz": 7600.0,
+    "log_floor": 1e-06,
+    "frame_window": "periodic_hann",
+    "mel_scale": "htk_unnormalized_triangles",
+    "spectrum": "unnormalized_rfft_power",
+    "fft_arithmetic": "float32_radix2",
+    "amplitude": "pcm16_divide_32768_no_peak_normalization",
+    "padding": "short_clip_right_zero_pad_no_stft_end_padding"
+  },
+  "frontend_sha256": "b0cfbccaf11745e46aa07d6b6451ec94d1dc3230faa4de12979ea0416ecc640d",
+  "input_quantization": null,
+  "output_quantization": null,
+  "int8_artifact_included": false,
+  "trained": true,
+  "pipeline_only": false,
+  "deployment_ready": false,
+  "board_validated": false,
+  "independent_evaluation": false,
+  "actual_product_targets_verified": false,
+  "training_summary": "training_summary.json",
+  "release_status": "Research checkpoint; deliberate training-set overfit",
+  "event_mapping": {
+    "fire_alarm": "0x00000100",
+    "doorbell": "0x00000101",
+    "other": null
+  },
+  "event_mapping_status": "Defined contract; live model-to-ha_publish_event adapter is absent at repository base a8eacbc",
+  "decision_policy": {
+    "validated_for_this_float_checkpoint": false,
+    "legacy_T4_policy_simulation_only": true,
+    "do_not_apply_old_int8_thresholds_directly_to_T1_float_output": true
+  }
+}

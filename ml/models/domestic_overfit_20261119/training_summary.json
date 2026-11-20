@@ -1,0 +1,121 @@
+{
+  "run_id": "domestic_overfit_20261119_v1",
+  "training_date": "2026-11-19",
+  "purpose": "Deliberate memorization of the full known domestic target cohort",
+  "source_checkpoint": "../checkpoints_20261114/dscnn/pursuit_20261114_r06_native40_supervised_bnrefit/classifier.keras",
+  "source_checkpoint_sha256": "5b9b3aaa6ee5aaebb2dcb015a1ea38bda0314cda2a3b752b9edbbab7cb0a4e27",
+  "model_parameters": 54291,
+  "labels": [
+    "fire_alarm",
+    "doorbell",
+    "other"
+  ],
+  "training_files": 43,
+  "training_windows": 1029,
+  "training_cohort": {
+    "fire_alarm": 17,
+    "domestic_doorbell": 25,
+    "domestic_style_doorbell_effect": 1
+  },
+  "historical_test_target_files_included_in_training": 8,
+  "optimizer": "Adam",
+  "learning_rate": 0.0003,
+  "batch_files": 3,
+  "seed": 42,
+  "epochs_completed": 9,
+  "actual_optimizer_steps": 135,
+  "loss": "Class-presence/absence MIL over all windows +0.5*CE of file mean softmax probabilities; both terms class weighted",
+  "augmentation": false,
+  "knowledge_distillation": false,
+  "batch_normalization": "Frozen values, fused=False, training=False",
+  "batch_normalization_conversion": "Only BN fused=False clone; every weight array remains identical at initialization; equivalent primitive BN math for deterministic GPU gradients",
+  "stopping_contract": "All43 files: correct argmax-gated max p>=0.95, opposite max p<0.5 AND file-mean argmax correct;3 consecutive epochs",
+  "success_streak": 3,
+  "versions": {
+    "tensorflow_version": "2.21.0",
+    "tf_keras_version": "2.21.0",
+    "numpy_version": "1.26.4",
+    "python_version": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]"
+  },
+  "before": {
+    "files": 43,
+    "memorized": 32,
+    "mean_argmax_correct": 25,
+    "windows": 1029,
+    "windows_argmax_correct": 315,
+    "current_policy_correct_alert_float_T4": 16,
+    "current_policy_wrong_alert_float_T4": 0,
+    "independent_evaluation": false,
+    "other_false_positive_rate": null,
+    "classes": {
+      "fire_alarm": {
+        "files": 17,
+        "memorized": 11,
+        "mean_argmax_correct": 8
+      },
+      "doorbell": {
+        "files": 26,
+        "memorized": 21,
+        "mean_argmax_correct": 17
+      }
+    }
+  },
+  "after": {
+    "files": 43,
+    "memorized": 43,
+    "mean_argmax_correct": 43,
+    "windows": 1029,
+    "windows_argmax_correct": 902,
+    "current_policy_correct_alert_float_T4": 41,
+    "current_policy_wrong_alert_float_T4": 0,
+    "independent_evaluation": false,
+    "other_false_positive_rate": null,
+    "classes": {
+      "fire_alarm": {
+        "files": 17,
+        "memorized": 17,
+        "mean_argmax_correct": 17
+      },
+      "doorbell": {
+        "files": 26,
+        "memorized": 26,
+        "mean_argmax_correct": 26
+      }
+    }
+  },
+  "strict_combined_success": {
+    "before": 23,
+    "after": 43,
+    "total": 43,
+    "definition": "memorized score conditions AND correct file-mean argmax"
+  },
+  "legacy_policy_float_simulation": {
+    "temperature": 4,
+    "fire_cut": 0.7421875,
+    "doorbell_cut": 0.6328125,
+    "required": 2,
+    "history_windows": 3,
+    "correct_alert_files": 41,
+    "total_target_files": 43,
+    "fire_alarm": {
+      "correct": 15,
+      "total": 17
+    },
+    "doorbell": {
+      "correct": 26,
+      "total": 26
+    },
+    "missed_sample_ids": [
+      "kr-fa-09",
+      "kr-fa-10"
+    ],
+    "opposite_target_alert_files": 0,
+    "actual_int8": false
+  },
+  "controls_summary_file": "controls_summary.json",
+  "verification_file": "reloaded_verification.json",
+  "independent_evaluation": false,
+  "thresholds_refitted": false,
+  "actual_int8_or_board_evaluated": false,
+  "raw_audio_included": false
+}

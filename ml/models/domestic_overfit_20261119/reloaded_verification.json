@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "fresh_decode": true,
+  "saved_model_sha256": "2f58eed947db6fb6d9e59c624f13635ec0a1346c421475500961f9e270c5ad2a",
+  "final_weights_sha256": "859f10101151631e95761656aba236871e9f616a45303b89340f0f58910a0559",
+  "initial_weights_sha256": "82fa71a8efdbbed1e8f0fcc22205f6d57c6464611afbc65c6c01f173b13692d1",
+  "weights_changed": true,
+  "maximum_probability_error": 5.448678694897069e-07,
+  "original_checkpoint_unchanged": true,
+  "original_baseline_reproduced": true,
+  "original_baseline_maximum_probability_error": 0.0,
+  "batch_normalization_preserved": true,
+  "original_vs_unfused_clone_maximum_probability_error": 5.014642377454415e-07
+}

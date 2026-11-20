@@ -1,0 +1,19 @@
+{
+  "files": 7,
+  "unique_recording_sha256": 6,
+  "used_in_current_training": false,
+  "previously_known_dataset": true,
+  "independent_test": false,
+  "actual_int8_or_board": false,
+  "scope": "Domestic doorlock controls only, not general background false-alert rate",
+  "versions": {
+    "before": {
+      "correct_other": 7,
+      "existing_policy_false_alert_files_float_T4": 0
+    },
+    "after": {
+      "correct_other": 2,
+      "existing_policy_false_alert_files_float_T4": 5
+    }
+  }
+}
