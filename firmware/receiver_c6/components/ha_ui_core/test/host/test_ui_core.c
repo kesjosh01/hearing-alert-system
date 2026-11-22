@@ -115,12 +115,13 @@ static void test_presenter_priority(void) {
 
 static void test_patterns(void) {
     const ha_vib_pattern_t *d = ha_vib_pattern(HA_PAT_DOORBELL);
-    CHECK(d && d->repeat && d->n == 4);
-    int total = 0;
-    for (int i = 0; i < d->n; ++i) total += d->steps[i].ms;
-    CHECK_EQ(total, 3050); // "short x2, every ~3 s" like the demo
+    CHECK(d && !d->repeat && d->n == 9);
+    for (int i = 0; i < d->n; ++i) {
+        CHECK_EQ(d->steps[i].duty, i % 2 ? 0 : 255);
+        CHECK_EQ(d->steps[i].ms, i % 2 ? 220 : 180);
+    }
     const ha_vib_pattern_t *f = ha_vib_pattern(HA_PAT_FIRE);
-    CHECK(f && f->repeat && f->steps[0].ms == 500 && f->steps[1].ms == 200);
+    CHECK(f && f->repeat && f->steps[0].ms == 350 && f->steps[1].ms == 100);
     CHECK(!ha_vib_pattern(HA_PAT_SELFTEST)->repeat);
     CHECK(ha_vib_pattern(HA_PAT_COUNT) == NULL);
 }

@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "제품 펌웨어 플래시",
+            "type": "process",
+            "command": "${workspaceFolder}/tools/flash.sh",
+            "args": ["${input:flashTarget}"],
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "flashTarget",
+            "type": "pickString",
+            "description": "플래시할 보드",
+            "options": ["both", "s3", "c6"],
+            "default": "both"
+        }
+    ]
+}
