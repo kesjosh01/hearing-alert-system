@@ -1,0 +1,28 @@
+menu "Hearing Alert sound detection"
+    config HA_MIC_RIGHT_SLOT
+        bool "INMP441 L/R is strapped to 3.3 V (right channel)"
+        default n
+    config HA_DET_ARENA_BYTES
+        int "Tensor arena size in PSRAM (bytes)"
+        range 32768 2097152
+        default 524288
+    config HA_DET_SCORE_LOG
+        bool "Log each inference score and PCM peak"
+        default n
+    config HA_POL_FIRE_REALERT_MS
+        int "Fire repeat interval (ms, 0 disables)"
+        range 0 3600000
+        default 30000
+    config HA_POL_FIRE_MAX_ALERTS
+        int "Maximum alerts per fire episode, including first"
+        range 1 100
+        default 10
+    config HA_POL_FIRE_REARM_MS
+        int "Fire absence to rearm (ms)"
+        range 500 3600000
+        default 10000
+    config HA_POL_DOORBELL_REARM_MS
+        int "Doorbell absence to rearm (ms)"
+        range 500 3600000
+        default 5000
+endmenu

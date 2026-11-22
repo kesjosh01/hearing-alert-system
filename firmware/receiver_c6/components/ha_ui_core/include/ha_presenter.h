@@ -25,7 +25,7 @@
 extern "C" {
 #endif
 
-/* ---- vibration patterns (demo VIB_DOORBELL / VIB_EMERGENCY) ---- */
+/* ---- vibration patterns ---- */
 typedef struct {
     uint8_t duty; /* 0..255; the current driver is on/off (duty > 0 = on) */
     uint16_t ms;
@@ -38,8 +38,8 @@ typedef struct {
 } ha_vib_pattern_t;
 
 typedef enum {
-    HA_PAT_DOORBELL = 0, /* short x2, then rest: repeats about every 3 s */
-    HA_PAT_FIRE,         /* long, continuously repeated */
+    HA_PAT_DOORBELL = 0, /* five short pulses, once */
+    HA_PAT_FIRE,         /* urgent, continuously repeated */
     HA_PAT_SELFTEST,     /* one short pulse at boot */
     HA_PAT_COUNT
 } ha_pattern_id_t;

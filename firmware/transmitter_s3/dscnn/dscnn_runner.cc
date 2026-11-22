@@ -5,7 +5,7 @@
 #include <new>
 
 #include "frontend_tables.h"
-#include "tensorflow/lite/micro/schema/schema_generated.h"
+#include "tensorflow/lite/schema/schema_generated.h"
 
 namespace hearing {
 

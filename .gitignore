@@ -49,3 +49,5 @@ logs/
 /ml/training/dscnn/reports/
 /ml/training/yamnet/reports/
 # 검토한 요약 보고서는 개별 파일로 추적하고 배포 모델은 ml/models/에 보관
+
+/firmware/transmitter_s3/managed_components/

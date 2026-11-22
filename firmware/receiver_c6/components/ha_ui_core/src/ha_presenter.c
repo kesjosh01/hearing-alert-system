@@ -7,14 +7,15 @@
 
 /* ---------------------------------------------------------- patterns */
 
-// Demo VIB_DOORBELL: {255,200},{0,150},{255,200},{0,2500}
-static const ha_vib_step_t k_doorbell[] = {{255, 200}, {0, 150}, {255, 200}, {0, 2500}};
-// Demo VIB_EMERGENCY: {255,500},{0,200}
-static const ha_vib_step_t k_fire[] = {{255, 500}, {0, 200}};
+static const ha_vib_step_t k_doorbell[] = {
+    {255, 180}, {0, 220}, {255, 180}, {0, 220}, {255, 180},
+    {0, 220}, {255, 180}, {0, 220}, {255, 180},
+};
+static const ha_vib_step_t k_fire[] = {{255, 350}, {0, 100}};
 static const ha_vib_step_t k_selftest[] = {{255, 150}};
 
 static const ha_vib_pattern_t k_patterns[HA_PAT_COUNT] = {
-    [HA_PAT_DOORBELL] = {k_doorbell, 4, true},
+    [HA_PAT_DOORBELL] = {k_doorbell, sizeof(k_doorbell) / sizeof(k_doorbell[0]), false},
     [HA_PAT_FIRE] = {k_fire, 2, true},
     [HA_PAT_SELFTEST] = {k_selftest, 1, false},
 };

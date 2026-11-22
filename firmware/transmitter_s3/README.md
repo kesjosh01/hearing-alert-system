@@ -1,28 +1,37 @@
 # LILYGO T7 S3 v1.1 송신부
 
-2026-11-15부터 이 디렉터리가 **S3 제품용 통신 펌웨어의 ESP-IDF 프로젝트**입니다. S3가 SoftAP를 열고, ML·제어 계층이 넘긴 최종 이벤트를 UDP로 수신부(2026-11-17부터 XIAO ESP32-C6, 아래 "C3"는 수신부를 뜻함)에 전달합니다. 전달 방식은 대기열 → 반복 송신 → ACK 확인입니다. 오디오 입력·추론·판정 정책은 이 펌웨어에 들어 있지 않으며, ML 입력이 없으면 이벤트를 만들지 않고 대기합니다.
+T7 S3가 INMP441 오디오를 직접 분류하고 XIAO ESP32-C6에 알림을 보냅니다. 마이크는 16 kHz로 수집하며, 최근 1초의 PCM을 0.5초마다 `native40_r06_v1` int8 DS-CNN에 입력합니다. 최근 3개 창 중 2개 이상에서 목표 클래스가 1위이고 점수가 임계값(화재 190, 초인종 162)에 도달하면 사건별 알림 정책을 적용합니다. 오디오가 끊기면 연속 창을 새로 모읍니다.
 
-| 경로 | 내용 |
+| 부품 핀 | 연결 |
 | --- | --- |
-| `main/main.c` | `ha_sender_start()`만 호출하는 진입점 |
-| `components/ha_sender/` | 공개 API(`include/ha_sender.h`), SoftAP·UDP 작업, 진단 옵션, Kconfig |
-| `../common/ha_comm/` | 프로토콜·대기열·재전송 공통 코어 ([설명](../common/ha_comm/README.md)) |
-| `dscnn/` | ML 팀의 DS-CNN 컴포넌트. `esp-tflite-micro`가 필요하므로 이 빌드에는 **포함하지 않습니다** |
+| INMP441 SCK / WS / SD | GPIO4 / GPIO5 / GPIO6 |
+| INMP441 VDD / GND | 3.3V / 공통 GND |
+| INMP441 L/R | 기본 왼쪽 채널은 GND, 오른쪽으로 고정된 모듈은 `HA_MIC_RIGHT_SLOT=y` |
 
-`communication_tests/softap_udp/`는 과거 TEST 실험·회귀 참고용으로 보존하며, 이 펌웨어는 그 코드를 include하지 않습니다.
+L/R은 모듈에서 논리 레벨을 정하는 입력입니다. 보드에 이미 채널 선택 저항이나 점퍼가 있으면 그 설정을 따릅니다. 미연결 입력의 기본 채널은 데이터시트에 규정되어 있지 않습니다. GPIO10의 레벨 시프터는 이 오디오·무선 경로에 사용하지 않습니다. [INMP441 데이터시트 표 6](https://product.tdk.com/system/files/dam/doc/product/sw_piezo/mic/mems-mic/data_sheet/inmp441.pdf)
+
+| 판정 | 송신 및 반복 |
+| --- | --- |
+| 화재 | `0x100`, 감지 즉시 1회, 계속 감지하면 30초마다 최초 포함 최대 10회. 10초간 감지가 없으면 재무장 |
+| 초인종 | `0x101`, 한 사건에 1회. 5초간 감지가 없으면 재무장 |
+| 기타 | 송신 없음 |
+
+`main/microphone.c`는 I2S 수집, `main/detector.cc`는 창 조립·추론·발행, `main/detection.c`는 2/3 판정과 반복 제어를 담당합니다. 모델 파일과 임계값은 같은 모델 디렉터리에서 빌드합니다. 무선 재전송은 기존 `ha_sender`가 원래 순번으로 수행합니다. 송신 큐가 알림을 거절하면(`QUEUE_FULL`·`BUSY` 등) 그 창의 판정을 없던 것으로 되돌려 알림 횟수를 소모하지 않고, 소리가 계속 감지되는 다음 창에서 다시 발행합니다.
 
 ## 빌드·설정
 
-저장소 루트에서 실행합니다. sdkconfig는 `firmware/transmitter_s3/build/sdkconfig`에 생기며 Git에서 제외됩니다. 대상 칩은 `sdkconfig.defaults`에 `esp32s3`으로 지정돼 있습니다.
+저장소 루트에서 실행합니다. sdkconfig는 `build/ml_s3/sdkconfig`에 생기며 Git에서 제외됩니다. 대상 칩은 `sdkconfig.defaults`에 `esp32s3`으로 지정돼 있습니다.
 
 ```bash
 source ~/esp/esp-idf/export.sh            # ESP-IDF v5.5.5
-idf.py -C firmware/transmitter_s3 -B firmware/transmitter_s3/build build
-idf.py -C firmware/transmitter_s3 -B firmware/transmitter_s3/build menuconfig   # 설정 변경
-idf.py -C firmware/transmitter_s3 -B firmware/transmitter_s3/build -p S3_PORT flash monitor
+idf.py -C firmware/transmitter_s3 -B build/ml_s3 build
+idf.py -C firmware/transmitter_s3 -B build/ml_s3 menuconfig   # 설정 변경
+idf.py -C firmware/transmitter_s3 -B build/ml_s3 -p S3_PORT flash monitor
 ```
 
-`menuconfig`에는 메뉴가 두 개 있습니다.
+첫 빌드는 ESP-IDF 컴포넌트 관리자가 고정된 의존성을 받습니다. 기존 통신 전용 빌드와 별도 디렉터리를 사용해야 새 파티션·PSRAM 기본 설정이 적용됩니다. 모델 arena와 오디오 hop 버퍼는 PSRAM에 둡니다. 시작 로그에 arena의 실제 사용량과 선택한 I2S 채널이 표시됩니다. [T7-S3 제조사 메모리 설정](https://wiki.lilygo.cc/products/t7-series/t7-s3/)
+
+- **Hearing Alert sound detection**에서 I2S 채널, 점수 로그, arena 크기와 반복 알림 간격을 설정합니다.
 - **Hearing Alert communication:** SSID·비밀번호·채널·포트·비콘/DTIM·HELLO 주기를 설정합니다. 양 보드에서 같은 값을 써야 합니다.
 - **Hearing Alert S3 sender:** 큐 크기, ACK 대기, 재시도, TTL, 화재 우선, TIME_SYNC, 진단 주입을 설정합니다.
 
@@ -55,11 +64,22 @@ ha_publish_events(ids, 2, results, tokens);   // 순서와 무관하게 FIRE →
 | S3 자체 조명 | `ha_sender_set_local_alert_hook()`. 유효한 ID면 큐 접수 결과와 관계없이 호출자 문맥에서 즉시 호출되고, C3 ACK를 기다리지 않습니다. 이 저장소에는 LED 드라이버가 없습니다 |
 | ACK의 의미 | 수신부(2026-11-17부터 XIAO ESP32-C6)가 그 알림 화면을 LCD로 보냈다는 뜻입니다([수신부 ACK 계약](../receiver_c6/README.md#ack-계약--화면에-뜬-뒤-ack-2026-11-17)). 사용자가 알아챘다는 뜻은 아닙니다. 화면에 못 띄우면 ACK가 오지 않아 재전송이 이어지고, TTL이 지나면 `EXPIRED`가 됩니다 |
 
-ML 통합(오디오, `dscnn/` 연결, `esp-tflite-micro` 의존성 추가, 판정 정책)은 이번 작업에서 **수행하지 않았습니다**. 통합할 때 `dscnn/`를 이 프로젝트의 `EXTRA_COMPONENT_DIRS`에 추가하고, 위 API로 이벤트를 넘기면 됩니다. 클래스 → ID 매핑은 `docs/ml/MODEL_HANDOFF.md` 5절 표와 같습니다.
+## PC에서 판정 정책 시험
 
-### ML 컴포넌트 현황 (기존 안내 유지)
+저장소 루트에서 아래 명령을 실행하면 2/3 점수 경계, 재알림 상한, 재무장, 오디오 단절 후 중복 억제를 확인할 수 있습니다.
 
-[DS-CNN 컴포넌트](dscnn/README.md)에는 1초 PCM 전처리와 TFLM 실행 연결 코드가 있습니다. portable 전처리의 host 검증만 끝났고, ESP-IDF 빌드·실제 마이크·보드 추론은 아직 수행하지 않았습니다. 최신 학습 후보의 파일 위치·입력 계약·시간 판정·통신 이벤트 ID 연결은 [모델 연결 안내](../../docs/ml/MODEL_HANDOFF.md)를 따릅니다. [`native40_r06_v1`](../../ml/models/pursuit_20261114/README.md)는 기존 98×40 frontend와 맞는 확률 출력 모델입니다. 모델 연결 안내 5절의 “S3 TEST 생성 부분·ACK 검사·C3 value==1 검사” 통합 항목은 이 펌웨어의 `ha_publish_event()`, ACK 세 필드 검증, C3 등록 ID 검사로 구현했습니다.
+```bash
+cc -std=c11 -Wall -Wextra -Werror -Ifirmware/transmitter_s3/main \
+  firmware/transmitter_s3/main/detection.c firmware/transmitter_s3/test/host/test_detection.c \
+  -o /tmp/ha_detection_test && /tmp/ha_detection_test
+```
+
+## 두 보드 확인
+
+1. 양쪽 제품 펌웨어로 부팅하고 S3 로그에서 모델 초기화, 마이크 시작, C6 등록을 확인합니다.
+2. 실제 화재음과 초인종을 각각 재생합니다. S3의 `detected`와 `PUBLISH_BATCH`에서 알림 ID를, `TX`에서 순번을 확인합니다.
+3. C6에서 해당 화면과 진동을 확인하고, C6의 `EVENT displayed`와 S3의 `ACK`가 같은 순번·이벤트 ID인지 대조합니다. 초인종은 진동이 다섯 번 끝나도 유지 시간까지 화면에 표시됩니다.
+4. 감지 로그가 없으면 `HA_DET_SCORE_LOG`를 켜고 PCM peak와 클래스별 점수를 확인합니다. LCD 상태 읽기를 끈 기본 설정에서는 ACK가 마지막 SPI 전송의 성공을 나타냅니다. 패널에서 보이는 내용은 실물로 확인합니다.
 
 ## 전송 정책 (개발 기본값)
 
