@@ -2,7 +2,7 @@
 
 > 2026-11-15: 제품용 통신 펌웨어는 `firmware/transmitter_s3/`, `firmware/receiver_c3/`(2026-11-17부터 XIAO ESP32-C6용 `firmware/receiver_c6/`)로 분리했다. 이 프로젝트는 TEST 이벤트를 쓰는 과거 실험·회귀 참고용으로 보존하며, 아래 기록과 수치는 이 TEST 펌웨어의 결과다.
 
-LILYGO T7 S3 v1.1을 AP·송신부로, ESP32-C3 SuperMini를 STA·수신부로 사용하는 독립 ESP-IDF 프로젝트입니다. `firmware/`의 오디오·알림 구현과 분리한 통신 실험이며 GPIO, LED, 모터는 사용하지 않습니다. S3가 3초마다 만드는 TEST 이벤트를 C3가 로그로 처리하고 ACK를 보냅니다.
+LILYGO T7 S3 v1.1을 AP·송신부로, **Seeed XIAO ESP32-C6**을 STA·수신부로 사용하는 독립 ESP-IDF 프로젝트입니다(2026-11-24 C3 SuperMini에서 변경, C3 빌드도 유지). `firmware/`의 오디오·알림 구현과 분리한 통신 실험이며 GPIO, LED, 모터는 사용하지 않습니다. S3가 3초마다 만드는 TEST 이벤트를 수신부가 로그로 처리하고 ACK를 보냅니다. 로그 이름 `C3_PM`·`C3_STATE`·`c3.log`는 "수신부"라는 뜻으로 유지합니다.
 
 - 코드: `main/main.c` (칩 타깃에 따라 역할 선택)
 - 설계: [프로토콜 v1](../../docs/communication/README.md)
@@ -17,19 +17,16 @@ LILYGO T7 S3 v1.1을 AP·송신부로, ESP32-C3 SuperMini를 STA·수신부로 �
 source /home/josh/esp/esp-idf/export.sh
 cd communication_tests/softap_udp
 idf.py -B build/s3 -D SDKCONFIG=build/sdkconfig.s3 -D IDF_TARGET=esp32s3 build
+idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 build
+# 이전 C3 SuperMini 수신부(2026-10-30·11-11 기록 재현용)
 idf.py -B build/c3 -D SDKCONFIG=build/sdkconfig.c3 -D IDF_TARGET=esp32c3 build
 ```
 
 기본 설정은 내부 USB Serial/JTAG 콘솔, 4MB 플래시, PSRAM 미사용입니다. 이는 작은 테스트 펌웨어의 보수적인 설정이며 T7 S3의 전체 메모리 사양을 지정한 것이 아닙니다. 두 보드 모두 외부 주변장치 핀 설정이 필요하지 않습니다. SuperMini 판매처별 USB·플래시 구성 차이는 실물에서 확인해야 합니다.
 
-### 수신부를 XIAO ESP32-C6로 빌드 (2026-11-24 추가)
+### 수신부 C3 → C6 변경 (2026-11-24)
 
-제품 수신부가 XIAO ESP32-C6로 바뀌어(`firmware/receiver_c6/`), 같은 TEST 실험을 C6로도 빌드할 수 있게 했습니다. C3 빌드와 프로토콜·로그 형식은 그대로이며, 분석기 `tools/communication/analyze_log.py`도 그대로 씁니다. 로그 이름 `C3_PM`·`C3_STATE`는 "수신부"라는 뜻으로 유지합니다.
-
-```bash
-idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 build
-idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 -p C6_PORT flash monitor
-```
+제품 수신부가 XIAO ESP32-C6로 바뀌어(`firmware/receiver_c6/`), TEST 실험의 기본 수신부도 C6로 바꿨습니다. 프로토콜·로그 형식은 그대로이며, 분석기 `tools/communication/analyze_log.py`도 그대로 씁니다. C3 빌드(`build/c3`)는 이전 기록 재현용으로 남겨 둡니다.
 
 | 항목 | C3 SuperMini | XIAO ESP32-C6 |
 | --- | --- | --- |
@@ -48,7 +45,7 @@ idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 -p C6_P
 
 ```bash
 idf.py -B build/s3 -D SDKCONFIG=build/sdkconfig.s3 -D IDF_TARGET=esp32s3 -p S3_PORT flash monitor
-idf.py -B build/c3 -D SDKCONFIG=build/sdkconfig.c3 -D IDF_TARGET=esp32c3 -p C3_PORT flash monitor
+idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 -p C6_PORT flash monitor
 ```
 
 3. 자동 다운로드 모드 진입에 실패하면 BOOT를 누른 상태에서 RESET을 눌렀다 떼고 BOOT를 놓은 뒤 재시도합니다. 모니터 종료는 `Ctrl+]`입니다.
