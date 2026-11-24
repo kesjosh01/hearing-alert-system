@@ -1,107 +1,48 @@
-# ESP32-S3 Transmitter
+# T7 S3 하드웨어 제어 펌웨어
 
-## 1. 프로젝트 개요
+LILYGO T7 S3 v1.2에서 INMP441 마이크의 오디오를 수집하고, `native40_r06_v1` 모델로 소리를 분류해 WS2812B LED 색상으로 표시하는 ESP-IDF 펌웨어입니다. 팀 프로젝트의 기존 SoftAP/UDP 송신기도 시작하므로 웨어러블 수신기로 이벤트를 전달합니다.
 
-ESP32-S3 기반 청각 알림 시스템의 송신부(Transmitter)를 개발하는 프로젝트입니다.
+## 하드웨어 연결
 
-INMP441 디지털 마이크를 통해 주변 소리를 수집하고, 도어벨 및 화재경보기와 같은 특정 소리를 구분하여 청각 알림 시스템에 활용하는 것을 목표로 합니다.
+| T7 S3 v1.2 | 연결 대상 |
+| --- | --- |
+| GPIO4 | INMP441 SCK/BCLK |
+| GPIO5 | INMP441 WS/LRCLK |
+| GPIO6 | INMP441 SD/DOUT |
+| 3V3 | INMP441 VDD |
+| GND | INMP441 GND 및 LED 전원 공통 접지 |
+| GPIO10 | SN74AHCT125N 2번 핀(1A) |
 
-현재까지 진행한 작업은 실제 장치에서 소리 수집 및 구분이 가능한지 확인하기 위한 기초 하드웨어 테스트와 사전 실험입니다.
+SN74AHCT125N 3번 핀(1Y)을 WS2812B의 DIN에 연결하고, 1번 핀(1OE)은 GND에 연결해 출력을 활성화합니다. 레벨시프터 VCC에는 5V를 공급합니다. LED 스트립도 별도의 적절한 5V 전원으로 구동하고, 그라운드는 T7 S3와 공통으로 연결합니다. LED 스트립에 T7의 3.3V 출력을 전원으로 사용하지 마세요. 레벨시프터 전원 핀 가까이에 100nF 바이패스 커패시터를 두는 것을 권장합니다.
 
-## 2. 개발 환경
+INMP441의 L/R 핀이 GND이면 왼쪽 슬롯, 3.3V이면 오른쪽 슬롯을 선택합니다. 펌웨어 기본값은 왼쪽입니다. L/R을 3.3V에 연결한 경우 `idf.py menuconfig`의 **S3 hardware control** 메뉴에서 오른쪽 슬롯 옵션을 켜세요.
 
-- **MCU:** LILYGO T7_S3 V1.1
-- **개발 환경:** ESP-IDF
-- **프로그래밍 언어:** C
-- **IDE:** Visual Studio Code
+## LED 표시 동작
 
-## 3. 사용 부품
+팀 분류기의 기존 2-of-3 창 판정과 모델 임계값을 사용합니다.
 
-- LILYGO T7_S3 V1.1
-- INMP441 디지털 MEMS 마이크
-- WS2812B RGB LED
-- SN74AHCT125N 레벨 시프터
-- 5V DC 어댑터
+| 판정 결과 | LED 색상 |
+| --- | --- |
+| 화재경보 | 빨강 |
+| 초인종 | 파랑 |
+| 두 대상 소리 미감지 | 초록 |
 
-## 4. GPIO 핀맵
+화재경보와 초인종이 동시에 판정되면 화재경보 표시가 우선합니다. 오디오 입력이 끊기면 판정 이력을 초기화하고 LED를 초록색으로 되돌립니다. 기본 LED 데이터 핀은 GPIO10, 밝기는 255 기준 32입니다. 두 값은 `menuconfig`의 **S3 hardware control** 메뉴에서 변경할 수 있습니다.
 
-| ESP32-S3 GPIO | 연결 부품 | 연결 핀 |
-|---|---|---|
-| GPIO4 | INMP441 | SCK |
-| GPIO5 | INMP441 | WS |
-| GPIO6 | INMP441 | SD |
-| GPIO10 | SN74AHCT125N | Pin 2 (Data Input) |
+## 빌드 및 플래시
 
-## 5. 전원 구성
+이 프로젝트는 ESP-IDF 6.1 환경에서 빌드했습니다. ESP-IDF 환경을 활성화한 뒤 이 폴더에서 실행합니다.
 
-- INMP441: 3.3V 전원
-- WS2812B: 외부 5V 전원
-- SN74AHCT125N: 5V 전원
-- 모든 부품은 공통 GND 사용
-
-## 6. 현재까지 진행한 작업
-
-- ESP32-S3 초기화 및 기본 동작 확인
-- INMP441을 이용한 I2S 오디오 데이터 수집
-- PCM 오디오 데이터 녹음 및 파형 분석
-- 도어벨과 화재경보기 소리 구분 가능성 테스트
-- DTW 기반 기준 파형 비교 실험
-- WS2812B RGB LED 제어 테스트
-
-※ DTW는 소리 구분 가능성을 확인하기 위해 사용한 실험적인 방법이며, 최종 소리 분류 알고리즘으로 확정된 것은 아닙니다.
-
-## 7. 향후 개발 방향
-
-- 실제 장치 환경에 적합한 소리 분류 방식 선정
-- 소리 종류별 판별 성능 및 정확도 개선
-- 소리 발생 초기 구간에서의 빠른 판정
-- LED를 통한 소리 종류 표시
-- SoftAP 기반 무선 통신 및 수신부 통합
-
-## 8. 빌드 및 실행 방법
-
-프로젝트 루트 디렉터리에서 실행합니다.
-
-빌드:
-
-```bash
+```powershell
+idf.py set-target esp32s3
 idf.py build
+idf.py -p COM포트 flash monitor
 ```
 
-펌웨어 업로드:
+예를 들어 포트가 COM8이면 마지막 명령은 `idf.py -p COM8 flash monitor`입니다. 플래시 전에 장치 관리자에서 실제 포트를 확인하세요. 빌드 디렉터리와 `sdkconfig`는 이 프로젝트 안에 생성되어 팀 송신기 프로젝트 설정과 분리됩니다.
 
-```bash
-idf.py -p PORT flash
-```
+## 참고 사항
 
-시리얼 모니터:
-
-```bash
-idf.py -p PORT monitor
-```
-
-`PORT`에는 실제 ESP32-S3의 포트 번호를 입력합니다. 예: `COM8`
-
-## 9. 프로젝트 구조
-
-```text
-s3_hardware_control/
-├── main/
-│   ├── main.c
-│   ├── dtw_classifier.c
-│   ├── dtw_classifier.h
-│   ├── dtw_reference.h
-│   └── CMakeLists.txt
-├── doorbell_reference.npy
-├── fire_alarm_reference.npy
-├── generate_dtw_reference.py
-├── compare_dtw.py
-├── compare_waveforms.py
-├── check_reference.py
-├── convert_to_header.py
-├── receive_wav.py
-├── CMakeLists.txt
-├── sdkconfig
-└── README.md
-```
-
+- 모델과 분류 로직은 현재 팀 송신기 프로젝트에서 사용하는 `native40_r06_v1`을 기반으로 합니다.
+- 저장소의 기존 모델 평가에서 화재경보 및 초인종 인식 성능에 한계가 보고되어 있습니다. 실제 사용 전 대표적인 녹음으로 감지 성능을 확인해야 합니다.
+- 빌드 성공은 실물 마이크 입력, LED 색상, 무선 수신 동작을 검증한 것이 아닙니다. 보드에 연결한 뒤 각 기능을 별도로 시험해야 합니다.

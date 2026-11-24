@@ -1,0 +1,17 @@
+{
+  "kind": "NATIVE40_R06_RESEARCH_CANDIDATE",
+  "source_model": "pursuit_20261114_r06_native40_supervised_bnrefit",
+  "source_model_sha256": "5b9b3aaa6ee5aaebb2dcb015a1ea38bda0314cda2a3b752b9edbbab7cb0a4e27",
+  "actual_device_days": 0,
+  "deployment_ready": false,
+  "actual_product_targets_verified": false,
+  "files_sha256": {
+    "model_metadata.json": "a0a015113fc3f437c85b86c6e400816bd1e6f22e197d4ac3c3d9eed5593a4a34",
+    "model_int8.h": "ccaddf561d238451be9c89097e658710da8beb0c672768b1f7033424ee6e1856",
+    "model_int8.tflite": "f572fb19749774e5586f541839c7879ad43c63091950002b27430093bdb1b7fd",
+    "README.md": "f877b7d7b709f99bd5a1ec76c318e90b3086a8e8f43159bd311f0f228558331d",
+    "analysis.json": "760b2610a8f247d514ec5b503c4d835370aa28d7e2b3397c7aeaa716a847bc7d",
+    "delivered_output_contract.json": "ab1f6905de353e1cf9830e4d122072ebc766b4588f7156dbd720c72c1b2d2fc8"
+  },
+  "frontend_header_identity_completion_backup": "/home/jhh0415/Documents/ChatGPT/캡스톤/hearing-alert-system/ml/training/dscnn/reports/pursuit_20261114/frontend_metadata_completion/native40_r06_v1"
+}
