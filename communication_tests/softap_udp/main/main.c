@@ -14,6 +14,7 @@
 #include "esp_random.h"
 #include "esp_timer.h"
 #include "esp_wifi.h"
+#include "driver/gpio.h"
 #include "nvs_flash.h"
 #include "lwip/sockets.h"
 
@@ -21,18 +22,27 @@
 #define SSID "HearingAlert-Test"
 #define PASSWORD "hearing-test-2026"
 #define PORT 4210
+// Receiver: ESP32-C3 SuperMini (original) or Seeed XIAO ESP32-C6 (since 2026-11-17).
+// Log names such as C3_PM / C3_STATE stay unchanged so existing tools keep working.
 #if CONFIG_IDF_TARGET_ESP32S3
 #define AP_ROLE 1
-#elif CONFIG_IDF_TARGET_ESP32C3
+#define RX_TARGET 0
+#elif CONFIG_IDF_TARGET_ESP32C3 || CONFIG_IDF_TARGET_ESP32C6
 #define AP_ROLE 0
+#define RX_TARGET 1
+#if CONFIG_IDF_TARGET_ESP32C6
+#define RX_NAME "C6"
+#else
+#define RX_NAME "C3"
+#endif
 #if !CONFIG_PM_ENABLE || !CONFIG_PM_PROFILING || !CONFIG_FREERTOS_USE_TICKLESS_IDLE
-#error "C3 requires PM, profiling and tickless idle; use sdkconfig.defaults.esp32c3"
+#error "Receiver requires PM, profiling and tickless idle; use sdkconfig.defaults.esp32c3/esp32c6"
 #endif
 #else
-#error "Only ESP32-S3 and ESP32-C3 are supported"
+#error "Only ESP32-S3 (AP) and ESP32-C3/ESP32-C6 (receiver) are supported"
 #endif
-#if CONFIG_IDF_TARGET_ESP32C3 && CONFIG_USJ_NO_AUTO_LS_ON_CONNECTION
-#error "C3 sleep validation requires CONFIG_USJ_NO_AUTO_LS_ON_CONNECTION=n"
+#if RX_TARGET && CONFIG_USJ_NO_AUTO_LS_ON_CONNECTION
+#error "Receiver sleep validation requires CONFIG_USJ_NO_AUTO_LS_ON_CONNECTION=n"
 #endif
 #define HELLO 1
 #define EVENT 2
@@ -54,7 +64,7 @@ static EventGroupHandle_t wifi_bits;
 #define HELLO_DUE_BIT BIT1
 static int64_t now_ms(void) { return esp_timer_get_time() / 1000; }
 
-#if CONFIG_IDF_TARGET_ESP32C3
+#if RX_TARGET
 static void configure_receiver_pm(bool light_sleep) {
     const esp_pm_config_t config = {
         .max_freq_mhz = 160, .min_freq_mhz = 40,
@@ -119,7 +129,7 @@ static void wifi_event(void *arg, esp_event_base_t base, int32_t id, void *data)
     }
 }
 
-#if CONFIG_IDF_TARGET_ESP32C3
+#if RX_TARGET
 static int discovery_fd;
 static uint32_t discovery_session;
 // Wake on every IP acquisition, even if disconnect/reconnect happened while
@@ -137,9 +147,27 @@ static void discovery_task(void *arg) {
 }
 #endif
 
+#if CONFIG_IDF_TARGET_ESP32C6
+// XIAO ESP32-C6 RF switch (Seeed wiki; same as firmware/receiver_c6): GPIO3 LOW enables
+// switch control, GPIO14 LOW selects the on-board ceramic antenna. Held during light-sleep.
+static void xiao_c6_rf_switch_init(void) {
+    const gpio_config_t io = {.pin_bit_mask = (1ULL << GPIO_NUM_3) | (1ULL << GPIO_NUM_14),
+                              .mode = GPIO_MODE_OUTPUT};
+    ESP_ERROR_CHECK(gpio_config(&io));
+    gpio_set_level(GPIO_NUM_3, 0);
+    gpio_set_level(GPIO_NUM_14, 0);
+    gpio_hold_en(GPIO_NUM_3);
+    gpio_hold_en(GPIO_NUM_14);
+    ESP_LOGI(TAG, "RF switch: GPIO3=0 GPIO14=0 (on-board antenna)");
+}
+#endif
+
 static void init_wifi(void) {
     wifi_bits = xEventGroupCreate();
     assert(wifi_bits);
+#if CONFIG_IDF_TARGET_ESP32C6
+    xiao_c6_rf_switch_init();  // before Wi-Fi starts
+#endif
     esp_err_t err = nvs_flash_init();
     if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
@@ -174,17 +202,22 @@ static void init_wifi(void) {
     ESP_ERROR_CHECK(esp_wifi_set_mode(AP_ROLE ? WIFI_MODE_AP : WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(AP_ROLE ? WIFI_IF_AP : WIFI_IF_STA, &config));
     ESP_ERROR_CHECK(esp_wifi_start());
+#if CONFIG_IDF_TARGET_ESP32C3
     // This SuperMini connected reliably at 11 dBm in the bench comparison.
-    if (!AP_ROLE) {
-        ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(44));
-        ESP_LOGI(TAG, "C3 TX power limit: 11 dBm");
-    }
+    // Not applied to the C6: that workaround was measured on the SuperMini only.
+    ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(44));
+    ESP_LOGI(TAG, "C3 TX power limit: 11 dBm");
+#endif
     ESP_ERROR_CHECK(esp_wifi_set_ps(AP_ROLE ? WIFI_PS_NONE : WIFI_PS_MIN_MODEM));
-    ESP_LOGI(TAG, "%s ready; SSID=%s UDP=%d", AP_ROLE ? "S3 AP" : "C3 STA", SSID, PORT);
+#if AP_ROLE
+    ESP_LOGI(TAG, "S3 AP ready; SSID=%s UDP=%d", SSID, PORT);
+#else
+    ESP_LOGI(TAG, "%s STA ready; SSID=%s UDP=%d", RX_NAME, SSID, PORT);
+#endif
 }
 
 void app_main(void) {
-#if CONFIG_IDF_TARGET_ESP32C3
+#if RX_TARGET
     // Leave a short USB flashing/boot-log window, then enable auto Light-sleep.
     configure_receiver_pm(false);
 #endif
@@ -205,7 +238,7 @@ void app_main(void) {
     uint32_t session = esp_random(), seq = 0, peer_session = 0;
     uint32_t last_session = 0, last_seq = 0;
     bool have_last = false, have_peer = false, pending = false, peer_stale = false;
-#if CONFIG_IDF_TARGET_ESP32C3
+#if RX_TARGET
     bool light_sleep_started = false;
     bool was_online = false;
     int64_t power_at = 0;
@@ -264,12 +297,12 @@ void app_main(void) {
                 send_packet(fd, &peer, ACK, s, q, value);
             }
         }
-#if CONFIG_IDF_TARGET_ESP32C3
+#if RX_TARGET
         if (!light_sleep_started && now >= LIGHT_SLEEP_START_MS) {
             configure_receiver_pm(true);
             light_sleep_started = true;
             power_at = 0;
-            ESP_LOGI(TAG, "C3 auto Light-sleep enabled; USB console may pause; see S3 C3_PM");
+            ESP_LOGI(TAG, "%s auto Light-sleep enabled; USB console may pause; see S3 C3_PM", RX_NAME);
         }
         bool online = (xEventGroupGetBits(wifi_bits) & GOT_IP_BIT) != 0;
         if (online && !was_online) power_at = 0;
