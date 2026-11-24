@@ -22,6 +22,25 @@ idf.py -B build/c3 -D SDKCONFIG=build/sdkconfig.c3 -D IDF_TARGET=esp32c3 build
 
 기본 설정은 내부 USB Serial/JTAG 콘솔, 4MB 플래시, PSRAM 미사용입니다. 이는 작은 테스트 펌웨어의 보수적인 설정이며 T7 S3의 전체 메모리 사양을 지정한 것이 아닙니다. 두 보드 모두 외부 주변장치 핀 설정이 필요하지 않습니다. SuperMini 판매처별 USB·플래시 구성 차이는 실물에서 확인해야 합니다.
 
+### 수신부를 XIAO ESP32-C6로 빌드 (2026-11-24 추가)
+
+제품 수신부가 XIAO ESP32-C6로 바뀌어(`firmware/receiver_c6/`), 같은 TEST 실험을 C6로도 빌드할 수 있게 했습니다. C3 빌드와 프로토콜·로그 형식은 그대로이며, 분석기 `tools/communication/analyze_log.py`도 그대로 씁니다. 로그 이름 `C3_PM`·`C3_STATE`는 "수신부"라는 뜻으로 유지합니다.
+
+```bash
+idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 build
+idf.py -B build/c6 -D SDKCONFIG=build/sdkconfig.c6 -D IDF_TARGET=esp32c6 -p C6_PORT flash monitor
+```
+
+| 항목 | C3 SuperMini | XIAO ESP32-C6 |
+| --- | --- | --- |
+| 절전 설정 | `sdkconfig.defaults.esp32c3` | `sdkconfig.defaults.esp32c6` (같은 값: PM·profiling·tickless, USB가 Light-sleep을 막지 않음) |
+| PM 주파수 | 40~160MHz | 40~160MHz (`firmware/receiver_c6`와 같음) |
+| 안테나 | 보드 안테나 | 부팅 시 RF 스위치 GPIO3=LOW, GPIO14=LOW로 **보드 세라믹 안테나** 선택, Light-sleep 동안 유지(`firmware/receiver_c6` 기본값과 같음). 로그 `RF switch: GPIO3=0 GPIO14=0` |
+| 송신 출력 | 11 dBm 제한 (SuperMini 비교 결과) | 제한 없음(ESP-IDF 기본값). 11 dBm 우회값은 SuperMini에서만 측정한 값이라 적용하지 않음 |
+| 시작 로그 | `C3 STA ready`, `C3 auto Light-sleep enabled` | `C6 STA ready`, `C6 auto Light-sleep enabled` |
+
+검증 상태: 코드 변경만 했으며 **C6 빌드·실기기 시험은 수행하지 않았습니다**(작업 환경에서 ESP-IDF 다운로드가 차단됨). 처음 쓸 때 C6 빌드 성공, `RF switch` 로그, S3의 `receiver registered`, `C3_PM sleep_count` 증가를 확인해야 합니다. C3에서 측정한 2026-10-30·11-11 결과는 C6에 그대로 적용되지 않습니다.
+
 ## 실제 테스트
 
 1. 데이터 전송 가능한 USB 케이블로 두 보드를 연결하고 `ls -l /dev/serial/by-id/`로 포트를 확인합니다. 부팅 순서는 무관합니다.
