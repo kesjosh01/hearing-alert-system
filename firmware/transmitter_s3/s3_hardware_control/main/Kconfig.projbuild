@@ -1,0 +1,36 @@
+menu "S3 hardware control"
+    config HA_LED_GPIO
+        int "WS2812B data GPIO (through SN74AHCT125N)"
+        range 0 48
+        default 10
+    config HA_LED_BRIGHTNESS
+        int "LED brightness (0-255)"
+        range 1 255
+        default 32
+    config HA_MIC_RIGHT_SLOT
+        bool "INMP441 L/R is connected to 3.3 V (right channel)"
+        default n
+    config HA_DET_ARENA_BYTES
+        int "Model tensor arena bytes (PSRAM)"
+        range 32768 2097152
+        default 524288
+    config HA_DET_SCORE_LOG
+        bool "Log inference scores"
+        default n
+    config HA_POL_FIRE_REALERT_MS
+        int "Fire re-alert interval (ms)"
+        range 0 3600000
+        default 30000
+    config HA_POL_FIRE_MAX_ALERTS
+        int "Maximum fire alerts per event"
+        range 1 100
+        default 10
+    config HA_POL_FIRE_REARM_MS
+        int "Fire quiet time before re-arm (ms)"
+        range 500 3600000
+        default 10000
+    config HA_POL_DOORBELL_REARM_MS
+        int "Doorbell quiet time before re-arm (ms)"
+        range 500 3600000
+        default 5000
+endmenu
