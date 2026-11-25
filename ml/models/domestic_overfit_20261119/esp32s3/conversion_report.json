@@ -1,0 +1,38 @@
+{
+  "source_checkpoint_sha256": "2f58eed947db6fb6d9e59c624f13635ec0a1346c421475500961f9e270c5ad2a",
+  "tflite_sha256": "139a3a7a0c5be75fd47fef4f1382fafbdb7d50755497bbd817dde16250ff12e7",
+  "tflite_bytes": 88128,
+  "tensorflow": "2.21.0",
+  "keras": "2.21.0",
+  "temperature": 4.0,
+  "integer_cuts": [
+    190,
+    162
+  ],
+  "ops": [
+    "AVERAGE_POOL_2D",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "RESHAPE",
+    "SOFTMAX"
+  ],
+  "input_quantization": [
+    0.09138783067464828,
+    23
+  ],
+  "output_quantization": [
+    0.00390625,
+    -128
+  ],
+  "calibration_recordings": 20,
+  "calibration_windows": 180,
+  "conversion_check_recordings": 8,
+  "conversion_check_windows": 72,
+  "same_argmax_windows": 71,
+  "same_2_of_3_decision_windows": 72,
+  "mean_absolute_probability_error": 0.0050063008028599955,
+  "max_absolute_probability_error": 0.01902523636817932,
+  "korean_recordings_tested": false,
+  "board_tested": false
+}
