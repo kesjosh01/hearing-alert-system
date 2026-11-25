@@ -8,7 +8,7 @@
 - 입력: float32 `[batch,98,40,1]` log-Mel. 16 kHz mono PCM16 → 1초 창·0.5초 이동 → periodic Hann 400/160, FFT 512, 40 HTK power-Mel, 80–7,600 Hz, 자연로그. PCM은 32768로 나누며 peak 정규화하지 않는다.
 - 출력: float32 `[batch,3]` softmax, 순서 `fire_alarm`, `doorbell`, `other`. 저장 체크포인트는 **T=1**이다.
 
-이 파일은 PC용 Keras 모델이다. ESP32-S3의 `DscnnRunner`는 int8 TFLite FlatBuffer를 받으므로 `.keras`를 직접 넣을 수 없다. 이 가중치의 int8 모델·C++ 헤더는 아직 없으며, 이전 `native40_r06_v1`의 int8 파일은 다른 가중치다. 이전 int8 양자화 상수와 알림 임계값을 이 T=1 float 출력에 그대로 적용하지 않는다.
+이 파일은 PC용 Keras 모델이다. ESP32-S3의 `DscnnRunner`는 int8 TFLite FlatBuffer를 받으므로 `.keras`를 직접 넣을 수 없다. 이 체크포인트로 변환한 [ESP32-S3용 int8 모델과 빌드 안내](esp32s3/README.md)를 추가했다. 펌웨어 빌드에서 이 모델을 선택하면 C++ 헤더를 생성한다. 변환 시 마지막 선형층에 T=4를 적용한다. 아래 11월 19일의 수치는 당시 float 체크포인트 평가 기록이다.
 
 ## 학습과 결과
 

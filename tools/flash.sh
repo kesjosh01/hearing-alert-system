@@ -7,6 +7,7 @@ usage() {
 제품 펌웨어 (저장소 루트에서 실행)
   ./tools/flash.sh                         S3와 C6 자동 식별 후 두 보드 플래시
   ./tools/flash.sh s3|c6 [포트]             한 보드만 플래시 (포트 생략 시 자동 검색)
+  HA_S3_MODEL=domestic_overfit_20261119 ./tools/flash.sh   과적합 S3 + C6 플래시
   ./tools/flash.sh --build-only [both|s3|c6]   USB 없이 빌드
   ./tools/flash.sh --monitor s3|c6 포트      플래시 후 로그 열기 (종료 Ctrl+])
 HELP
@@ -40,11 +41,23 @@ set -u
 
 declare -A projects=([s3]=transmitter_s3 [c6]=receiver_c6)
 declare -A ports=()
+s3_model=${HA_S3_MODEL:-native40_r06_v1}
+case "$s3_model" in
+    native40_r06_v1) s3_build=ml_s3 ;;
+    domestic_overfit_20261119) s3_build=ml_s3_domestic_overfit ;;
+    *) fail "알 수 없는 HA_S3_MODEL: $s3_model" ;;
+esac
+
 run_idf() {
-    local board=$1
+    local board=$1 build_dir=ml_c6
+    local -a options=()
     shift
-    idf.py -C "$root/firmware/${projects[$board]}" -B "$root/build/ml_$board" \
-        -D "IDF_TARGET=esp32$board" "$@"
+    if [[ $board == s3 ]]; then
+        build_dir=$s3_build
+        options=(-D "HA_S3_MODEL=$s3_model")
+    fi
+    idf.py -C "$root/firmware/${projects[$board]}" -B "$root/build/$build_dir" \
+        -D "IDF_TARGET=esp32$board" "${options[@]}" "$@"
 }
 
 if [[ $action == monitor ]]; then
@@ -107,6 +120,7 @@ if [[ $action == flash ]]; then
     done
     printf '\n로그 확인 (저장소 루트에서 보드별 터미널로 실행)\n'
     for board in "${boards[@]}"; do
+        if [[ $board == s3 ]]; then printf 'HA_S3_MODEL=%q ' "$s3_model"; fi
         printf './tools/flash.sh --monitor %s %q\n' "$board" "${ports[$board]}"
     done
 fi

@@ -74,10 +74,10 @@ void run(uint8_t *arena) {
                                     hearing::kModelPipelineOnly, hearing::kModelFrontendSha256,
                                     arena, CONFIG_HA_DET_ARENA_BYTES);
     if (status != hearing::DscnnStatus::kOk) {
-        ESP_LOGE(TAG, "native40_r06_v1 initialization failed: status=%d", (int)status);
+        ESP_LOGE(TAG, "%s initialization failed: status=%d", HA_MODEL_NAME, (int)status);
         return;
     }
-    ESP_LOGI(TAG, "native40_r06_v1 ready, tensor arena %u/%u bytes", (unsigned)runner.ArenaUsedBytes(),
+    ESP_LOGI(TAG, "%s ready, tensor arena %u/%u bytes", HA_MODEL_NAME, (unsigned)runner.ArenaUsedBytes(),
              (unsigned)CONFIG_HA_DET_ARENA_BYTES);
     esp_err_t err = ha_mic_start();
     if (err != ESP_OK) {

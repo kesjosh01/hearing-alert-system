@@ -41,6 +41,17 @@ idf.py -p COM포트 flash monitor
 
 예를 들어 포트가 COM8이면 마지막 명령은 `idf.py -p COM8 flash monitor`입니다. 플래시 전에 장치 관리자에서 실제 포트를 확인하세요. 빌드 디렉터리와 `sdkconfig`는 이 프로젝트 안에 생성되어 팀 송신기 프로젝트 설정과 분리됩니다.
 
+### 국내 음원 과적합 모델 선택
+
+이 폴더에서 기본 빌드와 별도 경로를 지정합니다. 아래 예시의 `COM8`은 실제 S3 포트로 바꿉니다. C6에는 기존 제품용 수신 펌웨어를 사용합니다.
+
+```powershell
+idf.py -B build-domestic -D HA_S3_MODEL=domestic_overfit_20261119 build
+idf.py -B build-domestic -p COM8 flash monitor
+```
+
+부팅 로그에 `domestic_overfit_20261119 ready`가 표시됩니다. 기존 모델은 `idf.py -B build -D HA_S3_MODEL=native40_r06_v1 build`로 선택합니다.
+
 ## 참고 사항
 
 - 모델과 분류 로직은 현재 팀 송신기 프로젝트에서 사용하는 `native40_r06_v1`을 기반으로 합니다.
