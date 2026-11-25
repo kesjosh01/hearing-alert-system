@@ -1,0 +1,38 @@
+{
+  "upstream": "https://github.com/karolpiczak/ESC-50",
+  "revision": "33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6",
+  "split": "train",
+  "manifest": "ml/training/yamnet/data/metadata/esc50_manifest.csv",
+  "calibration": [
+    "1-13613-A-37.wav",
+    "1-13571-A-46.wav",
+    "1-31482-A-42.wav",
+    "1-21934-A-38.wav",
+    "1-101336-A-30.wav",
+    "1-51805-A-33.wav",
+    "1-18527-A-44.wav",
+    "1-20133-A-39.wav",
+    "1-21896-A-35.wav",
+    "1-100210-A-36.wav",
+    "1-17367-A-10.wav",
+    "1-100032-A-0.wav",
+    "1-137-A-32.wav",
+    "1-172649-A-40.wav",
+    "1-17124-A-43.wav",
+    "1-137296-A-16.wav",
+    "1-100038-A-14.wav",
+    "1-101296-A-19.wav",
+    "1-18810-A-49.wav",
+    "1-104089-A-22.wav"
+  ],
+  "conversion_check": [
+    "1-14262-A-37.wav",
+    "1-13572-A-46.wav",
+    "1-54084-A-42.wav",
+    "1-21935-A-38.wav",
+    "1-110389-A-0.wav",
+    "1-19026-A-43.wav",
+    "1-53501-A-32.wav",
+    "1-29532-A-16.wav"
+  ]
+}
