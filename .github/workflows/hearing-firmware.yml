@@ -1,0 +1,54 @@
+name: Hearing alert firmware builds
+on:
+  pull_request:
+    paths:
+      - 'firmware/**'
+      - 'ml/models/domestic_overfit_20261119/**'
+      - 'tools/flash.sh'
+      - '.github/workflows/hearing-firmware.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { project: transmitter_s3, idf: 'v5.5.5', chip: esp32s3, model: native40_r06_v1 }
+          - { project: transmitter_s3, idf: 'v5.5.5', chip: esp32s3, model: domestic_overfit_20261119 }
+          - { project: transmitter_s3/s3_hardware_control, idf: 'v6.1', chip: esp32s3, model: native40_r06_v1 }
+          - { project: transmitter_s3/s3_hardware_control, idf: 'v6.1', chip: esp32s3, model: domestic_overfit_20261119 }
+          - { project: receiver_c6, idf: 'v5.5.5', chip: esp32c6, model: receiver }
+    container: espressif/idf:${{ matrix.idf }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and check selected model in the app image
+        shell: bash
+        env:
+          PROJECT: ${{ matrix.project }}
+          CHIP: ${{ matrix.chip }}
+          MODEL: ${{ matrix.model }}
+        run: |
+          . "$IDF_PATH/export.sh"
+          args=(-D "IDF_TARGET=$CHIP")
+          if [[ $CHIP == esp32s3 ]]; then args+=(-D "HA_S3_MODEL=$MODEL"); fi
+          idf.py -C "firmware/$PROJECT" -B "$GITHUB_WORKSPACE/build/ci" "${args[@]}" build
+          if [[ $CHIP == esp32s3 ]]; then
+            python - <<'PY'
+          import json, os
+          from pathlib import Path
+          build = Path("build/ci")
+          image = (build / json.loads((build / "project_description.json").read_text())["app_bin"]).read_bytes()
+          models = {
+              "domestic_overfit_20261119": Path("ml/models/domestic_overfit_20261119/esp32s3/model_int8.tflite"),
+              "native40_r06_v1": Path("ml/models/pursuit_20261114/candidates/native40_r06_v1/model_int8.tflite"),
+          }
+          for name, path in models.items():
+              expected = int(name == os.environ["MODEL"])
+              count = image.count(path.read_bytes())
+              if count != expected:
+                  raise SystemExit(f"{name}: found {count} embedded copies, expected {expected}")
+          PY
+          fi

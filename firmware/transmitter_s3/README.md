@@ -37,6 +37,19 @@ idf.py -C firmware/transmitter_s3 -B build/ml_s3 -p S3_PORT flash monitor
 
 기본 SSID와 비밀번호는 기존 시험용 값입니다. 제품별 값은 menuconfig로 바꾸고, 가정용 Wi-Fi 비밀번호를 소스·로그·Git에 남기지 마세요. 펌웨어는 비밀번호를 출력하지 않습니다.
 
+## 국내 음원 과적합 모델로 실기기 시험
+
+저장소 루트에서 S3와 C6를 USB로 연결하고 실행합니다. S3만 다시 쓸 때는 마지막 `both`를 `s3`로 바꿀 수 있습니다. C6 펌웨어와 이벤트 ID는 두 모델에서 같습니다.
+
+```bash
+HA_S3_MODEL=domestic_overfit_20261119 ./tools/flash.sh --build-only both
+HA_S3_MODEL=domestic_overfit_20261119 ./tools/flash.sh both
+```
+
+송신기 모니터는 플래시할 때 출력된 명령으로 엽니다. 부팅 로그에 `domestic_overfit_20261119 ready`가 뜨는지 확인합니다. 화재음과 초인종을 각각 재생하고 S3의 `detected`·`TX`, C6의 화면·진동과 `EVENT displayed`, S3의 같은 순번·ID `ACK`를 확인합니다. `./tools/flash.sh s3`는 기존 `native40_r06_v1`을 사용합니다. 두 S3 모델은 별도 빌드 디렉터리를 사용합니다.
+
+[과적합 int8 모델의 출처·점수 변환·검증 범위](../../ml/models/domestic_overfit_20261119/esp32s3/README.md)
+
 ## ML·제어 팀용 연결 안내
 
 ```c

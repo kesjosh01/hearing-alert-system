@@ -1,0 +1,10 @@
+#pragma once
+#include <cstddef>
+#include <cstdint>
+
+namespace hearing {
+alignas(16) static constexpr std::uint8_t kModelData[] = {@model_bytes@};
+static constexpr std::size_t kModelBytes = sizeof(kModelData);
+static constexpr bool kModelPipelineOnly = false;
+static constexpr char kModelFrontendSha256[] = "@frontend_hash@";
+}  // namespace hearing
